@@ -31,11 +31,11 @@ https://www.hubspot.es/make-my-persona?persona=-MpGp9Kklf9jMHC_31Z2
 
 **Enlaces de referencia(links de páginas de referentes y de modelos, y una breve descripción de por qué fueron elegidas):**
 
--https://www.blanqueriahome.com.ar/
--https://www.casablancablanqueria.com.ar/
--https://divanlito.com/
--https://www.cannon.com.ar/
--https://sommiercenter.com/
+*https://www.blanqueriahome.com.ar/
+*https://www.casablancablanqueria.com.ar/
+*https://divanlito.com/
+*https://www.cannon.com.ar/
+*https://sommiercenter.com/
 
 **Link de tablero de trabajo: **
 https://trello.com/b/LyhSijMu/proyectointegrador
