@@ -1,6 +1,6 @@
 # **grupo_5_VamosMessi**(Ver nombre)
 
-# Repositorio para proyecto integrador de Digital House
+Repositorio para proyecto integrador de Digital House
 
 
 **Productos o servicios(breve descripción de la temática y de la lista de productos y servicios del e-commerce):**
