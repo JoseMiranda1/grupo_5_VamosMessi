@@ -5,7 +5,7 @@ Repositorio para proyecto integrador de Digital House
 
 **Productos o servicios(breve descripción de la temática y de la lista de productos y servicios del e-commerce):**
 
-Blanquería Lasa Bana 
+Blanquería La sabana 
 En un mundo en el que todo avanza y cambia constantemente, logramos conservar la calidad de nuestros productos año tras año.
 Hoy apostamos a adaptarnos a esta era cambiante y conquistar nuevas generaciones con el mismo cuidado y atención en detalles que nos caracteriza.
 Nuestra misión es permitir que las personas descubran la elegancia y la excelencia en el estilo al vestir sus casas, diseñando colecciones llenas de encanto a través de líneas refinadas y únicas. Respetando la identidad de cada hogar.
