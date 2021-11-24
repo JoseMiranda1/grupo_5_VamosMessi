@@ -33,6 +33,9 @@ https://www.hubspot.es/make-my-persona?persona=-MpGp9Kklf9jMHC_31Z2
 
 https://www.blanqueriahome.com.ar/
 https://www.casablancablanqueria.com.ar/
+https://divanlito.com/
+https://www.cannon.com.ar/
+https://sommiercenter.com/
 
 **Link de tablero de trabajo: **
 https://trello.com/b/LyhSijMu/proyectointegrador
