@@ -25,7 +25,7 @@ Con la visión de llegar al top of the mind (primeros en la mente de los consumi
 
 »miembro a
 
-»miembro b
+»Seiler Rocío: Mi nombre es Rocío Seiler y soy de Mar del Plata, Buenos Aires. Estoy terminando mi Tesina de Licenciatura en Historia en la Universidad Nacional de Mar del Plata, y formo parte de unos grupos y proyectos de investigación por la misma Universidad donde me especializo en literatura egipcia del Reino Medio. Debido a ello, tuve que estudiar otros idiomas (entre ellos el jeroglífico clásico). Si bien la programación es una rama totalmente distinta de lo que venia desarrollándome la considero como un tipo de idioma (desafiante) que me gustaría aprender y profesionalizarme, no sólo para poder contar con más herramientas en el mercado laboral sino también para continuar ampliando mis conocimientos y crecimiento. 
 
 »Aragón Matias: Mi nombre es Matias Aragon, tengo 25 años y resido en la localidad de Tapiales provincia de Buenos Aires. Actualmente me desempeño como jefe de servicio en una empresa de mantenimiento de espacios verdes y ademas tengo un emprendimiento que consiste en mantener el espacio verde de un country. Me recibi como tecnico electronico y ahora me encuentro estudiando Ing industrial en la facultad de la Matanza. Me considero una persona responsable y dinámica con facilidad de adaptacion, capacidad de trabajar en equipo y con iniciativa para resolver problemas.
 
@@ -42,6 +42,10 @@ Con la visión de llegar al top of the mind (primeros en la mente de los consumi
 > https://www.cannon.com.ar/
 >
 > https://sommiercenter.com/
+>
+>https://www.arredo.com.ar/
+>
+>https://www.duvet.com.ar/
 
 **Tablero de trabajo:**
 
