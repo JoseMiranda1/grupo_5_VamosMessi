@@ -25,7 +25,7 @@ Aquí nuestro Buyer de persona:
 
 **Miembros fundadores:**
 
-<p align=justify>»<b>José Miranda:</b></p>
+<p align=justify>»<b>José Miranda:</b> Mi nombre es José Miranda soy de Salta capital. Tengo mi oficio como fresador y tornero(fabricacion de engranajes, pernos, entre otros materiales automovilisticos e industriales) en un taller familiar. Me dedique a servicios petroleros durante 3 años y ahora mi intencion es introducirme al mundo de la programación por completo</p>
 
 <p align=justify>»<b>Seiler Rocío:</b> Mi nombre es Rocío Seiler y soy de Mar del Plata, Buenos Aires. Estoy terminando mi Tesina de Licenciatura en Historia en la Universidad Nacional de Mar del Plata, y formo parte de unos grupos y proyectos de investigación por la misma Universidad donde me especializo en literatura egipcia del Reino Medio. Debido a ello, tuve que estudiar otros idiomas (entre ellos el jeroglífico clásico). Si bien la programación es una rama totalmente distinta de lo que venia desarrollándome la considero como un tipo de idioma (desafiante) que me gustaría aprender y profesionalizarme, no sólo para poder contar con más herramientas en el mercado laboral sino también para continuar ampliando mis conocimientos y crecimiento.</p>
 
