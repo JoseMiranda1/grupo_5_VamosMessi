@@ -1,0 +1,26 @@
+body {
+  width: 100%;
+}
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+.enlaces {
+  display: flex;
+  justify-content: space-between;
+}
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.banner {
+  width: 100%;
+}
+.lista-producto {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
