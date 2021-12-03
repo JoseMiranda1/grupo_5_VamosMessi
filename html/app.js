@@ -11,3 +11,7 @@ app.get("/", (req,res)=> {
     const pathHtml = path.resolve(__dirname,"views/home.html")
     res.sendFile(pathHtml)
 })
+app.get("/login", (req,res)=> {
+    const pathHtml = path.resolve(__dirname,"views/login.html")
+    res.sendFile(pathHtml)
+})

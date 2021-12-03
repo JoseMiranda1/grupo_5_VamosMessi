@@ -1,1 +1,60 @@
-@media url(normalize.css)
+@import url(normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', cursive;
+    background-color: #faedda;
+}
+.nav-bar{
+    border: solid 3px red;
+    display: flex;
+    
+    
+}
+.logo {
+		width: 20%;
+		align-self:flex-start;
+
+}
+.enlaces{
+    display: flex;
+    justify-content: space-between;
+}
+.header-counteiner{             
+background-color: #fdf49f;  
+width: 100%;
+margin: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;     
+}
+
+@media (min-width: 400px) {
+    * {
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Roboto', cursive;
+        background-color: #faedda;
+    }
+    .nav-bar{
+        display: flex;
+    }
+    .enlaces{
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-counteiner{ 
+        border: solid 3px black;        
+    background-color: #fdf49f;  
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;     
+}
+}
