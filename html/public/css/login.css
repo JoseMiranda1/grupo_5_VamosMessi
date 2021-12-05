@@ -8,7 +8,7 @@
     width: 100%;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     }
 
 .body{
@@ -19,8 +19,16 @@
 .nav-bar{
     border: solid 3px red;
     display: flex;
+       
+}
+.registro{
+    color: rgb(237, 248, 138);
+   
+}
+.login{
+    color: rgb(237, 248, 138);
     
-    
+align-items:flex-end;
 }
 .logo {
 		width: 20%;
@@ -47,7 +55,7 @@ flex-wrap: wrap;
     }
     body{
         font-family: 'Roboto', cursive;
-        background-color: #faedda;
+        background-color: #fdf49f;
     }
     .nav-bar{
         display: flex;
@@ -58,7 +66,7 @@ flex-wrap: wrap;
     }
     .header-counteiner{ 
         border: solid 3px black;        
-    background-color: #fdf49f;  
+    background-color:  #fdf49f;  
     width: 100%;
     margin: auto;
     display: flex;

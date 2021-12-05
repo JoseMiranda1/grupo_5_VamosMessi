@@ -31,32 +31,51 @@
 </header>
 <main class="main">
     
-   <form action="/login" method="post">       
-    <div>
+   <form action="/login" method="post">    
+    <ul class="registro">   
+    <li>
        <label for="Nombre">Nombre:</label>
        <input type="text" name="usuario" placeholder="Ej: pepito lopez" required>
-    </div>
+    </li>
     <BR>
-    <div>
+    <li>
        <label for="Contraseña">Contraseña:</label>
        <input type="password" name="clave" placeholder="********" required>       
-     </div>
+    </li>
      <BR>
-       <div>
+       <li>
        <label for="Email">Email:</label>
        <input type="email" name="email" placeholder="Ej: usuario@nuevo.com" required>
-    </div>
+       </li>
     <BR>
-       <div>
+       <li>
        <label for="tel">Tel:</label>
        <input type="tel" name="telefono" placeholder="Ej: 115154255" required>
-    </div>
+       </li>
     <BR>
-       <div>
+       <li>
        <label for="edad">Edad:</label>
        <input type="number" name="edad" placeholder="Ej: 25" required>       
-    </div>
+       </li>
+    <label >
+        <input type="radio"> Acepto los terminos y condiciones
+    </label>
     <button type="submit"> Registrarme </button>
+</ul>
+   </form>
+   <form action="/login" method="post">
+<ul class="login">
+    <li>
+        <label for="Email">Email:</label>
+        <input type="email" name="email" placeholder="Ej: usuario@nuevo.com" required>
+    </li>
+    <li>
+        <label for="Contraseña">Contraseña:</label>
+        <input type="password" name="clave" placeholder="********" required>       
+     </li>
+     <button type="submit"> Ingresar </button>
+</ul>
+
    </form>
 
   
