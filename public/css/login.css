@@ -21,14 +21,18 @@
     display: flex;
        
 }
-.registro{
+.registro {
     color: rgb(237, 248, 138);
+    margin: 0 15px 15px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgb(87, 85, 85);  
    
 }
 .login{
-    color: rgb(237, 248, 138);
-    
-align-items:flex-end;
+    color: rgb(237, 248, 138);    
+    margin: 0 15px 15px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgb(87, 85, 85);  
 }
 .logo {
 		width: 20%;
@@ -49,7 +53,11 @@ align-items: center;
 flex-wrap: wrap;     
 }
 
-@media (min-width: 400px) {
+
+
+/* ---------- Version Tablet ----------------------------------------------------------------------------------------------- */
+
+@media (min-width: 481px) {
     * {
         box-sizing: border-box;
     }
@@ -74,4 +82,14 @@ flex-wrap: wrap;
     align-items: center;
     flex-wrap: wrap;     
 }
+}
+
+/* ---------- Version Laptop ----------------------------------------------------------------------------------------------- */
+
+@media (min-width: 769px) {
+}
+
+/* ---------- Version Monitor ----------------------------------------------------------------------------------------------- */
+@media (min-width: 1280px) {
+
 }

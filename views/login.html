@@ -29,13 +29,15 @@
             </nav>
         </div>   
 </header>
-<main class="main">
+<main class="main">   
     
    <form action="/login" method="post">    
+
     <ul class="registro">   
+        <h2>Crear cuenta</h2>
     <li>
        <label for="Nombre">Nombre:</label>
-       <input type="text" name="usuario" placeholder="Ej: pepito lopez" required>
+       <input type="text" name="usuario" placeholder="pepito lopez" required>
     </li>
     <BR>
     <li>
@@ -45,29 +47,30 @@
      <BR>
        <li>
        <label for="Email">Email:</label>
-       <input type="email" name="email" placeholder="Ej: usuario@nuevo.com" required>
+       <input type="email" name="email" placeholder="usuario@nuevo.com" required>
        </li>
     <BR>
        <li>
        <label for="tel">Tel:</label>
-       <input type="tel" name="telefono" placeholder="Ej: 115154255" required>
+       <input type="tel" name="telefono" placeholder="115154255" required>
        </li>
     <BR>
        <li>
        <label for="edad">Edad:</label>
-       <input type="number" name="edad" placeholder="Ej: 25" required>       
+       <input type="number" name="edad" placeholder="25" required>       
        </li>
     <label >
         <input type="radio"> Acepto los terminos y condiciones
     </label>
-    <button type="submit"> Registrarme </button>
+    <button type="submit"> Registrarse </button>
 </ul>
    </form>
    <form action="/login" method="post">
 <ul class="login">
+    <h2>Iniciar sesión</h2>
     <li>
         <label for="Email">Email:</label>
-        <input type="email" name="email" placeholder="Ej: usuario@nuevo.com" required>
+        <input type="email" name="email" placeholder="usuario@nuevo.com" required>
     </li>
     <li>
         <label for="Contraseña">Contraseña:</label>
