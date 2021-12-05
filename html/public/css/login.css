@@ -4,15 +4,17 @@
     box-sizing: border-box;
 }
 .main{
-        margin-bottom: 10px;
-        width: 100%;
-        margin: auto;
+    background-image:url('/imagenes/sin-titulo.jpg');
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
     }
 
 .body{
 
     font-family: 'Roboto', cursive;
-    background-image:url('/imagenes/sin-titulo.jpg')
+    
 }
 .nav-bar{
     border: solid 3px red;
