@@ -4,12 +4,133 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        detalles del producto
-    </title>
+    <title>Detalle del producto</title>
     <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="https://fonts.google.com/">
+    <link rel="stylesheet" href="/css/normalize.css">
 </head>
+
 <body>
-    <h2>Detalles</h2>
+    <!--Header-->
+    <head> 
+        <div class= "nav-bar"> 
+        <img src= "/imagenes/La-Sabana.png" alt=""width="100px">
+      </div>
+        <nav class="enlaces" > 
+            <ul>
+                <li><a href="">¿Quienes somos? </a></li>
+                <li><a href="">Nuestros productos</a></li>
+                <form>
+                  <i class="fa fa-search"></i>
+                  <input type="text">
+                  <input type="submit" value="Buscar" />
+              </form>
+              <li><i class="fas fa-user"></i> <a href="">Mi cuenta</a><i class="fas fa-angle-down"></i></li>
+              <li><i class="fas fa-cart-plus"></i><a href="">Mi Carrito</a></li>
+          </ul>
+        </nav>
+        
+    </head>
+    <!--página de detalle-->
+    <main>
+        <!--nombre del producto-->
+        <div class="product-name">
+            <h2>Sábanas Oro con Faja P/colch 1,60 Lisa Blanco</h2>
+        </div>
+        <!--imagen del producto-->
+        <div>
+            <img src="/productos/juego-de-sabanas-Pierre-Balmain-180-hilos.jpg" alt="product">
+        </div>
+        <ul class="alternative-images">
+            <li><a href="" class="imgA"><img src="/productos/sabanas-imgA.jpg" alt="imgA"></a></li> 
+            <li><a href="" class="imgB"><img src="/productos/sabanas-imgB.jpg" alt="imgB"></a></li>
+            <li><a href="" class="imgC"><img src="/productos/sabanas-imgC.jpg" alt="imgC"></a></li>
+            <li><a href="" class="imgD"><img src="/productos/sabanas-imgD.jpg" alt="imgD"></a></li>
+            <li><a href="" class="imgE"><img src="/productos/sabanas-imgE.jpg" alt="imgE"></a></li>
+        </ul>
+        <!--caja del poducto-->
+            <div class="product-meta">
+                <div class="crumber">
+                    <nav>
+                        <a href="/home.html" class="crumb">Inicio</a>
+                        <span class="divider">/</span>
+                        <a href="" class="crumb">Dormitorio</a>
+                        <span class="divider">/</span>
+                        <a href="" class="crumb">Sábanas</a>
+                        <span class="divider">/</span>
+                        <a href="" class="crumb-name">Sábanas Oro con Faja P/colch 1,60 Lisa Blanco</a>
+                    </nav>
+                    <!--redes sociales-->
+                    <nav class="social-network">
+                        <i class="fab fa-twitter" href="https://twitter.com/?lang=es" target="_blank"></i>
+                        <i class="fab fa-facebook" href="https://www.facebook.com/" target="_blank"></i>
+                        <i class="fab fa-instagram" href="https://www.instagram.com/?hl=es-la" target="_blank"></i>
+                    </nav>
+                </div>
+                <section class="price-box">
+                    <span class="discount">%25</span>
+                    <span class="original-price">$4000</span>
+                    <span class="price">$3000</span>
+                </section>
+                <!--selector de color- radio-script-->
+                <div class="color-selection">
+                    <ul>
+                        <li class="specification-title">Color</li>
+                    <li>
+                        <label for="blue-color"></label>
+                        <input type="radio" name="color" class="radio-color-A">
+                    </li>
+                    <li>
+                        <label for="blue-color"></label>
+                        <input type="radio" name="color" class="radio-color-B">
+                    </li>
+                    <li>
+                        <label for="blue-color"></label>
+                        <input type="radio" name="color" class="radio-color-C">
+                    </li>
+                    <li>
+                        <label for="blue-color"></label>
+                        <input type="radio" name="color" class="radio-color-D">
+                    </li>
+                    <li>
+                        <label for="blue-color"></label>
+                        <input type="radio" name="color" class="radio-color-E">
+                    </li>
+                    </ul>
+                    <!--informacion del producto- menu script-->
+                </div class="container-wrap">
+                    <section class="info-boxes">
+                        <article>
+                            <a href="#">Descripción</a>
+                        </article>
+                        <article>
+                            <a href="#">Composición</a>
+                        </article>
+                        <article>
+                            <a href="#">Características de la tela</a>
+                        </article>
+                    </section>
+                    <section class="info-boxes-container">
+                        <article class="info-boxes" id="description">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores sequi expedita voluptatem beatae nam!</p>
+                            <br>
+                            <span class="minor-title">Medidas:</span>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                            <br>
+                            <span class="minor-title">Incluye:</span>
+                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        </article>
+                        <article class="info-boxes" id="composition">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, ratione ducimus! Dolores necessitatibus et natus officiis ipsum aliquid, nostrum asperiores mollitia vitae maxime sunt! Atque nemo exercitationem quae doloribus vel.</p>
+                        </article>
+                        <article class="info-boxes" id="material-quality">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi totam repellat ab odit voluptas quae, dolores laboriosam provident? Aliquam labore voluptates quae, quisquam repellendus laboriosam pariatur debitis eaque tempore officia nihil fugit dolores, iste expedita? Quos?</p>
+                        </article>
+                    </section>
+            </div>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
