@@ -14,8 +14,8 @@
     <!--Header-->
     <head> 
         <div class= "nav-bar"> 
-        <img src= "/imagenes/La-Sabana.png" alt=""width="100px">
-      </div>
+            <img src= "/imagenes/La-Sabana.png" alt=""width="100px">
+        </div>
         <nav class="enlaces" > 
             <ul>
                 <li><a href="">¿Quienes somos? </a></li>
@@ -31,103 +31,119 @@
         </nav>
         
     </head>
-    <!--página de detalle-->
+    <!--página detalle de producto-->
     <main>
-        <!--nombre del producto-->
-        <div class="product-name">
-            <h2>Sábanas Oro con Faja P/colch 1,60 Lisa Blanco</h2>
-        </div>
-        <!--imagen del producto-->
-        <div>
-            <img src="/productos/juego-de-sabanas-Pierre-Balmain-180-hilos.jpg" alt="product">
-        </div>
-        <ul class="alternative-images">
-            <li><a href="" class="imgA"><img src="/productos/sabanas-imgA.jpg" alt="imgA"></a></li> 
-            <li><a href="" class="imgB"><img src="/productos/sabanas-imgB.jpg" alt="imgB"></a></li>
-            <li><a href="" class="imgC"><img src="/productos/sabanas-imgC.jpg" alt="imgC"></a></li>
-            <li><a href="" class="imgD"><img src="/productos/sabanas-imgD.jpg" alt="imgD"></a></li>
-            <li><a href="" class="imgE"><img src="/productos/sabanas-imgE.jpg" alt="imgE"></a></li>
-        </ul>
-        <!--caja del poducto-->
-            <div class="product-meta">
-                <div class="crumber">
-                    <nav>
-                        <a href="/home.html" class="crumb">Inicio</a>
-                        <span class="divider">/</span>
-                        <a href="" class="crumb">Dormitorio</a>
-                        <span class="divider">/</span>
-                        <a href="" class="crumb">Sábanas</a>
-                        <span class="divider">/</span>
-                        <a href="" class="crumb-name">Sábanas Oro con Faja P/colch 1,60 Lisa Blanco</a>
-                    </nav>
-                    <!--redes sociales-->
-                    <nav class="social-network">
-                        <i class="fab fa-twitter" href="https://twitter.com/?lang=es" target="_blank"></i>
-                        <i class="fab fa-facebook" href="https://www.facebook.com/" target="_blank"></i>
-                        <i class="fab fa-instagram" href="https://www.instagram.com/?hl=es-la" target="_blank"></i>
-                    </nav>
-                </div>
-                <section class="price-box">
-                    <span class="discount">%25</span>
-                    <span class="original-price">$4000</span>
-                    <span class="price">$3000</span>
-                </section>
-                <!--selector de color- radio-script-->
-                <div class="color-selection">
-                    <ul>
-                        <li class="specification-title">Color</li>
-                    <li>
-                        <label for="blue-color"></label>
-                        <input type="radio" name="color" class="radio-color-A">
-                    </li>
-                    <li>
-                        <label for="blue-color"></label>
-                        <input type="radio" name="color" class="radio-color-B">
-                    </li>
-                    <li>
-                        <label for="blue-color"></label>
-                        <input type="radio" name="color" class="radio-color-C">
-                    </li>
-                    <li>
-                        <label for="blue-color"></label>
-                        <input type="radio" name="color" class="radio-color-D">
-                    </li>
-                    <li>
-                        <label for="blue-color"></label>
-                        <input type="radio" name="color" class="radio-color-E">
-                    </li>
-                    </ul>
-                    <!--informacion del producto- menu script-->
-                </div class="container-wrap">
-                    <section class="info-boxes">
-                        <article>
-                            <a href="#">Descripción</a>
-                        </article>
-                        <article>
-                            <a href="#">Composición</a>
-                        </article>
-                        <article>
-                            <a href="#">Características de la tela</a>
-                        </article>
-                    </section>
-                    <section class="info-boxes-container">
-                        <article class="info-boxes" id="description">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores sequi expedita voluptatem beatae nam!</p>
-                            <br>
-                            <span class="minor-title">Medidas:</span>
-                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                            <br>
-                            <span class="minor-title">Incluye:</span>
-                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                        </article>
-                        <article class="info-boxes" id="composition">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, ratione ducimus! Dolores necessitatibus et natus officiis ipsum aliquid, nostrum asperiores mollitia vitae maxime sunt! Atque nemo exercitationem quae doloribus vel.</p>
-                        </article>
-                        <article class="info-boxes" id="material-quality">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi totam repellat ab odit voluptas quae, dolores laboriosam provident? Aliquam labore voluptates quae, quisquam repellendus laboriosam pariatur debitis eaque tempore officia nihil fugit dolores, iste expedita? Quos?</p>
-                        </article>
-                    </section>
+        <div class="main-container">
+            <!--nombre del producto-->
+            <div class="product-name">
+                <p>Sábanas Oro con Faja P/colch 1,60 Lisa Blanco</p>
             </div>
+            <!--imagen del producto-->
+            <div class="zoompad">
+                <img src="/imagenes/productos/juego-de-sabanas-Pierre-Balmain-180-hilos.jpg" alt="product" class="main-image">
+            </div>
+            <!--deslizamiento de imagen-->
+            <div class="image-dash">
+                <a href="#" class="control-prev">...</a>
+                <a href="#" class="control-right">...</a>
+            </div>
+            <!--imagenes del wrap-->
+            <nav class="wrap-images">
+                <ul class="wrap-list">
+                    <li><a href="" class="imgA"><img src="/productos/sabanas-imgA.jpg" alt="imgA"></a></li> 
+                    <li><a href="" class="imgB"><img src="/productos/sabanas-imgB.jpg" alt="imgB"></a></li>
+                    <li><a href="" class="imgC"><img src="/productos/sabanas-imgC.jpg" alt="imgC"></a></li>
+                    <li><a href="" class="imgD"><img src="/productos/sabanas-imgD.jpg" alt="imgD"></a></li>
+                    <li><a href="" class="imgE"><img src="/productos/sabanas-imgE.jpg" alt="imgE"></a></li>
+                </ul>
+            </nav>
+            <!--caja del poducto-->
+                <div class="product-meta">
+                        <nav class="crumber-nav">
+                            <a href="/home.html" class="crumb">Inicio</a>
+                            <span class="divider">/</span>
+                            <a href="" class="crumb">Dormitorio</a>
+                            <span class="divider">/</span>
+                            <a href="" class="crumb">Sábanas</a>
+                            <span class="divider">/</span>
+                            <a href="" class="crumb-name">Sábanas Oro con Faja P/colch 1,60 Lisa Blanco</a>
+                        </nav>
+                        <!--redes sociales-->
+                        <nav class="social-network">
+                            <i class="fab fa-twitter" href="https://twitter.com/?lang=es" target="_blank"></i>
+                            <i class="fab fa-facebook" href="https://www.facebook.com/" target="_blank"></i>
+                            <i class="fab fa-instagram" href="https://www.instagram.com/?hl=es-la" target="_blank"></i>
+                        </nav>
+                    <!--caja del precio-->
+                    <section class="price-box">
+                        <span class="discount">%25</span>
+                        <span class="original-price">$4000</span>
+                        <span class="price">$3000</span>
+                        <p class="finance">12 Cuotas sin interés</p>
+                        <p class="options-payment">Ver medios de pago</p>
+                    </section>
+                    <!--agregar carrito-->
+                    <div>
+                        <input type="submit" name="buy" value="Agregar al carrito" class="buy">
+                    </div>
+                    <!--selector de color- radio-script-->
+                    <div class="color-selection">
+                        <p class="specification-title">Color</p>
+                        <ul class="color-list">    
+                            <li>
+                                <label for="blue-color"></label>
+                                <input type="radio" name="color" class="radio-color">
+                            </li>
+                            <li>
+                                <label for="blue-color"></label>
+                                <input type="radio" name="color" class="radio-color">
+                            </li>
+                            <li>
+                                <label for="blue-color"></label>
+                                <input type="radio" name="color" class="radio-color">
+                            </li>
+                            <li>
+                                <label for="blue-color"></label>
+                                <input type="radio" name="color" class="radio-color">
+                            </li>
+                            <li>
+                                <label for="radio-colorE"></label>
+                                <input type="radio" name="color" class="radio-color">
+                            </li>
+                        </ul>
+                        <!--informacion del producto- menu script-->
+                    </div class="container-wrap">
+                        <section class="info-boxes">
+                            <article class="info-item">
+                                <a href="#">Descripción</a>
+                            </article>
+                            <article class="info-item">
+                                <a href="#">Composición</a>
+                            </article>
+                            <article class="info-item">
+                                <a href="#">Características de la tela</a>
+                            </article>
+                        </section>
+                        <hr class="bar">
+                        <section class="info-boxes-container">
+                            <article class="info-boxes" id="description">
+                                <p>Juego de sábanas estampado con cordón, compuesto por mezcla de algodón y poliéster. Estilo y diseño para tu cama.</p>
+                                <br>
+                                <span class="minor-title">Medidas:</span>
+                                <span>Medidas: Para colchón King de hasta 2 m de ancho x 2 m de largo x 0.35 m de alto.</span>
+                                <br>
+                                <span class="minor-title">Incluye:</span>
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                            </article>
+                            <article class="info-boxes" id="composition">
+                                <p>Mezcla de algodón y poliéster, 144 hilos.</p>
+                            </article>
+                            <article class="info-boxes" id="material-quality">
+                                <p>Las telas con mezclas de algodón y poliéster son conocidas por su durabilidad. El algodón es de fibra natural, por lo que le brinda propiedades como respirabilidad y suavidad. El poliéster le otorga mayor resistencia, baja tendencia al arrugado y secado rápido. Combinación perfecta entre suavidad y practicidad. Ideal para quienes viven en un departamento o tienen poco espacio para tender sus sábanas y tiempo para plancharlas.</p>
+                            </article>
+                        </section>
+                </div>
+            </div>    
     </main>
     <footer>
 

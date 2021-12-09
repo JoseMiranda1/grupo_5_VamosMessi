@@ -1,5 +1,96 @@
 @import url(normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
     box-sizing: content-box;
+}
+
+.main-container {
+    background-color: #fdf0d8;
+    font-family: "Montserrat", sans-serif;
+    margin:auto;
+}
+
+.product-name {
+    color: #444;
+    font-size: 25px;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+.zoompad {
+    text-align: center;
+}
+
+.main-image{
+    width: 95%;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrap-images {
+    display: none;
+}
+
+.crumber-nav {
+    padding: 10px 15px;
+}
+
+.crumber-nav a,
+.crumber-nav span{
+    color: #d49c50;
+}
+
+.discount {
+    display: none;
+}
+
+.price-box {
+    width: 100%;
+}
+
+.price-box span{
+    font-size: 2rem;
+}
+
+.finance,
+.options-payment {
+    font-size: 25%;
+    color: #d49c50;
+}
+
+.color-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.radio-color {
+    color: #fbfb80;
+    width: 2rem;
+    border: 0px;
+}
+
+
+
+.bar {
+    width: 70%;
+    color: #e8ba7b;
+}
+
+.info-item {
+    font-size: 25px;
+    padding: 10px 15px;
+}
+
+.info-item a {
+    color: #444;
 }
