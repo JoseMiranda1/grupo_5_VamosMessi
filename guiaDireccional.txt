@@ -11,3 +11,13 @@ Colores:
 Fuentes:
 -Roboto- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 -Monserrat- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">; @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+Tamaños Tipográficos aplicados en productDetail.css
+-Cuerpos de texto: 12px
+-Titulares (Basado en tu última visita/Ofertas): 24px
+-Precios: 18px
+-Descuentos: 16px
+-Descripciones: 16px
+
+URL:
+-Font awesome- @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");

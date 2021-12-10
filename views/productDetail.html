@@ -70,67 +70,67 @@
                         </nav>
                         <!--redes sociales-->
                         <nav class="social-network">
-                            <i class="fab fa-twitter" href="https://twitter.com/?lang=es" target="_blank"></i>
-                            <i class="fab fa-facebook" href="https://www.facebook.com/" target="_blank"></i>
-                            <i class="fab fa-instagram" href="https://www.instagram.com/?hl=es-la" target="_blank"></i>
+                            <a href="#"><i class="fab fa-twitter" href="https://twitter.com/?lang=es" target="_blank"></i></a>
+                            <a href="#"><i class="fab fa-facebook" href="https://www.facebook.com/" target="_blank"></i></a>
+                            <a href="#"><i class="fab fa-instagram" href="https://www.instagram.com/?hl=es-la" target="_blank"></i></a>
                         </nav>
                     <!--caja del precio-->
                     <section class="price-box">
                         <span class="discount">%25</span>
                         <span class="original-price">$4000</span>
                         <span class="price">$3000</span>
-                        <p class="finance">12 Cuotas sin interés</p>
+                        <p class="finance"><i class="far fa-id-card"></i>12 Cuotas sin interés</p>
                         <p class="options-payment">Ver medios de pago</p>
                     </section>
                     <!--agregar carrito-->
-                    <div>
-                        <input type="submit" name="buy" value="Agregar al carrito" class="buy">
+                    <div class="buy-container">
+                        <input type="submit" name="buy" value=" Agregar al carrito" class="buy-button">
                     </div>
                     <!--selector de color- radio-script-->
                     <div class="color-selection">
-                        <p class="specification-title">Color</p>
+                        <p class="color-title">Color</p>
                         <ul class="color-list">    
                             <li>
                                 <label for="blue-color"></label>
-                                <input type="radio" name="color" class="radio-color">
+                                <input type="radio" name="color" id="radio-colorA">
                             </li>
                             <li>
                                 <label for="blue-color"></label>
-                                <input type="radio" name="color" class="radio-color">
+                                <input type="radio" name="color" id="radio-colorB">
                             </li>
                             <li>
                                 <label for="blue-color"></label>
-                                <input type="radio" name="color" class="radio-color">
+                                <input type="radio" name="color" id="radio-colorC">
                             </li>
                             <li>
                                 <label for="blue-color"></label>
-                                <input type="radio" name="color" class="radio-color">
+                                <input type="radio" name="color" id="radio-colorD">
                             </li>
                             <li>
                                 <label for="radio-colorE"></label>
-                                <input type="radio" name="color" class="radio-color">
+                                <input type="radio" name="color" id="radio-colorE">
                             </li>
                         </ul>
                         <!--informacion del producto- menu script-->
                     </div class="container-wrap">
                         <section class="info-boxes">
-                            <article class="info-item">
-                                <a href="#">Descripción</a>
+                            <article class="info-article">
+                                <a href="#info" databox="desc" class="item" ::before>Descripción</a>
                             </article>
-                            <article class="info-item">
-                                <a href="#">Composición</a>
+                            <article class="info-article">
+                                <a href="#info" databox="" class="item">Composición</a>
                             </article>
-                            <article class="info-item">
-                                <a href="#">Características de la tela</a>
+                            <article class="info-article">
+                                <a href="#info" databox="" class="item">Características de la tela</a>
                             </article>
                         </section>
                         <hr class="bar">
                         <section class="info-boxes-container">
                             <article class="info-boxes" id="description">
-                                <p>Juego de sábanas estampado con cordón, compuesto por mezcla de algodón y poliéster. Estilo y diseño para tu cama.</p>
+                                <p> <a href="#info:after""> Juego de sábanas estampado con cordón, compuesto por mezcla de algodón y poliéster. Estilo y diseño para tu cama.</p>
                                 <br>
                                 <span class="minor-title">Medidas:</span>
-                                <span>Medidas: Para colchón King de hasta 2 m de ancho x 2 m de largo x 0.35 m de alto.</span>
+                                <span id="desc">Medidas: Para colchón King de hasta 2 m de ancho x 2 m de largo x 0.35 m de alto.</span>
                                 <br>
                                 <span class="minor-title">Incluye:</span>
                                 <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
