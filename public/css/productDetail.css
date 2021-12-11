@@ -20,6 +20,7 @@ body {
     display: flex;
     justify-content: space-between;
   }
+
   ol,
   ul {
     list-style: none;
@@ -46,7 +47,7 @@ body {
 .product-name {
     font-size: 25px;
     padding: 10px 15px;
-    font-weight: 200;
+    font-weight: 500;
 }
 
 .zoompad {
@@ -58,16 +59,62 @@ body {
     margin: auto;
 }
 
-ul {
-    list-style: none;
-}
-
 a {
     text-decoration: none;
 }
 
-.wrap-images {
-    display: none;
+.slider-container {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+.slider-list {
+    position: relative;
+    width: 95%;
+    height: 300px;
+}
+
+.slider-list li {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all, 0.5s;
+}
+
+.slider-list li img {
+    width: inherit;
+    height: 300px;
+}
+
+.slider-list li:first-child {
+    opacity: 1;
+}
+
+.slider-list li:target {
+    opacity: 1;
+}
+
+.menu-slider {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.menu-slider li a i{
+    border-radius: 50%;
+    color: #e8ba7b ;
+    background-color: #d49c50;
+    display: inline-block;
+    padding: 5px;
+    outline: none;
+    margin: 10px;
 }
 
 .crumber-nav {
@@ -76,14 +123,13 @@ a {
 
 .crumber-nav a,
 .crumber-nav span{
-    color: #d49c50;
+    color: #584229;
 }
 
 .social-network i{
     padding: 10px 15px;
     color: #d49c50;
     font-size: 1.5rem;;
-
 }
 
 .discount {
@@ -113,18 +159,33 @@ a {
     margin: 0px;
 }
 
+#cart {
+    font-size: 20px;
+    color: #444;
+    position: relative;
+    left: 50px;
+}
+
 .buy-button {
-    width: 30%;
-    border-radius: 0.3rem;
-    font-size: 20%;
-    font-weight: bold;
-    ;
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1rem;
+    font-weight: 300;
     display: inline-block;
-    transition: all, 0.3s, ease;
+    transition: all, 0.5s;
     background-color: #d49c50;
     color: #eee;
     box-shadow: 0px, 2px, 3px, #d49c50;
-    background-image: url("/imagenes/cart_plus_icon.png");
+    padding-left: 25px;
+    font-family: monospace, sans-serif;
+}
+
+.buy-button:hover {
+    box-shadow: 100px, 100px, 100px, #e8ba7b;
+    background-color: #584229;
+    border: coral;
 }
 
 .buy-button:focus {
@@ -145,6 +206,9 @@ a {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 0px 10px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .color-title {
@@ -162,37 +226,72 @@ input[type=radio] {
     appearance:none;
     width:12px;
     height:12px;
-    transition:all ease-in 0.2s;
+    display: block;
 }
 
 #radio-colorA {
     background-color: coral;
     border:0.5px solid coral;
     box-shadow:0 0 0 2.5px coral;
+    transition:all 0.5s;
+}
+
+#radio-colorA:hover {
+    background-color: #444;;
+    border:0.5px solid coral;
+    box-shadow:0 0 0 2.5px #444;
 }
 
 #radio-colorB {
     background-color: blueviolet;
     border:0.5px solid blueviolet;
     box-shadow:0 0 0 2.5px blueviolet;
+    transition:all 0.5s;
+}
+
+#radio-colorB:hover {
+    background-color: #444;;
+    border:0.5px solid blueviolet;
+    box-shadow:0 0 0 2.5px #444;
 }
 
 #radio-colorC {
     background-color: lightslategrey;
     border:0.5px solid lightslategrey;
     box-shadow:0 0 0 2.5px lightslategrey;
+    transition:all 0.5s;
+}
+
+#radio-colorC:hover {
+    background-color: #444;;
+    border:0.5px solid lightslategray;
+    box-shadow:0 0 0 2.5px #444;
 }
 
 #radio-colorD {
-    background-color: #584229;
-    border:0.5px solid #584229;
-    box-shadow:0 0 0 2.5px #584229;
+    background-color: lightgreen;
+    border:0.5px solid lightgreen;
+    box-shadow:0 0 0 2.5px lightgreen;
+    transition:all 0.5s;
+}
+
+#radio-colorD:hover {
+    background-color: #444;;
+    border:0.5px solid lightgreen;
+    box-shadow:0 0 0 2.5px #444;
 }
 
 #radio-colorE {
     background-color: #fbfb80;
     border:0.5px solid #fbfb80;
     box-shadow:0 0 0 2.5px #fbfb80;
+    transition:all 0.5s;
+}
+
+#radio-colorE:hover {
+    background-color: #444;;
+    border:0.5px solid #fbfb80;
+    box-shadow:0 0 0 2.5px #444;
 }
 /*
 input[type=radio]:hover {

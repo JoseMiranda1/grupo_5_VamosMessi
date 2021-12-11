@@ -39,22 +39,36 @@
                 <p>Sábanas Oro con Faja P/colch 1,60 Lisa Blanco</p>
             </div>
             <!--imagen del producto-->
-            <div class="zoompad">
-                <img src="/imagenes/productos/juego-de-sabanas-Pierre-Balmain-180-hilos.jpg" alt="product" class="main-image">
-            </div>
-            <!--deslizamiento de imagen-->
-            <div class="image-dash">
+            <!--deslizamiento de imagen
+            <div class="image-selector>
                 <a href="#" class="control-prev">...</a>
                 <a href="#" class="control-right">...</a>
-            </div>
+            </div>-->
             <!--imagenes del wrap-->
-            <nav class="wrap-images">
-                <ul class="wrap-list">
-                    <li><a href="" class="imgA"><img src="/productos/sabanas-imgA.jpg" alt="imgA"></a></li> 
-                    <li><a href="" class="imgB"><img src="/productos/sabanas-imgB.jpg" alt="imgB"></a></li>
-                    <li><a href="" class="imgC"><img src="/productos/sabanas-imgC.jpg" alt="imgC"></a></li>
-                    <li><a href="" class="imgD"><img src="/productos/sabanas-imgD.jpg" alt="imgD"></a></li>
-                    <li><a href="" class="imgE"><img src="/productos/sabanas-imgE.jpg" alt="imgE"></a></li>
+            <nav class="slider-container">
+                <ul class="slider-list">
+                    <li id="slide1">
+                        <img src="/imagenes/productos/juego-de-sabanas-Pierre-Balmain-180-hilos.jpg" alt="imgA"></a>
+                    </li> 
+                    <li id="slide2">
+                        <img src="/imagenes/productos/sabanas-imgB.jpg" alt="imgB"></a>
+                    </li>
+                    <li id="slide3">
+                        <img src="/imagenes/productos/sabanas-imgC.jpg" alt="imgC"></a>
+                    </li>
+                    <li id="slide4">
+                        <img src="/imagenes/productos/sabanas-imgD.jpg" alt="imgD"></a>
+                    </li>
+                    <li id="slide5">
+                        <img src="/imagenes/productos/sabanas-imgE.jpg" alt="imgE"></a>
+                    </li>
+                </ul>
+                <ul class="menu-slider">
+                    <li><a href="#slide1" id="img1"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#slide2" id="img2"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#slide3" id="img3"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#slide4" id="img4"><i class="far fa-circle"></i></a></li>
+                    <li><a href="#slide5" id="img5"><i class="far fa-circle"></i></a></li>
                 </ul>
             </nav>
             <!--caja del poducto-->
@@ -79,38 +93,41 @@
                         <span class="discount">%25</span>
                         <span class="original-price">$4000</span>
                         <span class="price">$3000</span>
-                        <p class="finance"><i class="far fa-id-card"></i>12 Cuotas sin interés</p>
-                        <p class="options-payment">Ver medios de pago</p>
+                        <p class="finance"><i class="far fa-id-card"></i>   12 Cuotas sin interés</p>
+                        <a href="#" class="options-payment"><i class="far fa-credit-card"></i>   Ver medios de pago</a>
                     </section>
                     <!--agregar carrito-->
                     <div class="buy-container">
-                        <input type="submit" name="buy" value=" Agregar al carrito" class="buy-button">
+                        <i class="fas fa-cart-plus" id="cart"></i>
+                        <input type="submit" name="add-cart" value="Agregar" class="buy-button">
                     </div>
                     <!--selector de color- radio-script-->
                     <div class="color-selection">
                         <p class="color-title">Color</p>
-                        <ul class="color-list">    
-                            <li>
-                                <label for="blue-color"></label>
-                                <input type="radio" name="color" id="radio-colorA">
-                            </li>
-                            <li>
-                                <label for="blue-color"></label>
-                                <input type="radio" name="color" id="radio-colorB">
-                            </li>
-                            <li>
-                                <label for="blue-color"></label>
-                                <input type="radio" name="color" id="radio-colorC">
-                            </li>
-                            <li>
-                                <label for="blue-color"></label>
-                                <input type="radio" name="color" id="radio-colorD">
-                            </li>
-                            <li>
-                                <label for="radio-colorE"></label>
-                                <input type="radio" name="color" id="radio-colorE">
-                            </li>
-                        </ul>
+                        <form action="" method="get">
+                            <ul class="color-list">    
+                                <li>
+                                    <label for="blue-color"></label>
+                                    <input type="radio" name="color" id="radio-colorA">
+                                </li>
+                                <li>
+                                    <label for="blue-color"></label>
+                                    <input type="radio" name="color" id="radio-colorB">
+                                </li>
+                                <li>
+                                    <label for="blue-color"></label>
+                                    <input type="radio" name="color" id="radio-colorC">
+                                </li>
+                                <li>
+                                    <label for="blue-color"></label>
+                                    <input type="radio" name="color" id="radio-colorD">
+                                </li>
+                                <li>
+                                    <label for="radio-colorE"></label>
+                                    <input type="radio" name="color" id="radio-colorE">
+                                </li>
+                            </ul>
+                        </form>
                         <!--informacion del producto- menu script-->
                     </div class="container-wrap">
                         <section class="info-boxes">
