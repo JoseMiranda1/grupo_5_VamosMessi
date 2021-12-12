@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingresá a tu cuenta</title>
     <link rel="stylesheet" href="/css/login.css">
+    <script src="https://kit.fontawesome.com/36b9ea7acc.js" crossorigin="anonymous"></script>
    
 </head>
 <body>
@@ -31,18 +32,26 @@
 </header>
 <main class="main">   
     
-   <form action="/login" method="post">    
+   <form action="/login" method="post" class="registro">    
 
-    <ul class="registro">   
+    <ul class="list-regis">   
         <h2>Crear cuenta</h2>
     <li>
        <label for="Nombre">Nombre:</label>
-       <input type="text" name="usuario" placeholder="pepito lopez" required>
+       <input type="text" name="usuario" placeholder="pepito" required>
+       <span class="feedback"><span>
     </li>
     <BR>
+        <li>
+            <label for="apellido">Apellido</label>
+            <input type="text" name="usuario" placeholder="Lopez" required>
+            <span class="feedback"><span>
+         </li>
+   <br>
     <li>
        <label for="Contraseña">Contraseña:</label>
-       <input type="password" name="clave" placeholder="********" required>       
+       <input type="password" name="clave" placeholder="********" required>
+       <span class="feedback"><span>       
     </li>
      <BR>
        <li>
@@ -56,27 +65,29 @@
        </li>
     <BR>
        <li>
-       <label for="edad">Edad:</label>
-       <input type="number" name="edad" placeholder="25" required>       
+        <label for="edad">Edad:</label>
+       <input type="date" name="fechaNacimiento">  
        </li>
-    <label >
-        <input type="radio"> Acepto los terminos y condiciones
-    </label>
-    <button type="submit"> Registrarse </button>
-</ul>
-   </form>
-   <form action="/login" method="post">
-<ul class="login">
+    <label for="terminos"> Acepto los terminos y condiciones </label>
+    <input type="checkbox" name="terminos">
+  
+     <button type="submit">Registrarse</button>
+    
+</ul>   
+<ul class="list-log">
     <h2>Iniciar sesión</h2>
     <li>
         <label for="Email">Email:</label>
-        <input type="email" name="email" placeholder="usuario@nuevo.com" required>
+        <input type="email" name="email" placeholder="usuario@ingreso.com" required>
     </li>
     <li>
         <label for="Contraseña">Contraseña:</label>
         <input type="password" name="clave" placeholder="********" required>       
      </li>
-     <button type="submit"> Ingresar </button>
+     
+     <button type="submit">Ingresar</button>
+     </input>
+    
 </ul>
 
    </form>

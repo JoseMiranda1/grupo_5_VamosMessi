@@ -17,22 +17,48 @@
     
 }
 .nav-bar{
-    border: solid 3px red;
+    
     display: flex;
        
 }
 .registro {
+    
     color: rgb(237, 248, 138);
-    margin: 0 15px 15px;
+    margin: 0 15px ;
     padding: 15px;
-    box-shadow: 0 0 5px rgb(87, 85, 85);  
+    box-shadow: 0 0 5px rgb(87, 85, 85); 
+    width: 100%;   
+    display: flex; 
+    justify-content: space-around;  
+    
+   
+    
    
 }
-.login{
-    color: rgb(237, 248, 138);    
-    margin: 0 15px 15px;
-    padding: 15px;
-    box-shadow: 0 0 5px rgb(87, 85, 85);  
+.registro ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.registro li{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+.list-regis{
+    
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.list-log{
+    display: flex;
+    flex-direction: column;  
+   
 }
 .logo {
 		width: 20%;
