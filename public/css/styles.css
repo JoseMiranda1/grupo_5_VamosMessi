@@ -483,47 +483,78 @@ ul {
     color: black;
   }
   .nosotros {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     padding: 10px;
   }
   .nosotros h3 {
-    text-align: center;
+    text-align: left;
+    margin: auto;
   }
-
+  
   .pie-de-pagina {
     width: 100%;
-    background-color: #828282;
+    background-color: #444;
+    font-family: "Montserrat", sans-serif;
+    color: #e8ba7b;
+    padding-bottom: 60px;
   }
   .tituloFooter {
-    display: flex;
-    justify-content: center;
+    color: #d49c50;
+    text-align: center;
+    text-decoration: none;
+  }
+  .producFooter li a,
+  .condiciones li a,
+  .contacto1 li {
+      margin: 5px 20px 0px 20px;
+      text-align: center;
+      color: #fdf0d8;
+      text-decoration: none;
+  }
+  .section-footer ul li a {
+      transition: all 0.5s;
+    }
+  .section-footer ul li a:hover {
+      color: #000;
+  }
+  .producFooter li,
+  .condiciones li{
+    margin: 5px 20px 0px 20px;
+  }
+  .tituloFooter {
     padding-top: 10px;
+    padding-bottom: 0px;
+    text-align: center;
+    margin: 15px 20px 5px 20px;
   }
   .iconoMaps {
-    display: flex;
-    position: relative;
     left: 304px;
     bottom: 35px;
   }
   .maps {
-    display: flex;
-    justify-content: center;
-    margin-top: -15px;
+    text-align: center;
+  }
+  .maps h3 {
+    margin: 0px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: #d49c50;
   }
   .maps img {
     width: 250px;
     height: 250px;
+    border: 1px solid #584229;
+    transition: all 0.5s;
+  }
+  .maps img:hover {
+    padding: 2px;
+    border: 2px solid#d49c50;
   }
   .producFooter {
     text-align: center;
   }
-  .iconpHelp {
-    display: flex;
-    position: relative;
-    left: 270px;
-    bottom: 37px;
+  .maps h3 i,
+  .tituloFooter i {
+    color: #d49c50;
     border-radius: 35px;
     width: 35px;
     height: 35px;
@@ -531,32 +562,72 @@ ul {
   }
   .condiciones {
     text-align: center;
-    margin-top: -40px;
-  }
-  .inconoContacto {
-    position: relative;
-    left: 285px;
-    bottom: 40px;
-    border-radius: 35px;
-    width: 35px;
-    height: 35px;
-    font-size: 20px;
   }
   .contacto1 {
     text-align: center;
-    margin-top: -40px;
+    margin-bottom: 20px;
+  }
+  #rebelLi {
+    margin-left: 0px;
+  }
+  .chatea {
+    width: 100%;
+    font-size: 120%;
+    text-align: end;
+    margin: 20px 10px;
+    color: #d49c50;
   }
   .chateaConNosotros {
     display: flex;
     justify-content: end;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  .containerLogo {
+    border-radius: 8px;
+    background-color: #444;
+    height: 40px;
+    width: 100x;
+  }
+  .logoEnlace img{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 15px;
   }
 }
 
 /* ---------- Version Laptop ----------------------------------------------------------------------------------------------- */
 
 @media (min-width: 769px) {
+  .pie-de-pagina {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .maps {
+    font-size: 1rem;
+    width: 15%;
+  }
+  .section-footer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    flex-direction: row;
+  }
+  .contacto,
+  .ubicacionhelp {
+    width: 32%;
+  }
+  .contacto ul li {
+    text-align: left;
+  }
+  .producFooter li a {
+    text-align: left;
+  }
 }
-
 /* ---------- Version Monitor ----------------------------------------------------------------------------------------------- */
 @media (min-width: 1280px) {
 }
