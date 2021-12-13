@@ -50,68 +50,28 @@ rel="stylesheet" />
 </header> 
 <main class="mainl">   
     
-   <form action="/login" method="post" class="registrol">    
-
-    <ul class="list-regisl">   
-        <h2>Crear cuenta</h2>
-    <li>
-       <label for="Nombre">Nombre:</label>
-       <input type="text" name="usuario" placeholder="pepito" required>
-       <span class="feedbackl"><span>
-    </li>
-    <BR>
-        <li>
-            <label for="apellido">Apellido</label>
-            <input type="text" name="usuario" placeholder="Lopez" required>
-            <span class="feedbackl"><span>
-         </li>
-   <br>
-    <li>
-       <label for="Contraseña">Contraseña:</label>
-       <input type="password" name="clave" placeholder="********" required>
-       <span class="feedbackl"><span>       
-    </li>
-     <BR>
-       <li>
-       <label for="Email">Email:</label>
-       <input type="email" name="email" placeholder="usuario@nuevo.com" required>
-       </li>
-    <BR>
-       <li>
-       <label for="tel">Tel:</label>
-       <input type="tel" name="telefono" placeholder="115154255" required>
-       </li>
-    <BR>
-       <li>
-        <label for="edad">Edad:</label>
-       <input type="date" name="fechaNacimiento">  
-       </li>
-    <label for="terminos"> Acepto los terminos y condiciones </label>
-    <input type="checkbox" name="terminos">
-  
-     <button type="submit">Registrarse</button>
-    
-</ul>   
+  <form action="/login" method="post" class="registro">  
+   
 <ul class="list-logl">
-    <h2>Iniciar sesión</h2>
-    <li>
-        <label for="Email">Email:</label>
-        <input type="email" name="email" placeholder="usuario@ingreso.com" required>
-    </li>
-    <li>
-        <label for="Contraseña">Contraseña:</label>
-        <input type="password" name="clave" placeholder="********" required>       
-     </li>
-     
-     <button type="submit">Ingresar</button>
-     </input>
-    
+   <h5>Iniciar sesión</h5>
+   <li>
+       <label for="Email">Email:</label>
+       <input  class="controlsl"type="email" name="email" placeholder="usuario@ingreso.com" required>
+   </li>
+   <li>
+       <label for="Contraseña">Contraseña:</label>
+       <input class="controlsl" type="password" name="clave" placeholder="Contraseña" required>       
+    </li>         
+    <button class="buttonsl" type="submit">Ingresar</button>
+    <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+    </input>
+   
 </ul>
 
-   </form>
+  </form>
 
-  
-    
+ 
+   
 
 
 </main>
