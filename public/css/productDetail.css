@@ -180,13 +180,14 @@ body {
   .usuario i {
     color: black;
   }
+   /*footer*/
   .logoFooter {
     margin-top: 10px;
   }
   .carrito i {
     color: black;
   }
-  /*footer*/
+ 
   .nosotros {
     padding: 10px;
   }
@@ -194,7 +195,6 @@ body {
     text-align: left;
     margin: auto;
   }
-  
   .pie-de-pagina {
     width: 100%;
     background-color: #444;
@@ -278,6 +278,10 @@ body {
     margin: 20px 10px;
     color: #d49c50;
   }
+  .chatea a img {
+    width: 40px;
+    height: 40px;
+  }
   .chateaConNosotros {
     display: flex;
     justify-content: end;
@@ -285,15 +289,7 @@ body {
     bottom: 20px;
     right: 20px;
   }
-  .containerLogo {
-    border-radius: 8px;
-    background-color: #444;
-    height: 40px;
-    width: 100x;
-  }
-  
   /* css login*/
-  
   .mainl {
     background-image: url("/imagenes/sin-titulo.jpg");
     width: 100%;
@@ -694,10 +690,11 @@ input[type=radio] {
 #cart {
     font-size: 20px;
     color: #d49c50;
-    position: relative;
+    position: absolute;
     left: 50px;
     top: 2px;
     display: inline;
+    
 }
 
 .buy-button {
@@ -729,6 +726,7 @@ input[type=radio] {
     margin-right: 24px;
     padding: 0px;
     text-align: center;
+    position: relative;
 }
 /*bar*/
 .bar {
@@ -736,7 +734,7 @@ input[type=radio] {
     background-color: #eee;
     color: #e8ba7b;
 }
-/*menur desplegable de info*/
+/*menu desplegable de info*/
 .info-boxes {
     background-color: #fdf0d8;
     width: 100%;
@@ -782,11 +780,10 @@ a .item {
         margin-top: 160px;
     }
     .color-price-crumb-box {
-        width: 33%;
+        width: 30%;
         padding: 0px;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
     }
     .slider-container {
         width: 60%;
@@ -863,10 +860,12 @@ a .item {
     #cart {
         display: none;
     }
-@media (min-width:648px) {
+@media (min-width:712px) {
     #cart {
         display: inline;
-        font-size: 25px;
+        font-size: 20px;
+        right: 140px;
+        top: 15px;
     }
     .buy-button {
         margin-left: 26px;
@@ -891,10 +890,11 @@ a .item {
         justify-content: space-between;
     }
     .info-article {
-        width: 33%;
+        width: 29%;
+        font-size: 200%;
         text-align: center;
         padding: 0px;
-        margin: 0px;
+        margin: auto;
         height: 50px;
     }
     .slider-container {
@@ -958,6 +958,11 @@ a .item {
     .color-title {
         font-size: 1.3rem;
         margin: 0px;
+    }
+    #cart {
+      font-size: 22px;
+      right: 144px;
+      top: 22px;
     }
     .buy-container {
       margin: 20px 40px 0px 0px;

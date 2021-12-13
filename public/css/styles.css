@@ -3,11 +3,10 @@
 * {
   box-sizing: border-box;
 }
-
+/*header footer*/
 body {
   width: 100%;
-
-  background-color: #f2f2f2;
+  margin: auto;
 }
 .nav-bar {
   display: flex;
@@ -178,12 +177,14 @@ ul {
 .usuario i {
   color: black;
 }
+ /*footer*/
 .logoFooter {
   margin-top: 10px;
 }
 .carrito i {
   color: black;
 }
+
 .nosotros {
   padding: 10px;
 }
@@ -191,7 +192,6 @@ ul {
   text-align: left;
   margin: auto;
 }
-
 .pie-de-pagina {
   width: 100%;
   background-color: #444;
@@ -275,6 +275,10 @@ ul {
   margin: 20px 10px;
   color: #d49c50;
 }
+.chatea a img {
+  width: 40px;
+  height: 40px;
+}
 .chateaConNosotros {
   display: flex;
   justify-content: end;
@@ -282,19 +286,6 @@ ul {
   bottom: 20px;
   right: 20px;
 }
-.containerLogo {
-  border-radius: 8px;
-  background-color: #444;
-  height: 40px;
-  width: 100x;
-}
-.logoEnlace img{
-  width: 50px;
-  height: 50px;
-  position: relative;
-  top: 15px;
-}
-
 /*------------------------------------- css login--------------------------------------*/
 
 .bodyl {
@@ -410,7 +401,6 @@ ul {
   align-items: center;
   flex-wrap: wrap;
 }
-<<<<<<< HEAD
 /* css login*/
 
 .mainl {
@@ -476,77 +466,6 @@ ul {
   align-items: center;
   flex-wrap: wrap;
 }
-=======
-/*--------------------------------------- css register---------------------------------------*/
-* {
-    box-sizing: border-box;
-}
-.mainr{
-    color: black;
-    background-color: #f2f2f2;
-    width: 100%;
-    margin: auto;
-    align-items: center;
-    
-    }
-
-.bodyr{
-    background-image: url('/public/imagenes/bg.png');
-    font-family: 'Roboto', cursive;
-    
-}
-.list-regisr{
-    
-    color: black;
-    margin: 0 15px ;
-    padding: 15px;   
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
- 
-}
-.list-regisr li{
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    padding: 5px 0;
-    font-size: 17px;
-}
-.crearr{
-    
-    width: 100%;
-    padding: 40px 20px;
-    height: 40px;
-    font-weight: bold;
-    font-size: 23px;
-    margin-bottom: 40px;
-    text-align: center;
-    border-bottom: 1px solid black ;
-}
-.controlsr{
-    width: 400px;
-    margin-bottom: 15px;
-    padding: 11px 10px;
-    background: rgb(248, 248, 248);
-    font-size: 14px;
-    font-weight: bold;
-
-}
-.buttonsr {
-    font-size: 22px;
-    font-weight: bold;
-    width: 100%;
-    height: 40px;
-    background: #00a740;
-    border: none;
-    color: white;
-    margin-bottom: 16px;
-    
-  }
->>>>>>> bd2800fc798b35f7c133e6a7787b9968558f152e
 
 /* ---------- Version Tablet ----------------------------------------------------------------------------------------------- */
 
@@ -769,8 +688,8 @@ ul {
     color: #d49c50;
   }
   .maps img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border: 1px solid #584229;
     transition: all 0.5s;
   }
@@ -780,6 +699,9 @@ ul {
   }
   .producFooter {
     text-align: center;
+  }
+  .maps h3 {
+    width: 100%;
   }
   .maps h3 i,
   .tituloFooter i {
@@ -828,7 +750,7 @@ ul {
 }
 
 /* ---------- Version Laptop ----------------------------------------------------------------------------------------------- */
-
+@media (min-width:769px) {
 .pie-de-pagina {
   display: flex;
   flex-wrap: wrap;
@@ -837,7 +759,8 @@ ul {
 }
 .maps {
   font-size: 1rem;
-  width: 15%;
+  width: 25%;
+  padding-top: 15px;
 }
 .section-footer {
   display: flex;
@@ -852,8 +775,9 @@ ul {
 .contacto ul li {
   text-align: left;
 }
-.producFooter li a {
+.condiciones li a {
   text-align: left;
+}
 }
 /* ---------- Version Monitor ----------------------------------------------------------------------------------------------- */
 @media (min-width: 1280px) {
