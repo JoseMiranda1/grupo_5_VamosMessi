@@ -16,6 +16,7 @@ app.get("/login", (req,res)=> {
     const pathHtml = path.resolve(__dirname,"views/login.html");
     res.sendFile(pathHtml);
 });
+app.get("/register",(req,res)=> res.sendFile(path.join(__dirname,"views/register.html")))
 
 app.get("/product-detail", (req,res)=> {
     const pathProductDetail = path.resolve(__dirname, "views/productDetail.html");

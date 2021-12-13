@@ -295,6 +295,122 @@ ul {
   top: 15px;
 }
 
+/*------------------------------------- css login--------------------------------------*/
+
+.bodyl {
+  font-family: "Roboto", cursive;
+  width: 100%;
+}
+.nav-barl {
+  display: flex;
+}
+* {
+    box-sizing: border-box;
+}
+.mainl{
+    color: black;
+    background-color: #f2f2f2;
+    width: 100%;
+    margin: auto;    
+    align-items: center
+    }
+
+.registrol {
+    
+    color: black;
+    margin: 0 15px ;
+    padding: 15px;   
+    width: 100%;   
+    display: flex; 
+    justify-content: space-between;
+   
+    
+   
+}
+.registrol ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.registrol li{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+
+.list-logl{
+    display: flex;
+    flex-direction: column;   
+    width: 400px;
+    height: 360px;   
+    margin: auto;   
+    padding: 20px 30px;
+    border-top: 4px solid #f2f2f2d3;
+}
+.list-logl h5{
+    margin: 0;
+    height: 40px;
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 1px solid black ;
+}
+
+.controlsl{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: rgb(248, 248, 248);
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.buttonsl {
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    height: 40px;
+    background: #00a740;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+  }
+  .list-logl p{
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+  }
+  .list-logl a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .list-logl a:hover {
+    text-decoration: underline;
+  }
+.logol {
+  width: 20%;
+  align-self: flex-start;
+}
+.enlacesl {
+  display: flex;
+  justify-content: space-between;
+}
+.header-counteinerl {
+  background-color: #fdf49f;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+<<<<<<< HEAD
 /* css login*/
 
 .mainl {
@@ -360,71 +476,77 @@ ul {
   align-items: center;
   flex-wrap: wrap;
 }
-/* css login*/
+=======
+/*--------------------------------------- css register---------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+.mainr{
+    color: black;
+    background-color: #f2f2f2;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    
+    }
 
-.mainl {
-  background-image: url("/imagenes/sin-titulo.jpg");
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
+.bodyr{
+    background-image: url('/public/imagenes/bg.png');
+    font-family: 'Roboto', cursive;
+    
 }
+.list-regisr{
+    
+    color: black;
+    margin: 0 15px ;
+    padding: 15px;   
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+ 
+}
+.list-regisr li{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+.crearr{
+    
+    width: 100%;
+    padding: 40px 20px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 1px solid black ;
+}
+.controlsr{
+    width: 400px;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: rgb(248, 248, 248);
+    font-size: 14px;
+    font-weight: bold;
 
-.bodyl {
-  font-family: "Roboto", cursive;
-  width: 100%;
 }
-.nav-barl {
-  display: flex;
-}
-.registrol {
-  color: rgb(237, 248, 138);
-  margin: 0 15px;
-  padding: 15px;
-  box-shadow: 0 0 5px rgb(87, 85, 85);
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-.registrol ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.registrol li {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  display: inline-block;
-  padding: 5px 0;
-  font-size: 17px;
-}
-
-.list-regisl {
-  width: 50%;
-  display: flex;
-  flex-wrap: wrap;
-}
-.list-logl {
-  display: flex;
-  flex-direction: column;
-}
-.logol {
-  width: 20%;
-  align-self: flex-start;
-}
-.enlacesl {
-  display: flex;
-  justify-content: space-between;
-}
-.header-counteinerl {
-  background-color: #fdf49f;
-  width: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
+.buttonsr {
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    height: 40px;
+    background: #00a740;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+    
+  }
+>>>>>>> bd2800fc798b35f7c133e6a7787b9968558f152e
 
 /* ---------- Version Tablet ----------------------------------------------------------------------------------------------- */
 
