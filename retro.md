@@ -2,10 +2,14 @@
 
 1. Comenzar a hacer:
 
+
+
 2. Hacer más:
-Divisiones de tareas?
+Divisiones de tareas
+Utilizar más el trello para ello e ir actualizandolo
 
 3. Continuar haciendo:
+
 ¡Trabajar en equipo! 
 
 4. Hacer menos:
