@@ -2,17 +2,19 @@
 
 1. Comenzar a hacer:
 
-
+- Reuniones en equipo mas segudio.
 
 2. Hacer más:
-Divisiones de tareas
-Utilizar más el trello para ello e ir actualizandolo
+   Mas comunicacion por slack
+   Divisiones de tareas
+   Utilizar más el trello para ello e ir actualizandolo
 
 3. Continuar haciendo:
 
-¡Trabajar en equipo! 
+¡Trabajar en equipo!
 
 4. Hacer menos:
 
-5. Dejar de hacer:
+-
 
+5. Dejar de hacer:
