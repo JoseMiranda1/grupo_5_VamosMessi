@@ -401,15 +401,8 @@ ul {
   align-items: center;
   flex-wrap: wrap;
 }
-/* css login*/
 
-.mainl {
-  background-image: url("/imagenes/sin-titulo.jpg");
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-}
+/*------------------------------------- css login--------------------------------------*/
 
 .bodyl {
   font-family: "Roboto", cursive;
@@ -418,37 +411,95 @@ ul {
 .nav-barl {
   display: flex;
 }
+* {
+    box-sizing: border-box;
+}
+.mainl{
+    color: black;
+    background-color: #f2f2f2;
+    width: 100%;
+    margin: auto;    
+    align-items: center
+    }
+
 .registrol {
-  color: rgb(237, 248, 138);
-  margin: 0 15px;
-  padding: 15px;
-  box-shadow: 0 0 5px rgb(87, 85, 85);
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+    
+    color: black;
+    margin: 0 15px ;
+    padding: 15px;   
+    width: 100%;   
+    display: flex; 
+    justify-content: space-between;
+   
+    
+   
 }
-.registrol ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.registrol ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-.registrol li {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  display: inline-block;
-  padding: 5px 0;
-  font-size: 17px;
+.registrol li{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
 }
 
-.list-regisl {
-  width: 50%;
-  display: flex;
-  flex-wrap: wrap;
+
+.list-logl{
+    display: flex;
+    flex-direction: column;   
+    width: 400px;
+    height: 360px;   
+    margin: auto;   
+    padding: 20px 30px;
+    border-top: 4px solid #f2f2f2d3;
 }
-.list-logl {
-  display: flex;
-  flex-direction: column;
+.list-logl h5{
+    margin: 0;
+    height: 40px;
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 1px solid black ;
 }
+
+.controlsl{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: rgb(248, 248, 248);
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.buttonsl {
+    font-size: 22px;
+    font-weight: bold;
+    width: 100%;
+    height: 40px;
+    background: #00a740;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+  }
+  .list-logl p{
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+  }
+  .list-logl a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .list-logl a:hover {
+    text-decoration: underline;
+  }
 .logol {
   width: 20%;
   align-self: flex-start;
@@ -466,6 +517,208 @@ ul {
   align-items: center;
   flex-wrap: wrap;
 }
+/*--------------------------------------- css register---------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background-color: #F2F2F2;
+}
+.nav-bar {
+  display: flex;
+  margin-bottom: 10px;
+  background-color: f2f2f2;
+}
+.logo {
+  width: 100px;
+}
+.enlaces {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+.quienesSomos {
+  background-color: white;
+  margin-left: 10px;
+  margin-right: 25px;
+  text-align: center;
+  border: 1px solid red;
+}
+.lista-produc {
+  display: flex;
+  margin-right: 15px;
+  margin-top: 8px;
+  background-color: white;
+  color: red;
+  margin-left: -15px;
+}
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.buscar {
+  position: relative;
+  padding: 5px;
+  margin-right: 15px;
+}
+.buscar input {
+  width: 0px;
+  height: 25px;
+  padding: 0 13px;
+  font-size: 18px;
+  color: #000;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.btn {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 38px;
+  background: #D49C50;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.buscar:hover input {
+  width: 240px;
+}
+.buscar input:focus {
+  width: 240px;
+}
+.icono-menu {
+  margin: 40px 50px;
+  position: relative;
+  z-index: 10;
+}
+.usuario {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: 0;
+  right: 0;
+  line-height: 38px;
+  background: #D49C50;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50px;
+  margin-right: 7.5px;
+}
+.carrito {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: 0;
+  right: 0;
+  line-height: 38px;
+  background: #D49C50;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50px;
+  margin-left: 7.5px;
+}
+.usuario i {
+  color: black;
+}
+.carrito i {
+  color: black;
+}
+
+
+
+
+.mainr{
+  color: black;
+  background-color: #f2f2f2;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  
+  }
+
+.bodyr{
+  background-image: url('/public/imagenes/bg.png');
+  font-family: 'Roboto', cursive;
+  
+}
+.list-regisr{
+  
+  color: black;
+  margin: 0 15px ;
+  padding: 15px;   
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  text-align: center;
+  
+
+}
+.list-regisr li{
+width: 100%; 
+display: flex;
+justify-content: center;
+align-items: center;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  padding: 5px 0;
+  font-size: 17px;
+}
+
+.crearr{
+  
+  width: 100%;
+  padding: 40px 20px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 23px;
+  margin-bottom: 40px;
+  text-align: center;
+  border-bottom: 1px solid black ;
+}
+.controlsr{
+ align-items: center;
+justify-content: center;
+  width: 100%;    
+  padding: 11px 10px;
+  background: rgb(248, 248, 248);
+  font-size: 14px;
+  font-weight: bold;
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.buttonsr {  
+  font-size: 22px;
+  font-weight: bold;  
+color:white;
+  background: #00a740;
+align-items: center;
+  margin: auto;
+  text-align: center;   
+   display: flex;
+  justify-content: center;
+  width: 100%;
+
+ 
+}
+
 
 /* ---------- Version Tablet ----------------------------------------------------------------------------------------------- */
 
@@ -781,4 +1034,5 @@ ul {
 }
 /* ---------- Version Monitor ----------------------------------------------------------------------------------------------- */
 @media (min-width: 1280px) {
+  
 }
