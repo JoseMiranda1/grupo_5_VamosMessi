@@ -790,7 +790,6 @@ align-items: center;
     padding: 0;
     margin: 0;
   }
-
   .lista-producto {
     background-color: white;
     color: black;
@@ -804,7 +803,6 @@ align-items: center;
     justify-content: space-between;
     background-color: green;
   }
-
   .buscar {
     position: relative;
     padding: 5px;
