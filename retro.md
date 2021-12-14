@@ -1,18 +1,18 @@
 **Principales conclusiones de la retro del primer sprint.**
 
-1. Comenzar a hacer:
+### Cosas a comenzar a hacer:
 
 
 
-2. Hacer más:
+## Hacer más: 
 Divisiones de tareas
 Utilizar más el trello para ello e ir actualizandolo
 
-3. Continuar haciendo:
+## Continuar haciendo:
 
 ¡Trabajar en equipo! 
 
-4. Hacer menos:
+## Hacer menos/Dejar de hacer:
 
-5. Dejar de hacer:
+
 
