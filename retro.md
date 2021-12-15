@@ -21,10 +21,11 @@ Asistirnos y ayudarnos
 ## Hacer menos/Dejar de hacer:
 
 Trabajar de forma individual
+Estar hasta último momento trabajando
 
 =======
 
-##  Dejar de hacer:
 
-Estar hasta último momento trabajando
+
+
 
