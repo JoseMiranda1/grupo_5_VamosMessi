@@ -2,29 +2,29 @@
 
 ### Cosas a comenzar a hacer:
 
-- Reuniones en equipo mas segudio.
+- Reuniones en equipo más segudias.
 
-<<<<<<< HEAD
-2. Hacer más:
-   Mas comunicacion por slack
-   Divisiones de tareas
-   Utilizar más el trello para ello e ir actualizandolo
 =======
 ## Hacer más: 
 Divisiones de tareas
-Utilizar más el trello para ello e ir actualizandolo
->>>>>>> 38728e7da3eaff0ad888b14886fbd94b7ac2c5fb
+Más comunicacion por slack
+Utilizar más el trello para e ir actualizandolo
 
+=======
 ## Continuar haciendo:
 
 ¡Trabajar en equipo!
+Asistirnos y ayudarnos
+
+=======
 
 ## Hacer menos/Dejar de hacer:
 
+Trabajar de forma individual
 
-<<<<<<< HEAD
--
 =======
->>>>>>> 38728e7da3eaff0ad888b14886fbd94b7ac2c5fb
 
-5. Dejar de hacer:
+##  Dejar de hacer:
+
+Estar hasta último momento trabajando
+
