@@ -1,0 +1,27 @@
+
+Colores:
+-#d49c50 (naranja pastel)
+-#e8ba7b (naranja piel)
+-#fbfb80 (amarillo pastel)
+-#fdf0d8 (rosa pastel)
+-#584229 (marrón)
+-#eee (blanco)
+-#444 (gris oscuro)
+
+  color: lightgreen;
+  color: #D49C50;
+  color: cornsilk;
+
+Fuentes:
+-Roboto- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+-Monserrat- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">; @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+Tamaños Tipográficos aplicados en productDetail.css
+-Cuerpos de texto: 12px
+-Titulares: 24px
+-Precios: 18px
+-Descuentos: 16px
+-Descripciones: 16px
+
+URL:
+-Font awesome- @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");

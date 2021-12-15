@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="https://fonts.google.com/">
     <link rel="stylesheet" href="/css/normalize.css">
 </head>
-
 <body>
     <!--Header-->
     <head> 
         <div class= "nav-bar"> 
-        <img src= "/imagenes/La-Sabana.png" alt=""width="100px">
-      </div>
+            <img src= "/imagenes/La-Sabana.png" alt=""width="100px">
+        </div>
         <nav class="enlaces" > 
             <ul>
                 <li><a href="">¿Quienes somos? </a></li>
@@ -31,106 +30,215 @@
         </nav>
         
     </head>
-    <!--página de detalle-->
+    <!--página detalle de producto-->
     <main>
-        <!--nombre del producto-->
-        <div class="product-name">
-            <h2>Sábanas Oro con Faja P/colch 1,60 Lisa Blanco</h2>
-        </div>
-        <!--imagen del producto-->
-        <div>
-            <img src="/productos/juego-de-sabanas-Pierre-Balmain-180-hilos.jpg" alt="product">
-        </div>
-        <ul class="alternative-images">
-            <li><a href="" class="imgA"><img src="/productos/sabanas-imgA.jpg" alt="imgA"></a></li> 
-            <li><a href="" class="imgB"><img src="/productos/sabanas-imgB.jpg" alt="imgB"></a></li>
-            <li><a href="" class="imgC"><img src="/productos/sabanas-imgC.jpg" alt="imgC"></a></li>
-            <li><a href="" class="imgD"><img src="/productos/sabanas-imgD.jpg" alt="imgD"></a></li>
-            <li><a href="" class="imgE"><img src="/productos/sabanas-imgE.jpg" alt="imgE"></a></li>
-        </ul>
-        <!--caja del poducto-->
-            <div class="product-meta">
-                <div class="crumber">
-                    <nav>
-                        <a href="/home.html" class="crumb">Inicio</a>
-                        <span class="divider">/</span>
-                        <a href="" class="crumb">Dormitorio</a>
-                        <span class="divider">/</span>
-                        <a href="" class="crumb">Sábanas</a>
-                        <span class="divider">/</span>
-                        <a href="" class="crumb-name">Sábanas Oro con Faja P/colch 1,60 Lisa Blanco</a>
-                    </nav>
-                    <!--redes sociales-->
-                    <nav class="social-network">
-                        <i class="fab fa-twitter" href="https://twitter.com/?lang=es" target="_blank"></i>
-                        <i class="fab fa-facebook" href="https://www.facebook.com/" target="_blank"></i>
-                        <i class="fab fa-instagram" href="https://www.instagram.com/?hl=es-la" target="_blank"></i>
-                    </nav>
-                </div>
-                <section class="price-box">
-                    <span class="discount">%25</span>
-                    <span class="original-price">$4000</span>
-                    <span class="price">$3000</span>
-                </section>
-                <!--selector de color- radio-script-->
-                <div class="color-selection">
-                    <ul>
-                        <li class="specification-title">Color</li>
-                    <li>
-                        <label for="blue-color"></label>
-                        <input type="radio" name="color" class="radio-color-A">
-                    </li>
-                    <li>
-                        <label for="blue-color"></label>
-                        <input type="radio" name="color" class="radio-color-B">
-                    </li>
-                    <li>
-                        <label for="blue-color"></label>
-                        <input type="radio" name="color" class="radio-color-C">
-                    </li>
-                    <li>
-                        <label for="blue-color"></label>
-                        <input type="radio" name="color" class="radio-color-D">
-                    </li>
-                    <li>
-                        <label for="blue-color"></label>
-                        <input type="radio" name="color" class="radio-color-E">
-                    </li>
+        <div class="main-container-PD">
+            <!--imagen del producto-->
+            <!--deslizamiento de imagen-->
+            <section class="slider-box-price-container-PD">
+                <!--crumber-->
+                <nav class="crumber-nav-PD">
+                    <a href="/home.html" class="crumb-PD">Inicio</a>
+                    <span class="crumb-PD">/</span>
+                    <a href="" class="crumb-PD">Dormitorio</a>
+                    <span class="crumb-PD">/</span>
+                    <a href="" class="crumb-PD">Sábanas</a>
+                    <span class="crumb-PD">/</span>
+                    <a href="" class="crumb-PD">Sábanas Oro con Faja P/colch 1,60 Lisa Blanco</a>
+                </nav>
+                <!--imagenes del wrap-->
+                <nav class="slider-container-PD">
+                    <ul class="slider-list-PD">
+                        <li id="slide1-PD">
+                            <img src="/imagenes/productos/sabanas-img1.jpg" alt="img1"></a>
+                        </li> 
+                        <li id="slide2-PD">
+                            <img src="/imagenes/productos/sabanas-img2.jpg" alt="img2"></a>
+                        </li>
+                        <li id="slide3-PD">
+                            <img src="/imagenes/productos/sabanas-img3.jpg" alt="img3"></a>
+                        </li>
+                        <li id="slide4-PD">
+                            <img src="/imagenes/productos/sabanas-img4.jpg" alt="img4"></a>
+                        </li>
+                        <li id="slide5-PD">
+                            <img src="/imagenes/productos/sabanas-img5.jpg" alt="img5"></a>
+                        </li>
+                        <nav class="nav-selector">
+                            <li>
+                                <a href="#"><i class="fas fa-chevron-left" id="left-selector-PD"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-chevron-right" id="right-selector-PD"></i></a>
+                            </li>
+                        </nav>
                     </ul>
-                    <!--informacion del producto- menu script-->
-                </div class="container-wrap">
-                    <section class="info-boxes">
-                        <article>
-                            <a href="#">Descripción</a>
-                        </article>
-                        <article>
-                            <a href="#">Composición</a>
-                        </article>
-                        <article>
-                            <a href="#">Características de la tela</a>
-                        </article>
-                    </section>
-                    <section class="info-boxes-container">
-                        <article class="info-boxes" id="description">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores sequi expedita voluptatem beatae nam!</p>
-                            <br>
-                            <span class="minor-title">Medidas:</span>
-                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                            <br>
-                            <span class="minor-title">Incluye:</span>
-                            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                        </article>
-                        <article class="info-boxes" id="composition">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, ratione ducimus! Dolores necessitatibus et natus officiis ipsum aliquid, nostrum asperiores mollitia vitae maxime sunt! Atque nemo exercitationem quae doloribus vel.</p>
-                        </article>
-                        <article class="info-boxes" id="material-quality">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi totam repellat ab odit voluptas quae, dolores laboriosam provident? Aliquam labore voluptates quae, quisquam repellendus laboriosam pariatur debitis eaque tempore officia nihil fugit dolores, iste expedita? Quos?</p>
-                        </article>
-                    </section>
-            </div>
+                    <ul class="menu-slider-PD">
+                        <li>
+                            <a href="#slide1" id="img1"><img src="/imagenes/productos/sabanas-img1.jpg" alt="" class="img-item-PD"></a>
+                        </li>
+                        <li>
+                            <a href="#slide2" id="img2"><img src="/imagenes/productos/sabanas-img2.jpg" alt="" class="img-item-PD"></a>
+                        </li>
+                        <li>
+                            <a href="#slide3" id="img3"><img src="/imagenes/productos/sabanas-img3.jpg" alt="" class="img-item-PD"></a>
+                        </li>
+                        <li>
+                            <a href="#slide4" id="img4"><img src="/imagenes/productos/sabanas-img4.jpg" alt="" class="img-item-PD"></a>
+                        </li>
+                        <li>
+                            <a href="#slide5" id="img5"><img src="/imagenes/productos/sabanas-img5.jpg" alt="" class="img-item-PD"></a>
+                        </li>
+                    </ul>
+                </nav>
+            <!--caja del poducto-->
+            <section class="color-price-crumb-box-PD">
+                        <!--redes sociales-->
+                        <nav class="social-network-PD">
+                            <a href="https://twitter.com/?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </nav>
+                    <!--nombre del producto-->
+                    <p class="product-name-PD">Sábanas Oro con Faja P/colch 1,60 Lisa Blanco</p>
+                    <!--caja del precio-->
+                    <div class="price-box-PD">
+                        <span class="discount-PD">%25</span>
+                        <span class="original-price-PD">$4350</span>
+                        <p class="price-PD">$3100</p>
+                        <p class="finance-PD"><i class="far fa-id-card"></i>   12 Cuotas sin interés</p>
+                        <p class="pay-options-PD">
+                            <a href="#"><i class="far fa-credit-card"></i>   Ver medios de pago</a>
+                        </p>
+                    </div>
+                    <!--medidas-->
+                    <form action="" method="get" class="seizures-selector-PD">
+                        <p>
+                        <label for="seizures">Seleccione una medida:  </label>
+                        <select name="seizures" id="seizures">
+                            <option value="">Cuna</option>
+                            <option value="">Cuna funcional</option>
+                            <option value="">1 plaza</option>
+                            <option value="">Queen Size</option>
+                            <option value="" selected>Extra Queen Size</option>
+                            <option value="">King Size</option>
+                            <option value="">Extra King Size</option>
+                        </select>
+                        </p>
+                    </form>
+                    <!--selector de color- radio-script-->
+                    <div class="color-selection-PD">
+                        <p class="color-title-PD">Color</p>
+                        <form action="" method="get">
+                            <ul class="color-list-PD">    
+                                <li>
+                                    <label for="blue-color"></label>
+                                    <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorA-PD"></p>
+                                </li>
+                                <li>
+                                    <label for="blue-color"></label>
+                                    <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorB-PD"></p>
+                                </li>
+                                <li>
+                                    <label for="blue-color"></label>
+                                    <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorC-PD"></p>
+                                </li>
+                                <li>
+                                    <label for="blue-color"></label>
+                                    <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorD-PD"></p>
+                                </li>
+                                <li>
+                                    <label for="radio-colorE"></label>
+                                    <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorE-PD"></p>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>  
+                    <!--agregar carrito-->
+                    <div class="buy-container-PD">
+                        <i class="fas fa-cart-plus" id="cart-PD"></i>
+                        <input type="submit" name="add-cart" value="    Comprar" class="buy-button-PD">
+                    </div>               
+                </section>
+            </section>
+                        <!--informacion del producto- menu script-->
+                    <div class="container-wrap-PD">
+                        <section class="info-boxes-PD">
+                            <article class="info-article-PD">
+                                <a href="#desc" databox="desc" class="item-PD">Descripción</a>
+                            </article>
+                            <article class="info-article-PD">
+                                <a href="#info" databox="" class="item-PD">Composición</a>
+                            </article>
+                            <article class="info-article-PD">
+                                <a href="#info" databox="" class="item-PD">Características de la tela</a>
+                            </article>
+                        </section>
+                        <hr class="bar-PD">
+                        <section class="info-boxes-container-PD">
+                            <article class="info-boxes-PD" id="desc-PD">
+                                <p> <a href="#info:after"> Juego de sábanas estampado con cordón, compuesto por mezcla de algodón y poliéster. Estilo y diseño para tu cama.</p>
+                                <br>
+                                <span class="minor-title"-PD>Medidas:</span>
+                                <span id="desc-PD">Medidas: Para colchón King de hasta 2 m de ancho x 2 m de largo x 0.35 m de alto.</span>
+                                <br>
+                                <span class="minor-title-PD">Incluye:</span>
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                            </article>
+                            <article class="info-boxes-PD" id="composition-PD">
+                                <p>Mezcla de algodón y poliéster, 144 hilos.</p>
+                            </article>
+                            <article class="info-boxes-PD" id="material-quality-PD">
+                                <p>Las telas con mezclas de algodón y poliéster son conocidas por su durabilidad. El algodón es de fibra natural, por lo que le brinda propiedades como respirabilidad y suavidad. El poliéster le otorga mayor resistencia, baja tendencia al arrugado y secado rápido. Combinación perfecta entre suavidad y practicidad. Ideal para quienes viven en un departamento o tienen poco espacio para tender sus sábanas y tiempo para plancharlas.</p>
+                            </article>
+                        </section>
+                    </div>  
     </main>
-    <footer>
-
+    <footer >
+        <section class="pie-de-pagina">
+            <article class="maps">
+                <h3><i class="far fa-map"></i>Dónde estamos</h3>
+                <img src= "/imagenes/ubicacion.jpg" alt="map-searching"> 
+            </article>
+            <section class="section-footer">
+                <article>
+                    <h3 class="tituloFooter"><i class="far fa-list-alt"></i>Productos</h3>
+                <ul class="producFooter">
+                    <li><a id="rebelLi" href="#">Sábanas</a></li>
+                    <li><a href="#">Colchones</a></li>
+                    <li><a href="#">Toallas</a></li>
+                    <li><a href="#">Sommiers</a></li>
+                    <li><a href="#">Almohadas</a></li>
+                    <li><a href="#">Batas</a></li>
+                </ul>
+                </article>
+                <article class="ubicacionhelp">
+                    <h3 class="tituloFooter"><i class="fas fa-info-circle"></i>Ayuda</h3>
+                    <ul class="condiciones">
+                        <li><a href="#">Cambios y devoluciones</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Politica de privacidad</a></li>
+                        <li><a href="#">Informacién sobre envíos</a></li>
+                    </ul>
+                </article>
+                <article class="contacto">
+                        <h3 class="tituloFooter"><i class="fas fa-address-card"></i>Contactos</h3></div> 
+                    <ul class="contacto1">
+                        <li>Némero de teléfono: 4462-7514</li>
+                        <li>Direccién: Tuyuti 234</li>
+                        <li>WhatsApp: +54 11-3451-2475</li>
+                        <li>Email: lasabana@lasabana.com.ar</li>
+                    </ul>
+                </article>
+                <article class="chateaConNosotros">
+                    <h3 class="chatea">Chateá con nosotros
+                        <a href="https://api.whatsapp.com/send?phone=+34662681XXX" class="logoEnlace">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png">
+                        </a>
+                    </h3>    
+                </article>
+            </section>
+        </section>
     </footer>
 </body>
 </html>

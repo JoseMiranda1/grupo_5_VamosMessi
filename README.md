@@ -31,7 +31,7 @@ Aquí nuestro Buyer de persona:
 
 <p align=justify>»<b>Aragón Matias:</b> Mi nombre es Matias Aragon, tengo 25 años y resido en la localidad de Tapiales provincia de Buenos Aires. Actualmente me desempeño como jefe de servicio en una empresa de mantenimiento de espacios verdes y ademas tengo un emprendimiento que consiste en mantener el espacio verde de un country. Me recibi como tecnico electronico y ahora me encuentro estudiando Ing industrial en la facultad de la Matanza. Me considero una persona responsable y dinámica con facilidad de adaptacion, capacidad de trabajar en equipo y con iniciativa para resolver problemas.</p>
 
-<p align=justify>» <b>Braian Martinez:</b> Vivo en Escobar, Buenos Aires. Estudio Literatura en la Universidad de San Miguel y también soy escritor. Tengo experiencia en HTML y CSS, y actualmente introduciendome al lenguaje de JavaScript. </p>
+<p align=justify>» <b>Braian Martinez:</b> Vivo en Escobar, Buenos Aires. Estudio Literatura en la Universidad de San Miguel y también soy escritor. Tengo experiencia en HTML y CSS, y actualmente estoy introduciendome al lenguaje de JavaScript. </p>
 
 **Páginas modelos:**
 
