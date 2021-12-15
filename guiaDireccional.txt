@@ -8,13 +8,14 @@ Colores:
 -#eee (blanco)
 -#444 (gris oscuro)
 
-  color: lightgreen;
-  color: #D49C50;
-  color: cornsilk;
+verde whatsapp: #00BB2D
+gris oscuro: #444
+gris claro: #F2F2F2
+gris intermedio: #CFCDCD
 
 Fuentes:
 -Roboto- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
--Monserrat- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">; @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+-Montserrat- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">; @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 Tamaños Tipográficos aplicados en productDetail.css
 -Cuerpos de texto: 12px

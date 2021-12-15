@@ -324,7 +324,7 @@ a {
 .slider-list-PD {
     position: relative;
     z-index: 0;
-    min-height: 250px;
+    height: 250px;
     width: inherit;;
     object-fit: cover;
 }
@@ -633,11 +633,11 @@ a .item-PD {
     font-size: inherit;
 }
 .info-article-PD {
-    padding: 10px 15px;
+    padding: 10px 0px;
     transition: all, 0.5s;
-    margin: 15px 10px;
+    margin: 0px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
 }
 .info-article-PD:hover {
     background-color: #d49c50;
@@ -650,6 +650,7 @@ a .item-PD {
 @media (min-width: 461px) {
     .product-name-PD {
         font-size: 1.2rem;
+        margin: 0px 0px 0px 10px;
     }
     .slider-box-price-container-PD {
         display: flex;
@@ -662,7 +663,7 @@ a .item-PD {
         margin-top: 160px;
     }
     .color-price-crumb-box-PD {
-        width: 30%;
+        width: 38%;
         padding: 0px;
         display: flex;
         flex-wrap: wrap;
@@ -682,7 +683,7 @@ a .item-PD {
     }
     .slider-list-PD li img {
         width: 90%;
-        min-height: 400px;
+        height: 400px;
     }
     .crumber-nav-PD {
         width: 100%;
@@ -694,12 +695,12 @@ a .item-PD {
         width: 100%;
         font-size: 2px;
         display: block;
-        margin: 0px 10px;
+        margin: 0px;
         padding:0px;
     }
     .price-PD {
         margin-bottom: 5px;
-        margin: 0px 10px;
+        margin: 0px 10px 10px 10px;
         font-size: 1.4rem;
     }
     .original-price-PD {
@@ -708,7 +709,7 @@ a .item-PD {
     }
     .price-box{
         width: 100%;
-        margin: 0px 10px;
+        margin: 0px;
     }
     .pay-options-PD,
     .finance-PD {
@@ -723,6 +724,7 @@ a .item-PD {
         text-align: center;
         padding-left: 0px;
         font-size: 1.1rem;
+        margin: 0px;
     }
     .color-selection-PD {
         width: 100%;
@@ -742,6 +744,9 @@ a .item-PD {
     #cart-PD {
         display: none;
     }
+    .info-article-PD {
+      font-size: 1.8rem;
+    }
 @media (min-width:712px) {
     #cart-PD {
         display: inline;
@@ -760,30 +765,27 @@ a .item-PD {
         width: 100%;
         align-items: flex-start;
     }
-    .color-price-crumb-box-PD {
-        width: 33%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
     .info-boxes-PD {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
     .info-article-PD {
-        width: 29%;
-        font-size: 200%;
+        width: 33%;
+        font-size: 180%;
         text-align: center;
-        padding: 0px;
-        margin: auto;
-        min-height: 50px;
+        padding: 10px 0px;
+        margin: 0px;
+        min-height: 40px;
     }
     .slider-container-PD {
         flex-direction: row;
         width: 67%;
         margin: 0px;
         min-height: 600px;
+    }
+    .color-price-crumb-box-PD {
+      width: 33%;
     }
     .menu-slider-PD {
         flex-direction: column;
@@ -847,14 +849,11 @@ a .item-PD {
       top: 22px;
     }
     .buy-container-PD {
-      margin: 20px 40px 0px 0px;
+      margin: 20px 0px 0px 0px;
     }
     .buy-button-PD {
       height: 50px;
       font-size: 1.3rem;
-    }
-    .info-article-PD {
-      font-size: 1.8rem;
     }
     /*footer responsive*/
     .pie-de-pagina {
