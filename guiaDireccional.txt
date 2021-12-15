@@ -8,6 +8,10 @@ Colores:
 -#eee (blanco)
 -#444 (gris oscuro)
 
+  color: lightgreen;
+  color: #D49C50;
+  color: cornsilk;
+
 Fuentes:
 -Roboto- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 -Monserrat- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">; @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
