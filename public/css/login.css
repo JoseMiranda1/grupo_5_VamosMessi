@@ -13,7 +13,7 @@
 
 .body{
 
-    font-family: 'Roboto', cursive;
+    font-family: 'Roboto', sans-serif;
     
 }
 .nav-bar{
@@ -62,7 +62,7 @@ flex-wrap: wrap;
         box-sizing: border-box;
     }
     body{
-        font-family: 'Roboto', cursive;
+        font-family: 'Roboto', sans-serif;
         background-color: #fdf49f;
     }
     .nav-bar{
