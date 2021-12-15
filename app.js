@@ -22,3 +22,8 @@ app.get("/product-detail", (req,res)=> {
     const pathProductDetail = path.resolve(__dirname, "views/productDetail.html");
     res.sendFile(pathProductDetail);
 });
+
+app.get("/product-cart", (req,res)=> {
+    const pathProductCart = path.resolve(__dirname, "views/productCart.html");
+    res.sendFile(pathProductCart);
+});

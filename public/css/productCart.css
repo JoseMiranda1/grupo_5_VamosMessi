@@ -1,0 +1,257 @@
+@import url(normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+
+* {
+    box-sizing: border-box;
+    background-color: #F2F2F2;
+    font-family: "roboto", sans-serif;
+
+}
+
+
+
+.product-cart {
+
+    margin: 5%;
+
+}
+
+.page-banner {
+    font-size: 20px;
+    color: #444444;
+    font-weight: bold;
+    background-color: #CFCDCD;
+    padding: 16px;
+}
+
+.cart-collection {
+    margin-top: 16px;
+
+
+}
+
+.cart-end {
+    margin-left: 20px;
+}
+
+.cart-item form {
+    display: grid;
+    /*para que los elementos se muestren uno abajo del otro, diseño de cuadricula que divide la grilla en columnas*/
+    grid-template-columns: 100%;
+    /*especifica el número (y el ancho) de las columnas la cuadrícula.*/
+    border: 1px solid #444444;
+
+
+}
+
+.cart-item {
+    margin: 4%;
+}
+
+.cart-item :hover {
+    font-size: 25px;
+    transition: 500ms;
+
+}
+
+
+.cart-product {
+    display: grid;
+    grid-template-columns: 80px auto;
+    /*dimensiones de la cajas con info del producto*/
+    grid-gap: 0px 20px;
+    /*especifica los canales entre las filas y las columnas de la cuadrícula*/
+    padding: 16px 16px;
+    border-bottom: 1px solid #CFCDCD;
+
+}
+
+
+
+.cover-img {
+    height: 100px;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.cart-quantity,
+.cart-product-total {
+
+    display: none;
+    margin-left: 30px;
+
+}
+
+.cart-product-info {
+
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-gap: 0px 20px;
+    text-align: center;
+    padding: 5%;
+
+}
+
+.cart-controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 14px;
+}
+
+.cart-quantity-controls {
+    display: flex;
+}
+
+.cart-quantity-controls button,
+.cart-quantity-controls input {
+    height: 25px;
+    width: 25px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+
+
+}
+
+.cart-quantity-controls button {
+    border-radius: 50%;
+    color: black;
+    background-color: #CFCDCD;
+    ;
+}
+
+.btn-remove {
+    border: none;
+    font-weight: bold;
+    color: #D49C50;
+}
+
+.cart-product-name {
+    font-weight: bold;
+    color: #444444;
+    margin-bottom: 5px;
+}
+
+.cart-price {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cart-total-holder {
+    margin-top: 30px;
+}
+
+.cart-total {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.cart-total p {
+    font-weight: bold;
+    font-size: 25px;
+
+
+}
+
+.cart-action-button a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+.cart-action-button {
+    display: flex;
+    flex-direction: column;
+    padding: 0%, 20%, 0%, 20%;
+
+
+}
+
+.cart-action-button a:first-child {
+    /*representa el primer elemento entre un grupo de elementos hermanos.*/
+    color: black;
+    background-color: #CFCDCD;
+    margin: 2px 20px;
+    text-decoration: none;
+
+
+}
+
+.btn-main {
+    background-color: #00BB2D;
+    color: black;
+    text-decoration: none;
+    margin: 2px 20px;
+
+
+}
+
+
+
+
+
+
+
+/* ---------- Version Tablet --------------------------------*/
+
+
+@media (min-width: 481px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    .cart-quantity,
+    .cart-product-name,
+    .cart-product-total {
+
+        display: flex;
+
+    }
+}
+
+
+
+/* ---------- Version Laptop ----------------------------------*/
+
+@media (min-width: 769px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    .cart-quantity,
+    .cart-product-name,
+    .cart-product-total {
+
+        display: flex;
+
+    }
+}
+
+
+
+/* ---------- Version Monitor ----------------------------------*/
+@media (min-width: 1280px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    .cart-quantity,
+    .cart-product-name,
+    .cart-product-total {
+
+        display: flex;
+
+    }
+}
