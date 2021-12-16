@@ -6,83 +6,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La sabana</title>
-    <link rel="stylesheet" href="/css/productCart.css">
+    
     <!--cuando hago el sendFile el navegador va directamente a buscar en la carpeta de archivos publicos que haya definido, pore so no va el public-->
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/productCart.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <meta name="viewport" content="width = device-wid th, initial-scale =1.0">
 </head>
 
 <body>
     <!--Header-->
-    <header > 
-        <div class= "nav-bar"> 
-        <img class="logo" src= "/imagenes/La-Sabana.png" alt=""width="100px">
-        <nav> 
-              <ul class="enlaces">
-                <div class="quienesSomos">
-                <a href="#¿QuienesSomos?" style="text-decoration: none;"> <font color=black> ¿Quienes <br> somos?</font> </a>
-              </div>
-                <form> 
-                  <select class="lista-produc" > 
-                  <option>  Nuestros productos </option>
-                  <option> Producto1 </option>
-                  <option>  Producto2</option>
-                  <option> Producto3 </option>
-                  <option> Producto4</option>
-                  </select>
-                </form>
-                <div class="buscar"> 
-                  <input type="text" placeholder="¿Que estas buscando?" required>         
-                  <div class="btn">
-                  <i class="fas fa-search"></i>
-                </div>
-                </div>
-                <div class=" usuario">
-    
-                <a href="login"><i class="fas fa-user"></i></a>
-                </div>
-             
-                <div class="carrito">
-                  </i><a href="login"><i class="fas fa-cart-plus"></i></a>
-                </div>
-              </ul>
-        </nav>
-        </div>
-   </header> 
+
+        <header>
+          <nav class="header-nav"> 
+                  <section class="header-container-left">
+                      <div>
+                        <a href="/"><img class="logo" src="/imagenes/logo.png" alt="logo"></a>
+                      </div>
+                    <nav class="nav-hidden">
+                      <div class="quienesSomos">
+                        <a href="#¿QuienesSomos?">¿Quiénes somos?</a>
+                      </div>
+                      <form action="" method="get"> 
+                        <select class="lista-produc"> 
+                          <option>Nuestros productos</option>
+                          <option selected>Sábanas</option>
+                          <option>Colchones</option>
+                          <option>Toallas</option>
+                          <option>Almohadas</option>
+                          <option>Batas</option>
+                        </select>
+                      </form>
+                    </nav> 
+                    </section>
+                    <section class="header-container-right">
+                      <div class="burguer-menu">
+                        <i class="fas fa-bars"></i>
+                      </div>
+                      <nav class="nav-alt">
+                        <div class="buscar"> 
+                        <input type="text" placeholder="¿Que estas buscando?" required>         
+                        <div class="btn">
+                          <i class="fas fa-search"></i>
+                        </div>
+                      </div>
+                      <div class="usuario">
+                        <a href="login"><i class="fas fa-user"></i></a>
+                      </div>
+                      <div class="carrito">
+                        <a href="/login"><i class="fas fa-cart-plus"></i></a>
+                      </div>
+                    </nav>
+                  </nav>
+                  <div class="div-banner">
+                    <p class="box-banner">3 Cuotas sin interés 12 cuotas<br> en compras superiores a $7990</p>
+                    <hr>
+                    <p class="box-banner" id="p-hidden">Envío gratis a partir de $9800</p>
+                    <hr>
+                    <p class="box-banner" id="p-boxC">Retiro gratis en sucursales seleccionadas</p>
+                  </div>
+       </header> 
 
    
 
     <!--Carrito-->
 
-    <h4 class="page-banner">Mi Carrito</h4>
-    <div class="wrapper">
+    <h4 class="page-banner-pr">Mi Carrito</h4>
+    <div class="wrapper-pr">
 
-        <div class="cart-collection">
-            <div class="cart-item">
+        <div class="cart-collection-pr">
+            <div class="cart-item-pr">
                 <form action="">
-                    <div class="cart-product">
-                        <div class="img-info">
-                            <img class="cover-img" src="\imagenes\cubrecama.png" alt="cubrecama">
+                    <div class="cart-product-pr">
+                        <div class="img-info-pr">
+                            <img class="cover-img-pr" src="\imagenes\cubrecama.png" alt="cubrecama">
                         </div>
-                        <div class="cart-product-info">
-                            <p class="cart-product-name">Descripción del producto</p>
-                            <p class="cart-price"> $5000</p>
+                        <div class="cart-product-info-pr">
+                            <p class="cart-product-name-pr">Descripción del producto</p>
+                            <p class="cart-price-pr"> $5000</p>
                         </div>
                     </div>
 
 
-                    <div class="cart-product-total">
+                    <div class="cart-product-total-pr">
                         <h5> Valor unitario:$5000 </h5>
                     </div>
-                    <div class="cart-controls">
-                        <div class="remove">
+                    <div class="cart-controls-pr">
+                        <div class="remove-pr">
                             <span class="fas fa-trash" id="trash"></span>
 
-                            <button class="btn-remove"> Remover </button>
+                            <button class="btn-remove-pr"> Remover </button>
                         </div>
-                        <div class="cart-quantity-controls">
+                        <div class="cart-quantity-controls-pr">
                             <button>-</button>
                             <input type="number" value="1" readonly>
                             <button>+</button>
@@ -93,29 +109,29 @@
 
             </div>
 
-            <div class="cart-item">
+            <div class="cart-item-pr">
                 <form action="">
-                    <div class="cart-product">
-                        <div class="img-info">
-                            <img class="cover-img" src="\imagenes\cubrecama.png" alt="cubrecama">
+                    <div class="cart-product-pr">
+                        <div class="img-info-pr">
+                            <img class="cover-img-pr" src="\imagenes\cubrecama.png" alt="cubrecama">
                         </div>
-                        <div class="cart-product-info">
-                            <p class="cart-product-name">Descripción del producto</p>
-                            <p class="cart-price">$5000</p>
+                        <div class="cart-product-info-pr">
+                            <p class="cart-product-name-pr">Descripción del producto</p>
+                            <p class="cart-price-pr">$5000</p>
                         </div>
                     </div>
 
 
-                    <div class="cart-product-total">
+                    <div class="cart-product-total-pr">
                         <h5> Valor unitario:$5000 </h5>
                     </div>
-                    <div class="cart-controls">
-                        <div class="remove">
+                    <div class="cart-controls-pr">
+                        <div class="remove-pr">
                             <span class="fas fa-trash" id="trash"></span>
-                            <button class="btn-remove"> Remover </button>
+                            <button class="btn-remove-pr"> Remover </button>
 
                         </div>
-                        <div class="cart-quantity-controls">
+                        <div class="cart-quantity-controls-pr">
                             <button>-</button>
                             <input type="number" value="1" readonly>
                             <button>+</button>
@@ -126,29 +142,29 @@
 
             </div>
 
-            <div class="cart-item">
+            <div class="cart-item-pr">
                 <form action="">
-                    <div class="cart-product">
-                        <div class="img-info">
-                            <img class="cover-img" src="\imagenes\cubrecama.png" alt="cubrecama">
+                    <div class="cart-product-pr">
+                        <div class="img-info-pr">
+                            <img class="cover-img-pr" src="\imagenes\cubrecama.png" alt="cubrecama">
                         </div>
-                        <div class="cart-product-info">
-                            <p class="cart-product-name">Descripción del producto</p>
-                            <p class="cart-price">$5000</p>
+                        <div class="cart-product-info-pr">
+                            <p class="cart-product-name-pr">Descripción del producto</p>
+                            <p class="cart-price-pr">$5000</p>
                         </div>
                     </div>
 
 
-                    <div class="cart-product-total">
+                    <div class="cart-product-total-pr">
                         <h5> Valor unitario:$5000 </h5>
                     </div>
-                    <div class="cart-controls">
-                        <div class="remove">
+                    <div class="cart-controls-pr">
+                        <div class="remove-pr">
                             <span class="fas fa-trash" id="trash"></span>
 
-                            <button class="btn-remove"> Remover </button>
+                            <button class="btn-remove-pr"> Remover </button>
                         </div>
-                        <div class="cart-quantity-controls">
+                        <div class="cart-quantity-controls-pr">
                             <button>-</button>
                             <input type="number" value="1" readonly>
                             <button>+</button>
@@ -159,29 +175,29 @@
 
             </div>
 
-            <div class="cart-item">
+            <div class="cart-item-pr">
                 <form action="">
-                    <div class="cart-product">
-                        <div class="img-info">
-                            <img class="cover-img" src="\imagenes\cubrecama.png" alt="cubrecama">
+                    <div class="cart-product-pr">
+                        <div class="img-info-pr">
+                            <img class="cover-img-pr" src="\imagenes\cubrecama.png" alt="cubrecama">
                         </div>
-                        <div class="cart-product-info">
-                            <p class="cart-product-name">Descripción del producto</p>
-                            <p class="cart-price">$5000</p>
+                        <div class="cart-product-info-pr">
+                            <p class="cart-product-name-pr">Descripción del producto</p>
+                            <p class="cart-price-pr">$5000</p>
                         </div>
                     </div>
 
 
-                    <div class="cart-product-total">
+                    <div class="cart-product-total-pr">
                         <h5> Valor unitario:$5000 </h5>
                     </div>
-                    <div class="cart-controls">
-                        <div class="remove">
+                    <div class="cart-controls-pr">
+                        <div class="remove-pr">
                             <span class="fas fa-trash" id="trash"></span>
 
-                            <button class="btn-remove"> Remover </button>
+                            <button class="btn-remove-pr"> Remover </button>
                         </div>
-                        <div class="cart-quantity-controls">
+                        <div class="cart-quantity-controls-pr">
                             <button>-</button>
                             <input type="number" value="1" readonly>
                             <button>+</button>
@@ -193,16 +209,16 @@
             </div>
 
         </div>
-        <div class="cart-end">...</div>
-        <div class="cart-total-holder">
-            <div class="cart-total">
+        <div class="cart-end-pr">...</div>
+        <div class="cart-total-holder-pr">
+            <div class="cart-total-pr">
                 <p>Total a pagar:</p>
                 <p>$20000</p>
 
             </div>
-            <div class="cart-action-button">
+            <div class="cart-action-button-pr">
                 <a href="">Continuar comprando</a>
-                <a href="" class="btn-main">Comenzar pago</a>
+                <a href="" class="btn-main-pr">Comenzar pago</a>
             </div>
         </div>
 
