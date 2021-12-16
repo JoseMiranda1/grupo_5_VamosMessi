@@ -52,12 +52,6 @@
     margin: 4%;
 }
 
-.cart-item-pr :hover {
-    font-size: 25px;
-    transition: 500ms;
-
-}
-
 
 .cart-product-pr {
     display: grid;
@@ -226,6 +220,11 @@
         display: flex;
 
     }
+    .cart-item-pr :hover {
+        font-size: 25px;
+        transition: 500ms;
+    
+    }
 }
 
 
@@ -244,6 +243,11 @@
         display: flex;
 
     }
+    .cart-item-pr :hover {
+        font-size: 25px;
+        transition: 500ms;
+    
+    }
 }
 
 
@@ -260,5 +264,10 @@
 
         display: flex;
 
+    }
+    .cart-item-pr :hover {
+        font-size: 25px;
+        transition: 500ms;
+    
     }
 }
