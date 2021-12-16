@@ -57,7 +57,17 @@ F/*------------------------------------- css login------------------------------
   text-align: center;
   border-bottom: 1px solid black;
 }
+.opt{
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+ justify-content: center;
 
+}
+.opt p{
+  margin: 5%;
+
+}
 .controlsl {
   width: 100%;
   margin-bottom: 15px;
@@ -79,7 +89,7 @@ F/*------------------------------------- css login------------------------------
 .list-logl p {
   height: 40px;
   text-align: center;
-  border-bottom: 1px solid;
+  
 }
 .list-logl a {
   color: black;
@@ -152,49 +162,96 @@ F/*------------------------------------- css login------------------------------
 .list-logl {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 360px;
+  width: 55%;
+  min-height: 100%;
   margin: auto;
   padding: 20px 30px;
   border-top: 4px solid #f2f2f2d3;
 }
+.buttons-fb-g a {
+  color: rgb(212, 156, 80);
+  font-weight: bold;
+  text-align: center;
+  font-size: 24px;
+  text-decoration: none;
+}
 .list-logl h5 {
+  color:#d49c50;
   margin: 0;
   height: 40px;
   font-weight: bold;
   font-size: 23px;
   margin-bottom: 40px;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #d49c50;
 }
 
-.controlsl {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 11px 10px;
-  background: rgb(248, 248, 248);
-  font-size: 14px;
-  font-weight: bold;
+.controlsl{    
+  align-items: center;
+ justify-content: center;
+   width: 100%;    
+   padding: 11px 10px;
+   background: rgb(248, 248, 248);
+   font-size: 14px;
+   font-weight: bold;
+   display:flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   transition: transform 250ms; 
+   border-radius: 6px;
+ }   
+     
+     .controlsl:hover {
+       transform: translateY(-10px);
+     }
+.nombre-log{
+  text-align: center;
+  width: 200px;
+
 }
 .buttonsl {
-  font-size: 22px;
-  font-weight: bold;
-  width: 100%;
-  height: 40px;
-  background: #00a740;
-  border: none;
-  color: white;
-  margin-bottom: 16px;
-}
+      font-size: 22px;
+    font-weight: bold;  
+  color:white;
+    background: rgb(37 211 102); 
+    text-align: center;   
+     display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 6px;
+   box-shadow: 0px 10px 10px -6px black;
+  }  
+  .box-bot {
+       
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+   
+  }
+  .box-bot a{
+  
+    display: flex;
+    flex-direction: column;
+         color: rgb(212, 156, 80);
+      font-weight: bold;
+      text-align: center;
+      font-size: 34px;
+      text-decoration: none;
+  }
+  
+  .buttonsl:hover {filter: opacity(.5);}
+
 .list-logl p {
   height: 40px;
   text-align: center;
-  border-bottom: 1px solid;
+  
 }
 .list-logl a {
-  color: black;
+  
   text-decoration: none;
-  font-size: 14px;
+  
 }
 
 .list-logl a:hover {
@@ -242,100 +299,6 @@ body {
   margin-top: 30px;
   justify-content: space-between;
 }
-.quienesSomos {
-  background-color: white;
-  margin-left: 10px;
-  margin-right: 25px;
-  text-align: center;
-  border: 1px solid red;
-}
-.lista-produc {
-  display: flex;
-  margin-right: 15px;
-  margin-top: 8px;
-  background-color: white;
-  color: red;
-  margin-left: -15px;
-}
-ol,
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.buscar {
-  position: relative;
-  padding: 5px;
-  margin-right: 15px;
-}
-.buscar input {
-  width: 0px;
-  height: 25px;
-  padding: 0 13px;
-  font-size: 18px;
-  color: #000;
-  outline: none;
-  border: 1px solid white;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-}
-.btn {
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  line-height: 38px;
-  background: #d49c50;
-  text-align: center;
-  color: black;
-  font-size: 20px;
-  border-radius: 50px;
-  cursor: pointer;
-}
-.buscar:hover input {
-  width: 240px;
-}
-.buscar input:focus {
-  width: 240px;
-}
-.icono-menu {
-  margin: 40px 50px;
-  position: relative;
-  z-index: 10;
-}
-.usuario {
-  width: 35px;
-  height: 35px;
-  position: relative;
-  top: 0;
-  right: 0;
-  line-height: 38px;
-  background: #d49c50;
-  text-align: center;
-  font-size: 20px;
-  border-radius: 50px;
-  margin-right: 7.5px;
-}
-.carrito {
-  width: 35px;
-  height: 35px;
-  position: relative;
-  top: 0;
-  right: 0;
-  line-height: 38px;
-  background: #d49c50;
-  text-align: center;
-  font-size: 20px;
-  border-radius: 50px;
-  margin-left: 7.5px;
-}
-.usuario i {
-  color: black;
-}
-.carrito i {
-  color: black;
-}
 
 .mainr {
   color: black;
@@ -380,7 +343,7 @@ ul {
   font-size: 23px;
   margin-bottom: 40px;
   text-align: center;
-  border-bottom: 1px solid black;
+ 
 }
 .controlsr {
   align-items: center;
@@ -457,114 +420,8 @@ ul {
     margin-top: 30px;
     justify-content: space-between;
   }
-  .quienesSomos {
-    background-color: white;
-    margin-left: 10px;
-    margin-right: 25px;
-    text-align: center;
-    border: 1px solid red;
-  }
-  .lista-produc {
-    display: flex;
-    margin-right: 15px;
-    margin-top: 8px;
-    background-color: white;
-    color: red;
-    margin-left: -15px;
-  }
-  ol,
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .lista-producto {
-    background-color: white;
-    color: black;
-    border: solid 1px white;
-    margin: 0 5px 10px;
-    padding: 1px;
-    box-shadow: 0 0 5px rgb(87, 85, 85);
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: green;
-  }
-
-  .buscar {
-    position: relative;
-    padding: 5px;
-    margin-right: 15px;
-  }
-  .buscar input {
-    width: 0px;
-    height: 25px;
-    padding: 0 13px;
-    font-size: 18px;
-    color: #000;
-    outline: none;
-    border: 1px solid white;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-  }
-  .btn {
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    line-height: 38px;
-    background: #d49c50;
-    text-align: center;
-    color: black;
-    font-size: 20px;
-    border-radius: 50px;
-    cursor: pointer;
-  }
-  .buscar:hover input {
-    width: 240px;
-  }
-  .buscar input:focus {
-    width: 240px;
-  }
-  .icono-menu {
-    margin: 40px 50px;
-    position: relative;
-    z-index: 10;
-  }
-  .usuario {
-    width: 35px;
-    height: 35px;
-    position: relative;
-    top: 0;
-    right: 0;
-    line-height: 38px;
-    background: #d49c50;
-    text-align: center;
-
-    font-size: 20px;
-    border-radius: 50px;
-    margin-right: 7.5px;
-  }
-  .carrito {
-    width: 35px;
-    height: 35px;
-    position: relative;
-    top: 0;
-    right: 0;
-    line-height: 38px;
-    background: #d49c50;
-    text-align: center;
-
-    font-size: 20px;
-    border-radius: 50px;
-    margin-left: 7.5px;
-  }
-  .usuario i {
-    color: black;
-  }
+  
+ 
   .logoFooter {
     margin-top: 10px;
   }
@@ -652,6 +509,11 @@ ul {
     height: 35px;
     font-size: 20px;
   }
+  .list-logl div {
+    padding-bottom: 2%;
+    font-weight: bold;
+    text-align: center;
+}
   .condiciones {
     text-align: center;
   }
