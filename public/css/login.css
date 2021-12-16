@@ -1,5 +1,3 @@
-F/*------------------------------------- css login--------------------------------------*/
-
 .bodyl {
   font-family: "Roboto", cursive;
   width: 100%;
@@ -17,7 +15,6 @@ F/*------------------------------------- css login------------------------------
   margin: auto;
   align-items: center;
 }
-
 .registrol {
   color: black;
   margin: 0 15px;
@@ -38,127 +35,6 @@ F/*------------------------------------- css login------------------------------
   padding: 5px 0;
   font-size: 17px;
 }
-
-.list-logl {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  height: 360px;
-  margin: auto;
-  padding: 20px 30px;
-  border-top: 4px solid #f2f2f2d3;
-}
-.list-logl h5 {
-  margin: 0;
-  height: 40px;
-  font-weight: bold;
-  font-size: 23px;
-  margin-bottom: 40px;
-  text-align: center;
-  border-bottom: 1px solid black;
-}
-.opt{
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
- justify-content: center;
-
-}
-.opt p{
-  margin: 5%;
-
-}
-.controlsl {
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 11px 10px;
-  background: rgb(248, 248, 248);
-  font-size: 14px;
-  font-weight: bold;
-}
-.buttonsl {
-  font-size: 22px;
-  font-weight: bold;
-  width: 100%;
-  height: 40px;
-  background: #00a740;
-  border: none;
-  color: white;
-  margin-bottom: 16px;
-}
-.list-logl p {
-  height: 40px;
-  text-align: center;
-  
-}
-.list-logl a {
-  color: black;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.list-logl a:hover {
-  text-decoration: underline;
-}
-.logol {
-  width: 20%;
-  align-self: flex-start;
-}
-.enlacesl {
-  display: flex;
-  justify-content: space-between;
-}
-.header-counteinerl {
-  background-color: #fdf49f;
-  width: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-/*------------------------------------- css login--------------------------------------*/
-
-.bodyl {
-  font-family: "Roboto", cursive;
-  width: 100%;
-}
-.nav-barl {
-  display: flex;
-}
-* {
-  box-sizing: border-box;
-}
-.mainl {
-  color: black;
-  background-color: #f2f2f2;
-  width: 100%;
-  margin: auto;
-  align-items: center;
-}
-
-.registrol {
-  color: black;
-  margin: 0 15px;
-  padding: 15px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.registrol ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.registrol li {
-  text-decoration: none;
-  color: black;
-  display: inline-block;
-  padding: 5px 0;
-  font-size: 17px;
-}
-
 .list-logl {
   display: flex;
   flex-direction: column;
@@ -176,7 +52,7 @@ F/*------------------------------------- css login------------------------------
   text-decoration: none;
 }
 .list-logl h5 {
-  color:#d49c50;
+  color: #d49c50;
   margin: 0;
   height: 40px;
   font-weight: bold;
@@ -185,75 +61,73 @@ F/*------------------------------------- css login------------------------------
   text-align: center;
   border-bottom: 1px solid #d49c50;
 }
-
-.controlsl{    
+.controlsl {
   align-items: center;
- justify-content: center;
-   width: 100%;    
-   padding: 11px 10px;
-   background: rgb(248, 248, 248);
-   font-size: 14px;
-   font-weight: bold;
-   display:flex;
-   flex-direction: column;
-   flex-wrap: nowrap;
-   transition: transform 250ms; 
-   border-radius: 6px;
- }   
-     
-     .controlsl:hover {
-       transform: translateY(-10px);
-     }
-.nombre-log{
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: rgb(248, 248, 248);
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  transition: transform 250ms;
+  border-radius: 6px;
+}
+
+.controlsl:hover {
+  transform: translateY(-10px);
+}
+.nombre-log {
   text-align: center;
   width: 200px;
-
 }
 .buttonsl {
-      font-size: 22px;
-    font-weight: bold;  
-  color:white;
-    background: rgb(37 211 102); 
-    text-align: center;   
-     display: flex;
-    justify-content: center;
-    width: 100%;
-    border-radius: 6px;
-   box-shadow: 0px 10px 10px -6px black;
-  }  
-  .box-bot {
-       
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    
-   
-  }
-  .box-bot a{
-  
-    display: flex;
-    flex-direction: column;
-         color: rgb(212, 156, 80);
-      font-weight: bold;
-      text-align: center;
-      font-size: 34px;
-      text-decoration: none;
-  }
-  
-  .buttonsl:hover {filter: opacity(.5);}
+  height: 40px;
+  color: white;
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  background: rgb(37 211 102);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0px 10px 10px -6px black;
+}
+.nombre-log {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.box-bot {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.box-bot a {
+  display: flex;
+  flex-direction: column;
+  color: rgb(212, 156, 80);
+  font-weight: bold;
+  text-align: center;
+  font-size: 34px;
+  text-decoration: none;
+}
 
+.buttonsl:hover {
+  filter: opacity(0.5);
+}
 .list-logl p {
   height: 40px;
   text-align: center;
-  
 }
-.list-logl a {
-  
-  text-decoration: none;
-  
-}
-
 .list-logl a:hover {
   text-decoration: underline;
 }
@@ -274,105 +148,16 @@ F/*------------------------------------- css login------------------------------
   align-items: center;
   flex-wrap: wrap;
 }
-/*--------------------------------------- css register---------------------------------------*/
-* {
-  box-sizing: border-box;
-}
-body {
+.opt {
   width: 100%;
-  background-color: #f2f2f2;
-}
-.nav-bar {
   display: flex;
-  margin-bottom: 10px;
-  background-color: f2f2f2;
-}
-.logo {
-  width: 100px;
-}
-.enlaces {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
   flex-wrap: nowrap;
-  width: 100%;
-  margin-top: 30px;
-  justify-content: space-between;
-}
-
-.mainr {
-  color: black;
-  background-color: #f2f2f2;
-  width: 100%;
-  margin: auto;
-  align-items: center;
-}
-
-.bodyr {
-  background-image: url("/public/imagenes/bg.png");
-  font-family: "Roboto", cursive;
-}
-.list-regisr {
-  color: black;
-  margin: 0 15px;
-  padding: 15px;
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.list-regisr li {
-  width: 100%;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: black;
-  display: inline-block;
-  padding: 5px 0;
-  font-size: 17px;
 }
-
-.crearr {
-  width: 100%;
-  padding: 40px 20px;
-  height: 40px;
-  font-weight: bold;
-  font-size: 23px;
-  margin-bottom: 40px;
-  text-align: center;
- 
+.opt p {
+  margin: 5%;
 }
-.controlsr {
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 11px 10px;
-  background: rgb(248, 248, 248);
-  font-size: 14px;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
-
-.buttonsr {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  background: #00a740;
-  align-items: center;
-  margin: auto;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
 /* ---------- Version Tablet ----------------------------------------------------------------------------------------------- */
-
 @media (min-width: 481px) {
   * {
     box-sizing: border-box;
@@ -397,191 +182,42 @@ body {
     align-items: center;
     flex-wrap: wrap;
   }
-
   .home {
     width: 100%;
     background-color: #f2f2f2;
   }
-  .nav-bar {
-    display: flex;
-    margin-bottom: 10px;
-    background-color: f2f2f2;
-  }
 
-  .logo {
-    width: 100px;
+  /* ---------- Version Laptop ----------------------------------------------------------------------------------------------- */
+  @media (min-width: 769px) {
+    .pie-de-pagina {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    .maps {
+      font-size: 1rem;
+      width: 25%;
+      padding-top: 15px;
+    }
+    .section-footer {
+      display: flex;
+      flex-wrap: wrap;
+      width: 70%;
+      flex-direction: row;
+    }
+    .contacto,
+    .ubicacionhelp {
+      width: 32%;
+    }
+    .contacto ul li {
+      text-align: left;
+    }
+    .condiciones li a {
+      text-align: left;
+    }
   }
-  .enlaces {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    width: 100%;
-    margin-top: 30px;
-    justify-content: space-between;
+  /* ---------- Version Monitor ----------------------------------------------------------------------------------------------- */
+  @media (min-width: 1280px) {
   }
-  
- 
-  .logoFooter {
-    margin-top: 10px;
-  }
-  .carrito i {
-    color: black;
-  }
-  .nosotros {
-    padding: 10px;
-  }
-  .nosotros h3 {
-    text-align: left;
-    margin: auto;
-  }
-
-  .pie-de-pagina {
-    width: 100%;
-    background-color: #444;
-    font-family: "Montserrat", sans-serif;
-    color: #e8ba7b;
-    padding-bottom: 60px;
-  }
-  .tituloFooter {
-    color: #d49c50;
-    text-align: center;
-    text-decoration: none;
-  }
-  .producFooter li a,
-  .condiciones li a,
-  .contacto1 li {
-    margin: 5px 20px 0px 20px;
-    text-align: center;
-    color: #fdf0d8;
-    text-decoration: none;
-  }
-  .section-footer ul li a {
-    transition: all 0.5s;
-  }
-  .section-footer ul li a:hover {
-    color: #000;
-  }
-  .producFooter li,
-  .condiciones li {
-    margin: 5px 20px 0px 20px;
-  }
-  .tituloFooter {
-    padding-top: 10px;
-    padding-bottom: 0px;
-    text-align: center;
-    margin: 15px 20px 5px 20px;
-  }
-  .iconoMaps {
-    left: 304px;
-    bottom: 35px;
-  }
-  .maps {
-    text-align: center;
-  }
-  .maps h3 {
-    margin: 0px;
-    padding-top: 10px;
-    text-decoration: none;
-    color: #d49c50;
-  }
-  .maps img {
-    width: 200px;
-    height: 200px;
-    border: 1px solid #584229;
-    transition: all 0.5s;
-  }
-  .maps img:hover {
-    padding: 2px;
-    border: 2px solid#d49c50;
-  }
-  .producFooter {
-    text-align: center;
-  }
-  .maps h3 {
-    width: 100%;
-  }
-  .maps h3 i,
-  .tituloFooter i {
-    color: #d49c50;
-    border-radius: 35px;
-    width: 35px;
-    height: 35px;
-    font-size: 20px;
-  }
-  .list-logl div {
-    padding-bottom: 2%;
-    font-weight: bold;
-    text-align: center;
-}
-  .condiciones {
-    text-align: center;
-  }
-  .contacto1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  #rebelLi {
-    margin-left: 0px;
-  }
-  .chatea {
-    width: 100%;
-    font-size: 120%;
-    text-align: end;
-    margin: 20px 10px;
-    color: #d49c50;
-  }
-  .chateaConNosotros {
-    display: flex;
-    justify-content: end;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-  }
-  .containerLogo {
-    border-radius: 8px;
-    background-color: #444;
-    height: 40px;
-    width: 100x;
-  }
-  .logoEnlace img {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    top: 15px;
-  }
-}
-
-/* ---------- Version Laptop ----------------------------------------------------------------------------------------------- */
-@media (min-width: 769px) {
-  .pie-de-pagina {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .maps {
-    font-size: 1rem;
-    width: 25%;
-    padding-top: 15px;
-  }
-  .section-footer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 70%;
-    flex-direction: row;
-  }
-  .contacto,
-  .ubicacionhelp {
-    width: 32%;
-  }
-  .contacto ul li {
-    text-align: left;
-  }
-  .condiciones li a {
-    text-align: left;
-  }
-}
-/* ---------- Version Monitor ----------------------------------------------------------------------------------------------- */
-@media (min-width: 1280px) {
 }

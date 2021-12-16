@@ -1,17 +1,17 @@
-<html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ingresá a La sabana</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/login.css">
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-  <meta name="viewport" content="width = device-wid th, initial-scale =1.0">   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La sabana</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width= device-width, initial-scale =1.0">   
 </head>
-<body class="loginl">
-  
-
+<body>
   <header>
     <nav class="header-nav"> 
             <section class="header-container-left">
@@ -24,8 +24,8 @@
                 </div>
                 <form action="" method="get"> 
                   <select class="lista-produc"> 
-                    <option>Nuestros productos</option>
-                    <option selected>Sábanas</option>
+                    <option selected>Nuestros productos</option>
+                    <option >Sábanas</option>
                     <option>Colchones</option>
                     <option>Toallas</option>
                     <option>Almohadas</option>
@@ -49,7 +49,7 @@
                   <a href="login"><i class="fas fa-user"></i></a>
                 </div>
                 <div class="carrito">
-                  <a href="/login"><i class="fas fa-cart-plus"></i></a>
+                  <a href="/product-cart"><i class="fas fa-cart-plus"></i></a>
                 </div>
               </nav>
             </nav>
@@ -61,7 +61,6 @@
               <p class="box-banner" id="p-boxC">Retiro gratis en sucursales seleccionadas</p>
             </div>
  </header> 
-
 
 <main class="mainl">   
   
@@ -89,13 +88,13 @@
   </div>
  <li>
    <div>
-     <label for="Email">Email:</label>
+     <label class="nombre-log" for="Email">Email:</label>
     </div>
      <input class="controlsl" type="email" name="email" placeholder="usuario@ingreso.com" required="">
  </li>
  <li>
   <div>
-     <label for="Contraseña">Contraseña:</label>
+     <label class="nombre-log" for="Contraseña">Contraseña:</label>
      </div>
      <input class="controlsl" type="password" name="clave" placeholder="Contraseña" required="">       
   </li>  
@@ -115,51 +114,51 @@
 
 
 </main>
-<footer>
-<section class="pie-de-pagina">
-    <article class="maps">
-        <h3><i class="far fa-map"></i>Dónde estamos</h3>
-        <img src="/imagenes/ubicacion.jpg" alt="map-searching"> 
-    </article>
-    <section class="section-footer">
-        <nav class="producFooter">
-          <ul class="footer-ul">
-              <p class="tituloFooter"><i class="far fa-list-alt"></i>Productos</p>
-              <li><a href="#">Sábanas</a></li>
-              <li><a href="#">Colchones</a></li>
-              <li><a href="#">Toallas</a></li>
-              <li><a href="#">Sommiers</a></li>
-              <li><a href="#">Almohadas</a></li>
-              <li><a href="#">Batas</a></li>
-          </ul>
-        </nav>
-        <nav class="condiciones">
-          <ul class="footer-ul">
-              <p class="tituloFooter"><i class="fas fa-info-circle"></i>Ayuda</p>
-              <li><a href="#">Cambios y devoluciones</a></li>
-              <li><a href="#">Términos y condiciones</a></li>
-              <li><a href="#">Política de privacidad</a></li>
-              <li><a href="#">Información sobre envíos</a></li>
-          </ul>
-        </nav>
-        <nav class="contacto">
+<footer >
+  <section class="pie-de-pagina">
+      <article class="maps">
+          <h3><i class="far fa-map"></i>Dónde estamos</h3>
+          <img src= "/imagenes/ubicacion.jpg" alt="map-searching"> 
+      </article>
+      <section class="section-footer">
+          <nav class="producFooter">
             <ul class="footer-ul">
-                <p class="tituloFooter"><i class="fas fa-address-card"></i>Contactos</p> 
-                <li>Número de teléfono: 4462-7514</li>
-                <li>Dirección: Tuyuti 234</li>
-                <li>WhatsApp: +54 11-3451-2475</li>
-                <li>Email: lasabana@lasabana.com.ar</li>
+                <p class="tituloFooter"><i class="far fa-list-alt"></i>Productos</p>
+                <li><a href="#">Sábanas</a></li>
+                <li><a href="#">Colchones</a></li>
+                <li><a href="#">Toallas</a></li>
+                <li><a href="#">Sommiers</a></li>
+                <li><a href="#">Almohadas</a></li>
+                <li><a href="#">Batas</a></li>
             </ul>
           </nav>
-        <article class="chateaConNosotros">
-            <h3 class="chatea">Chateá con nosotros
-                <a href="https://api.whatsapp.com/send?phone=+34662681XXX" class="logoEnlace">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png">
-                </a>
-            </h3>    
-        </article>
-    </section>
-</section>
+          <nav class="condiciones">
+            <ul class="footer-ul">
+                <p class="tituloFooter"><i class="fas fa-info-circle"></i>Ayuda</p>
+                <li><a href="#">Cambios y devoluciones</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Información sobre envíos</a></li>
+            </ul>
+          </nav>
+          <nav class="contacto">
+              <ul class="footer-ul">
+                  <p class="tituloFooter"><i class="fas fa-address-card"></i>Contactos</h3></p> 
+                  <li>Número de teléfono: 4462-7514</li>
+                  <li>Dirección: Tuyuti 234</li>
+                  <li>WhatsApp: +54 11-3451-2475</li>
+                  <li>Email: lasabana@lasabana.com.ar</li>
+              </ul>
+            </nav>
+          <article class="chateaConNosotros">
+              <h3 class="chatea">Chateá con nosotros
+                  <a href="https://api.whatsapp.com/send?phone=+34662681XXX" class="logoEnlace">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png">
+                  </a>
+              </h3>    
+          </article>
+      </section>
+  </section>
 </footer>
-    
-    </body></html>
+</body>
+</html>
