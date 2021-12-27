@@ -1,68 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La sabana</title>
-    <!--cuando hago el sendFile el navegador va directamente a buscar en la carpeta de archivos publicos que haya definido, pore so no va el public-->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
+<head>    
     <link rel="stylesheet" href="/css/productCart.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <meta name="viewport" content="width = device-wid th, initial-scale =1.0">
+        <%- include("./partials/head")%>
 </head>
 <body>
     <!--Header-->
-    <header>
-        <nav class="header-nav">
-            <section class="header-container-left">
-                <div>
-                    <a href="/"><img class="logo" src="/imagenes/logo.png" alt="logo"></a>
-                </div>
-                <nav class="nav-hidden">
-                    <div class="quienesSomos">
-                        <a href="#¿QuienesSomos?">¿Quiénes somos?</a>
-                    </div>
-                    <form action="" method="get">
-                        <select class="lista-produc">
-                            <option>Nuestros productos</option>
-                            <option selected>Sábanas</option>
-                            <option>Colchones</option>
-                            <option>Toallas</option>
-                            <option>Almohadas</option>
-                            <option>Batas</option>
-                        </select>
-                    </form>
-                </nav>
-            </section>
-            <section class="header-container-right">
-                <div class="burguer-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <nav class="nav-alt">
-                    <div class="buscar">
-                        <input type="text" placeholder="¿Que estas buscando?" required>
-                        <div class="btn">
-                            <i class="fas fa-search"></i>
-                        </div>
-                    </div>
-                    <div class="usuario">
-                        <a href="login"><i class="fas fa-user"></i></a>
-                    </div>
-                    <div class="carrito">
-                        <a href="/login"><i class="fas fa-cart-plus"></i></a>
-                    </div>
-                </nav>
-        </nav>
-        <div class="div-banner">
-            <p class="box-banner">3 Cuotas sin interés 12 cuotas<br> en compras superiores a $7990</p>
-            <hr>
-            <p class="box-banner" id="p-hidden">Envío gratis a partir de $9800</p>
-            <hr>
-            <p class="box-banner" id="p-boxC">Retiro gratis en sucursales seleccionadas</p>
-        </div>
-    </header>
+    <%- include("./partials/header")%>
+<main>
     <!--Carrito-->
     <h4 class="page-banner-pr">Mi Carrito</h4>
     <div class="wrapper-pr">
@@ -189,53 +134,10 @@
         </div>
     </div>
     </div>
+</main>
+    <!-- footer -->
+<%- include("./partials/footer")%>
+
 </body>
-<!-- footer -->
-<footer>
-    <section class="pie-de-pagina">
-        <article class="maps">
-            <h3><i class="far fa-map"></i>Dónde estamos</h3>
-            <img src="/imagenes/ubicacion.jpg" alt="map-searching">
-        </article>
-        <section class="section-footer">
-            <nav class="producFooter">
-                <ul class="footer-ul">
-                    <p class="tituloFooter"><i class="far fa-list-alt"></i>Productos</p>
-                    <li><a href="#">Sábanas</a></li>
-                    <li><a href="#">Colchones</a></li>
-                    <li><a href="#">Toallas</a></li>
-                    <li><a href="#">Sommiers</a></li>
-                    <li><a href="#">Almohadas</a></li>
-                    <li><a href="#">Batas</a></li>
-                </ul>
-            </nav>
-            <nav class="condiciones">
-                <ul class="footer-ul">
-                    <p class="tituloFooter"><i class="fas fa-info-circle"></i>Ayuda</p>
-                    <li><a href="#">Cambios y devoluciones</a></li>
-                    <li><a href="#">Términos y condiciones</a></li>
-                    <li><a href="#">Política de privacidad</a></li>
-                    <li><a href="#">Información sobre envíos</a></li>
-                </ul>
-            </nav>
-            <nav class="contacto">
-                <ul class="footer-ul">
-                    <p class="tituloFooter"><i class="fas fa-address-card"></i>Contactos</h3>
-                    </p>
-                    <li>Número de teléfono: 4462-7514</li>
-                    <li>Dirección: Tuyuti 234</li>
-                    <li>WhatsApp: +54 11-3451-2475</li>
-                    <li>Email: lasabana@lasabana.com.ar</li>
-                </ul>
-            </nav>
-            <article class="chateaConNosotros">
-                <h3 class="chatea">Chateá con nosotros
-                    <a href="https://api.whatsapp.com/send?phone=+34662681XXX" class="logoEnlace">
-                        <img
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png">
-                    </a>
-                </h3>
-            </article>
-        </section>
-</footer>
+
 </html>

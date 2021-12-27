@@ -1,9 +1,296 @@
 @import url(normalize.css);
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;700&display=swap");
+/*inicio popup---------------*/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing:border-box;  
+}
+
+body {
+	background: #fff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+}
+
+.contenedor article {
+	line-height: 28px;
+}
+
+.contenedor article h1 {
+	font-size: 30px;
+	text-align: left;
+	padding: 50px 0;
+}
+
+.contenedor article p {
+	margin-bottom: 20px;
+}
+
+.contenedor article .btn-abrir-popup {
+	padding: 0 20px;
+	margin-bottom: 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #fff;
+	background: #5ee369;
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+	cursor: pointer;
+  
+}
+
+.contenedor article .btn-abrir-popup:hover {
+	background: rgba(2, 95, 6, 0.9);
+}
+
+
+/* POPUP */
+
+.form-regis-log{
+	display: flex;
+	justify-content: space-between;
+}
+
+.overlay {
+  z-index: 4;
+	background: rgba(0,0,0,.3);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.popup {
+	background: #F8F8F8;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif;
+	padding: 20px;
+	text-align: center;
+	width: 80%;
+	transition: .3s ease all;
+	transform: scale(0.5);
+	opacity: 0;
+}
+
+.popup .btn-cerrar-popup {
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	transition: .3s ease all;
+	color: #BBBBBB;
+}
+
+.popup .btn-cerrar-popup:hover {
+	color: #000;
+}
+
+.popup h3 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	opacity: 0;
+}
+
+.popup h4 {
+	font-size: 26px;
+	font-weight: 300;
+	margin-bottom: 40px;
+	opacity: 0;
+}
+
+.popup form .contenedor-inputs {
+	opacity: 0;
+}
+
+.popup form .contenedor-inputs input {
+	width: 100%;
+	margin-bottom: 20px;
+	min-height: 52px;
+	font-size: 18px;
+	line-height: 52px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
+}
+.popup form .contenedor-inputs-regis input{
+	width: 50%;
+	margin-bottom: 20px;
+	min-height: 32px;
+	font-size: 18px;
+	line-height: 32px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
+}
+.popup form .contenedor-inputs-regis h3{
+	font-size: 25px;
+	
+}
+.popup form .contenedor-inputs-regis h4{
+	font-size: 20px;
+}
+.popup form .btn-submit {
+  text-decoration: none;
+  color: #444;
+  line-height: 1.9;
+	border: solid;
+ height: 40px;
+  color: white;
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  background: rgb(37 211 102);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: 40%;
+  border-radius: 6px;
+
+ 	cursor: pointer;
+	transition: .3s ease all;
+}
+
+.popup form .btn-submit:hover {
+	background: rgba(2, 126, 19, 0.9);
+}
+
+
+/* ANIMACIONES */
+
+.popup.active {	transform: scale(1); opacity: 1; }
+.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
+.popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active .contenedor-inputs {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	margin: auto;
+	 animation: entradaInputs 1s linear 1s forwards; }
+
+@keyframes entradaTitulo {
+	from {
+		opacity: 0;
+		transform: translateY(-25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaSubtitulo {
+	from {
+		opacity: 0;
+		transform: translateY(25px);
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes entradaInputs {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+/*fin popup----------------------------*/
+
+/* INICIO HOVER IMAGENES ----------*/
+
+.hover{
+  width: 400px;
+  min-height: 300px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  }
+  
+  .hover img{
+   
+      width: 25%;
+      min-height:25% ;
+  }
+  
+  
+  .hover h2{
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%)scale(0);
+      color: white;
+      z-index: 4;
+      transition: all 300ms;
+      border: 2px solid white;
+      background: black;
+      opacity: 0.6;
+      padding: 6px;
+      
+  }
+  .hover:hover h2{
+      transform:translate(-50%,-50%)scale(1);
+  
+  }
+  
+  .hover:before,
+  .hover:after{
+      content: "";
+      width: 500px;
+      min-height: 400px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: black;
+      opacity: 0.6;
+      border: 4px solid white;
+      transition: all 300ms;
+      
+  }
+  
+  .hover:before{
+      background: black;
+      transform: rotate(45deg)translateY(-550px) translateX(0px);
+  }
+  .hover:after{
+      transform:rotate(45deg)translateY(550px) translateX(20px)
+  }
+  .hover:hover:before{   
+      transform: rotate(45deg)translateY(-230px) translateX(-10px);
+  }
+  .hover:hover:after{
+      transform:rotate(45deg)translateY(300px) translateX(-50px)
+  }
+/*    FIN HOVER IMAGENES------------*/
+
 * {
   box-sizing: border-box;
 }
 /*header*/
+
 body {
   width: 100%;
   margin: auto;
@@ -62,6 +349,7 @@ body {
 .usuario,
 .carrito {
   width: 20%;
+  
 }
 .burguer-menu {
   background-color: #cfcdcd;
@@ -82,7 +370,7 @@ body {
   list-style: none;
 }
 .quienesSomos {
-  background-color: #d49c50;
+  background-color: #444;
   border-radius: 10px;
   min-width: 128px;
   max-width: 150px;
@@ -95,13 +383,13 @@ body {
 }
 .quienesSomos a {
   text-decoration: none;
-  color: #444;
+  color: white;
   line-height: 1.9;
 }
 .lista-produc {
   display: flex;
-  background-color: #d49c50;
-  color: #444;
+  background-color: #444;
+  color: white;
   border-radius: 10px;
   padding: 5px 0px;
   border: 0px;
@@ -156,17 +444,27 @@ ul {
   color: black;
   border: solid white;
   box-shadow: 0 0 5px rgb(87, 85, 85);
+  
 }
-.produc-conteiner img {
+.produc-conteiner img {    
   width: 100%;
+  
 }
-.sec-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  padding: 0;
+
+.sec-container {  
+  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+   
+    
+  
+
 }
+/*
 .sec-container1 {
   display: flex;
   flex-direction: row;
@@ -174,6 +472,7 @@ ul {
   justify-content: center;
   padding: 0;
 }
+*/
 .imagenes {
   display: flex;
 }
@@ -203,13 +502,16 @@ ul {
   top: 0;
   right: 0px;
   line-height: 38px;
-  background: #d49c50;
+  background: #444;
   text-align: center;
-  color: #444;
+  color: #fff;
   font-size: 20px;
   border-radius: 50px;
   cursor: pointer;
   margin: 0px 7px;
+}
+.btn:hover{
+  background: rgb(120, 120, 121);
 }
 .buscar:hover input {
   width: 100%;
@@ -221,17 +523,19 @@ ul {
   opacity: 1;
 }
 .usuario {
+  cursor: pointer;
   max-width: 35px;
   height: 35px;
-  position: relative;
-  top: 0;
-  right: 0;
+  position: relative; 
   line-height: 38px;
-  background: #d49c50;
   text-align: center;
   font-size: 20px;
   border-radius: 50px;
   margin: 0px 7px;
+  
+}
+.usuario:hover{
+  background: rgb(137, 137, 141);
 }
 .carrito {
   max-width: 35px;
@@ -240,18 +544,22 @@ ul {
   top: 0;
   right: 0;
   line-height: 38px;
-  background: #d49c50;
+  background: #444;
   text-align: center;
   font-size: 20px;
   border-radius: 50px;
   margin-left: 0px 7px;
 }
+.carrito:hover{
+  background: rgb(120, 120, 121);
+}
 .carrito i,
 .usuario i {
-  color: #444;
+  color: #fff;
 }
 .div-banner {
-  background-color: #00a740;
+
+  background: #444;
   color: #cfcdcd;
   display: flex;
   flex-wrap: wrap;
@@ -320,6 +628,7 @@ ul {
   margin: 20px;
   text-decoration: none;
 }
+
 .maps {
   text-align: center;
 }
@@ -385,8 +694,12 @@ ul {
   * {
     box-sizing: border-box;
   }
+  body{
+    width: 100%;
+  }
 } /*header responsive*/
 .header-nav {
+  width: 100%;
   margin: 0px;
   padding: 0px;
 }
@@ -431,43 +744,30 @@ ul {
   justify-content: end;
 }
 .header-container-left {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   width: 45%;
+  display: flex;
+  justify-content: space-between;  
   margin: 10px 10px 0px 10px;
 }
 .quienesSomos,
 .lista-produc {
+ 
   width: 40%;
   transition: all, 0.5s;
 }
 .nav-hidden form {
-  width: 30%;
+  width: 40%;  
 }
 .lista-produc:hover {
-  background-color: #00a740;
+  background-color: rgb(137, 137, 141);
   color: #f2f2f2;
 }
 .quienesSomos:hover {
-  background-color: #00a740;
+  background-color: rgb(137, 137, 141);;
   color: #f2f2f2;
 }
 
-.btn {
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  top: 0;
-  right: 0px;
-  line-height: 38px;
-  background: #d49c50;
-  text-align: center;
-  color: #444;
-  font-size: 20px;
-  border-radius: 50px;
-  cursor: pointer;
-}
+
 .buscar {
   width: 100%;
   margin-right: 0px;
@@ -492,12 +792,13 @@ ul {
   top: 0;
   right: 0;
   line-height: 38px;
-  background: #d49c50;
+  background: #444;
   text-align: center;
   font-size: 20px;
   border-radius: 50px;
   margin-right: 7.5px;
 }
+
 .carrito {
   width: 30%;
   width: 35px;
@@ -506,7 +807,7 @@ ul {
   top: 0;
   right: 0;
   line-height: 38px;
-  background: #d49c50;
+  background: #444;  
   text-align: center;
   font-size: 20px;
   border-radius: 50px;
@@ -514,8 +815,21 @@ ul {
 }
 .carrito i,
 .usuario i {
-  color: #444;
+  color: #fff;
 }
+.produc-conteiner {
+  background-color: #fdf0d8;
+  color: black;
+  border: solid white;
+  box-shadow: 0 0 5px rgb(87, 85, 85);
+  
+}
+.produc-conteiner img {    
+  width: 100%;
+  
+}
+
+
 /*footer responsive*/
 .pie-de-pagina {
   width: 100%;
@@ -688,7 +1002,7 @@ ul {
     margin: 10px;
   }
   .div-banner {
-    background-color: #00a740;
+    background-color: #444;
     color: #cfcdcd;
     display: flex;
     flex-wrap: wrap;
@@ -697,6 +1011,7 @@ ul {
     font-weight: 700;
     padding: 15px 5px;
     justify-content: space-around;
+    width: 100%;
   }
   .box-banner {
     width: 26%;
@@ -712,7 +1027,7 @@ ul {
   }
   .div-banner hr {
     width: 1px;
-    background-color: #cfcdcd;
+    background-color: 1f2b23;
     height: 50px;
     float: left;
     border: 2px solid #cfcdcd;
@@ -744,7 +1059,7 @@ ul {
     margin: 10px;
   }
   .div-banner {
-    background-color: #00a740;
+    background-color: 1f2b23;
     color: #cfcdcd;
     display: flex;
     flex-wrap: wrap;
@@ -782,18 +1097,12 @@ ul {
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 0;
-    width: 1000px;
-    position: relative;
-    left: 250px;
+    width: 100%;
+    justify-content: center;
+  
   }
-  .sec-container1 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 1000px;
-    position: relative;
-    left: 250px;
-  }
+  
+ 
   .banner {
     height: 670px;
   }
