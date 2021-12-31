@@ -58,10 +58,28 @@
               <div class="popup" id="popup">
                   <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                   
-                  <form class="form-regis-log" action="">
+                  <form class="form-regis-log" action="/users" method="post">
                       <div class="contenedor-inputs-regis">
+                        <div class="register">
                           <h3 >SUSCRIBETE</h3>
                   <h4 >y recibe un cupon de descuento.</h4>
+                  <div class="btn-rsociales">                            
+            
+                    <div class="fbgoogle">
+                        <a class="button" href="https://www.facebook.com/
+                        " target="_blank">
+                            <i class="fab fa-facebook"> </i> Facebook
+                        </a>
+                    </div>
+    
+                    <div class="fbgoogle">
+                        <a class="button" href="https://mail.google.com/mail/u/0/#inbox
+                        " target="_blank">
+                            <i class="fab fa-google"></i> Google
+                            </i>
+                        </a>
+                    </div>
+                </div>
                           <input type="text" name="usuario" placeholder="Nombre" required id="Nombre">
                           <input type="text" name="Apellido" placeholder="Apellido" id="Apellido" required>
                           <input type="password" name="clave" placeholder="Contraseña" required>
@@ -69,12 +87,31 @@
                           <input class="controlsr" type="date" name="fechaNacimiento" required>  
                           <input type="email" placeholder="Correo">
                           <br>
-                          <button class="btn-submit" type="submit">Registrarse</button>
+                          <button class="btn-submit-register" type="submit">Registrarse</button>
                       </div>
+                    </div>
                       <div class="contenedor-inputs">
                           <h4>Iniciar sesión</h4>
+                          <div class="btn-rsociales-login">                            
+            
+                            <div class="fbgoogle">
+                                <a class="button" href="https://www.facebook.com/
+                                " target="_blank">
+                                    <i class="fab fa-facebook"> </i> Facebook
+                                </a>
+                            </div>
+            
+                            <div class="fbgoogle">
+                                <a class="button" href="https://mail.google.com/mail/u/0/#inbox
+                                " target="_blank">
+                                    <i class="fab fa-google"></i> Google
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
                           <input type="text" name="usuario" placeholder="Usuario o Email" required id="Nombre">
                           <input type="password" name="clave" placeholder="Contraseña" required>
+                          <a class="olvidaste-contra" href="#">¿Olvidaste tu contraseña?</a>
                           <input type="submit" class="btn-submit" value="Ingresar">
                       </div>
   

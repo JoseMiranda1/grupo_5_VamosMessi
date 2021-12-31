@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include("./partials/head")%>
+  <link rel="stylesheet" href="/css/productEdit.css">
+  <link rel="stylesheet" href="/css/productDetail.css">
+
+<body>   
+
+          <%- include("./partials/header")%>
+        
+
+<main >
+  <div class="form" >
+    <label for="">Nombre del producto</label>
+ <input type="text">
+ <label for="">Descripción</label>
+  <input type="text">
+  <label for="">Imagen</label>
+ <input type="file">
+ <label for="">Categoría</label>
+ <form action="" method="get"> 
+  <select class="lista-produc">     
+    <option >Sábanas</option>
+    <option>Colchones</option>
+    <option>Toalleria</option>
+    <option>Almohadas</option>
+    <option>Acolchados</option>
+  </select>
+</form>
+<label for="">Colores</label>
+  <!--selector de color- radio-script-->
+  <div class="color-selection-PD">
+    <p class="color-title-PD">Color</p>
+    <form action="" method="get">
+        <ul class="color-list-PD">    
+            <li>
+                <label for="blue-color"></label>
+                <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorA-PD"></p>
+            </li>
+            <li>
+                <label for="blue-color"></label>
+                <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorB-PD"></p>
+            </li>
+            <li>
+                <label for="blue-color"></label>
+                <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorC-PD"></p>
+            </li>
+            <li>
+                <label for="blue-color"></label>
+                <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorD-PD"></p>
+            </li>
+            <li>
+                <label for="radio-colorE"></label>
+                <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorE-PD"></p>
+            </li>
+        </ul>
+    </form>
+</div>  
+
+ <!--colores-->
+<label for="">precio</label>
+ <input type="number">
+
+
+</div>
+  </main>
+    <!-- footer -->
+  <%- include("./partials/footer")%>
+
+</body>
+</html>

@@ -80,6 +80,7 @@ body {
 }
 
 .popup {
+  background-image: url(/public/imagenes/logo2.png);
 	background: #F8F8F8;
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
 	border-radius: 3px;
@@ -100,7 +101,39 @@ body {
 	transition: .3s ease all;
 	color: #BBBBBB;
 }
+.btn-rsociales{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;  
+  margin: auto;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 50%;
+}
+.btn-rsociales-login{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;  
+  margin: auto;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 50%;
+}
 
+.fbgoogle:hover{
+  background: #dddcdc;
+  border-radius: 6px;
+  transition: all .4s ease-in-out;
+  transform: scale(1.2);
+}
+.olvidaste-contra:hover{
+  padding: 5px ;
+  background: #a5a4a4;
+  color: #000;
+  border-radius: 6px;
+  transition: all .4s ease-in-out;
+  transform: scale(1.2);
+}
 .popup .btn-cerrar-popup:hover {
 	color: #000;
 }
@@ -113,9 +146,10 @@ body {
 }
 
 .popup h4 {
+
 	font-size: 26px;
 	font-weight: 300;
-	margin-bottom: 40px;
+	margin-bottom: 10px;
 	opacity: 0;
 }
 
@@ -148,7 +182,33 @@ body {
 .popup form .contenedor-inputs-regis h4{
 	font-size: 20px;
 }
-.popup form .btn-submit {
+.btn-submit-register{
+  z-index: 4;
+  text-decoration: none;
+  color: #444;
+  line-height: 1.9;
+	border: solid;
+ height: 40px;
+  color: white;
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  background: rgb(37 211 102);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: 60%;
+  border-radius: 6px;
+ 	cursor: pointer; 
+	transition: .3s ease all;
+}
+.btn-submit-register:hover{
+  background: rgba(2, 126, 19, 0.9);
+}
+.popup form .btn-submit {  
+  z-index: 4;
   text-decoration: none;
   color: #444;
   line-height: 1.9;
@@ -166,7 +226,6 @@ body {
   margin: auto;
   width: 40%;
   border-radius: 6px;
-
  	cursor: pointer;
 	transition: .3s ease all;
 }
@@ -689,6 +748,7 @@ ul {
 }
 
 /* ---------- Version Tablet ----------------------------------------------------------------------------------------------- */
+
 
 @media (min-width: 481px) {
   * {
