@@ -1,0 +1,125 @@
+<header>
+    <nav class="header-nav"> 
+            <section class="header-container-left">
+                <div>
+                  <a href="/"><img class="logo" src="/imagenes/logo.png" alt="logo"></a>
+                </div>
+              <nav class="nav-hidden">
+                <div class="quienesSomos">
+                  <a href="#¿QuienesSomos?">¿Quiénes somos?</a>
+                </div>
+                <form action="" method="get"> 
+                  <select class="lista-produc"> 
+                    <option selected>Nuestros productos</option>
+                    <option>Sábanas</option>
+                    <option>Colchones</option>
+                    <option>Toallas</option>
+                    <option>Almohadas</option>
+                    <option>Batas</option>
+                  </select>
+                </form>
+              </nav> 
+              </section>
+              <section class="header-container-right">
+                <div class="burguer-menu">
+                  <i class="fas fa-bars"></i>
+                </div>
+                <nav class="nav-alt">
+                  <div class="buscar"> 
+                  <input type="text" placeholder="¿Qué estás buscando?" required>         
+                  <div class="btn">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <div class="usuario">
+                  <a id="btn-abrir-popup" ><i class="fas fa-user"></i></a>
+                </div>
+                <div class="carrito">
+                  <a href="/productCart"><i class="fas fa-cart-plus"></i></a>
+                </div>
+                <div class="hidden-user">
+                  <a id="btn-abrir-popup">Usuario<i class="fas fa-user"></i></a>
+                </div>
+                <div class="hidden-cart">
+                  <a href="/productCart">Mis compras<i class="fas fa-cart-plus"></i></a>
+                </div>
+              </nav>
+            </nav>
+            <div class="div-banner">
+              <p class="box-banner">3 Cuotas sin interés 12 cuotas<br> en compras superiores a $7990</p>
+              <hr>
+              <p class="box-banner" id="p-hidden">Envío gratis a partir de $9800</p>
+              <hr>
+              <p class="box-banner" id="p-boxC">Retiro gratis en sucursales seleccionadas</p>
+            </div>
+
+            <!--   popup  -->
+           <!-- inicio popup-->
+    
+<main class="mainl">   
+    <div class="contenedor">		
+          <div class="overlay" id="overlay">
+              <div class="popup" id="popup">
+                  <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                  
+                  <form class="form-regis-log" action="/users" method="post">
+                      <div class="contenedor-inputs-regis">
+                        <div class="register">
+                          <h3 >SUSCRIBETE</h3>
+                  <h4 >y recibe un cupón de descuento.</h4>
+                  <div class="btn-rsociales">                            
+            
+                    <div class="fbgoogle">
+                        <a class="button" href="https://www.facebook.com/
+                        " target="_blank">
+                            <i class="fab fa-facebook"> </i> Facebook
+                        </a>
+                    </div>
+    
+                    <div class="fbgoogle">
+                        <a class="button" href="https://mail.google.com/mail/u/0/#inbox
+                        " target="_blank">
+                            <i class="fab fa-google"></i> Google
+                            </i>
+                        </a>
+                    </div>
+                </div>
+                          <input type="text" name="usuario" placeholder="Nombre" required id="Nombre">
+                          <input type="text" name="Apellido" placeholder="Apellido" id="Apellido" required>
+                          <input type="password" name="clave" placeholder="Contraseña" required>
+                          <input type="password" name="clave" placeholder="Repetir contraseña" required>
+                          <input class="controlsr" type="date" name="fechaNacimiento" required>  
+                          <input type="email" placeholder="Correo">
+                          <br>
+                          <button class="btn-submit-register" type="submit">Registrarse</button>
+                      </div>
+                    </div>
+                      <div class="contenedor-inputs">
+                          <h4>Iniciar sesión</h4>
+                          <div class="btn-rsociales-login">                            
+            
+                            <div class="fbgoogle">
+                                <a class="button" href="https://www.facebook.com/
+                                " target="_blank">
+                                    <i class="fab fa-facebook"> </i> Facebook
+                                </a>
+                            </div>
+            
+                            <div class="fbgoogle">
+                                <a class="button" href="https://mail.google.com/mail/u/0/#inbox
+                                " target="_blank">
+                                    <i class="fab fa-google"></i> Google
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+                          <input type="text" name="usuario" placeholder="Usuario o Email" required id="Nombre">
+                          <input type="password" name="clave" placeholder="Contraseña" required>
+                          <a class="olvidaste-contra" href="#">¿Olvidaste tu contraseña?</a>
+                          <input type="submit" class="btn-submit" value="Ingresar">
+                      </div>
+  
+            <script src="/js/popup.js"></script>
+      <!-- fin popup-->
+ 
+          </header> 

@@ -1,35 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle del producto</title>
+<head>    
     <link rel="stylesheet" href="/css/productDetail.css">
-    <link rel="stylesheet" href="https://fonts.google.com/">
-    <link rel="stylesheet" href="/css/normalize.css">
+    <%- include("./partials/head")%>    
 </head>
 <body>
-    <!--Header-->
-    <head> 
-        <div class= "nav-bar"> 
-            <img src= "/imagenes/La-Sabana.png" alt=""width="100px">
-        </div>
-        <nav class="enlaces" > 
-            <ul>
-                <li><a href="">¿Quienes somos? </a></li>
-                <li><a href="">Nuestros productos</a></li>
-                <form>
-                  <i class="fa fa-search"></i>
-                  <input type="text">
-                  <input type="submit" value="Buscar" />
-              </form>
-              <li><i class="fas fa-user"></i> <a href="">Mi cuenta</a><i class="fas fa-angle-down"></i></li>
-              <li><i class="fas fa-cart-plus"></i><a href="">Mi Carrito</a></li>
-          </ul>
-        </nav>
-        
-    </head>
+    <%- include("./partials/header")%>
+
     <!--página detalle de producto-->
     <main>
         <div class="main-container-PD">
@@ -129,26 +106,27 @@
                     <!--selector de color- radio-script-->
                     <div class="color-selection-PD">
                         <p class="color-title-PD">Color</p>
+                        <br>
                         <form action="" method="get">
                             <ul class="color-list-PD">    
                                 <li>
-                                    <label for="blue-color"></label>
+                                    <label for="radio-colorA-PD"></label>
                                     <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorA-PD"></p>
                                 </li>
                                 <li>
-                                    <label for="blue-color"></label>
+                                    <label for="radio-colorB-PD"></label>
                                     <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorB-PD"></p>
                                 </li>
                                 <li>
-                                    <label for="blue-color"></label>
+                                    <label for="radio-colorC-PD"></label>
                                     <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorC-PD"></p>
                                 </li>
                                 <li>
-                                    <label for="blue-color"></label>
+                                    <label for="radio-colorD-PD"></label>
                                     <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorD-PD"></p>
                                 </li>
                                 <li>
-                                    <label for="radio-colorE"></label>
+                                    <label for=radio-colorE-PD"></label>
                                     <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorE-PD"></p>
                                 </li>
                             </ul>
@@ -156,8 +134,7 @@
                     </div>  
                     <!--agregar carrito-->
                     <div class="buy-container-PD">
-                        <i class="fas fa-cart-plus" id="cart-PD"></i>
-                        <input type="submit" name="add-cart" value="    Comprar" class="buy-button-PD">
+                        <input type="submit" name="add-cart" value="Agregar al carrito" class="buy-button-PD">
                     </div>               
                 </section>
             </section>
@@ -194,51 +171,10 @@
                         </section>
                     </div>  
     </main>
-    <footer >
-        <section class="pie-de-pagina">
-            <article class="maps">
-                <h3><i class="far fa-map"></i>Dónde estamos</h3>
-                <img src= "/imagenes/ubicacion.jpg" alt="map-searching"> 
-            </article>
-            <section class="section-footer">
-                <article>
-                    <h3 class="tituloFooter"><i class="far fa-list-alt"></i>Productos</h3>
-                <ul class="producFooter">
-                    <li><a id="rebelLi" href="#">Sábanas</a></li>
-                    <li><a href="#">Colchones</a></li>
-                    <li><a href="#">Toallas</a></li>
-                    <li><a href="#">Sommiers</a></li>
-                    <li><a href="#">Almohadas</a></li>
-                    <li><a href="#">Batas</a></li>
-                </ul>
-                </article>
-                <article class="ubicacionhelp">
-                    <h3 class="tituloFooter"><i class="fas fa-info-circle"></i>Ayuda</h3>
-                    <ul class="condiciones">
-                        <li><a href="#">Cambios y devoluciones</a></li>
-                        <li><a href="#">Términos y condiciones</a></li>
-                        <li><a href="#">Politica de privacidad</a></li>
-                        <li><a href="#">Informacién sobre envíos</a></li>
-                    </ul>
-                </article>
-                <article class="contacto">
-                        <h3 class="tituloFooter"><i class="fas fa-address-card"></i>Contactos</h3></div> 
-                    <ul class="contacto1">
-                        <li>Némero de teléfono: 4462-7514</li>
-                        <li>Direccién: Tuyuti 234</li>
-                        <li>WhatsApp: +54 11-3451-2475</li>
-                        <li>Email: lasabana@lasabana.com.ar</li>
-                    </ul>
-                </article>
-                <article class="chateaConNosotros">
-                    <h3 class="chatea">Chateá con nosotros
-                        <a href="https://api.whatsapp.com/send?phone=+34662681XXX" class="logoEnlace">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png">
-                        </a>
-                    </h3>    
-                </article>
-            </section>
-        </section>
-    </footer>
-</body>
-</html>
+      <!-- footer -->
+
+    <%- include("./partials/footer")%>
+    
+    </body>
+    </html>
+    
