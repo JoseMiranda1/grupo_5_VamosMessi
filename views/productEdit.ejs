@@ -14,11 +14,28 @@
   <div class="form-edit" >
     <form action="" method="get"> 
       <label for="">Nombre del producto</label>
-      <input type="text" name="name-product-edit">
+      <input type="text" name="name-product-edit" placeholder="Por ej.: Bata de Baño Smoking Piqué...">
+      <br>
+      <label for="">Marca del producto</label>
+      <input type="text" name="trade-edit" placeholder="Por ej.: Piero...">
+      <br>
       <label for="">Descripción</label>
-      <input type="text" name="description-edit">
-      <label for="">Imagen</label>
+      <input type="text" name="description-edit" placeholder="Por ej.: Bata de baño para adulto...">
+      <br>
+      <label for="">Composición</label>
+      <input type="text" name="composition-edit" placeholder="Por ej.: Mezcla de algodón y poliéster, 144 hilos.">
+      <br>
+      <label for="">Características de la tela</label>
+      <br>
+      <form action="" method="get" target="_blank">
+        <p>
+          <textarea type="text" rows="3" name="property-edit" placeholder="Por ej.: Las telas con mezclas de algodón y poliéster son conocidas por su durabilidad. El algodón es de fibra natural, por lo que le brinda propiedades como respirabilidad y suavidad." maxlength="450"required></textarea>
+      </p>
+      </form>
+      <br>
+      <label for="">Imagenes</label>
       <input type="file" name="image-edit" accept="image/png, .jpeg, .jpg, image/gif">
+      <br>
       <label for="">Categoría</label>
       <select class="product-list-edit">     
         <option>Sábanas</option>
@@ -27,37 +44,92 @@
         <option>Almohadas</option>
         <option>Acolchados</option>
       </select>
+      <br>
+      <label for="">Tamaños</label>
+      <select class="product-seizures-edit">     
+        <option value="">Cuna</option>
+        <option value="">Cuna funcional</option>
+        <option value="">1 plaza</option>
+        <option value="">Queen Size</option>
+        <option value="" selected>Extra Queen Size</option>
+        <option value="">King Size</option>
+        <option value="">Extra King Size</option>
+      </select>
+      <br>
        <!--selector de color- radio-script-->
-      <div class="color-selection-PD">
-        <p class="color-title-PD">Color</p>
+      <div class="color-selection">
+        <p class="color-title">Colores</p>
+        <br>
         <form action="" method="post">
           <ul class="color-list-PD">    
-              <li>
-                  <label for="blue-color"></label>
-                  <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorA-PD"></p>
-              </li>
-              <li>
-                  <label for="blue-color"></label>
-                  <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorB-PD"></p>
-              </li>
-              <li>
-                  <label for="blue-color"></label>
-                  <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorC-PD"></p>
-              </li>
-              <li>
-                  <label for="blue-color"></label>
-                  <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorD-PD"></p>
-              </li>
-              <li>
-                  <label for="radio-colorE"></label>
-                  <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorE-PD"></p>
-              </li>
+            <li>
+              <label for="checkbox-colorA-PD" class="color-label">Beige</label>
+              <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorA-PD"></p>
+            </li>
+            <li>
+              <label for="checkbox-colorB-PD" class="color-label">Gris</label>
+              <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorB-PD"></p>
+            </li>
+            <li>
+              <label for="checkbox-colorC-PD" class="color-label">Rojo</label>
+              <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorC-PD"></p>
+            </li>
+            <li>
+              <label for="checkbox-colorD-PD" class="color-label">Dorado</label>
+              <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorD-PD"></p>
+            </li>
+            <li>
+              <label for=checkbox-colorE-PD" class="color-label">Verde</label>
+              <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorE-PD"></p>
+            </li>
+          <li>
+            <label for="checkbox-colorF-PD" class="color-label">Marrón</label>
+            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorF-PD"></p>
+          </li>
+          <li>
+            <label for="checkbox-colorG-PD" class="color-label">Celeste</label>
+            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorG-PD"></p>
+          </li>
+          <li>
+            <label for="checkbox-colorH-PD" class="color-label">Naranja</label>
+            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorH-PD"></p>
+          </li>
+          <li>
+            <label for="checkbox-colorI-PD" class="color-label">Blanco</label>
+            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorI-PD"></p>
+          </li>
+          <li>
+            <label for="checkbox-colorJ-PD" class="color-label">Azul</label>
+            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorJ-PD"></p>
+          </li>
+          <li>
+            <label for="checkbox-colorK-PD" class="color-label">Gris plata</label>
+            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorK-PD"></p>
+          </li>
+          <li>
+            <label for="checkbox-colorL-PD" class="color-label">Ocre</label>
+            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorL-PD"></p>
+          </li>
+          <li>
+            <label for="checkbox-colorM-PD" class="color-label">Marfil</label>
+            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorM-PD"></p>
+          </li>
+          <li>
+            <label for="checkbox-colorN-PD" class="color-label">Salmón</label>
+            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorN-PD"></p>
+          </li>
+          <li>
+            <label for="checkbox-colorO-PD" class="color-label">Amarillo pálido</label>
+            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorO-PD"></p>
+          </li>
           </ul>
         </form>
       </div>
     </form>
     <label for="price-edit" class="price-edit">Precio</label>
     <input type="number" name="price-edit">
+    <br>
+    <input type="submit" name="create" value="Publicar" class="create">
   </div>  
 </main>
     <!-- footer -->

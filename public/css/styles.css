@@ -757,7 +757,7 @@ ul {
   body{
     width: 100%;
   }
-} /*header responsive*/
+ /*header responsive*/
 .header-nav {
   width: 100%;
   margin: 0px;
@@ -988,7 +988,7 @@ ul {
   position: relative;
   top: 15px;
 }
-
+}
 /* ---------- Version Laptop ----------------------------------------------------------------------------------------------- */
 @media (min-width: 769px) {
   /*footer responsive*/

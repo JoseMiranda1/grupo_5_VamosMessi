@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+body {
+  background-color: #eee;
+}
 /*seccion de product detail*/
 .main-container-PD {
   background-color: #eee;
