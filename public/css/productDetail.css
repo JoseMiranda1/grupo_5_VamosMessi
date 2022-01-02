@@ -1,11 +1,6 @@
 * {
   box-sizing: border-box;
 }
-/*header footer*/
-body {
-  width: 100%;
-  margin: auto;
-}
 /*seccion de product detail*/
 .main-container-PD {
   background-color: #eee;
@@ -292,30 +287,18 @@ input[type="radio"] {
   box-shadow: 0 0 0 2.5px #444;
 }
 /*botón de compra- cart icon*/
-#cart-PD {
-  font-size: 20px;
-  color: #d49c50;
-  position: absolute;
-  left: 20px;
-  top: 2px;
-  display: inline;
-}
 .buy-button-PD {
-  width: 60%;
-  min-width: 80px;
-  max-width: 120px;
+  width: 85%;
   height: 2rem;
   border-radius: 0.6rem;
   font-size: 100%;
   font-weight: bold;
   line-height: 0px;
-  display: inline-block;
   transition: all, 0.5s;
-  background-color: #eee;
-  color: #584229;
-  padding-left: 27px;
-  margin: 10px 15px 15px 15px;
-  border: 2px solid #584229;
+  background-color: #d49c50;
+  color: #444;
+  border: 2px solid #444;
+  margin: 10px 0px 30px 0px;
 }
 .buy-button-PD:hover {
   box-shadow: 100px, 100px, 100px, #584229;
@@ -324,10 +307,8 @@ input[type="radio"] {
   padding: 2px;
 }
 .buy-container-PD {
-  margin-right: 24px;
   padding: 0px;
   text-align: center;
-  position: relative;
 }
 /*bar*/
 .bar-PD {
@@ -448,29 +429,13 @@ a .item-PD {
   }
   .buy-container-PD {
     width: 100%;
-    margin: 10px 10px 0px 10px;
   }
   .buy-button-PD {
-    min-width: 120px;
-    max-width: 150px;
-    padding: 0px;
-  }
-  #cart-PD {
-    display: none;
+    margin: 50px 0px 0px 0px;
   }
   .info-article-PD {
     font-size: 1.8rem;
   }
-  @media (min-width: 712px) {
-    #cart-PD {
-      display: inline;
-      font-size: 20px;
-      right: 140px;
-      top: 15px;
-    }
-    .buy-button-PD {
-      margin-left: 26px;
-    }
     @media (min-width: 769px) {
       .slider-box-price-container-PD {
         display: flex;
@@ -557,11 +522,6 @@ a .item-PD {
         font-size: 1.3rem;
         margin: 0px;
       }
-      #cart-PD {
-        font-size: 22px;
-        right: 144px;
-        top: 22px;
-      }
       .buy-container-PD {
         margin: 20px 0px 0px 0px;
       }
@@ -571,4 +531,3 @@ a .item-PD {
       }
     }
   }
-}
