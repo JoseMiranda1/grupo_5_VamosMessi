@@ -130,6 +130,15 @@
     background-color: white;
 }
 
+.cover-img-pr :hover{
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3);
+}
+.cover-img-pr :hover{
+    overflow:hidden;
+}
+
+
 .cart-product-name-pr {
     font-weight: bold;
     color: #444444;
