@@ -226,7 +226,6 @@ body {
 	justify-content: space-between;
 }
 .overlay {
-
   z-index: 4000;
 	background: rgba(0,0,0,.3);
 	position: fixed;
@@ -471,8 +470,8 @@ body {
 /* INICIO HOVER IMAGENES ----------*/
 
 .hover{
-  width: 400px;
-  min-height: 300px;
+  width: 100%;
+  min-height: 100px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -576,7 +575,7 @@ body {
   border: solid white;
   box-shadow: 0 0 5px rgb(87, 85, 85);
 }
-.produc-conteiner img {    
+.produc-conteiner img {  
   width: 100%;
 }
 
@@ -587,16 +586,12 @@ body {
     padding: 0;
     width: 100%;
     justify-content: center;  
-  
-
 }
-
 .imagenes {
   display: flex;
 }
 .buscar {
-position: relative;
-  
+  position: relative;
   width: 50%;
   padding: 5px;
   margin-right: 15px;
