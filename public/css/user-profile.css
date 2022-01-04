@@ -1,0 +1,35 @@
+*{
+box-sizing: border-box;
+
+}
+main{
+    padding: 1px 0px 30px ;
+}
+.camp-dates{
+    display: flex;
+    justify-content: space-around;
+        
+}
+.nombrecamp{
+    font-size: 20px;
+   
+}
+.img-dates{
+    padding: 30px;
+    display: flex;
+    flex-direction:column;
+    border: solid 1px rgb(158, 158, 158);
+}
+
+.cont-li{
+    border: solid 1px rgb(158, 158, 158);
+    padding: 20%;
+  
+   
+
+}
+.img-profile{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}

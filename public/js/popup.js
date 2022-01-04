@@ -13,3 +13,11 @@ btnCerrarPopup.addEventListener('click', function(e){
 	overlay.classList.remove('active');
 	popup.classList.remove('active');
 });
+function openRegister(){
+	document.querySelector("#cont-regis").style.display='block';
+	document.querySelector("#contenedor-inputs").style.display='none';
+}
+function closeRegister(){
+	document.querySelector("#cont-regis").style.display='none';
+	document.querySelector("#contenedor-inputs").style.display='block';
+}
