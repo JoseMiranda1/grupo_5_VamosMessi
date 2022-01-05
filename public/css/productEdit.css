@@ -4,6 +4,9 @@
 .main-edit {
     background-color: #eee;
     margin: 0px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 .form-edit,
 .form-create{

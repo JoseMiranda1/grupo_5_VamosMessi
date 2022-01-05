@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: right;
   flex-direction: row;
-
+  height: 50px;
   flex-wrap: wrap;
   background: #444;
 
@@ -47,12 +47,16 @@ body {
 }
 
 .menu {
-  width: 100%;
-  justify-content: left;
+  width: 50%;
   background: #444;
   z-index: 1000;
   margin-left: -100%;
   transition: all 0.5s;
+  position: relative;
+  left: -50%;
+  top: 50%;
+
+  
 }
 
 .menu__link {
@@ -66,6 +70,7 @@ body {
 
 .menu__link:hover {
   background: rgb(39, 39, 39);
+  width: 50%;
 }
 
 .submenu .menu__link:hover {
@@ -81,6 +86,7 @@ body {
   height: 0;
   overflow: hidden;
   transition: all 0.3s;
+  width: 50%;
 }
 
 .mostrar {
@@ -544,7 +550,7 @@ body {
 
 /*fin popup----------------------------*/
 
-/* INICIO HOVER IMAGENES ----------*/
+/* INICIO HOVER IMAGENES ----------
 
 .hover{
   width: 400px;
@@ -607,7 +613,7 @@ body {
 .hover:hover:after {
   transform: rotate(45deg)translateY(300px) translateX(-50px)
 }
-
+*/
 /*    FIN HOVER IMAGENES------------*/
 
 * {
@@ -1411,7 +1417,7 @@ body {
   width: 100%;
   height: auto;
   /* puede ir calc(100vh- x cant de px que ocupe la barra de navegion y demas*/
-  position: relative;
+  overflow: hidden;
 }
 
 .slider-container ul {
@@ -1584,6 +1590,30 @@ body {
     text-align: center;
     transition: all .3s ease-in-out;
   }
+  .iconos-navbar {
 
-
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    height: 50px;
+    flex-wrap: wrap;
+    background: #444;
+  
+  }
+  .menu__link:hover  {
+    background-color: rgb(39, 39, 39);
+    width: 100%;
+  }
+  .menu__item:hover { 
+    background-color: rgb(39, 39, 39);
+  }
+  .menu {
+    width: 100%;
+    background: #444;
+    z-index: 1000;
+    margin-left: -100%;
+    transition: all 0.5s;
+    left: 0;
+    top: 0;
+}
 }
