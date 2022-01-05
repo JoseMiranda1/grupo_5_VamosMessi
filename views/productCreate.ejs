@@ -9,6 +9,9 @@
   <!--header-->
           <%- include("./partials/header")%>
 <main class="main-edit">
+  <p class="create-product">
+    <a  href="/productEdit"><i class="fas fa-edit"></i></i>Editar Producto</a>
+  </p>
   <section class="form-create" >
     <form action="" method="get"> 
       <p class="title-edit">Crear un nuevo producto</p>
@@ -26,7 +29,7 @@
       <br>
       <label for="">Características de la tela</label>
       <br>
-      <p>
+      <p class="caract-tela-create">
         <textarea type="text" rows="3" name="property-edit" placeholder="Por ej.: Las telas con mezclas de algodón y poliéster son conocidas por su durabilidad. El algodón es de fibra natural, por lo que le brinda propiedades como respirabilidad y suavidad." maxlength="450"required></textarea>
       </p>
       <br>
@@ -126,7 +129,6 @@
     <input class="input-edit" type="number" name="price-edit" placeholder=" $0000">
     <br>
     <input type="submit" name="create" value="Publicar" class="button-edit">
-   <a href="/productEdit"> <input type="submit" name="create" value="Modificar un producto" class="button-edit"></a>
   </form>
   </section>  
   
