@@ -470,8 +470,8 @@ body {
 /* INICIO HOVER IMAGENES ----------*/
 
 .hover{
-  width: 100%;
-  min-height: 100px;
+  width: 400px;
+  min-height: 300px;
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -575,7 +575,7 @@ body {
   border: solid white;
   box-shadow: 0 0 5px rgb(87, 85, 85);
 }
-.produc-conteiner img {  
+.produc-conteiner img {    
   width: 100%;
 }
 

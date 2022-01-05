@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box;
 }
-body {
-  background-color: #eee;
-}
 /*seccion de product detail*/
+ul {
+  list-style: none;
+}
 .main-container-PD {
   background-color: #eee;
   font-family: "Roboto", sans-serif;
@@ -119,6 +119,7 @@ a {
 .crumb-PD {
   color: #584229;
   font-size: 90%;
+  transition: all 0.6s;
 }
 .crumb-PD:hover {
   color: #e8ba7b;
@@ -191,7 +192,7 @@ a {
   background: #eee;
   color: #584229;
   width: 90%;
-  max-width: 190px;
+  max-width: 290px;
   border-radius: 5px;
   transition: all, 0.5s;
   margin: 8px 0px;
