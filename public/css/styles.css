@@ -467,8 +467,13 @@ body {
   cursor: pointer;
   transition: .3s ease all;
 }
-
+.regis-log-popup{
+  display: none;
+}
 @media(max-width:791px) {
+  .regis-log-popup{
+    display: block;
+  }
   .button-regis-oculto {
     display: block;
   }
@@ -690,19 +695,21 @@ body {
 }
 
 .btn {
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  right: 0px;
-  line-height: 38px;
-  background: #444;
-  text-align: center;
-  color: #fff;
-  font-size: 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  margin: 0px 7px;
+      width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    line-height: 38px;
+    background: #444;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0px 7px;
 }
+
 
 .btn:hover {
   background: rgb(120, 120, 121);
@@ -787,6 +794,7 @@ body {
 }
 
 .footer-ul li {
+  list-style: none;
   text-align: center;
   padding: 0px 0px;
   margin: 0px 0px;
@@ -890,6 +898,19 @@ body {
 /* ---------- Version Tablet --------------- */
 @media (min-width: 481px) {
 
+  .nav-alt {
+    position: relative;
+    top: -300px;
+    left: 20px;
+  }
+  .btn-buscar-user-carrito{
+    position: absolute;
+    top: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   /*header responsive*/
   .header-nav {
     width: 100%;
@@ -991,8 +1012,15 @@ body {
   .buscar:hover>input {
     opacity: 1;
   }
+  .div-banner{
+    background: #444;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+  }
 
   .box-banner {
+
     width: 98%;
   }
 
@@ -1517,7 +1545,15 @@ body {
 
 
 /*versión Monitor*/
-@media (min-width: 1280px) {
+@media (min-width: 1000px) {
+  .btn-buscar-user-carrito{ 
+    position: absolute;
+    top: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6000;
+}
 
   .infoBanner h1 {
 
