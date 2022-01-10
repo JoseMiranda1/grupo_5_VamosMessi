@@ -773,6 +773,10 @@ body {
 .nosotros {
   padding: 10px;
 }
+.nosotros p{
+  line-height : 25px;
+}
+
 
 .nosotros h3 {
   text-align: left;
@@ -974,6 +978,8 @@ body {
     background-color: rgb(137, 137, 141);
     ;
     color: #f2f2f2;
+    
+
   }
 
   .buscar {
@@ -1383,8 +1389,9 @@ body {
 .slider-container {
   width: 100%;
   height: auto;
-  /* puede ir calc(100vh- x cant de px que ocupe la barra de navegion y demas*/
   position: relative;
+  overflow: hidden;
+
 }
 
 .slider-container ul {
@@ -1401,6 +1408,8 @@ body {
 
 .slider-container img {
   width: 100%;
+ 
+  
 }
 
 @keyframes slide {
@@ -1461,6 +1470,7 @@ body {
   font-size: 50%;
   visibility: hidden;
   text-align: center;
+ 
 }
 
 .infoBanner a {
@@ -1491,15 +1501,22 @@ body {
     padding-bottom: 30px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(73, 71, 71);
+    
 
   }
 
   .infoBanner p {
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     visibility: visible;
     line-height : 30px;
+    padding: 25px;
+    color: rgb(44, 43, 43);
+    font-weight:normal;
+    
   }
 
   .infoBanner a {
@@ -1536,6 +1553,7 @@ body {
     text-align: center;
     visibility: visible;
     line-height : 30px;
+    padding: 30px;
   }
 
   .infoBanner a {
