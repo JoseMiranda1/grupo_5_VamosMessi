@@ -1,7 +1,7 @@
 
 const controllers={
     home:(req,res)=>{
-        res.render("home")
+       res.render("home");
     },
     productCart:(req,res)=> {        
         res.render("productCart");
@@ -11,6 +11,9 @@ const controllers={
     },
     productEdit:(req,res)=>{
         res.render("productEdit")
+    },
+    productCreate:(req,res)=>{
+        res.render("productCreate")
     },
     profile:(ewq,res)=>{
         const usuarioPerfil=[{

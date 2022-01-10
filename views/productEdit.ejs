@@ -8,131 +8,15 @@
   <!--header-->
           <%- include("./partials/header")%>
 <main class="main-edit">
-  <section class="form-create" >
-    <form action="" method="get"> 
-      <p class="title-edit">Crear un nuevo producto</p>
-      <label for="">Nombre del producto</label>
-      <input class="input-edit" type="text" name="name-product-edit" placeholder="  Por ej.: Bata de Baño Smoking Piqué...">
-      <br>
-      <label for="">Marca del producto</label>
-      <input class="input-edit" type="text" name="trade-edit" placeholder="  Por ej.: Piero...">
-      <br>
-      <label for="">Descripción</label>
-      <input class="input-edit" type="text" name="description-edit" placeholder="  Por ej.: Bata de baño para adulto...">
-      <br>
-      <label for="">Composición</label>
-      <input class="input-edit" type="text" name="composition-edit" placeholder="  Por ej.: Mezcla de algodón y poliéster, 144 hilos.">
-      <br>
-      <label for="">Características de la tela</label>
-      <br>
-      <p>
-        <textarea type="text" rows="3" name="property-edit" placeholder="Por ej.: Las telas con mezclas de algodón y poliéster son conocidas por su durabilidad. El algodón es de fibra natural, por lo que le brinda propiedades como respirabilidad y suavidad." maxlength="450"required></textarea>
-      </p>
-      <br>
-      <label for="">Imágenes</label>
-      <input class="input-edit" type="file" name="image-edit" accept="image/png, .jpeg, .jpg, image/gif">
-      <br>
-      <label for="">Categoría</label>
-      <select class="product-list-edit">     
-        <option>Sábanas</option>
-        <option>Colchones</option>
-        <option>Toalleria</option>
-        <option>Almohadas</option>
-        <option>Acolchados</option>
-      </select>
-      <br>
-      <label for="">Tamaños</label>
-      <select class="product-seizures-edit">     
-        <option value="">Cuna</option>
-        <option value="">Cuna funcional</option>
-        <option value="">1 plaza</option>
-        <option value="">Queen Size</option>
-        <option value="" selected>Extra Queen Size</option>
-        <option value="">King Size</option>
-        <option value="">Extra King Size</option>
-      </select>
-      <br>
-       <!--selector de color- radio-script-->
-      <div class="color-selection">
-        <p class="color-title">Colores</p>
-        <br>
-        <form action="" method="post">
-          <ul class="color-list-PD">    
-            <li>
-              <label for="checkbox-colorA-PD" id="label-color-A" class="color-label">Beige</label>
-              <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorA-PD"></p>
-            </li> 
-            <li>
-              <label for="checkbox-colorB-PD" id="label-color-B"class="color-label">Gris</label>
-              <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorB-PD"></p>
-            </li>
-            <li>
-              <label for="checkbox-colorC-PD" id="label-color-C"class="color-label">Rojo</label>
-              <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorC-PD"></p>
-            </li>
-            <li>
-              <label for="checkbox-colorD-PD" id="label-color-D"class="color-label">Dorado</label>
-              <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorD-PD"></p>
-            </li>
-            <li>
-              <label for=checkbox-colorE-PD" id="label-color-E" class="color-label">Verde</label>
-              <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorE-PD"></p>
-            </li>
-          <li>
-            <label for="checkbox-colorF-PD" id="label-color-F" class="color-label">Marrón</label>
-            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorF-PD"></p>
-          </li>
-          <li>
-            <label for="checkbox-colorG-PD" id="label-color-G" class="color-label">Celeste</label>
-            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorG-PD"></p>
-          </li>
-          <li>
-            <label for="checkbox-colorH-PD" id="label-color-H" class="color-label">Naranja</label>
-            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorH-PD"></p>
-          </li>
-          <li>
-            <label for="checkbox-colorI-PD" id="label-color-I" class="color-label">Blanco</label>
-            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorI-PD"></p>
-          </li>
-          <li>
-            <label for="checkbox-colorJ-PD" id="label-color-J" class="color-label">Azul</label>
-            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorJ-PD"></p>
-          </li>
-          <li>
-            <label for="checkbox-colorK-PD" id="label-color-K" class="color-label">Gris plata</label>
-            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorK-PD"></p>
-          </li>
-          <li>
-            <label for="checkbox-colorL-PD" id="label-color-L" class="color-label">Ocre</label>
-            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorL-PD"></p>
-          </li>
-          <li>
-            <label for="checkbox-colorM-PD" id="label-color-M" class="color-label">Marfil</label>
-            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorM-PD"></p>
-          </li>
-          <li>
-            <label for="checkbox-colorN-PD" id="label-color-N" class="color-label">Salmón</label>
-            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorN-PD"></p>
-          </li>
-          <li>
-            <label for="checkbox-colorO-PD" id="label-color-O" class="color-label">Amarillo pálido</label>
-            <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorO-PD"></p>
-          </li>
-          </ul>
-        </form>
-      </div>
-    <label for="price-edit" class="price-edit">Precio</label>
-    <input class="input-edit" type="number" name="price-edit" placeholder=" $0000">
-    <br>
-    <input type="submit" name="create" value="Publicar" class="button-edit">
-  </form>
-  </section>  
+  <p class="create-product">
+  <a  href="/productCreate"><i class="far fa-plus-square"></i>Crear Producto</a>
+</p>
   <section class="form-edit" >
     <form action="" method="get">
       <p class="title-edit">Modificar un producto existente</p>
       <div class="search-edit">
         <label for="search-edit" class="label-edit">Buscar producto</label>
-        <input type="text" name="search-edit" placeholder="  Ingresar nombre del producto..." required>         
+        <input type="text" name="search-edit" placeholder="  Ingresar nombre del producto..." required>        
           <div class="button-search-edit">
             <i class="fas fa-search icon"></i>
           </div>
@@ -160,7 +44,7 @@
       <input class="input-edit" type="file" name="image-edit" accept="image/png, .jpeg, .jpg, image/gif">
       <br>
       <label class="label-edit" for="">Modificar categoría</label>
-      <select class="product-list-edit">     
+      <select class="product-list-edit">    
         <option>Sábanas</option>
         <option>Colchones</option>
         <option>Toalleria</option>
@@ -169,7 +53,7 @@
       </select>
       <br>
       <label class="label-edit" for="">Modificar tamaños</label>
-      <select class="product-seizures-edit">     
+      <select class="product-seizures-edit">    
         <option value="">Cuna</option>
         <option value="">Cuna funcional</option>
         <option value="">1 plaza</option>
@@ -187,7 +71,7 @@
           <li>
             <label for="checkbox-colorA-PD" id="label-color-A" class="color-label">Beige</label>
             <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorA-PD"></p>
-          </li> 
+          </li>
           <li>
             <label for="checkbox-colorB-PD" id="label-color-B"class="color-label">Gris</label>
             <p><input type="checkbox" name="color" class="checkbox-color-PD" id="checkbox-colorB-PD"></p>
@@ -251,8 +135,10 @@
     <input class="input-edit" type="number" name="price-edit" placeholder="  $0000">
     <br>
       <input type="submit" name="create" value="Guardar cambios" class="button-edit">
-    </form> 
-  </section> 
+    </form>
+  </section>
+¡Dos cosas! Los archivos adjuntos y los accesos directos ahora están en el signo más. Echa un vistazo a los otros cambios
+
 </main>
     <!-- footer -->
   <%- include("./partials/footer")%>

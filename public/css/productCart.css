@@ -5,6 +5,11 @@
   box-sizing: border-box;
   font-family: "roboto", sans-serif;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+
+}
 /*background-color: #F2F2F2;*/
 .product-cart-pr {
   margin: 5%;
@@ -97,6 +102,7 @@
   overflow: hidden;
 }
 .cart-product-name-pr {
+
   font-weight: bold;
   color: #444444;
   margin-bottom: 5px;
@@ -154,13 +160,15 @@
   .cart-quantity-pr,
   .cart-product-name-pr,
   .cart-product-total-pr {
-    display: flex;
+    display: flex;    
+    justify-content: end;
+}
   }
   .cart-item-pr :hover {
     font-size: 25px;
     transition: 500ms;
   }
-}
+
 /* ---------- Version Laptop ----------------------------------*/
 @media (min-width: 769px) {
   * {

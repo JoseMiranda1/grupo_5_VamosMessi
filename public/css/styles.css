@@ -8,7 +8,11 @@
 }
 
 body {
-  margin: 0;
+ width: 100%;
+ margin: 0;
+}
+.nosotros p{
+  line-height : 25px;
 }
 
 .btn-buscar-user-carrito {
@@ -22,7 +26,7 @@ body {
   display: flex;
   justify-content: right;
   flex-direction: row;
-
+  height: 50px;
   flex-wrap: wrap;
   background: #444;
 
@@ -47,12 +51,16 @@ body {
 }
 
 .menu {
-  width: 100%;
-  justify-content: left;
+  width: 50%;
   background: #444;
   z-index: 1000;
   margin-left: -100%;
   transition: all 0.5s;
+  position: relative;
+  left: -50%;
+  top: 50%;
+
+  
 }
 
 .menu__link {
@@ -66,6 +74,7 @@ body {
 
 .menu__link:hover {
   background: rgb(39, 39, 39);
+  width: 50%;
 }
 
 .submenu .menu__link:hover {
@@ -81,6 +90,7 @@ body {
   height: 0;
   overflow: hidden;
   transition: all 0.3s;
+  width: 50%;
 }
 
 .mostrar {
@@ -130,77 +140,8 @@ body {
 }
 
 /*-------------fin barra navegacion*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.banner {
-  width: 100%;
-  height: 400%;
-  animation-name: banner 10s infinite linear alternate;
-  background-size: 100% 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
 
-
-}
-
-@keyframes banner {
-
-  0%,
-  30% {
-    background-image: url(imagenes/images-banner/banner4.png);
-  }
-
-  35%,
-  65% {
-    background-image: url(imagenes/images-banner/banner3.jpg);
-  }
-
-  70%,
-  100% {
-    background-image: url(imagenes/images-banner/banner2.jpg);
-  }
-}
-
-.capa {
-  width: 100%;
-  min-height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.info {
-  z-index: 1;
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-}
-
-.info h1 {
-  color: #fff;
-  font-size: 45px;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-}
-
-.info a {
-  color: #fff;
-  text-decoration: none;
-  background: #3088e0;
-  padding: 16px 37px;
-  display: inline-block;
-  border-radius: 50px;
-}
-
-/*--------fin banner------*/
 
 
 
@@ -264,7 +205,7 @@ body {
 }
 
 .overlay {
-  z-index: 4000;
+  z-index: 8000;
   background: rgba(0, 0, 0, .3);
   position: fixed;
   top: 0;
@@ -317,6 +258,8 @@ body {
 }
 
 .btn-rsociales-login {
+  text-decoration: none;
+  color: inherit;
   width: 80%;
   display: flex;
   justify-content: space-between;
@@ -327,6 +270,8 @@ body {
 }
 
 .fbgoogle:hover {
+  text-decoration: none;
+  color: inherit;
   background: #dddcdc;
   border-radius: 6px;
   transition: all .4s ease-in-out;
@@ -467,8 +412,13 @@ body {
   cursor: pointer;
   transition: .3s ease all;
 }
-
+.regis-log-popup{
+  display: none;
+}
 @media(max-width:791px) {
+  .regis-log-popup{
+    display: block;
+  }
   .button-regis-oculto {
     display: block;
   }
@@ -539,9 +489,9 @@ body {
 
 /*fin popup----------------------------*/
 
-/* INICIO HOVER IMAGENES ----------*/
+/* INICIO HOVER IMAGENES -------
 
-.hover {
+.hover{
   width: 100%;
   min-height: 100px;
   overflow: hidden;
@@ -603,7 +553,7 @@ body {
   transform: rotate(45deg)translateY(300px) translateX(-50px)
 }
 
-/*    FIN HOVER IMAGENES------------*/
+   FIN HOVER IMAGENES------------*/
 
 * {
   box-sizing: border-box;
@@ -664,8 +614,7 @@ body {
   border: solid white;
   box-shadow: 0 0 5px rgb(87, 85, 85);
 }
-
-.produc-conteiner img {
+.produc-conteiner img {    
   width: 100%;
 }
 
@@ -691,19 +640,21 @@ body {
 }
 
 .btn {
-  position: absolute;
-  width: 35px;
-  height: 35px;
-  right: 0px;
-  line-height: 38px;
-  background: #444;
-  text-align: center;
-  color: #fff;
-  font-size: 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  margin: 0px 7px;
+      width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    line-height: 38px;
+    background: #444;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0px 7px;
 }
+
 
 .btn:hover {
   background: rgb(120, 120, 121);
@@ -792,6 +743,7 @@ body {
 }
 
 .footer-ul li {
+  list-style: none;
   text-align: center;
   padding: 0px 0px;
   margin: 0px 0px;
@@ -894,6 +846,19 @@ body {
 
 /* ---------- Version Tablet --------------- */
 @media (min-width: 481px) {
+
+  .nav-alt {
+    position: relative;
+    top: -300px;
+    left: 20px;
+  }
+  .btn-buscar-user-carrito{
+    position: absolute;
+    top: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   /*header responsive*/
   .header-nav {
@@ -998,8 +963,15 @@ body {
   .buscar:hover>input {
     opacity: 1;
   }
+  .div-banner{
+    background: #444;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+  }
 
   .box-banner {
+
     width: 98%;
   }
 
@@ -1355,26 +1327,6 @@ body {
 /* ---------- Version Monitor ----------------------------------------------------------------------------------------------- */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-------------------------------BANNER ANIMADO--------------------------------------------*/
 
 @import url(normalize.css);
@@ -1389,9 +1341,8 @@ body {
 .slider-container {
   width: 100%;
   height: auto;
-  position: relative;
+  /* puede ir calc(100vh- x cant de px que ocupe la barra de navegion y demas*/
   overflow: hidden;
-
 }
 
 .slider-container ul {
@@ -1458,8 +1409,14 @@ body {
   top: 20%;
 
 }
+.infoBanner p{ 
+  font-weight: 700;
+  color: rgb(44, 43, 43);
+  }
 
 .infoBanner h1 {
+  font-weight: bold;
+  color: rgb(73, 71, 71);
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 150%;
@@ -1535,7 +1492,15 @@ body {
 
 
 /*versión Monitor*/
-@media (min-width: 1280px) {
+@media (min-width: 1000px) {
+  .btn-buscar-user-carrito{ 
+    position: absolute;
+    top: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6000;
+}
 
   .infoBanner h1 {
 
@@ -1567,6 +1532,37 @@ body {
     text-align: center;
     transition: all .3s ease-in-out;
   }
+  .iconos-navbar {
+
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    height: 50px;
+    flex-wrap: wrap;
+    background: #444;
+  
+  }
+  .menu__link:hover  {
+    background-color: rgb(39, 39, 39);
+    width: 100%;
+  }
+  .menu__item:hover { 
+    background-color: rgb(39, 39, 39);
+  }
+  .menu {
+    width: 100%;
+    background: #444;
+    z-index: 1000;
+    margin-left: -100%;
+    transition: all 0.5s;
+    left: 0;
+    top: 0;
+}
+.buscar input {
+ 
+  opacity: 1;
+}
+
 
 
 }
