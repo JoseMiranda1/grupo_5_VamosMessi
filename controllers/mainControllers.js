@@ -3,9 +3,22 @@ const controllers={
     home:(req,res)=>{
        res.render("home");
     },
+    cambiosDevoluciones:(req,res)=>{
+        res.render("cambiosDevoluciones");
+    },
+    terminosCondiciones: (req,res)=>{ 
+        res.render("terminosCondiciones")
+    },
+    politica:(req,res)=>{
+        res.render("politica")
+    },
+    informacion:(req,res)=>{
+        res.render("informacion")
+    },
     productCart:(req,res)=> {        
         res.render("productCart");
     },
+
     productDetail:(req,res)=>{
         res.render("productDetail")
     },
@@ -25,7 +38,6 @@ const controllers={
         
         res.render("profile",{user: usuarioPerfil})
 
-    }
-    
+    },
 }
 module.exports= controllers;
