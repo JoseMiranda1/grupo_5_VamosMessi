@@ -1,4 +1,3 @@
-const { application } = require("express");
 const express =require("express");
 const app = express();
 const path = require("path");
@@ -12,9 +11,16 @@ app.set("view engine", "ejs")
 const staticFiles = express.static(path.join(__dirname,"./public"));
 app.use(staticFiles);
 
+//setup del req.body
+app.use(express.urlencoded({extended: true}));
+app.use(express.json())
+
 
 const mainRouter= require("./routes/main");
 app.use("/", mainRouter)
+
+const productsRoutes=require("./routes/products")
+app.use("/products", productsRoutes)
 
 app.use((req,res,next)=>{ 
     res.status(404).render("notFound")

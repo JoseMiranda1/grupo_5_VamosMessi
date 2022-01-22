@@ -15,19 +15,8 @@ const controllers={
     informacion:(req,res)=>{
         res.render("informacion")
     },
-    productCart:(req,res)=> {        
-        res.render("productCart");
-    },
+    
 
-    productDetail:(req,res)=>{
-        res.render("productDetail")
-    },
-    productEdit:(req,res)=>{
-        res.render("productEdit")
-    },
-    productCreate:(req,res)=>{
-        res.render("productCreate")
-    },
     profile:(ewq,res)=>{
         const usuarioPerfil=[{
             name: "José Miranda",

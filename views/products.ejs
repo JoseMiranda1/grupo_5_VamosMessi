@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <%- include("./partials/head")%>
+
+<body>   
+
+          <%- include("./partials/header")%>
+<main>
+
+    <h1>Listado de productos</h1>
+    <ul>
+        <% for(let i=0; i<productsList.length;i++){ %> 
+            <li>
+                <h2><%= productsList[i].nameProduct %> </h2>
+                <p><strong>$ <%= productsList[i].priceCreate %> </strong></p>
+            </li>
+        <% } %> 
+    </ul>
+
+</main>
+        
+   <!-- footer -->
+   <%- include("./partials/footer")%>
+
+</body>
+</html>
