@@ -7,7 +7,6 @@ router.get("/cambiosDevoluciones",controllers.cambiosDevoluciones);
 router.get("/terminosCondiciones",controllers.terminosCondiciones)
 router.get("/politica",controllers.politica)
 router.get("/informacion",controllers.informacion)
-router.get("/user/profile",controllers.profile);
-router.post("/user/profile",controllers.profile);
+
 
 module.exports= router;

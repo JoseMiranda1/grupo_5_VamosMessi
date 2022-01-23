@@ -22,6 +22,9 @@ app.use("/", mainRouter)
 const productsRoutes=require("./routes/products")
 app.use("/products", productsRoutes)
 
+const usersRouter=require("./routes/users")
+app.use("/users",usersRouter)
+
 app.use((req,res,next)=>{ 
     res.status(404).render("notFound")
 })
