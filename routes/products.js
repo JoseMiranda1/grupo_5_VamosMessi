@@ -12,8 +12,6 @@ router.get("/cart", controllers.productCart);
 router.get("/detail", controllers.productDetail)
 
 router.get("/edit", controllers.productEdit)
-router.put("/:id", controllers.update)
-
 
 router.delete("/:id", controllers.delete)
 router.get("/:id", controllers.read);

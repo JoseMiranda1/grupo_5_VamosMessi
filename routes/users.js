@@ -6,6 +6,6 @@ router.get("/profile",controllers.profile);
 router.post("/profile",controllers.profile);
 
 router.get("/", controllers.users)
-router.post("/", controllers.add)
+router.post("/", controllers.register)
 
 module.exports= router;

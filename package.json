@@ -10,9 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "ejs": "^3.1.6",
     "expres": "^0.0.5",
     "express": "^4.17.2",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.4",
     "nodemon": "^2.0.15"
   }
 }

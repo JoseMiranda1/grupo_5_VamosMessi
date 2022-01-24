@@ -15,6 +15,9 @@ app.use(staticFiles);
 app.use(express.urlencoded({extended: true}));
 app.use(express.json())
 
+const methodOverride=require("method-override")
+app.use(methodOverride("_method"))
+
 
 const mainRouter= require("./routes/main");
 app.use("/", mainRouter)

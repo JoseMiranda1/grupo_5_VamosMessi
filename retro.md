@@ -53,3 +53,33 @@ Trabajar de forma individual
 Estar hasta último momento trabajando
 
 =======
+
+**Principales conclusiones de la retro del CUARTO sprint.**
+
+### Cosas a comenzar a hacer:
+
+-mas reuniones.
+-usar trello.
+
+
+=======
+## Hacer más: 
+-estilos css
+-comunicaciones por slack
+
+
+
+=======
+## Continuar haciendo:
+
+¡Trabajar en equipo!
+Asistirnos y ayudarnos
+
+=======
+
+## Hacer menos/Dejar de hacer:
+
+Trabajar de forma individual
+Estar hasta último momento trabajando
+
+=======

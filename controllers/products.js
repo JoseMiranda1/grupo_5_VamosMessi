@@ -26,13 +26,18 @@ const controllers={
         res.render("productCreate", productId)
     },
     add:(req,res)=>{          
+        const generateID = () => {
+            const lastProduct = productsDB[productsDB.length - 1];
+			const lastID = lastProduct.id;
+			return lastID + 1;
+        }
 
         productsArray.push({
-        nameProduct: req.params.name-product-edit,
-        tradeEdit: req.params.trade-edit , 
+        id: generateID(),
+        nameProduct: req.params.name-product-create,
+        tradeEdit: req.params.trade-create , 
         compositionCreate: req.params.composition-create,
-        propertyCreate: req.params.property-create,
-        imgCreate: req.params.image-create,
+        propertyCreate: req.params.property-create,      
         priceCreate: req.params.price-create,
         desctiptionCreate: req.params.description-create,
         })
@@ -40,13 +45,12 @@ const controllers={
 
         res.redirect("/products")
     },
-
-    update:(req,res)=>{
-        res.send("vamos a actualizar un producto")
-    },
-    delete:(req,res)=>{
-        const productId= req.params.id
-        res.send("vamos a borrar un producto con ID "+ productId)
+  
+    delete: (req, res) => {
+        let idProducto = req.params.id;
+        productsArray = productsArray.filter(product => product.id != idProducto);
+        fs.writeFileSync(filePath, JSON.stringify(productsDetails, null, ' '));
+        res.redirect("/");
     },
     productCart:(req,res)=> {        
         res.render("productCart");
