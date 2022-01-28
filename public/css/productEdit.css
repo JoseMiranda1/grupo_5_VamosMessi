@@ -6,6 +6,8 @@
   justify-content: center;
 }
 .create-product{
+
+  
   display: flex;
   justify-content: flex-end;
   margin: 0;
@@ -98,6 +100,7 @@
 	  border: 1px solid #444;
     padding: 7px 0px;
 }
+
 label {
     font-size: 1.5rem;
     font-family: "Roboto", sans-serif;
@@ -196,6 +199,7 @@ textarea{
   background-color: #333;
   color: #eee;
 }
+
 #label-color-C {
   background-color: tomato;
   transition: all 0.5;
@@ -296,53 +300,60 @@ textarea{
   background-color: lightyellow;
   transition: all 0.5;
 }
+.button-edit {
+  min-width: 60px;
+  display: block;
+  width: 200px;
+  min-height: 40px;
+  border-radius: 0.6rem;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 0px;
+  transition: all, 0.5s;
+  background-color: #d49c50;
+  color: #444;
+  border: 2px solid #444;
+  margin: 0px auto 0px auto;
+}
+.button-edit:hover {
+  box-shadow: 100px, 100px, 100px, #584229;
+  background-color: #584229;
+  color: #eee;
+  padding: 2px;
+}
+.price-edit {
+  margin-top: 40px;
+}
+.color-list-PD li{
+  width: 32%;
+  list-style: none;
+}
+
 #label-color-O:hover {
   background-color: #333;
   color: #eee;
-}
-
- li{
-    width: 32%;
-    list-style: none;
-}
-
-.price-edit {
-    margin-top: 40px;
-}
-.button-edit {
-    min-width: 60px;
-    display: block;
-    width: 30%;
-    min-height: 40px;
-    border-radius: 0.6rem;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 0px;
-    transition: all, 0.5s;
-    background-color: #d49c50;
-    color: #444;
-    border: 2px solid #444;
-    margin: 0px auto 0px auto;
-  }
-  .button-edit:hover {
-    box-shadow: 100px, 100px, 100px, #584229;
-    background-color: #584229;
-    color: #eee;
-    padding: 2px;
-  }
+} 
+  
   .button-edit {
     margin: 0px auto;
   }
+
   @media (min-width: 481px) {
-    li{
+    .color-list-PD li{
         width: 19%;
+    }
+    .main-edit{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
   }
   @media (min-width: 768px) {
+    
     .main-edit {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-round;
+      justify-content: space-around;
     }
     .form-edit,
     .form-create {
