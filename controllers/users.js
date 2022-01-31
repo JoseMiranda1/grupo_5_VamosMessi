@@ -16,13 +16,43 @@ const generateID = () => {
 };
 const controllers={
     users: (req,res)=>{
-        res.render("users",{
+        usersArray.push({ 
+            user: req.body.userlog,
+            pass:req.body.userpass
+        })      
+
+
+        res.redirect("/users/profile",{          
             usersList: usersArray
         })
     },
-    profile:(ewq,res)=>{
+    login:(req,res)=>{
+
+    },
+    loginProcess:(req,res)=>{
+
+        const userToLogin= usersArray.find(oneUser => oneUser.userlog ===req.body.userlog)
+
+        if(userToLogin){
+
+        const isPasswordCorrect=bcrypt.compareSync(req.body.userpass, userToLogin.userpass)
+
+        if(isPasswordCorrect){
+
+         delete userToLogin.userpass
+         req.session.userLogged = userToLogin;
+
+            return res.redirect("/users/profile")
+        }
+       
+        }    
+    },
+    logout:(req,res)=>{
+
+    },
+    profile:(req,res)=>{
         const usuarioPerfil=[{
-            name: "",
+            email: req.session.email,
             fechaNacimiento: "",  
             tel: 4152415241,
             direccion: "calle falsa 123"
@@ -32,14 +62,16 @@ const controllers={
 
     },
     register: (req,res)=>{       
+       const bodyData=req.body;       
+       delete bodyData.reclave
        
-
+   
       usersArray.push({
-      id: generateID(),
-      name: req.body.usuario,
-       lastName:req.body.apellido,
-      password: req.body.clave,
-       email:req.body.email,                
+      id: generateID(),      
+      ...bodyData,
+     clave: bcrypt.hashSync(req.body.clave, 10),     
+     lastName:req.body.apellido,      
+    email:req.body.email,                
     })
       fs.writeFileSync(filePath,JSON.stringify(usersArray, null, " "))
 

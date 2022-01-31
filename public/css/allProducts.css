@@ -9,14 +9,17 @@
 	max-width: 1100px;
 	margin: auto;
 }
-.title-cards{
+.title-cards{	
 	width: 100%;
 	max-width: 1080px;
 	margin: auto;
 	padding: 20px;
 	margin-top: 20px;
 	text-align: center;
+	display: flex;
+	justify-content: center;
 	color: #7a7a7a;
+	
 }
 .card{
 	width: 100%;

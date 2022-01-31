@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;700&display=swap");
 
 
+
 /*------------inicio barra navegacion------*/
 * {
   box-sizing: border-box;
@@ -10,7 +11,11 @@
 body {
  width: 100%;
  margin: 0;
+ padding: 0;
+ background-color: rgb(47,47,47);
+ 
 }
+
 .nosotros p{
   line-height : 25px;
 }
@@ -605,7 +610,9 @@ body {
 
 .main {
   background-color: #f2f2f2;
-  text-align: left;
+  padding: 0;
+  margin: 0;
+
 }
 
 .titulares {
@@ -621,6 +628,21 @@ body {
 }
 .produc-conteiner img {    
   width: 100%;
+}
+.text-quienessomos{  
+  display: table-cell;
+  justify-content: space-around;
+  font-size: 13px; 
+  font-weight: 400;
+  flex-wrap: wrap;
+   width: 40%;
+}
+.text-quienessomos2{
+  position: relative;
+  top: 25px;
+  padding: 20px;
+  align-items: center;
+ 
 }
 
 .sec-container {
@@ -968,7 +990,8 @@ body {
   .buscar:hover>input {
     opacity: 1;
   }
-  .div-banner{
+  .div-banner{   
+    
     background: #444;
     text-align: center;
     color: white;
@@ -1319,10 +1342,9 @@ body {
 
   .div-banner hr {
     width: 1px;
-    background-color: 1f2b23;
-    height: 50px;
-    float: left;
-    border: 2px solid #cfcdcd;
+    background-color: #1f2b23;
+    min-height: 50px;
+    float: left;   
     border-radius: 2px;
     display: block;
     margin: auto;

@@ -1,22 +1,3 @@
 [
-    [{"id":1,"first_name":"Harp","last_name":"O'Hogertie","email":"hohogertie0@reference.com","password":"7YjgBWL","category":"user","image":"user_1.jpg"},
-        {"id":2,"first_name":"Noelani","last_name":"Ace","email":"nace1@techcrunch.com","password":"PUoX379p","category":"user","image":"user_2.jpg"},
-        {"id":3,"first_name":"Royce","last_name":"Sainsberry","email":"rsainsberry2@sourceforge.net","password":"H4YBdzP2oH6","category":"user","image":"user_3.jpg"},
-        {"id":4,"first_name":"Steffen","last_name":"Greger","email":"sgreger3@photobucket.com","password":"PxhN82xcoI","category":"user","image":"user_4.jpg"},
-        {"id":5,"first_name":"Vernor","last_name":"Brine","email":"vbrine4@xinhuanet.com","password":"nTIeBkzQp2KN","category":"user","image":"user_5.jpg"},
-        {"id":6,"first_name":"Sandor","last_name":"Wapol","email":"swapol5@dyndns.org","password":"flbC4AbWw17","category":"user","image":"user_6.jpg"},
-        {"id":7,"first_name":"Christoffer","last_name":"Tavinor","email":"ctavinor6@rambler.ru","password":"gpABvle","category":"user","image":"user_7.jpg"},
-        {"id":8,"first_name":"Raimund","last_name":"Chappelow","email":"rchappelow7@vimeo.com","password":"P4TQwKCT","category":"user","image":"user_8.jpg"},
-        {"id":9,"first_name":"Emera","last_name":"Haddy","email":"ehaddy8@themeforest.net","password":"Xm38AfNi","category":"user","image":"user_9.jpg"},
-        {"id":10,"first_name":"Jonell","last_name":"Raimbauld","email":"jraimbauld9@reverbnation.com","password":"TkMIDjAUY9Ag","category":"user","image":"user_10.jpg"},
-        {"id":11,"first_name":"Thorin","last_name":"Juza","email":"tjuzaa@xing.com","password":"gu2CinCy0OJ5","category":"user","image":"user_11.jpg"},
-        {"id":12,"first_name":"Dorine","last_name":"Severy","email":"dseveryb@hp.com","password":"pp86pJ","category":"user","image":"user_12.jpg"},
-        {"id":13,"first_name":"Maxine","last_name":"Orniz","email":"mornizc@ebay.co.uk","password":"3gGaLtt","category":"user","image":"user_13.jpg"},
-        {"id":14,"first_name":"Xerxes","last_name":"Paoli","email":"xpaolid@homestead.com","password":"XxoB0t","category":"user","image":"user_14.jpg"},
-        {"id":15,"first_name":"Kevyn","last_name":"Rubinowitch","email":"krubinowitche@google.fr","password":"XKKwPiP","category":"user","image":"user_15.jpg"},
-        {"id":16,"first_name":"Tanner","last_name":"Mabey","email":"tmabeyf@wikimedia.org","password":"baHmOg0yEg5","category":"user","image":"user_16.jpg"},
-        {"id":17,"first_name":"Axe","last_name":"Carnilian","email":"acarniliang@dyndns.org","password":"zVlYj9e","category":"user","image":"user_17.jpg"},
-        {"id":18,"first_name":"Dario","last_name":"Ashbe","email":"dashbeh@buzzfeed.com","password":"Wns15TDm","category":"user","image":"user_18.jpg"},
-        {"id":19,"first_name":"Paige","last_name":"Scotts","email":"pscottsi@google.fr","password":"u5cGIIWU3pZW","category":"user","image":"user_19.jpg"},
-        {"id":20,"first_name":"Francois","last_name":"Fullick","email":"ffullickj@princeton.edu","password":"9LRZcLGVoIm","category":"user","image":"user_20.jpg"}]
+ 
 ]

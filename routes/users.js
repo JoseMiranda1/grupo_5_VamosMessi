@@ -7,5 +7,6 @@ router.post("/profile",controllers.profile);
 
 router.get("/", controllers.users)
 router.post("/", controllers.register)
-
+router.post("/",controllers.loginProcess)
+router.post("/logout",controllers.logout)
 module.exports= router;

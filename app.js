@@ -1,6 +1,7 @@
 const express =require("express");
 const app = express();
 const path = require("path");
+const session=require("express-session")
 
 app.use(express.static(path.join(__dirname + '../public')));
 
@@ -12,8 +13,16 @@ const staticFiles = express.static(path.join(__dirname,"./public"));
 app.use(staticFiles);
 
 //setup del req.body
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: false}));
 app.use(express.json())
+
+//session
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true
+}))
+
 
 const methodOverride=require("method-override")
 app.use(methodOverride("_method"))
