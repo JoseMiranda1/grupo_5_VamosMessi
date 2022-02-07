@@ -3,10 +3,11 @@ const router=express.Router();
 const controllers=require("../controllers/users");
 
 router.get("/profile",controllers.profile);
-router.post("/profile",controllers.profile);
 
-router.get("/", controllers.users)
-router.post("/", controllers.register)
-router.post("/",controllers.loginProcess)
-router.post("/logout",controllers.logout)
+router.post("/login", controllers.login);
+router.post("/", controllers.register);
+
+router.get("/logout",controllers.logout);
+
+
 module.exports= router;

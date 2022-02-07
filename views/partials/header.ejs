@@ -47,16 +47,10 @@
   <!--
           logos
         -->
-
-
-
-
-
-
   <!--inicio de banner animado --------------------->
   <div class="animacion">
 
-    <!-- INICIO BANNER ----------------------------------------------------------------------->
+   
 
     <section class="slider-container">
       <ul>
@@ -81,37 +75,9 @@
         <br>
         <a href="#¿QuienesSomos?"">Leer mas</a>
       </div>
-
-
-
-
-
     </section>
-
-
-
-
-
-    <!-- Fin banner rocio --------------------------------------------------------------------------->
-    <!--
-    <div class="capa"></div>
-
-    <!-- <ul>
-        <li><img src="imagenes/images-banner/banner1.jpg" alt=""></li>    
-        <li> <img src="imagenes/images-banner/banner2.jpg" alt=""></li> 
-        <li> <img src="imagenes/images-banner/banner3.jpg" alt=""></li> 
-        <li> <img src="imagenes/images-banner/banner4.png" alt=""></li> 
-      </ul>
-      
-    <div class="info">
-
-      <h1> aqui el banner animado</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eaque deleniti explicabo atque doloremque
-        quod, et odit! Quo quam sequi maiores magni, repellendus molestias ipsum sint eligendi pariatur mollitia
-        deserunt?</p>
-      <a href="#¿QuienesSomos?">Leer mas</a>
-    </div>-->
   </div>
+  
   <div class="div-banner">
     <p class="box-banner">3 , 6 y 12 cuotas sin interés<br> en compras superiores a $7990</p>
     <hr>
@@ -120,8 +86,8 @@
     <p class="box-banner" id="p-boxC">Retiro gratis en sucursales seleccionadas</p>
   </div>
   <script src="/js/menu.js"></script>
-  <!--   popup  -->
-  <!-- inicio popup-->
+  
+  <!---------------------------- inicio popup--------------------->
 
 
   <div class="contenedor">
@@ -129,7 +95,7 @@
       <div class="popup" id="popup">
         <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
 
-        <form class="form-regis-log" action="/users" method="post">
+        <form class="form-regis-log" action="/users" method="post" enc>
 
           <div class="contenedor-inputs-regis" id="cont-regis">
             <div class="register">
@@ -153,8 +119,7 @@
                   </a>
                 </div>
               </div>
-              <input type="text" name="usuario" placeholder="Nombre" required id="Nombre">
-              <input type="text" name="Apellido" placeholder="Apellido" id="Apellido" required>
+              <input type="text" name="usuario" placeholder="Nombre completo" required id="Nombre">           
               <input type="password" name="clave" placeholder="Contraseña" required>
               <input type="password" name="reclave" placeholder="Repetir contraseña" required>
               <input class="controlsr" type="date" name="fechaNacimiento" required>
@@ -166,7 +131,8 @@
           
           <div class="contenedor-inputs" id="contenedor-inputs">
           </form>
-            <form action="/users/profile" method="post">
+
+            <form action="/users/login" method="post">
             <h4>Iniciar sesión</h4>
             <div class="btn-rsociales-login">
 
@@ -184,7 +150,7 @@
                 </a>
               </div>
             </div>            
-            <input type="text" name="userlog" placeholder="Usuario o Email"  id="Nombre">
+            <input type="text" name="userlog" placeholder="Email"  id="Nombre">
             <input type="password" name="userpass" placeholder="Contraseña" >
             <p class="regis-log-popup" onclick="openRegister()" id="mostrar-regis">¿No tenes cuenta?<a
                 href="#">Registrate</a></p>
