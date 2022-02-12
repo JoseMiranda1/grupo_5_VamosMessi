@@ -4,7 +4,12 @@
 
 
 /*------------inicio barra navegacion------*/
+::-webkit-scrollbar-bottom{
+  display: none;
+}
+
 * {
+ 
   box-sizing: border-box;
 }
 
@@ -15,7 +20,38 @@ body {
  background-color: rgb(47,47,47);
  
 }
+.logout{
+  text-decoration: none;
+  color:white;
+}
+.campo-pais{
 
+  padding: 10px 0 15px 0 ;
+
+}
+.elegir-pais{
+  color: rgb(8, 8, 8);
+align-items:center;
+text-align: center;
+width:50%;
+border: solid .1px;
+}
+.login-width{
+  width:50%
+}
+/*redes sociales*/
+.social-network-PD i {
+  margin: 10px 0px 10px 15px;
+  color: #d49c50;
+  font-size: 1.7rem;
+  transition: all, 0.5s;
+}
+.social-network-PD i:hover {
+  color: #584229;
+}
+.social-network-PD i:active {
+  color: #d49c50;
+}
 .nosotros p{
   line-height : 25px;
 }
@@ -274,6 +310,7 @@ body {
 /* POPUP */
 
 .form-regis-log {
+  
   display: flex;
   justify-content: space-between;
 }
@@ -438,6 +475,11 @@ body {
 
 .btn-submit-register:hover {
   background: rgba(2, 126, 19, 0.9);
+}
+.register{
+  position: relative;
+  left: 80px;
+  
 }
 
 .popup form .btn-submit {

@@ -7,6 +7,8 @@ router.get("/profile",controllers.profile);
 router.post("/login", controllers.login);
 router.post("/", controllers.register);
 
+router.post("/edit", controllers.edit);
+
 router.get("/logout",controllers.logout);
 
 

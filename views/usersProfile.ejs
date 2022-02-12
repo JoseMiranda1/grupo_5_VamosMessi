@@ -3,6 +3,8 @@
 <head>
   <%- include("./partials/head")%>
   <link rel="stylesheet" href="/css/user-profile.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>   
     
@@ -10,29 +12,35 @@
         
 
     <main>
-        
-        <div class="camp-dates">
-            <div class="img-dates">
-            <img class="img-profile" src="/imagenes/img-user-profile.png"  alt="" >
-           <a href="#"><i class="fas fa-pencil-alt"></i></a> 
-
-           <a href="#"> Email : usuario@lasabana.com</a>
+      <div class="container">
+        <div class="center">
+          <div class="content">
+          <img src="/imagenes/bg-pattern-card.jpg" alt="bg-card">
+          <img class="potrait" src="/imagenes/img-user-profile.png" alt="" >
+          <div>
+          <a href="/users/edit"><i class="fa-regular fa-user-pen"></i> Editar perfil</a>
         </div>
-        <ul class="cont-li">
-            <% for(let i=0; i<user.length;i++ ){ %> 
-            <li class="nombrecamp">Nombre y apellido: <%= user[i].email %>  </li>
-            <br>
-            <li class="nombrecamp">Fecha de nacimiento: <%= user[i].fechaNacimiento %> </li>
-            <br>
-            <li class="nombrecamp">Telefono: <%= user[i].tel %> </li>
-            <br>
-            <li class="nombrecamp">Dirección: <%= user[i].direccion %> </li>
-            <br>
-            
-            <% } %> 
-
-        </ul>        
-    </div>
+          <h3 class="name"> <%= user.usuario %> <span class="age"><%=user.fechaNacimiento %>
+           </span></h3>
+          <h5 class="location" >Email:  <a href="#"><%= user.email %></a></h5>
+          <p class="location"><%=  user.pais %></p>
+        </div>
+        <div class="num">
+          <ul>
+            <li>80K</li>
+            <li>803K</li>
+            <li>20%</li>
+          </ul>
+        </div>
+        <div class="stats">
+          <ul>
+            <li>Compras</li>
+            <li class="likes">Likes</li>
+            <li class="photo">Descuento</li>
+          </ul>
+        </div>
+      </div>
+      </div>
     </main>
 
       <!-- footer -->
