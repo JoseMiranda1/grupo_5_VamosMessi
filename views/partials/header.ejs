@@ -25,20 +25,29 @@
       <!--
                logos
                  -->
-
       <div class="btn-buscar-user-carrito">        
         <nav class="nav-alt">
-          <a class="logout" href="/users/logout">Cerrar sesión<i class="fa-solid fa-arrow-right-from-bracket"></i></a> 
-
           <div class="buscar">
             <input type="text" placeholder="¿Que estás buscando?" required>
             <div class="btn">
               <i class="fas fa-search"></i>
             </div>
           </div>
-          <div class="usuario">
-            <a id="btn-abrir-popup"><i class="fas fa-user"></i></a>
-          </div>
+          <% if (locals.isAnUserLogged == true){%> 
+          <ul class="menuP" id="menu">
+            <li class="menu__item container-submenu">
+              <a href="#" class="menu__link submenu-btn"><b><%= userData.name %> </b>  <i class="fas fa-chevron-down"></i></a>
+              <ul class="submenu">
+                <li class="menu__item"><a href="/users/profile" class="menu__link">perfil</a></li>
+                <li class="menu__item"><a href="/users/logout" class="menu__link">Cerrar sesión</a></li>
+              </ul>
+            </li>
+          </ul>
+          <%} else { %> 
+            <div class="usuario">
+              <a id="btn-abrir-popup"><i class="fas fa-user"></i></a>
+            </div>         <%}%>
+         
           <div class="carrito">
             <a href="/products/cart"><i class="fas fa-cart-plus"></i></a>
           </div>

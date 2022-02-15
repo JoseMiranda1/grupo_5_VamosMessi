@@ -29,7 +29,7 @@ const controllers = {
 
         delete userToLogin.userpass
         req.session.userLogged = userToLogin;
-
+        return res.redirect("/users/profile")
       }
 
     }
@@ -38,10 +38,12 @@ const controllers = {
     } else {
       res.status(400).send("las credenciales son invalidas")
 
-    }
+    } 
 
   },
-
+  loginV: (req,res)=> { 
+    return res.render("login")
+  },
 
   logout: (req, res) => {
     res.clearCookie('userEmail');
@@ -66,15 +68,20 @@ const controllers = {
     delete bodyData.reclave
 
     usersArray.push({
-      id: generateID(),
-      ...bodyData,
-      clave: bcrypt.hashSync(req.body.clave, 10),    
+        id: generateID(),
+        ...bodyData,
+        clave: bcrypt.hashSync(req.body.clave, 10),
 
     })
     fs.writeFileSync(filePath, JSON.stringify(usersArray, null, " "))
 
     return res.redirect("/")
-  }
+ },
+ RegisterV: (req,res) => { 
+   return res.render("register")
+   
+   
+ },
 }
 
 

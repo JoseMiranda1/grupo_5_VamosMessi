@@ -7,7 +7,15 @@
 ::-webkit-scrollbar-bottom{
   display: none;
 }
+li { 
+  list-style: none; 
 
+}
+html {
+  margin-right: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
 * {
  
   box-sizing: border-box;
@@ -102,6 +110,17 @@ border: solid .1px;
   top: 50%;
 
   
+}
+.menuP {
+  width: 80%;
+  background: #444;
+  transition: all 0.5s;
+  height: 50px;
+  text-align: left;
+  position: relative;
+  top: -30px;
+  display: flex;
+
 }
 
 .menu__link {

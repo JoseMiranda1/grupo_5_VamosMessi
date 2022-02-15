@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include("./partials/head")%>
+  <link rel="stylesheet" href="/css/user-profile.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>   
+    <%- include("./partials/header")%>
+    <main>
+        <form class="login-width" action="/users/login" method="post">
+            <h4>Iniciar sesión</h4>
+  
+            <nav class="social-network-PD">
+              <a href="https://twitter.com/?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+          </nav>
+            
+            <input type="text" name="userlog" placeholder="Email" id="Nombre">
+            <input type="password" name="userpass" placeholder="Contraseña">
+            <p class="regis-log-popup" onclick="openRegister()" id="mostrar-regis">¿No tenes cuenta?<a
+                href="#">Registrate</a></p>
+            <a class="olvidaste-contra" href="#">¿Olvidaste tu contraseña?</a>
+            <input type="submit" class="btn-submit" value="Ingresar">
+  
+  
+        </div>
+        </form>
+</main>
+<!-- footer -->
+<%- include("./partials/footer")%>
+
+</body>
+</html>

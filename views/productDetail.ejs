@@ -2,13 +2,20 @@
 <html lang="en">
 <head>    
     <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="/css/productEdit.css">
+
     <%- include("./partials/head")%>    
 </head>
 <body>
     <%- include("./partials/header")%>
     <!--página detalle de producto-->
     <main>
+        
         <div class="main-container-PD">
+            <ul>
+            <li class="create-product"> <a  href="/products/edit"><i class="fas fa-edit"></i></i>Editar Producto</a> </li><br> <br>
+            <li class="create-product">  <a  href="/products/create"><i class="fas fa-edit"></i></i>Crear producto</a></li>
+        </ul>
             <!--imagen del producto-->
             <!--deslizamiento de imagen-->
             <section class="slider-box-price-container-PD">

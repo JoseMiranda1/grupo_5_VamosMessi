@@ -12,35 +12,42 @@
         
 
     <main>
-      <div class="container">
-        <div class="center">
-          <div class="content">
-          <img src="/imagenes/bg-pattern-card.jpg" alt="bg-card">
-          <img class="potrait" src="/imagenes/img-user-profile.png" alt="" >
-          <div>
-          <a href="/users/edit"><i class="fa-regular fa-user-pen"></i> Editar perfil</a>
+      <% if (locals.isAnUserLogged == true){%> 
+        <div class="container">
+          <div class="center">
+            <div class="content">
+             <b>Bienvenido <%= userData.name %> </b>
+            <img src="/imagenes/bg-pattern-card.jpg" alt="bg-card">
+            
+            <img class="potrait" src="/imagenes/img-user-profile.png" alt="" >
+            <div>
+            <a href="/users/edit"><i class="fa-regular fa-user-pen"></i> Editar perfil</a>
+          </div>
+            <h3 class="name"> <%= userData.name %> <span class="age"><%=userData.fechaNacimiento %>
+             </span></h3>
+            <h5 class="location" >Email:  <a href="#"><%= user.email %></a></h5>
+            <p class="location"><%=  user.pais %></p>
+          </div>
+          <div class="num">
+            <ul>
+              <li>80K</li>
+              <li>803K</li>
+              <li>20%</li>
+            </ul>
+          </div>
+          <div class="stats">
+            <ul>
+              <li>Compras</li>
+              <li class="likes">Likes</li>
+              <li class="photo">Descuento</li>
+            </ul>
+          </div>
         </div>
-          <h3 class="name"> <%= user.usuario %> <span class="age"><%=user.fechaNacimiento %>
-           </span></h3>
-          <h5 class="location" >Email:  <a href="#"><%= user.email %></a></h5>
-          <p class="location"><%=  user.pais %></p>
         </div>
-        <div class="num">
-          <ul>
-            <li>80K</li>
-            <li>803K</li>
-            <li>20%</li>
-          </ul>
-        </div>
-        <div class="stats">
-          <ul>
-            <li>Compras</li>
-            <li class="likes">Likes</li>
-            <li class="photo">Descuento</li>
-          </ul>
-        </div>
-      </div>
-      </div>
+      <%} else { %> 
+         <button><a href="/"> REGISTRARSE </a> </button> 
+      <%}%>
+     
     </main>
 
       <!-- footer -->

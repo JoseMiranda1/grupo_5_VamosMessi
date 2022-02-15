@@ -27,6 +27,9 @@ app.use(session({
 const methodOverride=require("method-override")
 app.use(methodOverride("_method"))
 
+//inicio del Middlewares
+const userLoggedMD= require("./middlewares/userLoggedMiddleware");
+app.use(userLoggedMD); 
 
 const mainRouter= require("./routes/main");
 app.use("/", mainRouter)
