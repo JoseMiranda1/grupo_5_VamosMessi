@@ -2,14 +2,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@400;700&display=swap");
 
 
+<<<<<<< HEAD
 /*------------inicio barra navegacion------*/
 * {
+=======
+
+/*------------inicio barra navegacion------*/
+::-webkit-scrollbar-bottom{
+  display: none;
+}
+
+* {
+ 
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
   box-sizing: border-box;
 }
 
 body {
  width: 100%;
  margin: 0;
+<<<<<<< HEAD
+=======
+ padding: 0;
+ background-color: rgb(47,47,47);
+ 
+}
+.logout{
+  text-decoration: none;
+  color:white;
+}
+.campo-pais{
+
+  padding: 10px 0 15px 0 ;
+
+}
+.elegir-pais{
+  color: rgb(8, 8, 8);
+align-items:center;
+text-align: center;
+width:50%;
+border: solid .1px;
+}
+.login-width{
+  width:50%
+}
+/*redes sociales*/
+.social-network-PD i {
+  margin: 10px 0px 10px 15px;
+  color: #d49c50;
+  font-size: 1.7rem;
+  transition: all, 0.5s;
+}
+.social-network-PD i:hover {
+  color: #584229;
+}
+.social-network-PD i:active {
+  color: #d49c50;
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
 }
 .nosotros p{
   line-height : 25px;
@@ -142,6 +191,78 @@ body {
 /*-------------fin barra navegacion*/
 
 
+<<<<<<< HEAD
+=======
+/*-----------INICIO HOVER IMG------------------*/
+
+
+.contenedor-img{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+.contenedor-img figure{
+ position:relative;
+  
+  cursor: pointer;
+  
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+}
+.contenedor-img figure img{  
+  transition: all 400ms ease-out;
+  will-change: transform;
+}
+.contenedor-img figure .capa{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  align-items: center;
+  background: rgba(79, 80, 80, 0.7);
+  transition: all 400ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+ text-align: center;
+}
+.contenedor-img figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+.contenedor-img figure:hover > .capa h3{
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+.contenedor-img figure:hover > img{
+  transform: scale(1.3);
+}
+.contenedor-img figure .capa h3{
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 120px;
+  transition: all 400ms ease-out;
+   margin-top: 30px;
+}
+.contenedor-img figure .capa p{
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+}
+
+
+
+/*----------------FIN HOVER IMG----------------*/
+
+
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
 
 
 
@@ -200,6 +321,10 @@ body {
 /* POPUP */
 
 .form-regis-log {
+<<<<<<< HEAD
+=======
+  
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
   display: flex;
   justify-content: space-between;
 }
@@ -365,6 +490,14 @@ body {
 .btn-submit-register:hover {
   background: rgba(2, 126, 19, 0.9);
 }
+<<<<<<< HEAD
+=======
+.register{
+  position: relative;
+  left: 80px;
+  
+}
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
 
 .popup form .btn-submit {
   z-index: 4;
@@ -489,6 +622,7 @@ body {
 
 /*fin popup----------------------------*/
 
+<<<<<<< HEAD
 /* INICIO HOVER IMAGENES -------
 
 .hover{
@@ -554,6 +688,9 @@ body {
 }
 
    FIN HOVER IMAGENES------------*/
+=======
+
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
 
 * {
   box-sizing: border-box;
@@ -600,7 +737,13 @@ body {
 
 .main {
   background-color: #f2f2f2;
+<<<<<<< HEAD
   text-align: left;
+=======
+  padding: 0;
+  margin: 0;
+
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
 }
 
 .titulares {
@@ -617,6 +760,24 @@ body {
 .produc-conteiner img {    
   width: 100%;
 }
+<<<<<<< HEAD
+=======
+.text-quienessomos{  
+  display: table-cell;
+  justify-content: space-around;
+  font-size: 13px; 
+  font-weight: 400;
+  flex-wrap: wrap;
+   width: 40%;
+}
+.text-quienessomos2{
+  position: relative;
+  top: 25px;
+  padding: 20px;
+  align-items: center;
+ 
+}
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
 
 .sec-container {
   display: flex;
@@ -963,7 +1124,12 @@ body {
   .buscar:hover>input {
     opacity: 1;
   }
+<<<<<<< HEAD
   .div-banner{
+=======
+  .div-banner{   
+    
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
     background: #444;
     text-align: center;
     color: white;
@@ -1314,10 +1480,16 @@ body {
 
   .div-banner hr {
     width: 1px;
+<<<<<<< HEAD
     background-color: 1f2b23;
     height: 50px;
     float: left;
     border: 2px solid #cfcdcd;
+=======
+    background-color: #1f2b23;
+    min-height: 50px;
+    float: left;   
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
     border-radius: 2px;
     display: block;
     margin: auto;
@@ -1565,4 +1737,8 @@ body {
 
 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
