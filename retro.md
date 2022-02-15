@@ -53,6 +53,8 @@ Trabajar de forma individual
 Estar hasta último momento trabajando
 
 =======
+<<<<<<< HEAD
+=======
 
 **Principales conclusiones de la retro del CUARTO sprint.**
 
@@ -83,3 +85,4 @@ Trabajar de forma individual
 Estar hasta último momento trabajando
 
 =======
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6

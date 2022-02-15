@@ -10,6 +10,24 @@
           <%- include("./partials/header")%>
 <main class="main-edit">
   <p class="create-product">
+<<<<<<< HEAD
+    <a  href="/productEdit"><i class="fas fa-edit"></i></i>Editar Producto</a>
+  </p>
+  <section class="form-create" >
+    <form action="" method="get"> 
+      <p class="title-edit">Crear un nuevo producto</p>
+      <label for="">Nombre del producto</label>
+      <input class="input-edit" type="text" name="name-product-edit" placeholder="  Por ej.: Bata de Baño Smoking Piqué...">
+      <br>
+      <label for="">Marca del producto</label>
+      <input class="input-edit" type="text" name="trade-edit" placeholder="  Por ej.: Piero...">
+      <br>
+      <label for="">Descripción</label>
+      <input class="input-edit" type="text" name="description-edit" placeholder="  Por ej.: Bata de baño para adulto...">
+      <br>
+      <label for="">Composición</label>
+      <input class="input-edit" type="text" name="composition-edit" placeholder="  Por ej.: Mezcla de algodón y poliéster, 144 hilos.">
+=======
     <a  href="/products/edit"><i class="fas fa-edit"></i></i>Editar Producto</a>
   </p>
   <section class="form-create" >
@@ -26,15 +44,24 @@
       <br>
       <label for="">Composición</label>
       <input class="input-edit" type="text" name="composition-create" placeholder="  Por ej.: Mezcla de algodón y poliéster, 144 hilos.">
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
       <br>
       <label for="">Características de la tela</label>
       <br>
       <p class="caract-tela-create">
+<<<<<<< HEAD
+        <textarea type="text" rows="3" name="property-edit" placeholder="Por ej.: Las telas con mezclas de algodón y poliéster son conocidas por su durabilidad. El algodón es de fibra natural, por lo que le brinda propiedades como respirabilidad y suavidad." maxlength="450"required></textarea>
+      </p>
+      <br>
+      <label for="">Imágenes</label>
+      <input class="input-edit" type="file" name="image-edit" accept="image/png, .jpeg, .jpg, image/gif">
+=======
         <textarea type="text" rows="3" name="property-create" placeholder="Por ej.: Las telas con mezclas de algodón y poliéster son conocidas por su durabilidad. El algodón es de fibra natural, por lo que le brinda propiedades como respirabilidad y suavidad." maxlength="450"required></textarea>
       </p>
       <br>
       <label for="">Imágenes</label>
       <input class="input-edit" type="file" name="image-create" accept="image/png, .jpeg, .jpg, image/gif">
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
       <br>
       <label for="">Categoría</label>
       <select class="product-list-edit">     
@@ -60,7 +87,11 @@
       <div class="color-selection">
         <p class="color-title">Colores</p>
         <br>
+<<<<<<< HEAD
+        <form action="" method="post">
+=======
         <form action="/products" method="post">
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
           <ul class="color-list-PD">    
             <li>
               <label for="checkbox-colorA-PD" id="label-color-A" class="color-label">Beige</label>
@@ -126,9 +157,15 @@
         </form>
       </div>
     <label for="price-edit" class="price-edit">Precio</label>
+<<<<<<< HEAD
+    <input class="input-edit" type="number" name="price-edit" placeholder=" $0000">
+    <br>
+    <input type="submit" name="create" value="Publicar" class="button-edit">
+=======
     <input class="input-edit" type="number" name="price-create" placeholder=" $0000">
     <br>
     <button type="submit" name="create"  class="button-edit" >Publicar</button>
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
   </form>
   </section>  
   

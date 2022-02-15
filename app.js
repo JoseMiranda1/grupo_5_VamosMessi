@@ -1,7 +1,10 @@
 const express =require("express");
 const app = express();
 const path = require("path");
+<<<<<<< HEAD
+=======
 const session = require("express-session")
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
 
 app.use(express.static(path.join(__dirname + '../public')));
 
@@ -12,6 +15,11 @@ app.set("view engine", "ejs")
 const staticFiles = express.static(path.join(__dirname,"./public"));
 app.use(staticFiles);
 
+<<<<<<< HEAD
+
+const mainRouter= require("./routes/main");
+app.use("/", mainRouter)
+=======
 //setup del req.body
 app.use(express.urlencoded({extended: false}));
 app.use(express.json())
@@ -43,3 +51,4 @@ app.use("/users",usersRouter)
 app.use((req,res,next)=>{ 
     res.status(404).render("notFound")
 })
+>>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
