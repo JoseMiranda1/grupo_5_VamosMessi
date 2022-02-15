@@ -1,0 +1,201 @@
+@import url(normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+* {
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+
+}
+/*background-color: #F2F2F2;*/
+.product-cart-pr {
+  margin: 5%;
+}
+.page-banner-pr {
+  font-size: 20px;
+  color: #444444;
+  font-weight: bold;
+  background-color: #cfcdcd;
+  padding: 16px;
+}
+.cart-collection-pr {
+  margin-top: 16px;
+}
+.cart-end-pr {
+  margin-left: 20px;
+}
+.cart-item-pr form {
+  display: grid;
+  /*para que los elementos se muestren uno abajo del otro, diseño de cuadricula que divide la grilla en columnas*/
+  grid-template-columns: 100%;
+  /*especifica el número (y el ancho) de las columnas la cuadrícula.*/
+  border: 1px solid #444444;
+}
+.cart-item-pr {
+  margin: 4%;
+}
+.cart-product-pr {
+  display: grid;
+  grid-template-columns: 80px auto;
+  /*dimensiones de la cajas con info del producto*/
+  grid-gap: 0px 20px;
+  /*especifica los canales entre las filas y las columnas de la cuadrícula*/
+  padding: 16px 16px;
+  border-bottom: 1px solid #cfcdcd;
+}
+.cover-img-pr {
+  height: 100px;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cart-quantity-pr,
+.cart-product-total-pr {
+  display: none;
+  margin-left: 30px;
+}
+.cart-product-info-pr {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-gap: 0px 20px;
+  text-align: center;
+  padding: 5%;
+}
+.cart-controls-pr {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 14px;
+}
+.cart-quantity-controls-pr {
+  display: flex;
+}
+.cart-quantity-controls-pr button,
+.cart-quantity-controls-pr input {
+  height: 25px;
+  width: 25px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 10px;
+}
+.cart-quantity-controls-pr button {
+  border-radius: 50%;
+  color: black;
+  background-color: #cfcdcd;
+}
+.btn-remove-pr {
+  border: none;
+  font-weight: bold;
+  color: #d49c50;
+  background-color: white;
+}
+.cover-img-pr :hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+.cover-img-pr :hover {
+  overflow: hidden;
+}
+.cart-product-name-pr {
+
+  font-weight: bold;
+  color: #444444;
+  margin-bottom: 5px;
+}
+.cart-price-pr {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.cart-total-holder-pr {
+  margin-top: 30px;
+}
+.cart-total-pr {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.cart-total-pr p {
+  font-weight: bold;
+  font-size: 25px;
+}
+.cart-action-button-pr a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+.cart-action-button-pr {
+  display: flex;
+  flex-direction: column;
+  padding: 0%, 20%, 0%, 20%;
+}
+.cart-action-button-pr a:first-child {
+  /*representa el primer elemento entre un grupo de elementos hermanos.*/
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #cfcdcd;
+  margin: 2px 20px;
+  text-decoration: none;
+}
+.btn-main-pr {
+  background-color: #00bb2d;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 2px 20px;
+}
+/* ---------- Version Tablet --------------------------------*/
+@media (min-width: 481px) {
+  * {
+    box-sizing: border-box;
+  }
+  .cart-quantity-pr,
+  .cart-product-name-pr,
+  .cart-product-total-pr {
+    display: flex;    
+    justify-content: end;
+}
+  }
+  .cart-item-pr :hover {
+    font-size: 25px;
+    transition: 500ms;
+  }
+
+/* ---------- Version Laptop ----------------------------------*/
+@media (min-width: 769px) {
+  * {
+    box-sizing: border-box;
+  }
+  .cart-quantity-pr,
+  .cart-product-name-pr,
+  .cart-product-total-pr {
+    display: flex;
+  }
+  .cart-item-pr :hover {
+    font-size: 25px;
+    transition: 500ms;
+  }
+}
+/* ---------- Version Monitor ----------------------------------*/
+@media (min-width: 1280px) {
+  * {
+    box-sizing: border-box;
+  }
+  .cart-quantity-pr,
+  .cart-product-name-pr,
+  .cart-product-total-pr {
+    display: flex;
+  }
+  .cart-item-pr :hover {
+    font-size: 25px;
+    transition: 500ms;
+  }
+}
