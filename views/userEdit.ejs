@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head")%>
+        <link rel="stylesheet" href="/css/user-profile.css">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/productEdit.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <%- include("./partials/header")%>
+        <main>
+            <form action="/users/profile" method="post" class="userEdit">
+                <input class="input-edit" type="text" value="<%= user.usuario %>">
+                <input class="input-edit" type="email" value="<%= user.email %>">
+                <input class="input-edit" type="date" value="<%= user.fechaNacimiento %>">
+                <select class="input-edit" name="pais" id="country" class="elegir-pais" value="<%= user.pais %>">
+                  <option value="-">Pais</option>
+                  <option value="Argentina">Argentina</option>
+                  <option value="Bolivia">Bolivia</option>
+                  <option value="Brasil">Brasil</option>
+                  <option value="Colombia">Colombia</option>
+                  <option value="Chile">Chile</option>
+                  <option value="Ecuador">Ecuador</option>
+                  <option value="Paraguay">Paraguay</option>
+                  <option value="Perú">Peru</option>
+                  <option value="Uruguay">Uruguay</option>
+                  <option value="Venezuela">Venezuela</option>
+              </select>
+
+
+                <button class="btn-submit-register" type="submit">Guardar cambios</button>
+            </form>
+        </main>
+        <!-- footer -->
+        <%- include("./partials/footer")%>
+
+</body>
+
+</html>

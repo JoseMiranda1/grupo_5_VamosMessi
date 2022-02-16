@@ -1,107 +1,77 @@
-<<<<<<< HEAD
-*{
-box-sizing: border-box;
-
-}
-main{
-    padding: 1px 0px 30px ;
-}
-.camp-dates{
-    display: flex;
-    justify-content: space-around;
-        
-}
-.nombrecamp{
-    font-size: 20px;
-   
-}
-.img-dates{
-    padding: 30px;
-    display: flex;
-    flex-direction:column;
-    border: solid 1px rgb(158, 158, 158);
-}
-
-.cont-li{
-    border: solid 1px rgb(158, 158, 158);
-    padding: 20%;
-  
-   
-
-}
-.img-profile{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-=======
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
-
-:root{
---Dark-cyan: hsl(60, 47%, 79%);
---Very-dark-desaturated-blue: hsl(229, 23%, 23%);
---Dark-grayish-blue: hsl(227, 10%, 46%);
---Dark-gray: hsl(0, 0%, 59%);
+:root {
+    --Dark-cyan: hsl(60, 47%, 79%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-main{
+
+main {
     font-family: 'Kumbh Sans', sans-serif;
     background-color: var(--Dark-cyan);
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background-image: url(/imagenes/img-fondo.jpg) ;
+    background-image: url(/imagenes/img-fondo.jpg);
     background-size: cover;
-    background-repeat: no-repeat, no-repeat;   
+    background-repeat: no-repeat, no-repeat;
 }
-.container{
+
+.container {
     margin: 0 auto;
     text-align: center;
 }
-.center{
+
+.center {
     max-width: 455px;
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
     margin-left: 1rem;
     margin-right: 1rem;
-    
 }
-.potrait{
+
+.potrait {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     border: 5px solid white;
     margin-top: -53px;
 }
-.name{
-    font-family:  'Kumbh Sans', sans-serif;
+
+.name {
+    font-family: 'Kumbh Sans', sans-serif;
     font-size: 18px;
     font-weight: 700;
     padding-top: 15px;
     margin-bottom: 10px;
     color: var(--Very-dark-desaturated-blue);
 }
-.age{
+
+.age {
     color: var(--Dark-grayish-blue);
     font-weight: 400;
     font-size: 18px;
     margin-left: 5px;
 }
-.location{
+
+.location {
     color: var(--Dark-gray);
     font-weight: 400;
     margin-bottom: 20px;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
-.num ul{
+.num ul {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -112,7 +82,8 @@ ul{
     color: var(--Very-dark-desaturated-blue);
     border-top: 1px solid hsl(0, 0%, 59%, 0.3);
 }
-.stats ul{
+
+.stats ul {
     font-family: 'Kumbh Sans', sans-serif;
     display: flex;
     align-items: center;
@@ -124,19 +95,16 @@ ul{
     font-weight: 400;
     color: var(--Dark-gray);
 }
-.stats ul:first-child{
+
+.stats ul:first-child {
     padding-left: 5px;
 }
-.stats ul .likes{
+
+.stats ul .likes {
     padding-left: 10px;
 }
-.stats ul .photo{
+
+.stats ul .photo {
     padding-left: 20px;
     z-index: 1;
 }
-
-
-
-
-
->>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6

@@ -1,29 +1,28 @@
-*{
+* {
     box-sizing: border-box;
 }
-.caract-tela-create{  
-  display: flex;
-  justify-content: center;
-}
-.create-product{
-<<<<<<< HEAD
-=======
 
-  
->>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
-  display: flex;
-  justify-content: flex-end;
-  margin: 0;
-  padding: 0; 
-  width: 100%;
-  height: 0px;
-  font-weight: 700;
-  color: #d49c50;
-  font-size: 24px;
+.caract-tela-create {
+    display: flex;
+    justify-content: center;
 }
-.create-product a{
-  color: inherit;
+
+.create-product {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 0px;
+    font-weight: 700;
+    color: #d49c50;
+    font-size: 24px;
 }
+
+.create-product a {
+    color: inherit;
+}
+
 .main-edit {
     background-color: #eee;
     margin: 0px;
@@ -31,52 +30,58 @@
     justify-content: center;
     text-align: center;
 }
+
 .form-edit,
-.form-create{
+.form-create {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     min-height: 500px;
-    padding:0px;
+    padding: 0px;
     margin: 0px;
 }
+
 .form-create {
-  margin: 0px 0px 40px 0px;
+    margin: 0px 0px 40px 0px;
 }
+
 .form-edit {
-  padding-top: 140px;
-  background-color: #BBBBBB;
-  padding-bottom: 50px;
-  border-top: 1px #444 solid;
+    padding-top: 140px;
+    background-color: #BBBBBB;
+    padding-bottom: 50px;
+    border-top: 1px #444 solid;
 }
+
 .title-edit {
-  color: #d49c50;
-  font-size: 2.2rem;
-  margin: 10px 20px 30px 40px;
-  font-weight: 700;
-  outline: none;
-  
+    color: #d49c50;
+    font-size: 2.2rem;
+    margin: 10px 20px 30px 40px;
+    font-weight: 700;
+    outline: none;
 }
+
 .search-edit {
     position: relative;
     padding: 5px;
     display: block;
 }
-.search-edit input{
+
+.search-edit input {
     position: relative;
     width: 80%;
-    padding:8px 20px;
+    padding: 8px 20px;
     font-family: "Roboto", sans-serif;
     border-radius: 8px;
     margin: 5px auto;
     display: block;
     font-size: 1.3rem;
-	  line-height: 32px;
-	  border: 1px solid #444;
+    line-height: 32px;
+    border: 1px solid #444;
 }
-  .button-search-edit {
+
+.button-search-edit {
     line-height: 55px;
     width: 55px;
     height: 55px;
@@ -89,9 +94,11 @@
     background-color: #333;
     color: #eee;
 }
-.button-search-edit:hover{
-  background: rgb(120, 120, 121);
+
+.button-search-edit:hover {
+    background: rgb(120, 120, 121);
 }
+
 .input-edit {
     font-family: "Roboto", sans-serif;
     border-radius: 9px;
@@ -99,14 +106,11 @@
     width: 80%;
     display: block;
     font-size: 1.3rem;
-	  line-height: 32px;
-	  border: 1px solid #444;
+    line-height: 32px;
+    border: 1px solid #444;
     padding: 7px 0px;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
 label {
     font-size: 1.5rem;
     font-family: "Roboto", sans-serif;
@@ -115,7 +119,8 @@ label {
     display: block;
     color: #333;
 }
-.label-edit{
+
+.label-edit {
     font-size: 1.5rem;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -123,43 +128,49 @@ label {
     display: block;
     color: #eee;
 }
-textarea{  
-    display:block;
+
+textarea {
+    display: block;
     box-sizing: padding-box;
-    overflow:hidden;
-    padding:10px;
-    width:250px;
-    margin:0px auto;
-    border-radius:8px;
-  }
+    overflow: hidden;
+    padding: 10px;
+    width: 250px;
+    margin: 0px auto;
+    border-radius: 8px;
+}
+
 .color-selection-PD {
     margin: 0px 0px 50px 0px;
     width: 90%;
 }
+
 .color-title {
-  font-size: 1.5rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  text-align: center;
-  display: block;
-  color: #444;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    color: #444;
 }
+
 .product-list-edit {
-  color: #444;
-  width: 80%;
-  padding: 8px;
-  font-size: 1.3rem;
-  border-radius: 5px;
-  transition: all, 0.5s;
-  margin: 8px auto;
-  text-align: center;
-  display: block;
+    color: #444;
+    width: 80%;
+    padding: 8px;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    transition: all, 0.5s;
+    margin: 8px auto;
+    text-align: center;
+    display: block;
 }
+
 .product-list-edit:hover {
     background-color: #d49c50;
     color: #eee;
-  }
-.product-seizures-edit{
+}
+
+.product-seizures-edit {
     color: #444;
     display: block;
     width: 80%;
@@ -169,18 +180,23 @@ textarea{
     transition: all, 0.5s;
     margin: 8px auto;
     text-align: center;
-  }
-.product-seizures-edit:hover {
-      background-color: #d49c50;
-      color: #eee;
 }
+
+.product-seizures-edit:hover {
+    background-color: #d49c50;
+    color: #eee;
+}
+
+
 /*color checkbox section*/
+
 .color-selection {
     font-size: 1.5rem;
     font-weight: bolder;
     text-align: center;
 }
-.color-label{
+
+.color-label {
     font-weight: normal;
     text-align: center;
     width: 100%;
@@ -189,144 +205,156 @@ textarea{
     border-radius: 12px;
     border: 1px solid #d49c50;
 }
+
 #label-color-A {
     background-color: #f5f5dc;
     transition: all 0.5;
 }
+
 #label-color-A:hover {
     background-color: #333;
     color: #eee;
 }
+
 #label-color-B {
-  background-color: grey;
-  transition: all 0.5;
+    background-color: grey;
+    transition: all 0.5;
 }
+
 #label-color-B:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: #333;
+    color: #eee;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
 #label-color-C {
-  background-color: tomato;
-  transition: all 0.5;
+    background-color: tomato;
+    transition: all 0.5;
 }
+
 #label-color-C:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: #333;
+    color: #eee;
 }
+
 #label-color-D {
-  background-color: gold;
-  transition: all 0.5;
+    background-color: gold;
+    transition: all 0.5;
 }
+
 #label-color-D:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: #333;
+    color: #eee;
 }
+
 #label-color-E {
-  background-color: lightgreen;
-  transition: all 0.5;
+    background-color: lightgreen;
+    transition: all 0.5;
 }
+
 #label-color-E:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: #333;
+    color: #eee;
 }
+
 #label-color-F {
-  background-color: brown;
-  transition: all 0.5;
+    background-color: brown;
+    transition: all 0.5;
 }
+
 #label-color-F:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: #333;
+    color: #eee;
 }
+
 #label-color-G {
-  background-color: lightseagreen;
-  transition: all 0.5;
+    background-color: lightseagreen;
+    transition: all 0.5;
 }
+
 #label-color-G:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: #333;
+    color: #eee;
 }
+
 #label-color-H {
-  background-color: orange;
-  transition: all 0.5;
+    background-color: orange;
+    transition: all 0.5;
 }
+
 #label-color-H:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: #333;
+    color: #eee;
 }
+
 #label-color-I {
-  background-color: whitesmoke;
-  transition: all 0.5;
+    background-color: whitesmoke;
+    transition: all 0.5;
 }
+
 #label-color-I:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: #333;
+    color: #eee;
 }
+
 #label-color-J {
-  background-color: cornflowerblue;
-  transition: all 0.5;
+    background-color: cornflowerblue;
+    transition: all 0.5;
 }
+
 #label-color-J:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: #333;
+    color: #eee;
 }
+
 #label-color-K {
-  background-color: silver;
-  transition: all 0.5;
+    background-color: silver;
+    transition: all 0.5;
 }
+
 #label-color-K:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: #333;
+    color: #eee;
 }
-#label-color-L{
-  background-color: cornsilk;
-  transition: all 0.5;
+
+#label-color-L {
+    background-color: cornsilk;
+    transition: all 0.5;
 }
+
 #label-color-L:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: #333;
+    color: #eee;
 }
+
 #label-color-M {
-  background-color: wheat;
-  transition: all 0.5;
+    background-color: wheat;
+    transition: all 0.5;
 }
+
 #label-color-M:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: #333;
+    color: #eee;
 }
-#label-color-N{
-  background-color: salmon;
-  transition: all 0.5;
+
+#label-color-N {
+    background-color: salmon;
+    transition: all 0.5;
 }
+
 #label-color-N:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: #333;
+    color: #eee;
 }
+
 #label-color-O {
-  background-color: lightyellow;
-  transition: all 0.5;
-}
-<<<<<<< HEAD
-#label-color-O:hover {
-  background-color: #333;
-  color: #eee;
+    background-color: lightyellow;
+    transition: all 0.5;
 }
 
- li{
-    width: 32%;
-    list-style: none;
-}
-
-.price-edit {
-    margin-top: 40px;
-}
 .button-edit {
     min-width: 60px;
     display: block;
-    width: 30%;
+    width: 200px;
     min-height: 40px;
     border-radius: 0.6rem;
     font-size: 20px;
@@ -337,96 +365,59 @@ textarea{
     color: #444;
     border: 2px solid #444;
     margin: 0px auto 0px auto;
-  }
-  .button-edit:hover {
+}
+
+.button-edit:hover {
     box-shadow: 100px, 100px, 100px, #584229;
     background-color: #584229;
     color: #eee;
     padding: 2px;
-  }
-  .button-edit {
-    margin: 0px auto;
-  }
-  @media (min-width: 481px) {
-    li{
-        width: 19%;
-    }
-  }
-  @media (min-width: 768px) {
-    .main-edit {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-round;
-=======
-.button-edit {
-  min-width: 60px;
-  display: block;
-  width: 200px;
-  min-height: 40px;
-  border-radius: 0.6rem;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 0px;
-  transition: all, 0.5s;
-  background-color: #d49c50;
-  color: #444;
-  border: 2px solid #444;
-  margin: 0px auto 0px auto;
 }
-.button-edit:hover {
-  box-shadow: 100px, 100px, 100px, #584229;
-  background-color: #584229;
-  color: #eee;
-  padding: 2px;
-}
+
 .price-edit {
-  margin-top: 40px;
+    margin-top: 40px;
 }
-.color-list-PD li{
-  width: 32%;
-  list-style: none;
+
+.color-list-PD li {
+    width: 32%;
+    list-style: none;
 }
 
 #label-color-O:hover {
-  background-color: #333;
-  color: #eee;
-} 
-  
-  .button-edit {
-    margin: 0px auto;
-  }
+    background-color: #333;
+    color: #eee;
+}
 
-  @media (min-width: 481px) {
-    .color-list-PD li{
+.button-edit {
+    margin: 0px auto;
+}
+
+@media (min-width: 481px) {
+    .color-list-PD li {
         width: 19%;
     }
-    .main-edit{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-  }
-  @media (min-width: 768px) {
-    
     .main-edit {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
->>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-edit {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
     .form-edit,
     .form-create {
-      width: 49%;
+        width: 49%;
     }
     .form-edit {
-      border-left: 1px solid #444;
-      border-top: 0px;
+        border-left: 1px solid #444;
+        border-top: 0px;
     }
     .form-create {
-    margin: 0px 0px 40px 0px;
+        margin: 0px 0px 40px 0px;
     }
-<<<<<<< HEAD
-  }
-=======
-  }
->>>>>>> afd22df9dd1d1b18dd45de0a334356fa31232ef6
+}
