@@ -1,3 +1,18 @@
 [
-
+ {
+  "id": 1,
+  "usuario": "Matias Aragon",
+  "clave": "$2a$10$wdeoBmfto3Rhm9yqA3LY2.RAw7Xe46SEB3QgMOdsL4xc0LIZ.b.2y",
+  "pais": "Argentina",
+  "fechaNacimiento": "1996-06-12",
+  "email": "mattiasaragon@gmail.com"
+ },
+ {
+  "id": 2,
+  "usuario": "mati aragon",
+  "clave": "$2a$10$1.On3k1/UCKVVX7cGhbMFuo.Q221hR6WAFubq4A1mN.L8J2z1cBV2",
+  "pais": "Argentina",
+  "fechaNacimiento": "1964-06-12",
+  "email": "m@gmail.com"
+ }
 ]
