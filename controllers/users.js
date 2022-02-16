@@ -4,84 +4,83 @@ const filePath = path.resolve(__dirname, "../data/users.json")
 const usersArray = JSON.parse(fs.readFileSync(filePath, "utf8"))
 const bcrypt = require("bcryptjs");
 const generateID = () => {
-  if (usersArray.length != 0) {
-    const lastProduct = usersArray[Number(usersArray.length) - Number(1)];
-    const lastID = Number(lastProduct.id) + Number(1);
-    return lastID;
-  } else {
-    const lastID = 1
-    return lastID;
-  }
+    if (usersArray.length != 0) {
+        const lastProduct = usersArray[Number(usersArray.length) - Number(1)];
+        const lastID = Number(lastProduct.id) + Number(1);
+        return lastID;
+    } else {
+        const lastID = 1
+        return lastID;
+    }
 };
 
 const controllers = {
 
-  login: (req, res) => {
-    let isPasswordCorrect
-    const userToLogin = usersArray.find(oneUser => oneUser.email === req.body.userlog)
+    login: (req, res) => {
+        let isPasswordCorrect
+        const userToLogin = usersArray.find(oneUser => oneUser.email === req.body.userlog)
 
 
-    if (userToLogin) {
+        if (userToLogin) {
 
-      isPasswordCorrect = bcrypt.compareSync(req.body.userpass, userToLogin.clave)
+            isPasswordCorrect = bcrypt.compareSync(req.body.userpass, userToLogin.clave)
 
-      if (isPasswordCorrect) {
+            if (isPasswordCorrect) {
 
-        delete userToLogin.userpass
-        req.session.userLogged = userToLogin;
+                delete userToLogin.userpass
+                req.session.userLogged = userToLogin;
+                if (req.body.remember_user) {
+                    res.cookie("email", userToLogin.email, { maxAge: (100 * 60) * 10 });
+                }
+            }
+
+        }
+        if (isPasswordCorrect) {
+            return res.redirect("/users/profile")
+        } else {
+            res.status(400).send("las credenciales son invalidas")
+
+        }
+
+    },
+    logout: (req, res) => {
+        res.clearCookie('email');
+        req.session.destroy();
+        return res.redirect("/")
+    },
+    edit: (req, res) => {
+
+        return res.render("userEdit", { user: req.session.userLogged })
+    },
+
+    editP: (req, res) => {
+        usersArray.push(req.body)
         return res.redirect("/users/profile")
-      }
-
-    }
-    if (isPasswordCorrect) {
-      return res.redirect("/users/profile")
-    } else {
-      res.status(400).send("las credenciales son invalidas")
-
-    } 
-
-  },
-  loginV: (req,res)=> { 
-    return res.render("login")
-  },
-
-  logout: (req, res) => {
-    res.clearCookie('userEmail');
-    req.session.destroy();
-    return res.redirect("/")
-  },
-  edit:(req,res)=>{
-     res.send("formulario de edición de perfil")
-  },
+    },
 
 
-  profile: (req, res) => {
+    profile: (req, res) => {
 
-    return res.render("usersProfile", {
-      user: req.session.userLogged
-    });
+        return res.render("usersProfile", {
+            user: req.session.userLogged
+        });
 
-  },
-  register: (req, res) => {
+    },
+    register: (req, res) => {
 
-    const bodyData = req.body;
-    delete bodyData.reclave
+        const bodyData = req.body;
+        delete bodyData.reclave
 
-    usersArray.push({
-        id: generateID(),
-        ...bodyData,
-        clave: bcrypt.hashSync(req.body.clave, 10),
+        usersArray.push({
+            id: generateID(),
+            ...bodyData,
+            clave: bcrypt.hashSync(req.body.clave, 10),
 
-    })
-    fs.writeFileSync(filePath, JSON.stringify(usersArray, null, " "))
+        })
+        fs.writeFileSync(filePath, JSON.stringify(usersArray, null, " "))
 
-    return res.redirect("/")
- },
- RegisterV: (req,res) => { 
-   return res.render("register")
-   
-   
- },
+        return res.redirect("/")
+    },
 }
 
 

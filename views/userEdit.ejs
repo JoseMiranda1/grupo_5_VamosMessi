@@ -13,7 +13,7 @@
 <body>
     <%- include("./partials/header")%>
         <main>
-            <form action="/users/profile" method="post" class="userEdit">
+            <form action="/users/profile" method="get" class="userEdit">
                 <input class="input-edit" type="text" value="<%= user.usuario %>">
                 <input class="input-edit" type="email" value="<%= user.email %>">
                 <input class="input-edit" type="date" value="<%= user.fechaNacimiento %>">
