@@ -18,6 +18,8 @@
   "homepage": "https://github.com/JoseMiranda1/grupo_5_VamosMessi#readme",
   "dependencies": {
     "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
     "mysql2": "^2.3.3",
     "sequelize": "^6.16.2"
   }
