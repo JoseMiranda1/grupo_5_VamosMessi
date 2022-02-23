@@ -9,7 +9,7 @@ USE lasabanadb;
 CREATE TABLE brands(
     idBrand INT UNSIGNED AUTO_INCREMENT,
     name VARCHAR(150) NOT NULL,   
-    PRIMARY KEY (idBrand),     
+    PRIMARY KEY (idBrand)     
 );
 
 
