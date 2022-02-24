@@ -17,7 +17,18 @@
                 <input class="input-edit" type="text" value="<%= user.usuario %>">
                 <input class="input-edit" type="email" value="<%= user.email %>">
                 <input class="input-edit" type="date" value="<%= user.fechaNacimiento %>">
-                <select class="input-edit" name="pais" id="country" class="elegir-pais" value="<%= user.pais %>">
+                <select>
+                <% countries.forEach(country => { %>
+                   
+                    <option>
+                        <%= country.name.common %> 
+                    </option>
+                   
+                 
+                <% }) %>
+                </select>
+
+              <!--  <select class="input-edit" name="pais" id="country" class="elegir-pais" value="<%= user.pais %>">
                   <option value="-">Pais</option>
                   <option value="Argentina">Argentina</option>
                   <option value="Bolivia">Bolivia</option>
@@ -30,6 +41,7 @@
                   <option value="Uruguay">Uruguay</option>
                   <option value="Venezuela">Venezuela</option>
               </select>
+              -->
 
 
                 <button class="btn-submit-register" type="submit">Guardar cambios</button>

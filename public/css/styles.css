@@ -6,7 +6,10 @@
             left: 180px;
         }
         /**********************texto caminante******************/
-        
+        .cuatroImg{
+            padding: 0 50px;
+            
+        }
         .carrusel {
             display: flex;
             justify-content: center;

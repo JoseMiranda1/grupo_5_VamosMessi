@@ -1,18 +1,10 @@
 [
  {
   "id": 1,
-  "usuario": "Matias Aragon",
-  "clave": "$2a$10$wdeoBmfto3Rhm9yqA3LY2.RAw7Xe46SEB3QgMOdsL4xc0LIZ.b.2y",
+  "usuario": "trueniyos",
+  "clave": "$2a$10$aoN77ipanK4MHmMYyRtVo.iKz/fKfUho4xa69YI/GbqGXrkmAf6GK",
   "pais": "Argentina",
-  "fechaNacimiento": "1996-06-12",
-  "email": "mattiasaragon@gmail.com"
- },
- {
-  "id": 2,
-  "usuario": "mati aragon",
-  "clave": "$2a$10$1.On3k1/UCKVVX7cGhbMFuo.Q221hR6WAFubq4A1mN.L8J2z1cBV2",
-  "pais": "Argentina",
-  "fechaNacimiento": "1964-06-12",
-  "email": "m@gmail.com"
+  "fechaNacimiento": "2009-12-31",
+  "email": "111@111.111"
  }
 ]

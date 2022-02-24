@@ -1,43 +1,51 @@
-const fs=require("fs")
-const path=require("path")
-const filePath=path.resolve(__dirname,"../data/products.json")
-const productsArray=JSON.parse(fs.readFileSync(filePath,"utf8"))
-const controllers={
-    products: (req,res)=>{
-        res.render("products",{
+const fs = require("fs")
+const path = require("path")
+const filePath = path.resolve(__dirname, "../data/products.json")
+const productsArray = JSON.parse(fs.readFileSync(filePath, "utf8"))
+
+const generateID = () => {
+    if (productsArray.length != 0) {
+        const lastProduct = productsArray[Number(productsArray.length) - Number(1)];
+        const lastID = Number(lastProduct.id) + Number(1);
+        return lastID;
+    } else {
+        const lastID = 1
+        return lastID;
+    }
+};
+
+
+const controllers = {
+    products: (req, res) => {
+        res.render("products", {
             productsList: productsArray
         })
     },
-    productDetail:(req,res)=>{
+    productDetail: (req, res) => {
         res.render("productDetail")
     },
-    read:(req,res)=>{
-        const productId= req.params.id
+    read: (req, res) => {
+        const productId = req.params.id
         res.send("Estamos en producto con id " + productId)
     },
-    productEdit:(req,res)=>{
+    productEdit: (req, res) => {
         res.render("productEdit")
     },
-    productCreate:(req,res)=>{
-        const productId= req.params.id
+    productCreate: (req, res) => {
+        const productId = req.params.id
         res.render("productCreate", productId)
     },
-    add:(req,res)=>{          
-        const generateID = () => {
-            const lastProduct = productsDB[productsDB.length - 1];
-            const lastID = lastProduct.id;
-            return lastID + 1;
-        }
+    add: (req, res) => {
+   
+
+        const bodyData = req.body;
         productsArray.push({
-        id: generateID(),
-        nameProduct: req.params.name-product-create,
-        tradeEdit: req.params.trade-create ,
-        compositionCreate: req.params.composition-create,
-        propertyCreate: req.params.property-create,      
-        priceCreate: req.params.price-create,
-        desctiptionCreate: req.params.description-create,
+            id: generateID(),
+            ...bodyData,
+            
         })
-        fs.writeFileSync(filePath,JSON.stringify(productsArray, null, " "))
+        fs.writeFileSync(filePath, JSON.stringify(productsArray, null, " "))
+
         res.redirect("/products")
     },
     delete: (req, res) => {
@@ -46,8 +54,8 @@ const controllers={
         fs.writeFileSync(filePath, JSON.stringify(productsDetails, null, ' '));
         res.redirect("/");
     },
-    productCart:(req,res)=> {        
+    productCart: (req, res) => {
         res.render("productCart");
     },
 }
-module.exports=controllers
+module.exports = controllers
