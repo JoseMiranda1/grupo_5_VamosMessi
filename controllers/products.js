@@ -1,3 +1,5 @@
+const {Product}= require("../database/models"); //desestructuramos el objeto (require("../database/models")) tomando las partes q nos -->Product
+
 const fs=require("fs")
 const path=require("path")
 const filePath=path.resolve(__dirname,"../data/products.json")
@@ -5,10 +7,15 @@ const productsArray=JSON.parse(fs.readFileSync(filePath,"utf8"))
 
 
 const controllers={
-    products: (req,res)=>{
+   
+   /* products: (req,res)=>{
         res.render("products",{
             productsList: productsArray
         })
+    },*/
+    products: function(req,res){       //Todos los metodos de sequelize son asincronicos
+        Product.findAll({})   
+        console.log(products)
     },
     productDetail:(req,res)=>{
         res.render("productDetail")

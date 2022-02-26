@@ -4,8 +4,10 @@ module.exports = {
     "password": null,
     "database": "lasabanadb",
     "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
+    "dialect": "mysql",
+    "options":{                         //aplicamos el timestamps false en todas las tablas
+      "timestamps":false
+  } },
   "test": {
     "username": "root",
     "password": null,
