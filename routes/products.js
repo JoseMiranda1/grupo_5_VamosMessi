@@ -18,10 +18,9 @@ router.get("/edit", controllers.productEdit)
 router.delete("/:id", controllers.delete)
 router.get("/:id", controllers.read);
 
+router.get("/productEdit/:id", controllers.formularioEdit)//Muestra el formulario 
+//router.put('/:id', controllers.editproduct) // Procesa la info que llega y reescribe el producto
 
-router.get("/productEdit/:id", controller.formularioedit)//Muestra el formulario 
-router.put('/:id', controller.editproduct) // Procesa la info que llega y reescribe el producto
-console.log("hasta aca")
 
 
 

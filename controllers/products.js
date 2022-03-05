@@ -17,6 +17,10 @@ const controllers={
         Product.findAll({})   
         console.log(products)
     },
+    formularioEdit: (req,res)=>{
+        res.send("Estas en formulario edit");
+    },
+
     productDetail:(req,res)=>{
         res.render("productDetail")
     },

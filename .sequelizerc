@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
 config: path.resolve('./database/config', 'config.js'),
@@ -6,3 +6,6 @@ config: path.resolve('./database/config', 'config.js'),
 'seeders-path': path.resolve('./database/seeders'),
 'migrations-path': path.resolve('./database/migrations'),
 };
+
+
+//este archivo nos crea el setup inicial -----> 1 carpeta con carpetas adicionales y un archivo mas.

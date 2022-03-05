@@ -15,7 +15,7 @@
 	        adress:DataTypes.STRING,
             postCode:DataTypes.STRING,
             country:DataTypes.STRING,
-	        phone:DataTypes.DataTypes.STRING 
+	        phone:DataTypes.STRING 
         }, {});
     
     return User;

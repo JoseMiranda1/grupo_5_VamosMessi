@@ -24,16 +24,16 @@ app.use(session({
 }))
 
 
-const methodOverride=require("method-override")
-app.use(methodOverride("_method"))
+const methodOverride=require("method-override");
+app.use(methodOverride("_method"));
  
 
 const mainRouter= require("./routes/main");
-app.use("/", mainRouter)
-console.log("hasta aca")
-const productsRoutes=require("./routes/products")
-;
-app.use("/products", productsRoutes)
+app.use("/", mainRouter);
+
+
+const productsRoutes=require("./routes/products.js");
+app.use("/products", productsRoutes);
 
 
 const usersRouter=require("./routes/users")
