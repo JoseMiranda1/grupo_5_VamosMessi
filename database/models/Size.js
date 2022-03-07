@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes) => {
     
     const Size= sequelize.define("Size",         
         {     
-          name:DataTypes.STRING
+          typeOfSize:DataTypes.STRING
         }, {});
     
     return Size;
