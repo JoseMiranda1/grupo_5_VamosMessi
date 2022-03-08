@@ -8,4 +8,4 @@ config: path.resolve('./database/config', 'config.js'),
 };
 
 
-//este archivo nos crea el setup inicial -----> 1 carpeta con carpetas adicionales y un archivo mas.
+//este archivo nos crea el setup inicial 

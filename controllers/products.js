@@ -5,7 +5,7 @@ const path=require("path")
 const filePath=path.resolve(__dirname,"../data/products.json")
 const productsArray=JSON.parse(fs.readFileSync(filePath,"utf8"))
 
-
+const { Product } = require("../database/models"); //desesctructuramos tomando la parte que nos interesa
 const controllers={
    
    /* products: (req,res)=>{
@@ -15,7 +15,7 @@ const controllers={
     },*/
     products: function(req,res){       //Todos los metodos de sequelize son asincronicos
         Product.findAll({})   
-        console.log(products)
+        console.log(products)     //59.24
     },
     formularioEdit: (req,res)=>{
         res.send("Estas en formulario edit");
