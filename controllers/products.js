@@ -1,14 +1,13 @@
-const { Product } = require("../database/models"); //desestructuramos el objeto (require("../database/models")) tomando las partes q nos -->Product
-
-const fs = require("fs")
-const path = require("path")
-const filePath = path.resolve(__dirname, "../data/products.json")
-const productsArray = JSON.parse(fs.readFileSync(filePath, "utf8"))
+const { Product,Brand } = require("../database/models"); //desestructuramos el objeto (require("../database/models")) tomando las partes q nos -->Product
+const fs = require("fs");
+const path = require("path");
+const filePath = path.resolve(__dirname, "../data/products.json");
+const productsArray = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
 
     const controllers = {
-       
-       products: function (req, res) {  
+       /* METODO LARGO para mandarle a la vista los productos:
+       show: function (req, res) {   
 
             Product
             .findAll({                                //del modelo producto le pedimos todos
@@ -21,8 +20,25 @@ const productsArray = JSON.parse(fs.readFileSync(filePath, "utf8"))
        
        
         },
+        */
+
+       /*METODO CORTO*/
+        products: async (req,res)=>{
+            try{ 
+            const products= await Product.findAll({include:["brand"]})     
+            return res.render("home", {products});  
+        } catch (error){
+            return res.send("error");
+        }
+         
+        },
+
         formularioEdit: (req, res) => {
+            try{
             res.send("Estas en formulario edit");
+        } catch (error){
+            console.log(error) //hay q mostrarle al usuario q hay un error con una vista-modificar el console.log
+        }
         },
 
         productDetail: (req, res) => {
@@ -36,9 +52,17 @@ const productsArray = JSON.parse(fs.readFileSync(filePath, "utf8"))
          productEdit: (req, res) => {
            res.render("productEdit")
         },
-        productCreate: (req, res) => {
-           const productId = req.params.id
-               res.render("productCreate", productId)
+        productCreate: async (req, res) => {
+            try{
+                const brands = await Brand.findAll({}); //tengo q traer el modelo tmb
+                return res.render("create", {
+                    brands
+                });
+            } catch (error){
+                console.log(error);
+            }
+           //const productId = req.params.id
+            //   res.render("productCreate", productId)
         },
         add: (req, res) => {
              const generateID = () => {

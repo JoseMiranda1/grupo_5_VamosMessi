@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
 
   
 
-    CategoryProduct.associate = function (models) 
+    CategoryProduct.associate = function (models)
     {    
 
        CategoryProduct.belongsTo(models.Product, {   
