@@ -9,10 +9,10 @@ module.exports = (sequelize, DataTypes) => {
 
 
 
-    ColorProduct.associate = funcion (models) 
+    ColorProduct.associate = function (models) 
     {                            
 
-        ColorProduct.belongsTo(models.Product, {
+        ColorProduct.belongsTo (models.Product, {
                 as: "product",
                 foreignKey: "idProduct"
     })
@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     ColorProduct.associate = function (models) 
     {  
 
-        ColorProduct.belongsTo(models.Colors, {
+        ColorProduct.belongsTo (models.Colors, {
                 as: "colors",
                 foreignKey: "idColor"
     })

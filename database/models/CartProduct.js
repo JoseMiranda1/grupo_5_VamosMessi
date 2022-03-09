@@ -11,14 +11,14 @@ module.exports = (sequelize, DataTypes) => {
 
 
 
-    CartProduct.associate = funcion (models) 
+    CartProduct.associate = function (models) 
     { 
         CartProduct.belongsTo (models.Product, {
             as: "product",
             foreignKey: "productId"
         })
     };
-    CartProduct.associate = funcion (models) 
+    CartProduct.associate = function (models) 
     { 
         CartProduct.belongsTo (models.Cart, {
             as: "cart",

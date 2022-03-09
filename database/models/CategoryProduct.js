@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
     CategoryProduct.associate = function (models) 
     {    
 
-       CategoryProduct.belongsTo(models.idProduct, {   
+       CategoryProduct.belongsTo(models.Product, {   
        as:"product",                               
        foreignKey: "idProduct"             
        })   
@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     CategoryProduct.associate = function (models)
     {    
 
-       CategoryProduct.belongsTo(models.idCategory, {   
+       CategoryProduct.belongsTo(models.Category, {   
        as:"category",                               
        foreignKey: "idCategories" 
        })     

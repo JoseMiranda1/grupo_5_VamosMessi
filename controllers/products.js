@@ -1,47 +1,50 @@
 const { Product } = require("../database/models"); //desestructuramos el objeto (require("../database/models")) tomando las partes q nos -->Product
 
-/*const fs = require("fs")
+const fs = require("fs")
 const path = require("path")
 const filePath = path.resolve(__dirname, "../data/products.json")
-const productsArray = JSON.parse(fs.readFileSync(filePath, "utf8"))*/
+const productsArray = JSON.parse(fs.readFileSync(filePath, "utf8"))
 
 
     const controllers = {
        
-    products: function (req, res) {  
+       products: function (req, res) {  
 
-      Product
-         .findAll({})                            //del modelo producto le pedimos todos
-         .then((products)=>{                     //cuando los tenga, entonces q ejecute la funcion
-            return res.render("index", {products});
-         });                       
+            Product
+            .findAll({                                //del modelo producto le pedimos todos
+                include:["brand"]                    //para acceder a la relacion 
+            })                            
+            .then((products) => {                     //cuando los tenga, entonces q ejecute la funcion
+               return res.render("home", {products});
+            })
+            .catch((err)=>{console.log(err) });                      
        
        
-    },
-    formularioEdit: (req, res) => {
-        res.send("Estas en formulario edit");
-    },
+        },
+        formularioEdit: (req, res) => {
+            res.send("Estas en formulario edit");
+        },
 
-    productDetail: (req, res) => {
-        res.render("productDetail")
-    },
-    read: (req, res) => {
-        const productId = req.params.id
-        res.send("Estamos en producto con id " + productId)
-    },
+        productDetail: (req, res) => {
+             res.render("productDetail")
+        },
+        read: (req, res) => {
+           const productId = req.params.id
+            res.send("Estamos en producto con id " + productId)
+        },
 
-    productEdit: (req, res) => {
-        res.render("productEdit")
-    },
-    productCreate: (req, res) => {
-        const productId = req.params.id
-        res.render("productCreate", productId)
-    },
-    add: (req, res) => {
-        const generateID = () => {
-            const lastProduct = productsDB[productsDB.length - 1];
-            const lastID = lastProduct.id;
-            return lastID + 1;
+         productEdit: (req, res) => {
+           res.render("productEdit")
+        },
+        productCreate: (req, res) => {
+           const productId = req.params.id
+               res.render("productCreate", productId)
+        },
+        add: (req, res) => {
+             const generateID = () => {
+                const lastProduct = productsDB[productsDB.length - 1];
+                const lastID = lastProduct.id;
+                return lastID + 1;
         }
 
         productsArray.push({

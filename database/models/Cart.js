@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
 
 
     
-    Cart.associate = funcion (models)
+    Cart.associate = function (models)
     {                           
 
         Cart.belongsTo (models.User, {

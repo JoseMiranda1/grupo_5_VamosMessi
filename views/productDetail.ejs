@@ -8,6 +8,29 @@
     <%- include("./partials/header")%>
     <!--página detalle de producto-->
     <main>
+           
+
+        <div class="containerOneProduct">
+          <ul>
+            <% products.forEach(oneProduct.name) %>
+            <li>
+              <h2>
+                <%= oneProduct.name %>
+              </h2>
+              <p>Precio:<%= oneProduct.price %></p>
+              <p>Marca: <%= oneProduct.brand %> </p>
+              <img src="<%= oneProduct.image %> ">
+            </li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
         <div class="main-container-PD">
             <!--imagen del producto-->
             <!--deslizamiento de imagen-->
@@ -169,6 +192,7 @@
                             </article>
                         </section>
                     </div>  
+ -->
     </main>
       <!-- footer -->
 

@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
 
     SizeProduct.associate=function(models){    
 
-        SizeProduct.belongsTo(models.idSize, {   
+        SizeProduct.belongsTo(models.Size, {   
         as:"size",                               
         foreignKey: "idSize" 
     })          
