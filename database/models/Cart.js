@@ -5,6 +5,18 @@ module.exports = (sequelize, DataTypes) => {
             idUser: DataTypes.INTEGER
         }, {});
 
-    return Cart;
 
-}
+    
+    Cart.associate = funcion (models)
+    {                           
+
+        Cart.belongsTo (models.User, {
+            as: "user",  //indicamos el nombre de la relacion
+            foreignKey: "idUser" // En la tabla carts, como FK guardo un idUser
+        })
+    };
+
+    return Cart; 
+
+};
+ 

@@ -6,6 +6,27 @@ module.exports = (sequelize, DataTypes) => {
             idColor: DataTypes.INTEGER
         }, {});
 
-    return ColorProduct;
 
-}
+
+
+    ColorProduct.associate = funcion (models) 
+    {                            
+
+        ColorProduct.belongsTo(models.Product, {
+                as: "product",
+                foreignKey: "idProduct"
+    })
+    }
+    ColorProduct.associate = function (models) 
+    {  
+
+        ColorProduct.belongsTo(models.Colors, {
+                as: "colors",
+                foreignKey: "idColor"
+    })
+
+    };
+    
+    return ColorProduct;
+    
+};

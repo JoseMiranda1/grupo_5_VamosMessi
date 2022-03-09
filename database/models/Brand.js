@@ -10,4 +10,4 @@ module.exports = (sequelize, DataTypes) => {  //hacemos directamente el module.e
 
     return Brand;
 
-}
+};

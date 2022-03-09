@@ -2,7 +2,7 @@ module.exports= {
   "development": {
     "username": "root",
     "password": null,
-    "database": "lasabanaDBConDatos",
+    "database": "lasabanadb",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "options":{                         //aplicamos el timestamps false en todas las tablas

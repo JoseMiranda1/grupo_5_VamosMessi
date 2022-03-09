@@ -6,6 +6,27 @@ module.exports = (sequelize, DataTypes) => {
             idSize: DataTypes.INTEGER
         }, {});
 
+ 
+
+
+     SizeProduct.associate=function(models)
+    {    
+
+        SizeProduct.belongsTo(models.idProduct, {   
+        as:"product",                               
+        foreignKey: "idProduct"             
+        })   
+    },
+
+    SizeProduct.associate=function(models){    
+
+        SizeProduct.belongsTo(models.idSize, {   
+        as:"size",                               
+        foreignKey: "idSize" 
+    })          
+    }; 
+
     return SizeProduct;
 
-}
+};
+

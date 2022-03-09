@@ -13,4 +13,3 @@ router.get("/logout",controllers.logout);
 
 
 module.exports= router;
-console.log("hasta aca")

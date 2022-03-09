@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 
-  <%- include("./partials/head") %>
+<%- include("./partials/head") %>
   <link rel="stylesheet" href="/css/allProducts.css">
 
-<body >   
+  <body>
 
-          <%- include("./partials/header")%>
-      
-          <script src="/js/darkmode.js"></script>
- <main>   
-  
+    <%- include("./partials/header")%>
+
+
+
+      <main>
+
+        <div class="containerOneProduct">
+          <ul>
+            <% products.forEach(oneProduct.name) %>
+              <li>
+                <h2>
+                  <%= oneProduct.name %>
+                </h2>
+                <p>Precio:<%= oneProduct.price %>
+                </p>
+                <img src="<%= oneProduct.image %> ">
+              </li>
+          </ul>
+        </div>
+        <!-- 
   <h3 class="title-cards">Encontrá lo que hace especial a tu casa!</h3>
   <div class="cuatroImg">
     <section class="sec-container">
@@ -124,9 +139,12 @@
     </div>
   </div>
   </div>
-  </main>
-    <!-- footer -->
-  <%- include("./partials/footer")%>
 
-</body>
+  -->
+      </main>
+      <!-- footer -->
+      <%- include("./partials/footer")%>
+
+  </body>
+
 </html>
