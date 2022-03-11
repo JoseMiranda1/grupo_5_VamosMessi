@@ -1,0 +1,113 @@
+Datos a insertar en brands:
+
+insert into brands (idBrand, name) values (1, 'Arredo');
+insert into brands (idBrand, name) values (2, 'Divanlito');
+insert into brands (idBrand, name) values (3, 'La Cardeuse');
+insert into brands (idBrand, name) values (4, 'laSabana');
+insert into brands (idBrand, name) values (5, 'Canon');
+*******************************************************************************************
+
+
+Datos a insertar en categories:
+
+insert into categories (idCategories, typeOfCategory) values (1, 'Sabanas);
+insert into categories (idCategories, typeOfCategory) values (2, 'Colchones');
+insert into categories (idCategories, typeOfCategory) values (3, 'Toallas');
+insert into categories (idCategories, typeOfCategory) values (4, 'Almohadas');
+insert into categories (idCategories, typeOfCategory) values (5, 'Batas');
+*******************************************************************************************
+
+Datos a insertar en categoryProduct:
+
+
+
+insert into categoryProduct (idCategoryProduct, idProduct,idCategories) values (1, 1,1);
+insert into categoryProduct (idCategoryProduct, idProduct,idCategories) values (2, 2,2);
+insert into categoryProduct (idCategoryProduct, idProduct,idCategories) values (3,3,3);
+insert into categoryProduct (idCategoryProduct, idProduct,idCategories) values (4, 4,5);
+insert into categoryProduct (idCategoryProduct, idProduct,idCategories) values (5, 5,4);
+********************************************************************************************
+
+
+Datos a insertar en sizes:
+
+insert into sizes (idSize, typeOfSize) values (1, 'Cuna');
+insert into sizes (idSize, typeOfSize) values (2, 'Cuna funcional');
+insert into sizes (idSize, typeOfSize) values (3, '1 Plaza);
+insert into sizes (idSize, typeOfSize) values (4, 'Queen Size);
+insert into sizes (idSize, typeOfSize) values (5, 'Extra Queen Size');
+insert into sizes (idSize, typeOfSize) values (6, 'King Size');
+insert into sizes (idSize, typeOfSize) values (7, 'Extra King Size');
+insert into sizes (idSize, typeOfSize) values (8, 'No Size');
+insert into sizes (idSize, typeOfSize) values (9, 'Medium');
+insert into sizes (idSize, typeOfSize) values (10, 'Large');
+
+********************************************************************************************
+
+Datos a insertar en colors:
+
+insert into colors (idColor, color) values (1, 'Rosa);
+insert into colors (idColor, color) values (2, 'Violeta');
+insert into colors (idColor, color) values (3, 'Gris');
+insert into colors (idColor, color) values (4, 'Verde');
+insert into colors (idColor, color) values (5, 'Amarillo');
+********************************************************************************************
+
+Datos a insertar en users:
+
+insert into users (idUser, userName, email, userPassword, postCode, country, phone) values (1, 'Mati', 'correo@gmail.com',clave1, '7600', 'Argentina', '436-397-9111');
+insert into users (idUser, userName, email, userPassword, postCode, country, phone) values (2, 'Jose', 'correo@gmail.com', 'clave2, '2700', 'Uruguay, '436-397-9111');
+insert into users (idUser, userName, email, userPassword, postCode, country, phone) values (3, 'Ro', 'correo@gmail.com', 'clave3', 8300', 'Colombia', '436-397-9111');
+insert into users (idUser, userName, email, userPassword, postCode, country, phone) values (4, 'Cosme','correo@gmail.com', 'clave4', '1500, 'Bolivia', '436-397-9111');
+insert into users (idUser, userName, email, userPassword, postCode, country, phone) values (5, 'Fulanito', 'correo@gmail.com', 'clave5', '5005', 'Paraguay, '436-397-9111');
+*********************************************************************************************
+
+Datos a insertar en products:
+
+insert into products (idProduct, name, price, stock, image, createDate, idBrand) values (1, 'sabanas', 3000, 5, '/grupo_5_VamosMessi/public/imagenes/productos/Sabanas-imgB.jpg', '2021/10/06', 5);
+insert into products (idProduct, name, price, stock, image, createDate, idBrand) values (2, 'colchon', 10000, 5, '/grupo_5_VamosMessi/public/imagenes/productos/colchon.jpg', '2021/11/07', 4);
+insert into products (idProduct, name, price, stock, image, createDate, idBrand) values (3, 'toallas', 500, 5, '/grupo_5_VamosMessi/public/imagenes/productos/toallas.jpg', '2022/05/02', 3);
+insert into products (idProduct, name, price, stock, image, createDate, idBrand) values (4, 'bata', 2000, 5, '/grupo_5_VamosMessi/public/imagenes/productos/bata-clasica-dos-costuras-800x800.jpg','2022/09/02', 2);
+insert into products (idProduct, name, price, stock, image, createDate, idBrand) values (5, 'almohada', 1000, 5,'/grupo_5_VamosMessi/public/imagenes/productos/Almohada-inspira-imgD.jpg' , '2021/08/12', 1);
+*********************************************************************************************
+
+Datos a insertar en carts:
+
+insert into carts (idCart, idUser) values (1, 4);
+insert into carts (idCart, idUser) values (2, 5);
+insert into carts (idCart, idUser) values (3, 2);
+insert into carts (idCart, idUser) values (4, 1);
+insert into carts (idCart, idUser) values (5, 3);
+*********************************************************************************************
+
+Datos a insertar en cartProduct:
+
+insert into cartProduct (idCartProduct, productPrice, quantity, idProduct, idCart) values (1, 3000, 1, 1, 1);
+insert into cartProduct (idCartProduct, productPrice, quantity, idProduct, idCart) values (2, 10000, 1, 2, 2);
+insert into cartProduct (idCartProduct, productPrice, quantity, idProduct, idCart) values (3, 4000, 2, 4, 3);
+insert into cartProduct (idCartProduct, productPrice, quantity, idProduct, idCart) values (4, 3000, 3, 5, 4);
+insert into cartProduct (idCartProduct, productPrice, quantity, idProduct, idCart) values (5, 2000, 4, 3, 5);
+***********************************************************************************************
+
+Datos a insertar en sizeProducts:
+
+insert into sizeProduct (idSizeProduct, idProduct, idSize) values (1, 1, 1);
+insert into sizeProduct (idSizeProduct, idProduct, idSize) values (8, 2, 5);
+insert into sizeProduct (idSizeProduct, idProduct, idSize) values (12,3 ,8 );
+insert into sizeProduct (idSizeProduct, idProduct, idSize) values (14,4 ,9 );
+insert into sizeProduct (idSizeProduct, idProduct, idSize) values (16,5, 8);
+***********************************************************************************************
+
+Datos a insertar en colorProducts:
+
+insert into colorProduct (idColorProduct, idProduct, idColor) values (1,1 ,1 );
+insert into colorProduct (idColorProduct, idProduct, idColor) values (6, 2, 3);
+insert into colorProduct (idColorProduct, idProduct, idColor) values (11, 3, 4);
+insert into colorProduct (idColorProduct, idProduct, idColor) values (16, 4,2 );
+insert into colorProduct (idColorProduct, idProduct, idColor) values (21, 5,3 );
+***********************************************************************************************
+
+
+
+
+

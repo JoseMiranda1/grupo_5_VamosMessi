@@ -1,0 +1,147 @@
+Query-Back up 
+
+
+CREATE DATABASE laSabanaDB;
+
+USE lasabanadb;
+******************************************
+
+CREATE TABLE brands(
+    idBrand INT UNSIGNED AUTO_INCREMENT,
+    name VARCHAR(150) NOT NULL,   
+    PRIMARY KEY (idBrand)     
+);
+
+
+
+CREATE TABLE products( 
+    idProduct INT UNSIGNED AUTO_INCREMENT, 
+    name VARCHAR(150) NOT NULL, 
+    price DECIMAL(18,2),   /*18 digitos en total, 2 para la parte decimal y 16 para la entera*/ 
+    image VARCHAR(200), 
+    stock INT,
+    createDate DATETIME,
+    idBrand INT UNSIGNED, 
+    PRIMARY KEY (idProduct), 
+    FOREIGN KEY (idBrand) REFERENCES brands(idBrand) 
+);
+
+
+
+CREATE TABLE categories(
+   idCategories INT UNSIGNED AUTO_INCREMENT,  
+   name VARCHAR(150) NOT NULL,  
+   PRIMARY KEY(idCategories)
+);
+
+
+
+CREATE TABLE categoryProduct(
+    idCategoryProduct INT UNSIGNED AUTO_INCREMENT,
+    idProduct INT UNSIGNED,
+    idCategories INT UNSIGNED,
+    PRIMARY KEY (idCategoryProduct),
+    FOREIGN KEY (idProduct) REFERENCES products(idProduct),
+    FOREIGN KEY (idCategories) REFERENCES categories(idCategories)
+);
+
+
+
+CREATE TABLE sizes(
+    idSize INT UNSIGNED AUTO_INCREMENT,
+    name VARCHAR(150) NOT NULL,   
+    PRIMARY KEY (idSize) 
+);
+
+
+
+CREATE TABLE sizeProduct(
+    idSizeProduct INT UNSIGNED AUTO_INCREMENT,
+    idProduct INT UNSIGNED,
+    idSize INT UNSIGNED,
+    PRIMARY KEY (idSizeProduct),
+    FOREIGN KEY (idProduct) REFERENCES products(idProduct),
+    FOREIGN KEY (idSize) REFERENCES sizes(idSize)
+);
+
+
+
+CREATE TABLE colors(
+    idColor INT UNSIGNED AUTO_INCREMENT,
+    name VARCHAR(150) NOT NULL,   
+    PRIMARY KEY (idColor) 
+); 
+
+
+
+
+CREATE TABLE colorProduct(
+    idColorProduct INT UNSIGNED AUTO_INCREMENT,
+    idProduct INT UNSIGNED,
+    idColor INT UNSIGNED,
+    PRIMARY KEY (idColorProduct),
+    FOREIGN KEY (idProduct) REFERENCES products(idProduct),
+    FOREIGN KEY (idColor) REFERENCES colors(idColor)
+);
+
+
+
+CREATE TABLE users(
+    idUser INT UNSIGNED AUTO_INCREMENT,
+    userName VARCHAR(150) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    userPassword VARCHAR(50) NOT NULL,
+    adress VARCHAR (50),
+    postCode VARCHAR (25),
+    country VARCHAR (50),
+    phone VARCHAR(50),
+    PRIMARY KEY (idUser)
+);
+
+
+
+CREATE TABLE carts(
+    idCart INT UNSIGNED AUTO_INCREMENT,
+    idUser INT UNSIGNED,
+    PRIMARY KEY (idCart),
+    FOREIGN KEY (idUser) REFERENCES users(idUser)
+);
+
+
+
+
+CREATE TABLE cartProduct(
+    idCartProduct INT UNSIGNED AUTO_INCREMENT,
+    productPrice DECIMAL(18,2),
+    quantity INT UNSIGNED,
+    idProduct INT UNSIGNED,
+    idCart INT UNSIGNED,
+    PRIMARY KEY (idCartProduct),
+    FOREIGN KEY (idProduct) REFERENCES products(idProduct),
+    FOREIGN KEY (idCart) REFERENCES carts(idCart)
+    );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
