@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const path = require("path")
+const path = require("path");
 const authMiddleware = require("../middlewares/authMiddleware");
 
-// multer
-const multer = require("multer")
+// Multer
+const multer = require("multer");
 const multerDiskStorage = multer.diskStorage({
     destination: function(req, file, cb) {
         cb(null, path.resolve(__dirname,'../public/uploads'))
