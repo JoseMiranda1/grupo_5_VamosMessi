@@ -9,7 +9,6 @@ app.listen(3000, () => console.log('Estamos usando el puerto 3000'));
 
 app.set('view engine', 'ejs');
 
-console.log("prueba");
 
 const staticFiles = express.static(path.join(__dirname, './public'));
 app.use(staticFiles);

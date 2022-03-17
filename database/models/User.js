@@ -5,10 +5,15 @@
  * 
  */
 
-module.exports = (sequelize, DataTypes) => {
+ module.exports = (sequelize, DataTypes) => {
 
     const User = sequelize.define("User",
         {
+            idUser:{
+                type:DataTypes.INTEGER,
+                primaryKey:true,
+                autoIncrement:true
+            },
             userName: DataTypes.STRING,
             email: DataTypes.STRING,
             userPassword: DataTypes.STRING,
@@ -17,6 +22,14 @@ module.exports = (sequelize, DataTypes) => {
             country: DataTypes.STRING,
             phone: DataTypes.STRING
         }, {});
+
+        User.associate = function (models) {
+            // associations can be defined here
+            User.hasMany(models.Cart, {
+                as: "relUserCart",
+                foreignKey: "idUser",
+            });
+        };
 
     return User;
 

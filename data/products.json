@@ -1,21 +1,3 @@
 [
- {
-  "id": 1,
-  "productCreate": "aaaaaaaaaaaaa",
-  "trade-create": "aaaaaaaaaaaaa",
-  "descriptionCreate": "aaaaaaaaaaaaa",
-  "composition-create": "aaaaaaaaaaa",
-  "property-create": "aa123123",
-  "imageCreate": "",
-  "color": [
-   "Beige",
-   "Gris",
-   "Rojo",
-   "Naranja",
-   "Blanco",
-   "Salmon",
-   "Amarillo pálido"
-  ],
-  "priceCreate": "123123123"
- }
+
 ]

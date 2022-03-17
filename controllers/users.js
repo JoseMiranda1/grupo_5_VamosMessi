@@ -2,7 +2,7 @@ const fs = require("fs")
 const path = require("path")
 const filePath = path.resolve(__dirname, "../data/users.json")
 const usersArray = JSON.parse(fs.readFileSync(filePath, "utf8"))
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 const fetch=require("node-fetch");
 
 const generateID = () => {

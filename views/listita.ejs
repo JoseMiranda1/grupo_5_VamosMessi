@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% for( let i = 0; i < products.length; i++ ) { %>
+
+    <h2 style="background-color: greenyellow;"><%= products[i].id %></h2>
+    <h2><%= products[i].name %></h2>
+    <h2><%= products[i].price %></h2>
+    <h2><%= products[i].stock %></h2>
+    <h2><%= products[i].image %></h2> 
+    <h2><%= products[i].createDate %></h2>
+    <h2><%= products[i].relProductBrand.name %></h2>
+    <h2><%= JSON.stringify(products[i].relProductColor[0].color) %></h2>
+    <h2><%= JSON.stringify(products[i].relProductCategory[0].typeOfCategory) %></h2>
+    <h2><%= JSON.stringify(products[i].relProductSize[0].typeOfSize) %></h2>
+    
+    <% } %>
+</body>
+</html>

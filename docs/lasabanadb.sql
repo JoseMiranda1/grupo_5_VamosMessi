@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS laSabanadb2;
+USE laSabanadb2;
 -- phpMyAdmin SQL Dump
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
@@ -18,9 +20,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `lasabanadb`
+-- Base de datos: `lasabanadb2`
 --
-
+create database lasabanadb2;
+use lasabanadb2;
 -- --------------------------------------------------------
 
 --
@@ -50,7 +53,7 @@ INSERT INTO `brands` (`idBrand`, `name`) VALUES
 --
 
 CREATE TABLE `cartproduct` (
-  `idCartProduct` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL,
   `productPrice` decimal(18,2) DEFAULT NULL,
   `quantity` int(10) UNSIGNED DEFAULT NULL,
   `idProduct` int(10) UNSIGNED DEFAULT NULL,
@@ -61,7 +64,7 @@ CREATE TABLE `cartproduct` (
 -- Volcado de datos para la tabla `cartproduct`
 --
 
-INSERT INTO `cartproduct` (`idCartProduct`, `productPrice`, `quantity`, `idProduct`, `idCart`) VALUES
+INSERT INTO `cartproduct` (`id`, `productPrice`, `quantity`, `idProduct`, `idCart`) VALUES
 (1, '3000.00', 1, 1, 1),
 (2, '10000.00', 1, 2, 2),
 (3, '4000.00', 2, 4, 3),
@@ -97,7 +100,7 @@ INSERT INTO `carts` (`idCart`, `idUser`) VALUES
 --
 
 CREATE TABLE `categories` (
-  `idCategories` int(10) UNSIGNED NOT NULL,
+  `idCategory` int(10) UNSIGNED NOT NULL,
   `typeOfCategory` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -105,7 +108,7 @@ CREATE TABLE `categories` (
 -- Volcado de datos para la tabla `categories`
 --
 
-INSERT INTO `categories` (`idCategories`, `typeOfCategory`) VALUES
+INSERT INTO `categories` (`idCategory`, `typeOfCategory`) VALUES
 (1, 'Sabanas'),
 (2, 'Colchones'),
 (3, 'Toallas'),
@@ -119,7 +122,7 @@ INSERT INTO `categories` (`idCategories`, `typeOfCategory`) VALUES
 --
 
 CREATE TABLE `categoryproduct` (
-  `idCategoryProduct` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL,
   `idProduct` int(10) UNSIGNED DEFAULT NULL,
   `idCategories` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -128,7 +131,7 @@ CREATE TABLE `categoryproduct` (
 -- Volcado de datos para la tabla `categoryproduct`
 --
 
-INSERT INTO `categoryproduct` (`idCategoryProduct`, `idProduct`, `idCategories`) VALUES
+INSERT INTO `categoryproduct` (`id`, `idProduct`, `idCategories`) VALUES
 (1, 1, 1),
 (2, 2, 2),
 (3, 3, 3),
@@ -142,7 +145,7 @@ INSERT INTO `categoryproduct` (`idCategoryProduct`, `idProduct`, `idCategories`)
 --
 
 CREATE TABLE `colorproduct` (
-  `idColorProduct` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL,
   `idProduct` int(10) UNSIGNED DEFAULT NULL,
   `idColor` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -151,7 +154,7 @@ CREATE TABLE `colorproduct` (
 -- Volcado de datos para la tabla `colorproduct`
 --
 
-INSERT INTO `colorproduct` (`idColorProduct`, `idProduct`, `idColor`) VALUES
+INSERT INTO `colorproduct` (`id`, `idProduct`, `idColor`) VALUES
 (1, 1, 1),
 (6, 2, 3),
 (11, 3, 4),
@@ -191,6 +194,7 @@ CREATE TABLE `products` (
   `name` varchar(150) NOT NULL,
   `price` decimal(18,2) DEFAULT NULL,
   `image` varchar(200) DEFAULT NULL,
+  `description` varchar(2000) DEFAULT NULL,
   `stock` int(11) NOT NULL,
   `idBrand` int(10) UNSIGNED DEFAULT NULL,
   `createDate` date DEFAULT NULL
@@ -200,12 +204,12 @@ CREATE TABLE `products` (
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`idProduct`, `name`, `price`, `image`, `stock`, `idBrand`, `createDate`) VALUES
-(1, 'sabanas', '3000.00', '/grupo_5_VamosMessi/public/imagenes/productos/Sabanas-imgB.jpg', 5, 5, '2021-11-23'),
-(2, 'colchon', '10000.00', '/grupo_5_VamosMessi/public/imagenes/productos/colchon.jpg', 5, 4, '2021-10-20'),
-(3, 'toallas', '500.00', '/grupo_5_VamosMessi/public/imagenes/productos/toallas.jpg', 5, 3, '2019-10-21'),
-(4, 'bata', '2000.00', '/grupo_5_VamosMessi/public/imagenes/productos/bata-clasica-dos-costuras-800x800.jpg', 5, 2, '2020-10-28'),
-(5, 'almohada', '1000.00', '/grupo_5_VamosMessi/public/imagenes/productos/Almohada-inspira-imgD.jpg', 5, 1, '2022-01-18');
+INSERT INTO `products` (`idProduct`, `name`, `price`, `image`,`description`, `stock`, `idBrand`, `createDate`) VALUES
+(1, 'sabanas', '3000.00', '/grupo_5_VamosMessi/public/imagenes/productos/Sabanas-imgB.jpg','descripcion uno',5, 5, '2021-11-23'),
+(2, 'colchon', '10000.00', '/grupo_5_VamosMessi/public/imagenes/productos/colchon.jpg', 'descripcion dos',5, 4, '2021-10-20'),
+(3, 'toallas', '500.00', '/grupo_5_VamosMessi/public/imagenes/productos/toallas.jpg', 'descripcion tres',5, 3, '2019-10-21'),
+(4, 'bata', '2000.00', '/grupo_5_VamosMessi/public/imagenes/productos/bata-clasica-dos-costuras-800x800.jpg' ,'descripcion 4',5, 2, '2020-10-28'),
+(5, 'almohada', '1000.00', '/grupo_5_VamosMessi/public/imagenes/productos/Almohada-inspira-imgD.jpg','descripcion 5', 5, 1, '2022-01-18');
 
 -- --------------------------------------------------------
 
@@ -214,7 +218,7 @@ INSERT INTO `products` (`idProduct`, `name`, `price`, `image`, `stock`, `idBrand
 --
 
 CREATE TABLE `sizeproduct` (
-  `idSizeProduct` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL,
   `idProduct` int(10) UNSIGNED DEFAULT NULL,
   `idSize` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -223,7 +227,7 @@ CREATE TABLE `sizeproduct` (
 -- Volcado de datos para la tabla `sizeproduct`
 --
 
-INSERT INTO `sizeproduct` (`idSizeProduct`, `idProduct`, `idSize`) VALUES
+INSERT INTO `sizeproduct` (`id`, `idProduct`, `idSize`) VALUES
 (1, 1, 1),
 (8, 2, 5),
 (12, 3, 8),
@@ -271,19 +275,20 @@ CREATE TABLE `users` (
   `adress` varchar(50) DEFAULT NULL,
   `postCode` varchar(25) DEFAULT NULL,
   `country` varchar(50) DEFAULT NULL,
-  `phone` varchar(50) DEFAULT NULL
+  `phone` varchar(50) DEFAULT NULL,
+  `birthdate` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`idUser`, `userName`, `email`, `userPassword`, `adress`, `postCode`, `country`, `phone`) VALUES
-(1, 'Mati', 'correo@gmail.com', 'clave1', NULL, '7600', 'Argentina', '436-397-9111'),
-(2, 'Jose', 'correo@gmail.com', 'clave2', NULL, '2700', 'Uruguay', '436-397-9111'),
-(3, 'Ro', 'correo@gmail.com', 'clave3', NULL, '8300', 'Colombia', '436-397-9111'),
-(4, 'Cosme', 'correo@gmail.com', 'clave4', NULL, '1500', 'Bolivia', '436-397-9111'),
-(5, 'Fulanito', 'correo@gmail.com', 'clave5', NULL, '5005', 'Paraguay', '436-397-9111');
+INSERT INTO `users` (`idUser`, `userName`, `email`, `userPassword`, `adress`, `postCode`, `country`, `phone`,`birthdate`) VALUES
+(1, 'Mati', 'correo@gmail.com', 'clave1', NULL, '7600', 'Argentina', '436-397-9111', '1990-08-08'),
+(2, 'Jose', 'correo@gmail.com', 'clave2', NULL, '2700', 'Uruguay', '436-397-9111', '1990-08-08'),
+(3, 'Ro', 'correo@gmail.com', 'clave3', NULL, '8300', 'Colombia', '436-397-9111', '1990-08-08'),
+(4, 'Cosme', 'correo@gmail.com', 'clave4', NULL, '1500', 'Bolivia', '436-397-9111', '1990-08-08'),
+(5, 'Fulanito', 'correo@gmail.com', 'clave5', NULL, '5005', 'Paraguay', '436-397-9111', '1990-08-08');
 
 --
 -- Índices para tablas volcadas
@@ -299,7 +304,7 @@ ALTER TABLE `brands`
 -- Indices de la tabla `cartproduct`
 --
 ALTER TABLE `cartproduct`
-  ADD PRIMARY KEY (`idCartProduct`),
+  ADD PRIMARY KEY (`id`),
   ADD KEY `idProduct` (`idProduct`),
   ADD KEY `idCart` (`idCart`);
 
@@ -314,13 +319,13 @@ ALTER TABLE `carts`
 -- Indices de la tabla `categories`
 --
 ALTER TABLE `categories`
-  ADD PRIMARY KEY (`idCategories`);
+  ADD PRIMARY KEY (`idCategory`);
 
 --
 -- Indices de la tabla `categoryproduct`
 --
 ALTER TABLE `categoryproduct`
-  ADD PRIMARY KEY (`idCategoryProduct`),
+  ADD PRIMARY KEY (`id`),
   ADD KEY `idProduct` (`idProduct`),
   ADD KEY `idCategories` (`idCategories`);
 
@@ -328,7 +333,7 @@ ALTER TABLE `categoryproduct`
 -- Indices de la tabla `colorproduct`
 --
 ALTER TABLE `colorproduct`
-  ADD PRIMARY KEY (`idColorProduct`),
+  ADD PRIMARY KEY (`id`),
   ADD KEY `idProduct` (`idProduct`),
   ADD KEY `idColor` (`idColor`);
 
@@ -349,7 +354,7 @@ ALTER TABLE `products`
 -- Indices de la tabla `sizeproduct`
 --
 ALTER TABLE `sizeproduct`
-  ADD PRIMARY KEY (`idSizeProduct`),
+  ADD PRIMARY KEY (`id`),
   ADD KEY `idProduct` (`idProduct`),
   ADD KEY `idSize` (`idSize`);
 
@@ -379,7 +384,7 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT de la tabla `cartproduct`
 --
 ALTER TABLE `cartproduct`
-  MODIFY `idCartProduct` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `carts`
@@ -391,19 +396,19 @@ ALTER TABLE `carts`
 -- AUTO_INCREMENT de la tabla `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `idCategories` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idCategory` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `categoryproduct`
 --
 ALTER TABLE `categoryproduct`
-  MODIFY `idCategoryProduct` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `colorproduct`
 --
 ALTER TABLE `colorproduct`
-  MODIFY `idColorProduct` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `colors`
@@ -421,7 +426,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT de la tabla `sizeproduct`
 --
 ALTER TABLE `sizeproduct`
-  MODIFY `idSizeProduct` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `sizes`
@@ -457,7 +462,7 @@ ALTER TABLE `carts`
 --
 ALTER TABLE `categoryproduct`
   ADD CONSTRAINT `categoryproduct_ibfk_1` FOREIGN KEY (`idProduct`) REFERENCES `products` (`idProduct`),
-  ADD CONSTRAINT `categoryproduct_ibfk_2` FOREIGN KEY (`idCategories`) REFERENCES `categories` (`idCategories`);
+  ADD CONSTRAINT `categoryproduct_ibfk_2` FOREIGN KEY (`idCategories`) REFERENCES `categories` (`idCategory`);
 
 --
 -- Filtros para la tabla `colorproduct`
