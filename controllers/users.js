@@ -3,7 +3,7 @@ const path = require("path")
 const filePath = path.resolve(__dirname, "../data/users.json")
 const usersArray = JSON.parse(fs.readFileSync(filePath, "utf8"))
 const bcrypt = require("bcrypt");
-const fetch=require("node-fetch");
+
 
 const generateID = () => {
     if (usersArray.length != 0) {
@@ -51,11 +51,10 @@ const controllers = {
         return res.redirect("/")
     },
     edit: (req, res) => {
-        fetch("https://restcountries.com/v3.1/all")
-        .then(response=>response.json())
-        .then(countries=>{     
-        return res.render("userEdit", { user: req.session.userLogged, countries:countries})
-    })
+        return res.render("userEdit", {
+            user: req.session.userLogged
+        });
+    
     },
             
 

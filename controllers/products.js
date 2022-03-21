@@ -8,8 +8,8 @@ const db = require("../database/models");
 
 
 /*const generateID = () => {
-    if (productsArray.length != 0) {
-        const lastProduct = productsArray[Number(productsArray.length) - Number(1)];
+    if (db.length != 0) {
+        const lastProduct = db[Number(db.length) - Number(1)];
         const lastID = Number(lastProduct.id) + Number(1);
         return lastID;
     } else {
@@ -20,24 +20,35 @@ const db = require("../database/models");
 
 
 const controllers = {
-    products: (req, res) => {
-        res.render("products", {
-            productsList: productsArray
-        })
+    products: async(req, res) => {
+       
+            try{
+                    const products = await db.Product.findAll({ include: {
+                        all:true
+                    }
+    
+    
+    
+                       /*[ {association: "relProductBrand"},
+                        {association:"relProductColor"},]*/
+                    });//incluye todas las relacion
+                    console.log(products);
+                    res.render("products", {products:products})
+            }catch(error){
+                return res.send("error");
+            }
+    
     },
     productDetail: (req, res) => {
         res.render("productDetail")
     },
-    read: (req, res) => {
-        const productId = req.params.id
-        res.send("Estamos en producto con id " + productId)
-    },
+   
     productEdit: (req, res) => {
           
         
             db.products.findByPk(req.params.id)
                 .then(function (products) {
-                    res.render('products/productEdit', { products: products });
+                    res.render('productEdit', { products: products });
                 })
     },
     productCreate: async (req, res) => {
@@ -88,35 +99,18 @@ const controllers = {
 
         res.redirect("/products")
     },
-    delete: (req, res) => {
-        let idProducto = req.params.id;
-        productsArray = productsArray.filter(product => product.id != idProducto);
-        fs.writeFileSync(filePath, JSON.stringify(productsDetails, null, ' '));
-        res.redirect("/");
-    },
+    destroy: async (req, res) => {
+		const productID = req.params.id;
+		db.Product.destroy({ where: { id: productID }});
+		return res.redirect("/products");
+	},
     productCart: (req, res) => {
         res.render("productCart");
     },
 
-    listita: async(req,res)=>{
-        try{
-                const products = await db.Product.findAll({ include: {
-                    all:true
-                }
-
-
-
-
-                   /*[ {association: "relProductBrand"},
-                    {association:"relProductColor"},]*/
-                });//incluye todas las relacion
-                console.log(products);
-                res.render("listita", {products:products})
-        }catch(error){
-            return res.send("error");
-        }
+    
 
         
-    }
+    
 }
 module.exports = controllers

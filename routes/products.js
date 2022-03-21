@@ -33,10 +33,10 @@ router.get("/detail", controllers.productDetail)
 
 router.get("/edit/:id",authMiddleware, controllers.productEdit)
 
-router.get("/listita", controllers.listita);
 
-router.delete("/:id", controllers.delete);
 
-router.get("/:id", controllers.read);
+router.delete("/:id", controllers.destroy);
+
+
 
 module.exports = router
