@@ -19,10 +19,11 @@
             stock: DataTypes.INTEGER,
             image: DataTypes.STRING,
             description:DataTypes.STRING, //DESCRIPTION
-            createDate: DataTypes.DATE,
-            idBrand: DataTypes.INTEGER
+            idBrand: DataTypes.INTEGER,
+            createDate: DataTypes.DATE
 
-        }, {});
+        }, {
+        });
 
 
 

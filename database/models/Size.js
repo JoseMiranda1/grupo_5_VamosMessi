@@ -8,7 +8,9 @@ module.exports = (sequelize, DataTypes) => {
         autoIncrement:true
     },
       typeOfSize: DataTypes.STRING
-    }, {});
+    }, {
+      
+    });
 
     Size.associate=function(models){
       Size.belongsToMany(models.Product,{

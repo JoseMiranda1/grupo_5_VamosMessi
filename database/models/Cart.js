@@ -8,7 +8,9 @@ module.exports = (sequelize, DataTypes) => {
                 autoIncrement:true
             },
             idUser: DataTypes.INTEGER
-        }, {});
+        }, {
+            
+        });
 
 
     

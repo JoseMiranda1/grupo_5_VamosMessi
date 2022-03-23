@@ -8,7 +8,7 @@ router.get("/profile", authMiddleware, controllers.profile);
 router.post("/login", guestMiddleware, controllers.login);
 router.post("/", guestMiddleware, controllers.register)
 router.get("/edit", authMiddleware, controllers.edit);
-router.get("/edit", controllers.editP)
+router.post("/edit", controllers.editP)
 
 router.get("/logout", controllers.logout);
 

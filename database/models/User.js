@@ -20,8 +20,11 @@
             adress: DataTypes.STRING,
             postCode: DataTypes.STRING,
             country: DataTypes.STRING,
-            phone: DataTypes.STRING
-        }, {});
+            phone: DataTypes.STRING,
+            birthdate: DataTypes.DATE
+        }, {
+           
+        });
 
         User.associate = function (models) {
             // associations can be defined here

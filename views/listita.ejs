@@ -9,16 +9,41 @@
 <body>
     <% for( let i = 0; i < products.length; i++ ) { %>
 
-    <h2 style="background-color: greenyellow;"><%= products[i].id %></h2>
+    <h2 style="background-color: greenyellow;"><%= products[i].idProduct %></h2>
     <h2><%= products[i].name %></h2>
     <h2><%= products[i].price %></h2>
     <h2><%= products[i].stock %></h2>
     <h2><%= products[i].image %></h2> 
+    <img src="/uploads/<%=products[i].image %>
+    " alt="">
     <h2><%= products[i].createDate %></h2>
+
+    <h2>Marca</h2>
+    
     <h2><%= products[i].relProductBrand.name %></h2>
-    <h2><%= JSON.stringify(products[i].relProductColor[0].color) %></h2>
-    <h2><%= JSON.stringify(products[i].relProductCategory[0].typeOfCategory) %></h2>
-    <h2><%= JSON.stringify(products[i].relProductSize[0].typeOfSize) %></h2>
+
+     <h2>Categoria</h2>
+    <% for( let j = 0; j < products[i].relProductCategory.length; j++ ) { %>
+        <h2><%= JSON.stringify(products[i].relProductCategory[j].typeOfCategory) %></h2>
+    <% } %>
+
+    <h2>Talle</h2>
+    <% for( let j = 0; j < products[i].relProductSize.length; j++ ) { %>
+        <h2><%= JSON.stringify(products[i].relProductSize[j].typeOfSize) %></h2>
+    <% } %>
+
+    <h2>color</h2>
+   <% for( let j = 0; j < products[i].relProductColor.length; j++ ) { %>
+    <h2><%= JSON.stringify(products[i].relProductColor[j].color) %></h2>
+   <% } %>
+       
+
+    
+    <a href="/products/edit/<%= products[i].idProduct %>"><button>Editar</button></a>
+    
+    <form action="/products/borrar/<%= products[i].idProduct %>" method="get">
+    <button type="submit">Eliminar</button>
+    </form>
     
     <% } %>
 </body>

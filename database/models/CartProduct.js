@@ -7,7 +7,11 @@ module.exports = (sequelize, DataTypes) => {
             //idProduct: DataTypes.INTEGER,
            // idCart: DataTypes.INTEGER
         }, {
-            tableName:"cartproduct" 
+            
+            tableName:"cartproduct",
+           
+        
+            
         });
 
 

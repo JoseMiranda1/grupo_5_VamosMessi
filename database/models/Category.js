@@ -9,8 +9,9 @@ module.exports = (sequelize, DataTypes) => {
             },
             typeOfCategory: DataTypes.STRING
         },
-         {
-            tableName: "categories" 
+         {  
+            tableName: "categories",
+            
          });
 
          Category.associate = function(models){

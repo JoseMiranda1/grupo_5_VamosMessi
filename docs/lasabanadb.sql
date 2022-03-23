@@ -22,7 +22,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `lasabanadb2`
 --
-create database lasabanadb2;
+
 use lasabanadb2;
 -- --------------------------------------------------------
 
@@ -177,7 +177,7 @@ CREATE TABLE `colors` (
 --
 
 INSERT INTO `colors` (`idColor`, `color`) VALUES
-(1, 'Rosa'),
+(1, 'Sin color'),
 (2, 'Violeta'),
 (3, 'Gris'),
 (4, 'Verde'),
@@ -284,11 +284,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`idUser`, `userName`, `email`, `userPassword`, `adress`, `postCode`, `country`, `phone`,`birthdate`) VALUES
-(1, 'Mati', 'correo@gmail.com', 'clave1', NULL, '7600', 'Argentina', '436-397-9111', '1990-08-08'),
-(2, 'Jose', 'correo@gmail.com', 'clave2', NULL, '2700', 'Uruguay', '436-397-9111', '1990-08-08'),
-(3, 'Ro', 'correo@gmail.com', 'clave3', NULL, '8300', 'Colombia', '436-397-9111', '1990-08-08'),
-(4, 'Cosme', 'correo@gmail.com', 'clave4', NULL, '1500', 'Bolivia', '436-397-9111', '1990-08-08'),
-(5, 'Fulanito', 'correo@gmail.com', 'clave5', NULL, '5005', 'Paraguay', '436-397-9111', '1990-08-08');
+(1, 'Mati', 'correo@gmail.com', 'clave1', calle1, '7600', 'Argentina', '436-397-9111', '1990-08-08'),
+(2, 'Jose', 'correo2@gmail.com', 'clave2', calle2, '2700', 'Uruguay', '436-397-9111', '1990-08-08'),
+(3, 'Ro', 'correo3@gmail.com', 'clave3', calle3, '8300', 'Colombia', '436-397-9111', '1990-08-08'),
+(4, 'Cosme', 'correo4@gmail.com', 'clave4', calle4, '1500', 'Bolivia', '436-397-9111', '1990-08-08'),
+(5, 'Fulanito', 'correo5@gmail.com', 'clave5', calle5, '5005', 'Paraguay', '436-397-9111', '1990-08-08');
 
 --
 -- Índices para tablas volcadas

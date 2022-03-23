@@ -1,122 +1,222 @@
 const fs = require("fs")
 const path = require("path")
 const { runInNewContext } = require("vm")
+const { Op } = require("sequelize");
 const filePath = path.resolve(__dirname, "../data/products.json")
 const productsArray = JSON.parse(fs.readFileSync(filePath, "utf8"))
 const db = require("../database/models");
 
 
 
-/*const generateID = () => {
-    if (productsArray.length != 0) {
-        const lastProduct = productsArray[Number(productsArray.length) - Number(1)];
-        const lastID = Number(lastProduct.id) + Number(1);
-        return lastID;
-    } else {
-        const lastID = 1
-        return lastID;
-    }
-};*/
-
 
 const controllers = {
+
     products: (req, res) => {
         res.render("products", {
             productsList: productsArray
         })
     },
+
+
     productDetail: (req, res) => {
-        res.render("productDetail")
+        let products = db.Product.findByPk(req.params.id, {
+            include: {
+                all: true
+            }
+        });
+        let colors = db.Color.findAll();
+        let brands = db.Brand.findAll();
+        let categories = db.Category.findAll();
+        let sizes = db.Size.findAll();
+        console.log("ESTE ES EL CONTENIDO");
+        console.log(sizes);
+
+
+        Promise.all([products, colors, brands, categories, sizes])
+
+            .then(function ([products, colors, brands, categories, sizes]) {
+
+
+
+                res.render('productDetail', {
+                    products: products, colors: colors, brands: brands, categories: categories,
+                    sizes: sizes
+                });
+            })
     },
-    read: (req, res) => {
-        const productId = req.params.id
-        res.send("Estamos en producto con id " + productId)
-    },
+
     productEdit: (req, res) => {
-          
-        
-            db.products.findByPk(req.params.id)
-                .then(function (products) {
-                    res.render('products/productEdit', { products: products });
-                })
+
+        let products = db.Product.findByPk(req.params.id, {
+            include: {
+                all: true
+            }
+        });
+        let colors = db.Color.findAll();
+        let brands = db.Brand.findAll();
+        let categories = db.Category.findAll();
+        let sizes = db.Size.findAll();
+
+
+        Promise.all([products, colors, brands, categories, sizes])
+
+            .then(function ([products, colors, brands, categories, sizes]) {
+
+                console.log(products.relProductBrand.idBrand);
+
+                res.render('productEdit', {
+                    products: products, colors: colors, brands: brands, categories: categories,
+                    sizes: sizes
+                });
+            })
+
     },
     productCreate: async (req, res) => {
         try {
             let categories = await db.Category.findAll({});
             let sizes = await db.Size.findAll({});
             let colors = await db.Color.findAll({});
-            let brands= await db.Brand.findAll({});
+            let brands = await db.Brand.findAll({});
             return res.render("productCreate", { categories, sizes, colors, brands });
         }
         catch (error) {
             console.log(error);
         }
     },
-    add: async(req, res) => {
-        //calculando fecha actual para insertar en la bbdd
+
+    productUpdate: async (req, res) => {
         let date = new Date()
         let day = date.getDate()
         let month = date.getMonth() + 1
         let year = date.getFullYear()
         let fecha;
         if (month < 10) {
-            fecha=`${year}-0${month}-${day}`
+            fecha = `${year}-0${month}-${day}`
         } else {
-            fecha=`${year}-${month}-${day}`
-
+            fecha = `${year}-${month}-${day}`
         }
-        console.log(req.body);
-        const productStored = await db.Product.create({
 
-            name: req.body.productCreate,
-            idBrand: req.body.idBrand,
-            price: req.body.priceCreate,
-            image: req.file ? req.file.filename : 'default-image.jpg',//ver multer porque no cargan las img 
-            description: req.body.description,
-            stock: req.body.stock,
-            createDate: fecha,
-            //color:req.body.color, FALTA AGREGAR DATOS A TABLAS INTERMEDIAS (CLASES JAVI)
-        }
+        let productToUpdate = await db.Product.findByPk(req.params.id, {
+            include: {
+                all: true
+            }
+        });
         
-        )
-        productStored.addRelProductColor(req.body.colors);
-        productStored.addRelProductSize(req.body.sizes);
-        productStored.addRelProductCategory(req.body.categories);
         
-        ;
 
+        productToUpdate.name = req.body.name,
+            productToUpdate.idBrand = req.body.idBrand,
+            productToUpdate.price = req.body.priceCreate,
+            productToUpdate.image = req.file ? req.file.filename : 'default-image.jpg',
+            productToUpdate.description = req.body.description,
+            productToUpdate.stock = req.body.stock,
+            productToUpdate.createDate = fecha,
+
+            await productToUpdate.save();
+
+
+        productToUpdate.addRelProductColor(req.body.colors);
+        productToUpdate.addRelProductSize(req.body.sizes);
+        productToUpdate.addRelProductCategory(req.body.categories);
 
         res.redirect("/products")
     },
-    delete: (req, res) => {
-        let idProducto = req.params.id;
-        productsArray = productsArray.filter(product => product.id != idProducto);
-        fs.writeFileSync(filePath, JSON.stringify(productsDetails, null, ' '));
-        res.redirect("/");
+
+
+
+    add: async (req, res) => {
+
+        let date = new Date()
+        let day = date.getDate()
+        let month = date.getMonth() + 1
+        let year = date.getFullYear()
+        let fecha;
+        if (month < 10) {
+            fecha = `${year}-0${month}-${day}`
+        } else {
+            fecha = `${year}-${month}-${day}`
+
+        }
+        const productStored = await db.Product.create({
+
+            name: req.body.name,
+            idBrand: req.body.idBrand,
+            price: req.body.priceCreate,
+            image: req.file ? req.file.filename : 'default-image.jpg',
+            description: req.body.description,
+            stock: req.body.stock,
+            createDate: fecha,
+
+        }
+
+        )
+        req.body.colors ? productStored.addRelProductColor(req.body.colors) : productStored.addRelProductColor([1]),
+            req.body.sizes ? productStored.addRelProductSize(req.body.sizes) : productStored.addRelProductSize([1]),
+            req.body.categories ? productStored.addRelProductCategory(req.body.categories) : productStored.addRelProductCategory([6]),
+
+
+
+            res.redirect("/products")
+    },
+
+
+    destroy: async (req, res) => {
+
+
+        const productToDelete = await db.Product.findByPk(req.params.id, {
+            include: { all: true }
+        })
+
+        productToDelete.removeRelProductColor(productToDelete.relProductColor);
+        productToDelete.removeRelProductSize(productToDelete.relProductSize);
+        productToDelete.removeRelProductCategory(productToDelete.relProductCategory);
+        productToDelete.removeRelProductCart(productToDelete.relProductCart);
+        //productToDelete.removeRelProductBrand(productToDelete.relProductBrand);
+        const result= await productToDelete.destroy();
+
+
+        return res.send("El producto ha sido eliminado");
+
+
+
     },
     productCart: (req, res) => {
         res.render("productCart");
     },
 
-    listita: async(req,res)=>{
-        try{
-                const products = await db.Product.findAll({ include: {
-                    all:true
+    listita: async (req, res) => {
+        try {
+            const products = await db.Product.findAll({
+                include: {
+                    all: true
                 }
 
 
 
 
-                   /*[ {association: "relProductBrand"},
-                    {association:"relProductColor"},]*/
-                });//incluye todas las relacion
-                console.log(products);
-                res.render("listita", {products:products})
-        }catch(error){
+
+            });
+
+            res.render("listita", { products: products })
+        } catch (error) {
             return res.send("error");
         }
 
-        
+
+
+    },
+    search: async (req, res) => {
+        const keyword = req.query.word;
+        const products = await db.Product.findAll({
+            where: {
+                name: {
+                    [Op.like]: `%${keyword}%` //"%" + keyword + "%"
+                }
+            }
+        })
+        return res.json(products)
+        //res.send("hola" + keyword);
+        //res.render("listita", {products:products})
     }
 }
 module.exports = controllers

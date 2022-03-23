@@ -28,10 +28,14 @@
             <div class="btn-buscar-user-carrito">
                 <nav class="nav-alt">
                     <div class="buscar">
-                        <input type="text" placeholder="¿Que estás buscando?" required>
-                        <div class="btn">
-                            <i class="fas fa-search"></i>
-                        </div>
+                        <form action="/products/search/" method="GET">
+                            <input type="text" placeholder="¿Que estás buscando?" name="word" required>
+                            <button type="submit">
+                                <div class="btn">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                            </button>
+                        </form>
                     </div>
                     <% if (locals.isAnUserLogged == true){%>
                         <ul class="menuP" id="menu">
@@ -199,11 +203,11 @@
                                 <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
                             </nav>
 
-                            <input type="text" name="usuario" placeholder="Nombre completo" required id="Nombre">
-                            <input type="password" name="clave" placeholder="Contraseña" required>
+                            <input type="text" name="user" placeholder="Nombre completo" required id="Nombre">
+                            <input type="password" name="password" placeholder="Contraseña" required>
                             <input type="password" name="reclave" placeholder="Repetir contraseña" required>
                             <div class="campo-pais">
-                                <select name="pais" id="country" class="elegir-pais" placeholder="Pais">
+                                <select name="country" id="country" class="elegir-pais" placeholder="Pais">
               <option value="-">Pais</option>
               <option value="Argentina">Argentina</option>
               <option value="Bolivia">Bolivia</option>

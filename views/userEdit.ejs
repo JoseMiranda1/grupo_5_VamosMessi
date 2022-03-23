@@ -13,11 +13,11 @@
 <body>
     <%- include("./partials/header")%>
         <main>
-            <form action="/users/profile" method="get" class="userEdit">
-                <input class="input-edit" type="text" value="<%= user.usuario %>">
-                <input class="input-edit" type="email" value="<%= user.email %>">
-                <input class="input-edit" type="date" value="<%= user.fechaNacimiento %>">
-                <select>
+            <form action="/users/edit" method="post" class="userEdit">
+                <input class="input-edit" type="text" name="userName" value="<%= user.usuario %>">
+                <input class="input-edit" type="email" name="email" value="<%= user.email %>">
+                <input class="input-edit" type="date" name="birthdate" value="<%= user.fechaNacimiento %>">
+                <select name="country">
                 <% countries.forEach(country => { %>
                    
                     <option>

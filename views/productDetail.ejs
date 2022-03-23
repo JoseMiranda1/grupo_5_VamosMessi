@@ -75,69 +75,83 @@
                     </ul>
                 </nav>
             <!--caja del poducto-->
-            <section class="color-price-crumb-box-PD">
-                        <!--redes sociales-->
-                        <nav class="social-network-PD">
-                            <a href="https://twitter.com/?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
-                        </nav>
-                    <!--nombre del producto-->
-                    <p class="product-name-PD">Sábanas Oro con Faja P/colch 1,60 Lisa Blanco</p>
-                    <!--caja del precio-->
-                    <div class="price-box-PD">
-                        <span class="discount-PD">%25</span>
-                        <span class="original-price-PD">$4350</span>
-                        <p class="price-PD">$3100</p>
-                        <p class="finance-PD"><i class="far fa-id-card"></i>   12 Cuotas sin interés</p>
-                        <p class="pay-options-PD">
-                            <a href="#"><i class="far fa-credit-card"></i>   Ver medios de pago</a>
-                        </p>
-                    </div>
-                    <!--medidas-->
-                    <form action="" method="get" class="seizures-selector-PD">
-                        <p>
-                        <label for="seizures">Seleccione una medida:  </label>
-                        <select name="seizures" id="seizures-PD">
-                            <option value="">Cuna</option>
-                            <option value="">Cuna funcional</option>
-                            <option value="">1 plaza</option>
-                            <option value="">Queen Size</option>
-                            <option value="" selected>Extra Queen Size</option>
-                            <option value="">King Size</option>
-                            <option value="">Extra King Size</option>
-                        </select>
-                        </p>
-                    </form>
-                    <!--selector de color- radio-script-->
-                    <div class="color-selection-PD">
-                        <p class="color-title-PD">Color</p>
-                        <br>
-                        <form action="" method="get">
-                            <ul class="color-list-PD">    
-                                <li>
-                                    <label for="radio-colorA-PD"></label>
-                                    <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorA-PD"></p>
-                                </li>
-                                <li>
-                                    <label for="radio-colorB-PD"></label>
-                                    <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorB-PD"></p>
-                                </li>
-                                <li>
-                                    <label for="radio-colorC-PD"></label>
-                                    <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorC-PD"></p>
-                                </li>
-                                <li>
-                                    <label for="radio-colorD-PD"></label>
-                                    <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorD-PD"></p>
-                                </li>
-                                <li>
-                                    <label for=radio-colorE-PD"></label>
-                                    <p><input type="radio" name="color" class="radio-color-PD" id="radio-colorE-PD"></p>
-                                </li>
-                            </ul>
-                        </form>
-                    </div>  
+            
+            <section class="form-edit" >
+                
+                 
+                  
+                  <h2>Nombre producto</h2>
+                  <h3><%= products.name%></h3>
+                  
+                    <h2>Nombre marca</h2>
+                  
+                    <% for (let k=0; k<brands.length; k++){ %>
+                      
+                        <% if(products.relProductBrand.idBrand== brands[k].idBrand) {%>
+                           
+                            <h3><%= brands[k].name %></h3>
+                          <% } %> 
+                      
+                      <% } %>
+                 
+                  <h2>Descripción</h2>
+                  <h3><%= products.description%></h3>
+                 <h2>Imagen</h2>
+                  <img src="/uploads/<%= products.image%>" alt="">
+                  
+
+                 
+                 
+            
+            
+            
+                  <h2>Categorias</h2>
+                  <% for( let i= 0; i < categories.length; i++ ) { %>
+                    
+                    <% for (let j=0; j <JSON.stringify(products.relProductCategory.length);j++) { %>
+                      <% if(JSON.stringify(products.relProductCategory[j].idCategory)== categories[i].idCategory){ %>
+                            <h3><%= categories[i].typeOfCategory %> </h3>
+                      
+                      <% } %>
+                   <% } %>            
+                          
+                          
+                    <%  } %>
+         <h2>Tamaños</h2>
+                  <% for( let i= 0; i < sizes.length; i++ ) { %>
+                    
+                    <% for (let j=0; j <JSON.stringify(products.relProductSize.length);j++) { %>
+                      <% if(JSON.stringify(products.relProductSize[j].idSize)== sizes[i].idSize){ %>
+                        <h3><%= sizes[i].typeOfSize %> </h3>
+                      
+                      <% } %>
+                   <% } %>          
+                          
+                          
+                    <%  } %>
+            
+            
+                    <h2>Colores</h2>
+            
+                    <% for( let i= 0; i < colors.length; i++ ) { %>
+                    
+                    <% for (let j=0; j <JSON.stringify(products.relProductColor.length);j++) { %>
+                      <% if(JSON.stringify(products.relProductColor[j].idColor)== colors[i].idColor){ %>
+                        
+                        <h3><%= colors[i].color %> </h3>
+                      <% } %>
+                   <% } %>            
+                          
+                          
+                    <%  } %>
+                <h2>Precio</h2>
+                <h3><%= products.price %></h3>
+                
+              </section>
+            
+
+
+
                     <!--agregar carrito-->
                     <div class="buy-container-PD">
                         <input type="submit" name="add-cart" value="Agregar al carrito" class="buy-button-PD">

@@ -25,18 +25,28 @@ router.get("/", controllers.products);
 
 router.get("/create",authMiddleware, controllers.productCreate);
 
-router.post("/create", upload.single("imageCreate"), controllers.add)
+router.post("/create", upload.single("imageCreate"), controllers.add);
+
+router.get("/search", controllers.search);
 
 router.get("/cart", controllers.productCart);
 
-router.get("/detail", controllers.productDetail)
-
-router.get("/edit/:id",authMiddleware, controllers.productEdit)
+router.get("/detail/:id", controllers.productDetail)
 
 router.get("/listita", controllers.listita);
 
-router.delete("/:id", controllers.delete);
 
-router.get("/:id", controllers.read);
+
+router.get("/borrar/:id", controllers.destroy);
+
+router.get("/edit/:id",authMiddleware, controllers.productEdit);
+
+router.post("/edit/:id",authMiddleware, controllers.productUpdate)
+
+//router.delete("/:id", controllers.delete);
+
+
+
+
 
 module.exports = router

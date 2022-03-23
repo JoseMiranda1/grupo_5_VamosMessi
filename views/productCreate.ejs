@@ -16,7 +16,7 @@
           <form action="/products/create" method="post" enctype="multipart/form-data">
             <p class=" title-edit"> Crear un nuevo producto</p>
             <label for="">Nombre del producto</label>
-            <input class="input-edit" type="text" name="productCreate"
+            <input class="input-edit" type="text" name="name"
               placeholder="  Por ej.: Bata de Baño Smoking Piqué...">
             <%= locals.errorsMessages ? errorsMessages.usuario.msg: " " %>
 
@@ -36,7 +36,7 @@
 
               <br>
               <label for="">Descripción</label>
-              <input class="input-edit" type="text" name="descriptionCreate"
+              <input class="input-edit" type="text" name="description"
                 placeholder="  Por ej.: Bata de baño para adulto...">
               <%= locals.errorsMessages ? errorsMessages.description-create.msg: " " %>
                 <br>
