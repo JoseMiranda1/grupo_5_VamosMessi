@@ -35,7 +35,6 @@ router.get("/detail/:id", controllers.productDetail)
 
 
 
-<<<<<<< HEAD
 
 router.get("/borrar/:id", controllers.destroy);
 
@@ -46,9 +45,7 @@ router.post("/edit/:id",authMiddleware, controllers.productUpdate)
 //router.delete("/:id", controllers.delete);
 
 
-=======
 router.delete("/:id", controllers.destroy);
->>>>>>> 2980e8dd20bdf95ad53186b0e5362d3a3ebd34ce
 
 
 
