@@ -75,7 +75,7 @@ const controllers = {
 
     editP: async(req, res) => {
         console.log(req.session);
-        let userToUpdate = await db.User.findByPk(req.session.userLogged.id, {
+        let userToUpdate = await db.User.findByPk(req.session.userLogged.idUser, {
             include: {
                 all: true
             }
@@ -95,7 +95,7 @@ const controllers = {
         
         
         
-        return res.redirect("/users/profile")
+        return res.redirect("/users/logout")
     },
 
 

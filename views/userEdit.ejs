@@ -14,21 +14,13 @@
     <%- include("./partials/header")%>
         <main>
             <form action="/users/edit" method="post" class="userEdit">
-                <input class="input-edit" type="text" name="userName" value="<%= user.usuario %>">
+                <input class="input-edit" type="text" name="userName" value="<%= user.userName %>">
                 <input class="input-edit" type="email" name="email" value="<%= user.email %>">
                 <input class="input-edit" type="date" name="birthdate" value="<%= user.fechaNacimiento %>">
-                <select name="country">
-                <% countries.forEach(country => { %>
-                   
-                    <option>
-                        <%= country.name.common %> 
-                    </option>
-                   
-                 
-                <% }) %>
+                <select id="countries" class="input-edit" type="date" value = "<%= user.country %>">
                 </select>
 
-              <!--  <select class="input-edit" name="pais" id="country" class="elegir-pais" value="<%= user.pais %>">
+              <!--  <select class="input-edit" name="pais" id="country" class="elegir-pais" value="<%=// user.pais %>">
                   <option value="-">Pais</option>
                   <option value="Argentina">Argentina</option>
                   <option value="Bolivia">Bolivia</option>
@@ -46,6 +38,7 @@
 
                 <button class="btn-submit-register" type="submit">Guardar cambios</button>
             </form>
+            <script src="/js/apiPais.js"></script>
         </main>
         <!-- footer -->
         <%- include("./partials/footer")%>

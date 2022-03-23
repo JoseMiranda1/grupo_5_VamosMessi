@@ -14,22 +14,22 @@
     </div>
     <div class="container-card">
 
-      <% for( let i = 0; i < productsList.length; i++ ) { %>
+      <% for( let i = 0; i < products.length; i++ ) { %>
 
 
       <div class="card">
         <figure>
-          <img src="/uploads/<%=productsList[i].imageCreate %>"alt="imagen de producto">
+          <img src="/uploads/<%=products[i].image%>"alt="imagen de producto">
         </figure>
         <div class="contenido-card">
           <h3>
-            <%= productsList[i].productCreate %>
+            <%= products[i].name %>
           </h3>
           <p>
-            <%= productsList[i].descriptionCreate %>
+            <%= products[i].relProductBrand.name  %>
           </p>
           <p class="precioproducts">
-            $ <%= productsList[i].priceCreate %>
+            $ <%=  products[i].price %>
           </p>
           <a href="/products/detail">Comprar ahora</a>
         </div>

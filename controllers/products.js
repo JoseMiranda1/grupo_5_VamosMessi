@@ -11,12 +11,28 @@ const db = require("../database/models");
 
 const controllers = {
 
-    products: (req, res) => {
-        res.render("products", {
-            productsList: productsArray
-        })
-    },
+   
+   products: async (req, res) => {
+        try {
+            const products = await db.Product.findAll({
+                include: {
+                    all: true
+                }
 
+
+
+
+
+            });
+
+            res.render("products", { products: products })
+        } catch (error) {
+            return res.send("error");
+        }
+
+
+
+    },
 
     productDetail: (req, res) => {
         let products = db.Product.findByPk(req.params.id, {
@@ -104,7 +120,7 @@ const controllers = {
         
         
 
-        productToUpdate.name = req.body.name,
+        productToUpdate.name = req.body.productCreate,
             productToUpdate.idBrand = req.body.idBrand,
             productToUpdate.price = req.body.priceCreate,
             productToUpdate.image = req.file ? req.file.filename : 'default-image.jpg',
@@ -137,15 +153,16 @@ const controllers = {
             fecha = `${year}-${month}-${day}`
 
         }
+        console.log("contenido de body");
+        console.log(req.body);
         const productStored = await db.Product.create({
-
             name: req.body.name,
             idBrand: req.body.idBrand,
             price: req.body.priceCreate,
             image: req.file ? req.file.filename : 'default-image.jpg',
             description: req.body.description,
             stock: req.body.stock,
-            createDate: fecha,
+           
 
         }
 
