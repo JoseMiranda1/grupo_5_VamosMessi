@@ -8,15 +8,13 @@ const db = require("../database/models");
 
 
 
-<<<<<<< HEAD
 
-const controllers = {
+/*const controllers = {
 
     products: (req, res) => {
         res.render("products", {
             productsList: productsArray
         })
-=======
 /*const generateID = () => {
     if (db.length != 0) {
         const lastProduct = db[Number(db.length) - Number(1)];
@@ -48,12 +46,10 @@ const controllers = {
                 return res.send("error");
             }
     
->>>>>>> 2980e8dd20bdf95ad53186b0e5362d3a3ebd34ce
     },
 
 
     productDetail: (req, res) => {
-<<<<<<< HEAD
         let products = db.Product.findByPk(req.params.id, {
             include: {
                 all: true
@@ -105,7 +101,6 @@ const controllers = {
                 });
             })
 
-=======
         res.render("productDetail")
     },
    
@@ -116,7 +111,6 @@ const controllers = {
                 .then(function (products) {
                     res.render('productEdit', { products: products });
                 })
->>>>>>> 2980e8dd20bdf95ad53186b0e5362d3a3ebd34ce
     },
     productCreate: async (req, res) => {
         try {
@@ -168,7 +162,6 @@ const controllers = {
 
         res.redirect("/products")
     },
-<<<<<<< HEAD
 
 
 
@@ -228,18 +221,15 @@ const controllers = {
 
 
     },
-=======
     destroy: async (req, res) => {
 		const productID = req.params.id;
 		db.Product.destroy({ where: { id: productID }});
 		return res.redirect("/products");
 	},
->>>>>>> 2980e8dd20bdf95ad53186b0e5362d3a3ebd34ce
     productCart: (req, res) => {
         res.render("productCart");
     },
 
-<<<<<<< HEAD
     listita: async (req, res) => {
         try {
             const products = await db.Product.findAll({
@@ -274,11 +264,9 @@ const controllers = {
         //res.send("hola" + keyword);
         //res.render("listita", {products:products})
     }
-=======
     
 
         
     
->>>>>>> 2980e8dd20bdf95ad53186b0e5362d3a3ebd34ce
 }
 module.exports = controllers
