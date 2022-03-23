@@ -3,9 +3,13 @@ const path = require("path")
 const filePath = path.resolve(__dirname, "../data/users.json")
 const usersArray = JSON.parse(fs.readFileSync(filePath, "utf8"))
 const bcrypt = require("bcrypt");
+<<<<<<< HEAD
 const fetch = require("node-fetch");
 const db = require("../database/models");
 const { Op } = require("sequelize");
+=======
+
+>>>>>>> 2980e8dd20bdf95ad53186b0e5362d3a3ebd34ce
 
 const generateID = () => {
     if (usersArray.length != 0) {
@@ -65,11 +69,18 @@ const controllers = {
         return res.redirect("/")
     },
     edit: (req, res) => {
+<<<<<<< HEAD
         fetch("https://restcountries.com/v3.1/all")
             .then(response => response.json())
             .then(countries => {
                 return res.render("userEdit", { user: req.session.userLogged, countries: countries })
             })
+=======
+        return res.render("userEdit", {
+            user: req.session.userLogged
+        });
+    
+>>>>>>> 2980e8dd20bdf95ad53186b0e5362d3a3ebd34ce
     },
 
 

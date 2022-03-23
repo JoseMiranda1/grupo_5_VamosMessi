@@ -190,7 +190,7 @@ INSERT INTO `colors` (`idColor`, `color`) VALUES
 --
 
 CREATE TABLE `products` (
-  `idProduct` int(10) UNSIGNED NOT NULL,
+  `idProduct` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(150) NOT NULL,
   `price` decimal(18,2) DEFAULT NULL,
   `image` varchar(200) DEFAULT NULL,
