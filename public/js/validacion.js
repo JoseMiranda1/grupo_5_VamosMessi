@@ -1,11 +1,11 @@
 const formularioRegistro = document.querySelector("#registerForm");
 
-const nombreUsuario = document.querySelector("[name=usuario]");
-const usuarioEmail = document.querySelector("[name=emailuser]");
-const usuarioClave = document.querySelector("[name=clave]");
+const nombreUsuario = document.querySelector("[name=user]");
+const usuarioEmail = document.querySelector("[name=email]");
+const usuarioClave = document.querySelector("[name=password]");
 const usuarioReclave = document.querySelector("[name=reclaveuser]");
-const usuarioPais = document.querySelector("[name=pais]");
-const claveRegistro = document.querySelector("[name=clave]");
+const usuarioPais = document.querySelector("[name=selectCountries]");
+const claveRegistro = document.querySelector("[name=password]");
 
 
 const validateEmptyField = (e) => {

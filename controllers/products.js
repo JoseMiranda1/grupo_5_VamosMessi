@@ -44,8 +44,7 @@ const controllers = {
         let brands = db.Brand.findAll();
         let categories = db.Category.findAll();
         let sizes = db.Size.findAll();
-        console.log("ESTE ES EL CONTENIDO");
-        console.log(sizes);
+       
 
 
         Promise.all([products, colors, brands, categories, sizes])
@@ -78,7 +77,7 @@ const controllers = {
 
             .then(function ([products, colors, brands, categories, sizes]) {
 
-                console.log(products.relProductBrand.idBrand);
+             
 
                 res.render('productEdit', {
                     products: products, colors: colors, brands: brands, categories: categories,
@@ -153,8 +152,7 @@ const controllers = {
             fecha = `${year}-${month}-${day}`
 
         }
-        console.log("contenido de body");
-        console.log(req.body);
+        
         const productStored = await db.Product.create({
             name: req.body.name,
             idBrand: req.body.idBrand,

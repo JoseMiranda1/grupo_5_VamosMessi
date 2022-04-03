@@ -8,5 +8,27 @@
     "multer": "^1.4.4",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
-  }
+  },
+  "name": "grupo_5_vamosmessi",
+  "description": "<img src=\"/design/logo.png\" width=\"970\" height=\"500\" />",
+  "version": "1.0.0",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"npx nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseMiranda1/grupo_5_VamosMessi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseMiranda1/grupo_5_VamosMessi/issues"
+  },
+  "homepage": "https://github.com/JoseMiranda1/grupo_5_VamosMessi#readme"
 }
