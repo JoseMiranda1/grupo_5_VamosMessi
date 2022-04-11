@@ -2,8 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const session = require('express-session');
+const {check,validationResult} = require ("express-validator")
 
-//app.use(express.static(path.join(__dirname + '../public')));
+app.use(express.static(path.join(__dirname + '../public')));
 
 app.listen(3000, () => console.log('Estamos usando el puerto 3000'));
 
@@ -15,6 +16,7 @@ app.use(staticFiles);
 //setup del req.body
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
 //session
 app.use(
     session({
@@ -33,7 +35,9 @@ app.use('/', mainRouter);
 const productsRoutes = require('./routes/products');
 app.use('/products', productsRoutes);
 const usersRouter = require('./routes/users');
+const { is } = require('express/lib/request');
 app.use('/users', usersRouter);
 app.use((req, res, next) => {
     res.status(404).render('notFound');
 });
+

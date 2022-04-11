@@ -15,7 +15,7 @@ const validateEmptyField = (e) => {
 	console.log(spanTagError); // capturo al <span></span> hermano
 	if (field.value.trim() === "") {
 		field.classList.add("inputRegister");
-		spanTagError.innerText = `El campo ${field.name} es obligatorio`;
+		spanTagError.innerText = `El campo ${field.np} es obligatorio`;
 		//console.log(field.name);
 		spanTagError.classList.add("invalidfeedback");
 	} else {
@@ -58,7 +58,7 @@ formularioRegistro.addEventListener("submit", function (e) {
 		const spanTagError = oneField.nextElementSibling; // capturo al <span></span> hermano
 		if (oneField.value.trim() === "") {
 			oneField.classList.add("inputRegister");
-			spanTagError.innerText = `El campo ${oneField.name} es obligatorio`;
+			spanTagError.innerText = `El campo ${oneField.np} es obligatorio`;
 			spanTagError.classList.add("invalid-feedback");
 
 			thereAreErrors = true;
