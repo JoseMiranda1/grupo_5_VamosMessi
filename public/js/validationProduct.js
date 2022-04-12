@@ -1,4 +1,4 @@
-window.addEventListener("load", function(e){
+/*window.addEventListener("load", function(e){
     let form = document.querySelector("#createForm");
 
     form.addEventListener("submit", function(e){
@@ -74,3 +74,4 @@ window.addEventListener("load", function(e){
 
     })
 });
+*/

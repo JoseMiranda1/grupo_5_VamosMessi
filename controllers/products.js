@@ -103,63 +103,19 @@ const controllers = {
     add: async (req, res) => {
        
        
-       
-       /* const resultValidation = validationResult(req)      
-       if (resultValidation.errors.length > 0) {        
-               db.categories.findAll()                
-               .then(function (e) {                   
-                    res.render("products/create", {                        
-                        categorias: e,                       
-                         errors: resultValidation.mapped(),                        
-                         oldData: req.body                    })
-                })
-
-        } else {
-            let date = new Date()
-            let day = date.getDate()
-            let month = date.getMonth() + 1
-            let year = date.getFullYear()
-            let fecha;
-            if (month < 10) {
-                fecha = `${year}-0${month}-${day}`
-            } else {
-                fecha = `${year}-${month}-${day}`
-            } 
-
-            db.products.create({                
-                id: "DEFAULT",        
-                name: req.body.name,
-                idBrand: req.body.idBrand,
-                price: req.body.priceCreate,
-                image: req.file ? req.file.filename : 'default-image.jpg',
-                description: req.body.description,
-                stock: req.body.stock,      
-
-                        
-                   creationDate: new Date()           
-                })
-                .then(function () {       
-                    req.body.colors ? productStored.addRelProductColor(req.body.colors) : productStored.addRelProductColor([1]),
-            req.body.sizes ? productStored.addRelProductSize(req.body.sizes) : productStored.addRelProductSize([1]),
-            req.body.categories ? productStored.addRelProductCategory(req.body.categories) : productStored.addRelProductCategory([6]),
-            res.redirect("/products")
-                      })
-        }
-    },
-    */
 
 
 
 
 
 
-
-       /* const validationErrors = validationResult(req);
+      const validationErrors = validationResult(req);
         if(!validationErrors.isEmpty()){ 
                 console.log(validationErrors)
-                return res.render("products/create", { 
-                    errorsMessages: validationErrors.mapped()
-                }); }*/
+                return res.render("productCreate", { 
+                    errorsMessages: validationErrors.mapped(),
+                    oldData: req.body
+                }); }
         let date = new Date()
         let day = date.getDate()
         let month = date.getMonth() + 1
@@ -182,7 +138,7 @@ const controllers = {
             req.body.sizes ? productStored.addRelProductSize(req.body.sizes) : productStored.addRelProductSize([1]),
             req.body.categories ? productStored.addRelProductCategory(req.body.categories) : productStored.addRelProductCategory([6]),
             res.redirect("/products")
-    },
+    }, 
     
     destroy: async (req, res) => {
         const productToDelete = await db.Product.findByPk(req.params.id, {
