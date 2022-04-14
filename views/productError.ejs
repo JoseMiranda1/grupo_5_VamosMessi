@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/css/productEdit.css">
+<link rel="stylesheet" href="/css/productDetail.css">
+<link rel="stylesheet" href="/css/productCreate.css">
+<%- include("./partials/head")%>
+  <body>
+    <!--header-->
+    <%- include("./partials/header")%>
+      <main class="main-edit">
+        <p class="create-product">
+          <a href="/products/edit"><i class="fas fa-edit"></i></i>Editar Producto</a>
+        </p>
+        <section class="form-create">
+          <form action="/products/create" method="post" enctype="multipart/form-data" id="createForm">
+            <p class=" title-edit"> Crear un nuevo producto</p>
+            <label for="name">Nombre del producto</label>
+            <input class="input-edit " type="text"  name="name" value="<%= locals.oldData ? oldData.name: null %>"
+              placeholder="  Por ej.: Bata de Baño Smoking Piqué..." >
+              <div>
+              </div> 
+              <span></span> 
+              <% if (locals.errors && errors.name) { %>
+                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                    <%= locals.errors.name.msg %>
+                </p>             
+                <% } %>
+              </select>
+              <br>
+              <label for="idBrand">Marcas</label>
+              <select class="product-seizures-edit" name="idBrand" value="<%= locals.oldData ? oldData.idBrand: null %>">
+                <% for (let k=0; k<brands.length; k++){ %>
+                  <option value="<%=brands[k].idBrand ? brands[k].idBrand:"" %>">
+                    <%= brands[k].name ? brands[k].name:""%>
+                  </option>
+                  <% } %>
+              </select>
+              <span></span>
+              <% if (locals.errors && errors.idBrand) { %>
+                <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                    <%= locals.errors.idBrand.msg %>
+                </p>             
+                <% } %>             
+              <label for="description">Descripción</label>
+              <input class="input-edit" type="text" name="description" value="<%= locals.oldData ? oldData.descripción: null %>"
+                placeholder="Ingrese la descripción del producto">
+                <span></span>
+                <% if (locals.errors && errors.description) { %>
+                  <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                      <%= locals.errors.description.msg %>
+                  </p>             
+                  <% } %>                 <br>
+                <label for="stock">Stock</label>
+                <input class="input-edit" type="number" name="stock" placeholder="0" value="<%= locals.oldData ? oldData.stock: null %>">
+                <span></span>
+                <% if (locals.errors && errors.stock) { %>
+                  <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                      <%= locals.errors.stock.msg %>
+                  </p>             
+                  <% } %>   
+                <br>
+                <label for="">Imágenes</label>
+                <input class="input-edit" type="file" name="imageCreate" accept="image/png, .jpeg, .jpg, image/gif">
+                <span></span>
+                <% if (locals.errors && errors.imageCreate) { %>
+                  <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                      <%= locals.errors.imageCreate.msg %>
+                  </p>             
+                  <% } %> 
+                <br>
+                <label for="">Categoría</label>
+                <select class="product-list-edit" name="categories"value="<%= locals.oldData ? oldData.categories: null %>" >
+                  <% for (let i=0; i<categories.length; i++){ %>
+                    <option value="<%=categories[i].categories%>">
+                      <%= categories[i].typeOfCategory %>
+                    </option>
+                    <% } %>
+                </select>
+                <span></span>
+                <% if (locals.errors && errors.categories) { %>
+                  <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                      <%= locals.errors.categories.msg %>
+                  </p>             
+                  <% } %> 
+                <br>
+                <label for="">Tamaños</label>
+                <select class="product-seizures-edit" name="sizes" value="<%= locals.oldData ? oldData.sizes: null %>">
+                  <% for (let j=0; j<sizes.length; j++){ %>
+                    <option value="<%=sizes[j].sizes%>">
+                      <%= sizes[j].typeOfSize %>
+                    </option>
+                    <% } %>
+                </select>
+                <span></span>
+                <% if (locals.errors && errors.sizes) { %>
+                  <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                      <%= locals.errors.sizes.msg %>
+                  </p>             
+                  <% } %> 
+                <br>
+                <!--selector de color- radio-script-->
+                <div class="color-selection">
+                  <p class="color-title"> Colores</p>
+                  <br>
+                <div class="content-colores">
+                  <ul class="color-list-PD">
+                    <% for (let h=0; h<colors.length; h++){ %>
+                      <li>
+                        <label class="content-input"><%= colors[h].color %></label>
+                        <div class="content-check">
+                          <label class="content-input">
+                            <input type="checkbox" name="color" id="color"  value="<%= locals.oldData ? oldData.color: null %>">
+                            <i></i>
+                          </label>
+                        </div>
+                      </li>
+                      <% } %>
+                  </ul>
+                  <span></span>
+                  <% if (locals.errors && errors.color) { %>
+                    <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                        <%= locals.errors.color.msg %>
+                    </p>             
+                    <% } %>
+                </div>
+                </div>
+                <label for="price-edit" class="priceCreate">Precio</label>
+                <input class="input-edit" type="number" name="priceCreate" placeholder=" $ 0 " value="<%= locals.oldData ? oldData.priceCreate: null %>">
+                <span></span>
+                <% if (locals.errors && errors.priceCreate) { %>
+                  <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
+                      <%= locals.errors.priceCreate.msg %>
+                  </p>             
+                  <% } %>
+                <br>
+                <button type="submit" class="button-edit">Publicar</button>
+          </form>
+     
+        </section>
+      </main>
+      <!-- footer -->
+      <%- include("./partials/footer")%>
+      <script src="/js/validationProduct.js" ></script>
+  </body>
+</html>

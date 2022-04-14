@@ -65,6 +65,8 @@ const controllers = {
             let categories = await db.Category.findAll({});
             let sizes = await db.Size.findAll({});
             let colors = await db.Color.findAll({});
+            console.log("ACAAAA!!!")
+            console.log(colors)
             let brands = await db.Brand.findAll({});
             return res.render("productCreate", { categories, sizes, colors, brands });
         }
@@ -101,20 +103,19 @@ const controllers = {
         res.redirect("/products")
     },
     add: async (req, res) => {
-       
-       
-
-
-
-
-
-
-      const validationErrors = validationResult(req);
+        const validationErrors =  validationResult(req);
         if(!validationErrors.isEmpty()){ 
-                console.log(validationErrors)
+            console.log(validationErrors.mapped())
+            const brands = await db.Brand.findAll({});
+            const sizes = await db.Size.findAll({});
+            const categories = await db.Category.findAll({});
+          
+
                 return res.render("productCreate", { 
                     errorsMessages: validationErrors.mapped(),
-                    oldData: req.body
+                    oldData: req.body,
+                    sizes,categories,brands,
+
                 }); }
         let date = new Date()
         let day = date.getDate()
@@ -134,9 +135,12 @@ const controllers = {
             description: req.body.description,
             stock: req.body.stock,
              })
+             
         req.body.colors ? productStored.addRelProductColor(req.body.colors) : productStored.addRelProductColor([1]),
             req.body.sizes ? productStored.addRelProductSize(req.body.sizes) : productStored.addRelProductSize([1]),
-            req.body.categories ? productStored.addRelProductCategory(req.body.categories) : productStored.addRelProductCategory([6]),
+            req.body.categories ? productStored.addRelProductCategory(req.body.categories) : productStored.addRelProductCategory([6])
+          
+            
             res.redirect("/products")
     }, 
     

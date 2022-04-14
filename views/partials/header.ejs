@@ -208,20 +208,20 @@
                                 <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
                             </nav>
 
-                            <input type="text" name="user" placeholder="Nombre completo"  >
+                            <input type="text" name="user" value="<%= locals.oldData ? oldData.user: null %>"placeholder="Nombre completo"  >
                             <span></span>
-                            <input type="email" name="email" placeholder="Correo">
+                            <input type="email" name="email" placeholder="Correo" value="<%= locals.oldData ? oldData.email: null %>"">
                             <span></span>
-                            <input type="password" name="password" placeholder="Contraseña" >
+                            <input type="password" name="password" placeholder="Contraseña" value="<%= locals.oldData ? oldData.password: null %>"> 
                             <span></span>
                             <input type="password" name="reclaveuser" placeholder="Repetir contraseña" >
                             <span></span>
                             <div class="campo-pais">
-                                <select class="elegir-pais" id="selectCountries" name="country">              
+                                <select class="elegir-pais" id="selectCountries" name="country" value="<%= locals.oldData ? oldData.country: null %>">              
                                 </select>
           <span></span>
                             </div>
-                            <input  type="date" name="fechaNacimiento" min="1930-01-01" max="2010-01-01" >
+                            <input  type="date" name="fechaNacimiento" min="1930-01-01"  max="2010-01-01" value="<%= locals.oldData ? oldData.fechaNacimiento: null %>">
                             <span></span>
                             <br>
                             <button class="btn-submit-register" type="submit">Registrarse</button>

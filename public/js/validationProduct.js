@@ -1,77 +1,35 @@
-/*window.addEventListener("load", function(e){
-    let form = document.querySelector("#createForm");
+let productCreateFrom = document.querySelector("#createForm");
+const productName= document.querySelector("[name=name]");
+const productStock= document.querySelector("[name=stock]");
+const productBrand= document.querySelector("[name=idBrand]");
+const productDescription= document.querySelector("[name=description]");
+const productSizes= document.querySelector("[name=sizes]");
+const productCategories= document.querySelector("[name=categories]");
+const productColor= document.querySelector("[name=color]");
+const productPrice= document.querySelector("[name=priceCreate]");
 
-    form.addEventListener("submit", function(e){
-        //Product Name Validation
-        let productName = document.getElementsByName("name")[0].value;
-        if(productName == ""){
-            alert("El Nombre del producto debe estar completo.");
-            e.preventDefault()
-        } else if (productName.length < 6) {
-            alert("El campo de Nombre debe tener al menos 6 caracteres.")
-            e.preventDefault()
-        }
 
-        //Product Price Validation
-        let productPrice = document.getElementsByName("priceCreate")[0].value;
-        if(productPrice == ""){
-            alert("El Precio debe estar completo.");
-            e.preventDefault()
-        }
-        //Product IdBrand validation
-        let productidBrand = document.getElementsByName("idBrand")[0].value; 
-        if(productidBrand == ""){ 
-            alert("Debe seleccionar una marca"); 
-            e.preventDefault()
-        } else if (productidBrand.length < 5) {
-            alert("El campo de marca debe tener al menos 5 caracteres.")
-            e.preventDefault()
-        }
+const validate = (e)=>{ 
+    const field = e.target; 
+    const Error = field.nextElementSibling; 
+    if (field.value.trim()=== ""){ 
+        field.classList.add("is-invalid"); 
+        Error.innerText = `El campo ${field.name} es obligatorios`;
+        Error.classList.add("invalid-feedback");
+    } else { 
+        field.classList.remove("is-invalid"); 
+        field.classList.add("is-valid");
+        Error.innerText = ""; 
+        Error.classList.remove("invalid-feedback");
+    }
+}
 
-        //Product Category Validation
-        let productCategory = document.getElementsByName("categories")[0].value;
-        if(productCategory == ""){
-            alert("Debe seleccionarse al menos 1 categoría.");
-            e.preventDefault()
-        }
-        else if (productidBrand.length < 5) {
-            alert("Debe seleccionarse al menos 1 categoría.")
-            e.preventDefault()
-        }
+productName.addEventListener("blur", validate);
+productStock.addEventListener("blur", validate);
+productBrand.addEventListener("blur", validate);
+productDescription.addEventListener("blur", validate);
+productSizes.addEventListener("blur", validate);
+productCategories.addEventListener("blur", validate);
+productColor.addEventListener("blur", validate);
+productPrice.addEventListener("blur", validate);
 
-        //Product Description Validation
-        let productDescription = document.getElementsByName("description")[0].value;
-        if(productDescription.length < 6) {
-            alert("El campo descripción debe tener al menos 15 caracteres")
-            e.preventDefault()
-        } else if (productDescription.length < 5) {
-            alert("La descripcion del producto tiene que tener al menos 15 caracteres.")
-            e.preventDefault()
-        }
-
-        //Product Image Validation
-        let img = document.getElementsByName("img")[0].value;
-        if(img == ""){
-            alert("Debe seleccionarse una imágen para el producto.");
-            e.preventDefault()
-        }
-        
-        
-
-        let productcolor = document.getElementsByName("color")[0].value;
-        if(productcolor == ""){
-            alert("El Precio debe estar completo.");
-            e.preventDefault()
-        }
-        let productStock = document.getElementsByName("stock")[0].value;
-        if(productStock == ""){
-            alert("La cantidad de stock debe estar completo.");
-            e.preventDefault()
-        } else if (productStock.length >= 1) {
-            alert("La cantidad de stock debe ser mayor o igual a 1.")
-            e.preventDefault()
-        }
-
-    })
-});
-*/

@@ -32,23 +32,13 @@
               <label for="idBrand">Marcas</label>
               <select class="product-seizures-edit" name="idBrand" placeholder="Ingrese una marca" >
                 <option value=""> Elige una marca </option>
-                <%  
-                  let marca= ["Arredo", "Divanlito","La Cardeuse","La Sabana","Canon"]
-                %>  
-                <% for (const oneBrand of marca) { %> 
-                <option 
-                value="<%= oneBrand %>"
-                   <%= locals.oldData && (oneBrand === oldData.idBrand) ? "selected" : null %>
-                   ><%=oneBrand %> </option> 
-                <% } %> 
-                
-               <!-- 
-                 <% // for (let k=0; k<brands.length; k++){%> 
-                      <option value="<%= //brands[k].idBrand ? brands[k].idBrand:"" %>">
-                    <%= //brands[k].name ? brands[k].name:""%>
+               
+                 <%  for (let k=0; k<brands.length; k++){%> 
+                      <option value="<%= brands[k].idBrand ? brands[k].idBrand:"" %>">
+                    <%= brands[k].name ? brands[k].name:""%>
                   </option>
-                  <%// } %>
-                  -->
+                  <% } %>
+                  
               </select>
               <span></span>
               <% if (locals.errorsMessages && errorsMessages.idBrand) { %>
@@ -57,7 +47,7 @@
                 </p>             
                 <% } %>             
               <label for="description">Descripción</label>
-              <input class="input-edit" type="text" name="description" value="<%= locals.oldData ? oldData.descripción: null %>"
+              <input class="input-edit" type="text" name="description" value="<%= locals.oldData ? oldData.description: null %>"
                 placeholder="Ingrese la descripción del producto">
                 <span></span>
                 <% if (locals.errorsMessages && errorsMessages.description) { %>
@@ -75,7 +65,7 @@
                   <% } %>   
                 <br>
                 <label for="">Imágenes</label>
-                <input class="input-edit" type="file" name="imageCreate" accept="image/png, .jpeg, .jpg, image/gif">
+                <input class="input-edit" type="file" name="imageCreate">
                 <span></span>
                 <% if (locals.errorsMessages && errorsMessages.imageCreate) { %>
                   <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
@@ -86,22 +76,14 @@
                 <label for="">Categoría</label>
                 <select class="product-list-edit" name="categories"value="<%= locals.oldData ? oldData.categories: null %>" >
                   <option value=""> Elige una categoria </option>
-                <%  
-                  let categories= ["Sabanas", "Colchones","Toallas","Almohadas","Batas"]
-                %>  
-                <% for (const oneCategories of categories) { %> 
-                <option 
-                value="<%= oneCategories %>"
-                   <%= locals.oldData && (oneCategories === oldData.categories) ? "selected" : null %>
-                   ><%=oneCategories %> </option> 
-                <% } %> 
-                  <!--
-                  <% //for (let i=0; i<categories.length; i++){ %>
-                    <option value="<%=//categories[i].categories%>">
-                      <%=// categories[i].typeOfCategory %>
+               
+                  
+                  <% for (let i=0; i<categories.length; i++){ %>
+                    <option value="<%=categories[i].idCategory%>">
+                      <%=categories[i].typeOfCategory %>
                     </option>
-                    <% //} %>
-                    -->
+                    <% } %>
+                    
                 </select>
                 <span></span>
                 <% if (locals.errorsMessages && errorsMessages.categories) { %>
@@ -113,21 +95,12 @@
                 <label for="">Tamaños</label>
                 <select class="product-seizures-edit" name="sizes" value="<%= locals.oldData ? oldData.sizes: null %>">
                   <option value=""> Elige el Tamaño </option>
-                  <%  
-                    let sizes= ["Cuna", "Cuna funciona","1 Plaza","Queen Size","Extra Queen Size", "King Size","Extra King size","No size","Medium","Large"]
-                  %>  
-                  <% for (const oneSizes of sizes) { %> 
-                  <option 
-                  value="<%= oneSizes %>"
-                     <%= locals.oldData && (oneSizes === oldData.idBrand) ? "selected" : null %>
-                     ><%=oneSizes %> </option> 
-                  <% } %> 
-                  
-                   <!-- <% //for (let j=0; j<sizes.length; j++){ %>
-                    <option value="<%=//sizes[j].sizes%>">
-                      <%= //sizes[j].typeOfSize %>
+                
+                    <% for (let j=0; j<sizes.length; j++){ %>
+                    <option value="<%=sizes[j].idSize%>">
+                      <%= sizes[j].typeOfSize %>
                     </option>
-                    <% //} %>   -->
+                    <% } %>  
                 </select>
                 <span></span>
                 <% if (locals.errorsMessages && errorsMessages.sizes) { %>
@@ -138,35 +111,24 @@
                 <br>
                 <!--selector de color- radio-script-->
                 <div class="color-selection">
-                  <p class="color-title"> Colores</p>
+                  <p class="color-title">Colores</p>
                   <br>
-                <class="content-colores">
-              <class="color-list-PD"> 
-                <select>
-                  <option value=""> Elige una color </option>
-                  <%  
-                    let color= ["Sin color", "Violeta","Gris","Verde","Amarillo"]
-                  %>  
-                  <% for (const oneColor of color) { %> 
-                  <option 
-                  value="<%= oneColor %>"
-                     <%= locals.oldData && (oneColor === color.idBrand) ? "selected" : null %>
-                     ><%=oneColor %> </option> 
-                  <% } %> 
-                </select>
-                   <!-- <%// for (let h=0; h<colors.length; h++){ %>
+
+                  <ul class="color-list-PD">
+
+                    <% for (let h=0; h<colors.length; h++){ %>
+
+
                       <li>
-                        <label class="content-input"><%=// colors[h].color %></label>
-                        <div class="content-check">
-                          <label class="content-input">
-                            <input type="checkbox" name="color" id="color"  value="<%=// locals.oldData ? oldData.color: null %>">
-                            <i></i>
-                          </label>
-                        </div>
-                      </li>-->
-                      <%// } %>
+                        <label>
+                          <%= colors[h].color %>
+                        </label>
+                        <p><input type="checkbox" name="colors" class="checkbox-color-PD"
+                            value=" <%= colors[h].idColor %>" id="checkbox-colorA-PD"></p>
+                      </li>
+                      <% } %>
+
                   </ul>
-                  <span></span>
                   <% if (locals.errorsMessages && errorsMessages.color) { %>
                     <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
                         <%= locals.errorsMessages.color.msg %>
