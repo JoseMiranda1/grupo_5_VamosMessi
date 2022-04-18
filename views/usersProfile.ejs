@@ -13,7 +13,6 @@
 
     <main class="mainProfile">
       <% if (locals.isAnUserLogged == true){%> 
-<<<<<<< HEAD
         <div class="container">
           <div class="center">
             <div class="content">
@@ -43,7 +42,6 @@
               <li class="photo">Descuento</li>
             </ul>
           </div>
-=======
       <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
@@ -57,7 +55,6 @@
                     <i class="far fa-image"></i> Cambiar fondo
                 </button>
             </div>
->>>>>>> 2980e8dd20bdf95ad53186b0e5362d3a3ebd34ce
         </div>
         <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">
@@ -67,10 +64,10 @@
             </div>
             <div class="perfil-usuario-footer">
                 <ul class="lista-datos">
-                    <li ><i class="icono fas fa-map-signs"></i> Direccion de usuario: <strong class="datos"> <%= user.email %> </strong></li>
+                    <li ><i class="icono fas fa-map-signs"></i> Direccion de usuario: <strong class="datos"> <%= userData.email %> </strong></li>
                     <li><i class="icono fas fa-phone-alt"></i> Telefono:<strong class="datos"> 1111111</strong> </li>
-                    <li><i class="icono fas fa-briefcase"></i> Trabaja en: <strong class="datos"><%= user.pais %></li></strong> 
-                    <li><i class="icono fas fa-building"></i> Pais: <strong class="datos"><%= user.pais %></li></strong> 
+                    <li><i class="icono fas fa-briefcase"></i> Trabaja en: <strong class="datos"><%= userData.pais %></li></strong> 
+                    <li><i class="icono fas fa-building"></i> Pais: <strong class="datos"><%= userData.pais %></li></strong> 
                 </ul>
                 <ul class="lista-datos">
                     <li><i class="icono fas fa-map-marker-alt"></i> Ubicacion.</li>
