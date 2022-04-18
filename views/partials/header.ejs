@@ -20,8 +20,7 @@
                   <li><a class="dropdown-item" href="#">Sabanas</a></li>
                   <li><a class="dropdown-item" href="#">Toallas y toallones</a></li>
                   <% if (locals.isAnUserLogged == true){%>
-                  <li><a class="dropdown-item" href="/products/create">Crear producto</a></li>
-                  <li><a class="dropdown-item" href="/products/edit">Editar producto</a></li>
+                  <li><a class="dropdown-item" href="/products/create">Crear producto</a></li>                  
                   <%}%>
                   <li><hr class="dropdown-divider"></li>
                   <li><a href="/#¿quienessomos?" class="dropdown-item" href="#">Nosotros</a></li>
@@ -38,7 +37,7 @@
                       <% if (locals.isAnUserLogged == true){%>
                           <ul class="menuP" id="menu">
                               <li class="menu__item container-submenu">
-                                  <a href="#" class="menu__link submenu-btn"><b><%= userData.name %> </b>  <i class="fas fa-chevron-down"></i></a>
+                                  <a href="#" class="menu__link submenu-btn"><b><%= userData.userName %> </b>  <i class="fas fa-chevron-down"></i></a>
                                   <ul class="submenu">
                                       <li class="menu__item"><a href="/users/profile" class="menu__link">perfil</a></li>
                                       <li class="menu__item"><a href="/users/logout" class="menu__link">Cerrar sesión</a></li>
@@ -64,6 +63,7 @@
             <!--
              logos
                -->
+<<<<<<< HEAD
             <div class="btn-buscar-user-carrito">
                 <nav class="nav-alt">
                     <div class="buscar">
@@ -99,6 +99,8 @@
             </div>
         </div>
     </div>
+=======
+>>>>>>> 111fd0f501a0af16fbacd746d3f7bd46f2f763ec
     <!--
         logos
       -->
@@ -244,6 +246,7 @@
                                 <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
                             </nav>
 
+<<<<<<< HEAD
                             <input type="text" name="user" placeholder="Nombre completo" required id="Nombre">
                             <input type="password" name="password" placeholder="Contraseña" required>
                             <input type="password" name="reclave" placeholder="Repetir contraseña" required>
@@ -266,15 +269,26 @@
                             <input type="email" name="emailuser" placeholder="Correo">
                             <span></span>
                             <input type="password" name="clave" placeholder="Contraseña" >
+=======
+                            <input type="text" name="user" value="<%= locals.oldData ? oldData.user: null %>"placeholder="Nombre completo"  >
+                            <span></span>
+                            <input type="email" name="email" placeholder="Correo" value="<%= locals.oldData ? oldData.email: null %>"">
+                            <span></span>
+                            <input type="password" name="password" placeholder="Contraseña" value="<%= locals.oldData ? oldData.password: null %>"> 
+>>>>>>> 111fd0f501a0af16fbacd746d3f7bd46f2f763ec
                             <span></span>
                             <input type="password" name="reclaveuser" placeholder="Repetir contraseña" >
                             <span></span>
                             <div class="campo-pais">
+<<<<<<< HEAD
                                 <select class="elegir-pais" id="selectCountries">              
+=======
+                                <select class="elegir-pais" id="selectCountries" name="country" value="<%= locals.oldData ? oldData.country: null %>">              
+>>>>>>> 111fd0f501a0af16fbacd746d3f7bd46f2f763ec
                                 </select>
           <span></span>
                             </div>
-                            <input  type="date" name="fechaNacimiento" min="1930-01-01" max="2010-01-01" >
+                            <input  type="date" name="fechaNacimiento" min="1930-01-01"  max="2010-01-01" value="<%= locals.oldData ? oldData.fechaNacimiento: null %>">
                             <span></span>
                             <br>
                             <button class="btn-submit-register" type="submit">Registrarse</button>
@@ -284,7 +298,7 @@
                     <div class="contenedor-inputs" id="contenedor-inputs">
                 </form>
 
-                <form class="login-width" action="/users/login" method="post">
+                <form class="login-width" action="/users/login" method="post" id="formLogin">
                     <h4>Iniciar sesión</h4>
 
                     <nav class="social-network-PD">
@@ -294,7 +308,9 @@
                     </nav>
 
                     <input type="email" name="userlog" placeholder="Email" id="Nombre">
+                    <span></span>
                     <input type="password" name="userpass" placeholder="Contraseña">
+                    <span></span>
 
                     <p class="regis-log-popup" onclick="openRegister()" id="mostrar-regis">¿No tenes cuenta?<a href="#">Registrate</a></p>
                     <a class="olvidaste-contra" href="#">¿Olvidaste tu contraseña?</a>
@@ -309,7 +325,8 @@
                 <script src="/js/popup.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
                 <script src="/js/validacion.js"></script>
-                <script src="/js/carruselProduct.js"></script>
+                <script src="/js/validacionLogin.js"></script>
+                
              
                 <!-- fin popup-->
 

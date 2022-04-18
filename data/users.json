@@ -9,9 +9,26 @@
  },
  {
   "id": 2,
-  "usuario": "",
-  "email": "",
-  "clave": "$2b$10$AWy7NBLN53Za10k6yvBqFuyUQ9D8.GccA/IU2s5ZGR63OgksZkMLO",
-  "fechaNacimiento": ""
+  "usuario": "Rocio Seiler",
+  "clave": "1234",
+  "pais": "Argentina",
+  "fechaNacimiento": "2009-11-11",
+  "email": "seilerrocio@gmail.com"
+ },
+ {
+  "id": 3,
+  "usuario": "Ro",
+  "clave": "$2b$10$BFMM2XXAHb3n5gcGNHByJerIercmGg998Q60t7MOCslD0p9Is.PpO",
+  "pais": "Argentina",
+  "fechaNacimiento": "2009-11-11",
+  "email": "ro@gmail.com"
+ },
+ {
+  "id": 4,
+  "usuario": "cosme fulanito",
+  "clave": "$2b$10$JcQojWXaqeQo7BFKmdsko.QTlrNY5h8ECNnb7xIIzi9PEMjttqgyW",
+  "pais": "Bolivia",
+  "fechaNacimiento": "2009-11-12",
+  "email": "cosme@gmail.com"
  }
 ]

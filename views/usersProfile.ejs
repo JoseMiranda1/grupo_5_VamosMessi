@@ -13,35 +13,6 @@
 
     <main class="mainProfile">
       <% if (locals.isAnUserLogged == true){%> 
-        <div class="container">
-          <div class="center">
-            <div class="content">
-             <b>Bienvenido <%= userData.userName %> </b>
-            <img src="/imagenes/bg-pattern-card.jpg" alt="bg-card">
-            
-            <img class="potrait" src="/imagenes/img-user-profile.png" alt="" >
-            <div>
-            <a href="/users/edit"><i class="fa-regular fa-user-pen"></i> Editar perfil</a>
-          </div>
-            <h3 class="name"> <%= userData.userName %> <span class="age"><%=userData.birthdate %>
-             </span></h3>
-            <h5 class="location" >Email:  <a href="#"><%= userData.email %></a></h5>
-            <p class="location"><%=  userData.country %></p>
-          </div>
-          <div class="num">
-            <ul>
-              <li>80K</li>
-              <li>803K</li>
-              <li>20%</li>
-            </ul>
-          </div>
-          <div class="stats">
-            <ul>
-              <li>Compras</li>
-              <li class="likes">Likes</li>
-              <li class="photo">Descuento</li>
-            </ul>
-          </div>
       <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
             <div class="perfil-usuario-portada">
@@ -58,7 +29,7 @@
         </div>
         <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">
-                <h3 class="titulo"><%= userData.name %> </h3>
+                <h3 class="titulo"><%= userData.userName %> </h3>
                 <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
@@ -66,7 +37,7 @@
                 <ul class="lista-datos">
                     <li ><i class="icono fas fa-map-signs"></i> Direccion de usuario: <strong class="datos"> <%= userData.email %> </strong></li>
                     <li><i class="icono fas fa-phone-alt"></i> Telefono:<strong class="datos"> 1111111</strong> </li>
-                    <li><i class="icono fas fa-briefcase"></i> Trabaja en: <strong class="datos"><%= userData.pais %></li></strong> 
+                    <li><i class="icono fas fa-briefcase"></i> Trabaja en: <strong class="datos"><%= userData.country %></li></strong> 
                     <li><i class="icono fas fa-building"></i> Pais: <strong class="datos"><%= userData.pais %></li></strong> 
                 </ul>
                 <ul class="lista-datos">
