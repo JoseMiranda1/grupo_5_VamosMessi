@@ -2,87 +2,56 @@
 
     <nav style="z-index:7000; background-color:#444" class="navbar navbar-expand-lg navbar-light bg-opacity-100">
         <div class="container-fluid">
-          <a style="color:white" class="navbar-brand" href="/">LA SABANA</a>
-          <button style="background:white" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a style="color:white" class="nav-link active" aria-current="page" href="/">Home</a>
-              </li>
-           
-              <li class="nav-item dropdown">
-                <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Productos
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Sabanas</a></li>
-                  <li><a class="dropdown-item" href="#">Toallas y toallones</a></li>
-                  <% if (locals.isAnUserLogged == true){%>
-                  <li><a class="dropdown-item" href="/products/create">Crear producto</a></li>                  
-                  <%}%>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a href="/#¿quienessomos?" class="dropdown-item" href="#">Nosotros</a></li>
+            <a style="color:white" class="navbar-brand" href="/">LA SABANA</a>
+            <button style="background:white" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a style="color:white" class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Sabanas</a></li>
+                            <li><a class="dropdown-item" href="#">Toallas y toallones</a></li>
+                            <% if (locals.isAnUserLogged==true){%>
+                                <li><a class="dropdown-item" href="/products/create">Crear producto</a></li>
+                                <%}%>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a href="/#¿quienessomos?" class="dropdown-item" href="#">Nosotros</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a style="color:white" class="nav-link active" aria-current="page" href="/#dondeEstamos">¿Donde
+                            estamos?</a>
+                    </li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a style="color:white" class="nav-link active" aria-current="page" href="/#dondeEstamos">¿Donde estamos?</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button style="position:relative; width:100px" class="btn btn-outline-success" type="submit">Buscar</button>
-              
-                      <% if (locals.isAnUserLogged == true){%>
-                          <ul class="menuP" id="menu">
-                              <li class="menu__item container-submenu">
-                                  <a href="#" class="menu__link submenu-btn"><b><%= userData.userName %> </b>  <i class="fas fa-chevron-down"></i></a>
-                                  <ul class="submenu">
-                                      <li class="menu__item"><a href="/users/profile" class="menu__link">perfil</a></li>
-                                      <li class="menu__item"><a href="/users/logout" class="menu__link">Cerrar sesión</a></li>
-                                  </ul>
-                              </li>
-                          </ul>
-                          <%} else { %>
-                              <div class="usuario">
-                                  <a id="btn-abrir-popup"><i class="fas fa-user"></i></a>
-                              </div>
-                              <%}%>
-      
-                                  <div class="carrito">
-                                      <a href="/products/cart"><i class="fas fa-cart-plus"></i></a>
-                                  </div>
-                  </nav>
-              </div>
-          </div>
-      </div>
-            </form>
-          </div>
-        </div>
-            <!--
-             logos
-               -->
-<<<<<<< HEAD
-            <div class="btn-buscar-user-carrito">
-                <nav class="nav-alt">
-                    <div class="buscar">
-                        <form action="/products/search/" method="GET">
-                            <input type="text" placeholder="¿Que estás buscando?" name="word" required>
-                            <button type="submit">
-                                <div class="btn">
-                                    <i class="fas fa-search"></i>
-                                </div>
-                            </button>
-                        </form>
-                    </div>
-                    <% if (locals.isAnUserLogged == true){%>
+                <form action="/products/search" class="d-flex" method="GET">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="word">
+                    <button style="position:relative; width:100px" class="btn btn-outline-success"
+                        type="submit">Buscar</button>
+                </form>
+                <form>
+                    <% if (locals.isAnUserLogged==true){%>
                         <ul class="menuP" id="menu">
                             <li class="menu__item container-submenu">
-                                <a href="#" class="menu__link submenu-btn"><b><%= userData.name %> </b>  <i class="fas fa-chevron-down"></i></a>
+                                <a href="#" class="menu__link submenu-btn"><b>
+                                        <%= userData.userName %>
+                                    </b> <i class="fas fa-chevron-down"></i></a>
                                 <ul class="submenu">
                                     <li class="menu__item"><a href="/users/profile" class="menu__link">perfil</a></li>
-                                    <li class="menu__item"><a href="/users/logout" class="menu__link">Cerrar sesión</a></li>
+                                    <li class="menu__item"><a href="/users/logout" class="menu__link">Cerrar sesión</a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
@@ -95,12 +64,16 @@
                                 <div class="carrito">
                                     <a href="/products/cart"><i class="fas fa-cart-plus"></i></a>
                                 </div>
-                </nav>
-            </div>
-        </div>
+    </nav>
     </div>
-=======
->>>>>>> 111fd0f501a0af16fbacd746d3f7bd46f2f763ec
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    <!--
+             logos
+               -->
     <!--
         logos
       -->
@@ -127,7 +100,8 @@
 
             <div class="infoBanner">
                 <h1>BIENVENIDOS A LA SABANA</h1>
-                <p>Tu casa también puede ser de revista. Decorá tus espacios con hermosos productos de blanquería que no cuestan una fortuna...
+                <p>Tu casa también puede ser de revista. Decorá tus espacios con hermosos productos de blanquería que no
+                    cuestan una fortuna...
                 </p>
                 <br>
                 <a href="#¿QuienesSomos?">Leer mas</a>
@@ -210,10 +184,10 @@
 
     <!--  ---- fin texto caminante------  -->
 
-<ul class="apis">
+    <ul class="apis">
 
-</ul>
-   <!-- <div class="div-banner">
+    </ul>
+    <!-- <div class="div-banner">
         <p class="box-banner">3 , 6 y 12 cuotas sin interés<br> en compras superiores a $7990</p>
         <hr>
         <p class="box-banner" id="p-hidden">Envío gratis a partir de $9800</p>
@@ -236,59 +210,38 @@
                         <div class="register">
                             <h3>SUSCRIBETE</h3>
                             <h4>y recibe un cupon de descuento.</h4>
-                            <p class="regis-log-popup" id="most-login" onclick="closeRegister()">¿Ya tenes cuenta?<a href="#"> Inicia
-                sesión</a></p>
+                            <p class="regis-log-popup" id="most-login" onclick="closeRegister()">¿Ya tenes cuenta?<a
+                                    href="#"> Inicia
+                                    sesión</a></p>
 
                             <!--redes sociales-->
                             <nav class="social-network-PD">
-                                <a href="https://twitter.com/?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://twitter.com/?lang=es" target="_blank"><i
+                                        class="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-                                <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
                             </nav>
 
-<<<<<<< HEAD
-                            <input type="text" name="user" placeholder="Nombre completo" required id="Nombre">
-                            <input type="password" name="password" placeholder="Contraseña" required>
-                            <input type="password" name="reclave" placeholder="Repetir contraseña" required>
-                            <div class="campo-pais">
-                                <select name="country" id="country" class="elegir-pais" placeholder="Pais">
-              <option value="-">Pais</option>
-              <option value="Argentina">Argentina</option>
-              <option value="Bolivia">Bolivia</option>
-              <option value="Brasil">Brasil</option>
-              <option value="Colombia">Colombia</option>
-              <option value="Chile">Chile</option>
-              <option value="Ecuador">Ecuador</option>
-              <option value="Paraguay">Paraguay</option>
-              <option value="Perú">Peru</option>
-              <option value="Uruguay">Uruguay</option>
-              <option value="Venezuela">Venezuela</option>
-          </select>
-                            <input type="text" name="usuario" placeholder="Nombre completo"  >
+                            <input type="text" name="user" value="<%= locals.oldData ? oldData.user: null %>"
+                                placeholder="Nombre completo">
                             <span></span>
-                            <input type="email" name="emailuser" placeholder="Correo">
+                            <input type="email" name="email" placeholder="Correo"
+                                value="<%= locals.oldData ? oldData.email: null %>"">
                             <span></span>
-                            <input type="password" name="clave" placeholder="Contraseña" >
-=======
-                            <input type="text" name="user" value="<%= locals.oldData ? oldData.user: null %>"placeholder="Nombre completo"  >
+                            <input type=" password" name="password" placeholder="Contraseña"
+                                value="<%= locals.oldData ? oldData.password: null %>">
                             <span></span>
-                            <input type="email" name="email" placeholder="Correo" value="<%= locals.oldData ? oldData.email: null %>"">
-                            <span></span>
-                            <input type="password" name="password" placeholder="Contraseña" value="<%= locals.oldData ? oldData.password: null %>"> 
->>>>>>> 111fd0f501a0af16fbacd746d3f7bd46f2f763ec
-                            <span></span>
-                            <input type="password" name="reclaveuser" placeholder="Repetir contraseña" >
+                            <input type="password" name="reclaveuser" placeholder="Repetir contraseña">
                             <span></span>
                             <div class="campo-pais">
-<<<<<<< HEAD
-                                <select class="elegir-pais" id="selectCountries">              
-=======
-                                <select class="elegir-pais" id="selectCountries" name="country" value="<%= locals.oldData ? oldData.country: null %>">              
->>>>>>> 111fd0f501a0af16fbacd746d3f7bd46f2f763ec
+                                <select class="elegir-pais" id="selectCountries" name="country"
+                                    value="<%= locals.oldData ? oldData.country: null %>">
                                 </select>
-          <span></span>
+                                <span></span>
                             </div>
-                            <input  type="date" name="fechaNacimiento" min="1930-01-01"  max="2010-01-01" value="<%= locals.oldData ? oldData.fechaNacimiento: null %>">
+                            <input type="date" name="fechaNacimiento" min="1930-01-01" max="2010-01-01"
+                                value="<%= locals.oldData ? oldData.fechaNacimiento: null %>">
                             <span></span>
                             <br>
                             <button class="btn-submit-register" type="submit">Registrarse</button>
@@ -304,7 +257,8 @@
                     <nav class="social-network-PD">
                         <a href="https://twitter.com/?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
                     </nav>
 
                     <input type="email" name="userlog" placeholder="Email" id="Nombre">
@@ -312,22 +266,25 @@
                     <input type="password" name="userpass" placeholder="Contraseña">
                     <span></span>
 
-                    <p class="regis-log-popup" onclick="openRegister()" id="mostrar-regis">¿No tenes cuenta?<a href="#">Registrate</a></p>
+                    <p class="regis-log-popup" onclick="openRegister()" id="mostrar-regis">¿No tenes cuenta?<a
+                            href="#">Registrate</a></p>
                     <a class="olvidaste-contra" href="#">¿Olvidaste tu contraseña?</a>
                     <input type="submit" class="btn-submit" value="Ingresar">
 
-                    </div>
-                    <div class="cookiebutton">
-                        <input type="radio" name="remember_user"> Recordar mi usuario
+            </div>
+            <div class="cookiebutton">
+                <input type="radio" name="remember_user"> Recordar mi usuario
 
-                    </div>
-                </form>
-                <script src="/js/popup.js"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-                <script src="/js/validacion.js"></script>
-                <script src="/js/validacionLogin.js"></script>
-                
-             
-                <!-- fin popup-->
+            </div>
+            </form>
+            <script src="/js/popup.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
+            <script src="/js/validacion.js"></script>
+            <script src="/js/validacionLogin.js"></script>
+
+
+            <!-- fin popup-->
 
 </header>

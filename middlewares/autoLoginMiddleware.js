@@ -4,7 +4,7 @@ const filePath = path.resolve(__dirname,"../database/users.json");
 const usersDB = JSON.parse (fs.readFileSync(filePath,"utf-8")); 
 
 function autoLoginMiddleware (req,res,next) { 
-    const emailInCookie = req.cokkies.email; 
+    const emailInCookie = req.cookies.email; 
     if (emailInCookie !== undefined){ 
         const userToLogin = usersDB.find(oneUser => oneUser.email === emailInCookie);
         delete userToLogin.password; 

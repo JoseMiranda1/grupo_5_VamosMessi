@@ -17,17 +17,13 @@
             userName: DataTypes.STRING,
             email: DataTypes.STRING,
             userPassword: DataTypes.STRING,
-            adress: DataTypes.STRING,
-            postCode: DataTypes.STRING,
             country: DataTypes.STRING,
-            phone: DataTypes.STRING,
             birthdate: DataTypes.DATE
         }, {
            
         });
 
         User.associate = function (models) {
-            // associations can be defined here
             User.hasMany(models.Cart, {
                 as: "relUserCart",
                 foreignKey: "idUser",

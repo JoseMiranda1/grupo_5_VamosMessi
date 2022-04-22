@@ -18,7 +18,7 @@
             price: DataTypes.DECIMAL(18, 2),
             stock: DataTypes.INTEGER,
             image: DataTypes.STRING,
-            description:DataTypes.STRING, //DESCRIPTION
+            description:DataTypes.STRING, 
             idBrand: DataTypes.INTEGER,
             createDate: DataTypes.DATE
 

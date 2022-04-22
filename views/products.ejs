@@ -10,12 +10,13 @@
   <main>
 
     <div class="title-cards">
-      <h2>¡Todo esto y mucho mas!</h2>
+      <h2>¡Todo ésto y mucho más!</h2>
     </div>
     <div class="container-card">
 
-      <% for( let i = 0; i < products.length; i++ ) { %>
-
+      <% for( let i=products.length ;  i>0; i-- ) { %>        
+                   
+        <% if(products[i]) { %>
 
       <div class="card">
         <figure>
@@ -34,56 +35,15 @@
           <p class="precioproducts">
             $ <%=  products[i].price %>
           </p>
-          <a href="/products/detail">Comprar ahora</a>
+          
+          <a href="/products/detail/<%=products[i].idProduct%>">Ver Detalle</a>
         </div>
       </div>
+      <% } %>
       <% } %>
 
 
 
-     
-    </div>
-    <div class="title-cards">
-      <h2>Segun tu ultima busqueda</h2>
-    </div>
-    <div class="container-card">
-
-      <div class="card">
-        <figure>
-          <img src="/imagenes/productos/bata-clasica-dos-costuras-800x800-800x800.jpg">
-        </figure>
-        <div class="contenido-card">
-          <h3>Bata de baño adulto</h3>
-          <p> Posee bolsillos delanteros y cinta de ajuste. la tela de algodon 100% aporta mayor confort y suavidad </p>
-          <p class="precioproducts">$10.000</p>
-          <a href="/products/detail">Comprar ahora</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <figure>
-          <img src="/imagenes/productos/almohadas-grandes-1.jpg">
-        </figure>
-        <div class="contenido-card">
-          <h3>Almohada sublime</h3>
-          <p>El relleno está formado por un núcleo central de espuma de poliuretano Hipersoft Premium de Alta Densidad que brinda resistencia y confort, y una abundante manta de fibra de poliéster hueca, siliconada, cardada y peinada que
-            le otorga suavidad.</p>
-          <p class="precioproducts">$10.000</p>
-          <a href="/products/detail">Comprar ahora</a>
-        </div>
-      </div>
-      <div class="card">
-        <figure>
-          <img src="/imagenes/productos/Sabanas-img1.jpg">
-        </figure>
-        <div class="contenido-card">
-          <h3>Sabanas 2 Plazas Algodón 400 hilos</h3>
-          <p>Juego completo de sábanas, fabricadas en genero de 240 hilos. 100% algodon Excelente calidad. No se destiñe, no se motosea, totalmente garantizado. Tela importada, confección nacional.</p>
-          <p class="precioproducts">$10.000</p>
-          <a href="/products/detail">Comprar ahora</a>
-        </div>
-      </div>
-    </div>
 
   </main>
 

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "axios": "^0.26.1",
     "bcrypt": "^5.0.1",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
@@ -8,6 +9,7 @@
     "method-override": "^3.0.0",
     "multer": "^1.4.4",
     "mysql2": "^2.3.3",
+    "node-fetch": "^2.6.1",
     "sequelize": "^6.18.0"
   },
   "name": "grupo_5_vamosmessi",

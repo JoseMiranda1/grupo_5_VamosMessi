@@ -118,10 +118,10 @@ const controllers = {
         userName: req.body.user,
         email: req.body.email,
         userPassword: bcrypt.hashSync(req.body.password, 10),
-        adress: "Avenida Siempreviva 742",
-        postCode: 7600,
+        //address: "Avenida Siempreviva 742",
+        //postCode: 7600,
         country: req.body.country,
-        phone: "22355555555",
+        //phone: "22355555555",
         birthdate: req.body.birthdate
 
         })

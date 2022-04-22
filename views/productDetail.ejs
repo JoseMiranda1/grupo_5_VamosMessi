@@ -1,200 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>    
-    <link rel="stylesheet" href="/css/productEdit.css">
-    <link rel="stylesheet" href="/css/productDetail.css">
 
-    <%- include("./partials/head")%>    
+<head>
+    <%- include("./partials/head")%>
+        <link rel="stylesheet" href="/css/productEdit.css">
+        <link rel="stylesheet" href="/css/productDetail.css">
+
 </head>
+
 <body>
-    <%- include("./partials/header")%>
-    <!--página detalle de producto-->
-    <main>
-        
-        <div class="main-container-PD">
-            <ul>
-            <li class="create-product"> <a  href="/products/edit"><i class="fas fa-edit"></i></i>Editar Producto</a> </li><br> <br>
-            <li class="create-product">  <a  href="/products/create"><i class="fas fa-edit"></i></i>Crear producto</a></li>
-        </ul>
-            <!--imagen del producto-->
-            <!--deslizamiento de imagen-->
-            <section class="slider-box-price-container-PD">
-                <!--crumber-->
-                <nav class="crumber-nav-PD">
-                    <a href="/home.html" class="crumb-PD">Inicio</a>
-                    <span class="crumb-PD">/</span>
-                    <a href="" class="crumb-PD">Dormitorio</a>
-                    <span class="crumb-PD">/</span>
-                    <a href="" class="crumb-PD">Sábanas</a>
-                    <span class="crumb-PD">/</span>
-                    <a href="" class="crumb-PD">Sábanas Oro con Faja P/colch 1,60 Lisa Blanco</a>
-                </nav>
-                <!--imagenes del wrap-->
-                <nav class="slider-container-PD">
-                    <ul class="slider-list-PD">
-                        <li id="slide1-PD">
-                            <img src="/imagenes/productos/sabanas-img1.jpg" alt="img1"></a>
-                        </li> 
-                        <li id="slide2-PD">
-                            <img src="/imagenes/productos/sabanas-img2.jpg" alt="img2"></a>
-                        </li>
-                        <li id="slide3-PD">
-                            <img src="/imagenes/productos/sabanas-img3.jpg" alt="img3"></a>
-                        </li>
-                        <li id="slide4-PD">
-                            <img src="/imagenes/productos/sabanas-img4.jpg" alt="img4"></a>
-                        </li>
-                        <li id="slide5-PD">
-                            <img src="/imagenes/productos/sabanas-img5.jpg" alt="img5"></a>
-                        </li>
-                        <nav class="nav-selector">
-                            <li>
-                                <a href="#"><i class="fas fa-chevron-left" id="left-selector-PD"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-chevron-right" id="right-selector-PD"></i></a>
-                            </li>
-                        </nav>
-                    </ul>
-                    <ul class="menu-slider-PD">
-                        <li>
-                            <a href="#slide1" id="img1"><img src="/imagenes/productos/sabanas-img1.jpg" alt="" class="img-item-PD"></a>
-                        </li>
-                        <li>
-                            <a href="#slide2" id="img2"><img src="/imagenes/productos/sabanas-img2.jpg" alt="" class="img-item-PD"></a>
-                        </li>
-                        <li>
-                            <a href="#slide3" id="img3"><img src="/imagenes/productos/sabanas-img3.jpg" alt="" class="img-item-PD"></a>
-                        </li>
-                        <li>
-                            <a href="#slide4" id="img4"><img src="/imagenes/productos/sabanas-img4.jpg" alt="" class="img-item-PD"></a>
-                        </li>
-                        <li>
-                            <a href="#slide5" id="img5"><img src="/imagenes/productos/sabanas-img5.jpg" alt="" class="img-item-PD"></a>
-                        </li>
-                    </ul>
-                </nav>
-            <!--caja del poducto-->
-            
-            <section class="form-edit" >
-                
-                 
-                  
-                  <h2>Nombre producto</h2>
-                  <h3><%= products.name%></h3>
-                  
-                    <h2>Nombre marca</h2>
-                  
-                    <% for (let k=0; k<brands.length; k++){ %>
-                      
-                        <% if(products.relProductBrand.idBrand== brands[k].idBrand) {%>
-                           
-                            <h3><%= brands[k].name %></h3>
-                          <% } %> 
-                      
-                      <% } %>
-                 
-                  <h2>Descripción</h2>
-                  <h3><%= products.description%></h3>
-                 <h2>Imagen</h2>
-                  <img src="/uploads/<%= products.image%>" alt="">
-                  
-
-                 
-                 
-            
-            
-            
-                  <h2>Categorias</h2>
-                  <% for( let i= 0; i < categories.length; i++ ) { %>
-                    
-                    <% for (let j=0; j <JSON.stringify(products.relProductCategory.length);j++) { %>
-                      <% if(JSON.stringify(products.relProductCategory[j].idCategory)== categories[i].idCategory){ %>
-                            <h3><%= categories[i].typeOfCategory %> </h3>
-                      
-                      <% } %>
-                   <% } %>            
-                          
-                          
-                    <%  } %>
-         <h2>Tamaños</h2>
-                  <% for( let i= 0; i < sizes.length; i++ ) { %>
-                    
-                    <% for (let j=0; j <JSON.stringify(products.relProductSize.length);j++) { %>
-                      <% if(JSON.stringify(products.relProductSize[j].idSize)== sizes[i].idSize){ %>
-                        <h3><%= sizes[i].typeOfSize %> </h3>
-                      
-                      <% } %>
-                   <% } %>          
-                          
-                          
-                    <%  } %>
-            
-            
-                    <h2>Colores</h2>
-            
-                    <% for( let i= 0; i < colors.length; i++ ) { %>
-                    
-                    <% for (let j=0; j <JSON.stringify(products.relProductColor.length);j++) { %>
-                      <% if(JSON.stringify(products.relProductColor[j].idColor)== colors[i].idColor){ %>
-                        
-                        <h3><%= colors[i].color %> </h3>
-                      <% } %>
-                   <% } %>            
-                          
-                          
-                    <%  } %>
-                <h2>Precio</h2>
-                <h3><%= products.price %></h3>
-                
-              </section>
-            
 
 
+    <div>
 
-                    <!--agregar carrito-->
-                    <div class="buy-container-PD">
-                        <input type="submit" name="add-cart" value="Agregar al carrito" class="buy-button-PD">
-                    </div>               
-                </section>
-            </section>
-                        <!--informacion del producto- menu script-->
-                    <div class="container-wrap-PD">
-                        <section class="info-boxes-PD">
-                            <article class="info-article-PD">
-                                <a href="#desc" databox="desc" class="item-PD">Descripción</a>
-                            </article>
-                            <article class="info-article-PD">
-                                <a href="#info" databox="" class="item-PD">Composición</a>
-                            </article>
-                            <article class="info-article-PD">
-                                <a href="#info" databox="" class="item-PD">Características de la tela</a>
-                            </article>
-                        </section>
-                        <hr class="bar-PD">
-                        <section class="info-boxes-container-PD">
-                            <article class="info-boxes-PD" id="desc-PD">
-                                <p> <a href="#info:after"> Juego de sábanas estampado con cordón, compuesto por mezcla de algodón y poliéster. Estilo y diseño para tu cama.</p>
-                                <br>
-                                <span class="minor-title"-PD>Medidas:</span>
-                                <span id="desc-PD">Medidas: Para colchón King de hasta 2 m de ancho x 2 m de largo x 0.35 m de alto.</span>
-                                <br>
-                                <span class="minor-title-PD">Incluye:</span>
-                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
-                            </article>
-                            <article class="info-boxes-PD" id="composition-PD">
-                                <p>Mezcla de algodón y poliéster, 144 hilos.</p>
-                            </article>
-                            <article class="info-boxes-PD" id="material-quality-PD">
-                                <p>Las telas con mezclas de algodón y poliéster son conocidas por su durabilidad. El algodón es de fibra natural, por lo que le brinda propiedades como respirabilidad y suavidad. El poliéster le otorga mayor resistencia, baja tendencia al arrugado y secado rápido. Combinación perfecta entre suavidad y practicidad. Ideal para quienes viven en un departamento o tienen poco espacio para tender sus sábanas y tiempo para plancharlas.</p>
-                            </article>
-                        </section>
-                    </div>  
-    </main>
-      <!-- footer -->
+        <img src="/uploads/<%= products.image %>" alt="">
+        <h2>Producto número: <%= products.idProduct %>
+        </h2>
+        <H3>
+            <%= products.name%>
+        </H3>
+        <h2>Marca</h2>
+        <h3>
+            <%=brands.name%>
+        </h3>
+        <h2>Colores disponibles</h2>
+        <% for( let i=0; i < colors.length; i++ ) { %>
+            <% for (let j=0; j <JSON.stringify(products.relProductColor.length);j++) { %>
+                <% if(JSON.stringify(products.relProductColor[j].idColor)==colors[i].idColor){ %>
+                    <h3>*<%= colors[i].color %><br></h3>
+                    <% } %>
+                        <% } %>
+                            <% } %>
+                                <h2>Tamaños disponibles</h2>
+                                <h3>
+                                    <% for( let i=0; i < sizes.length; i++ ) { %>
+                                        <% for (let j=0; j <JSON.stringify(products.relProductSize.length);j++) { %>
+                                            <% if(JSON.stringify(products.relProductSize[j].idSize)==sizes[i].idSize){
+                                                %>
+                                                <%= sizes[i].typeOfSize %>
+                                                    <% } %>
+                                                        <% } %>
+                                                            <% } %>
+                                </h3>
+                                <h2>Categorías</h2>
+                                <h3>
+                                    <% for( let i=0; i < categories.length; i++ ) { %>
+                                        <% for (let j=0; j <JSON.stringify(products.relProductCategory.length);j++) { %>
+                                            <% if(JSON.stringify(products.relProductCategory[j].idCategory)==categories[i].idCategory){
+                                                %>
+                                                <%= categories[i].typeOfCategory %>
+                                                    <% } %>
+                                                        <% } %>
+                                                            <% } %>
+                                </h3>
+                                <h2>Descripción</h2>
+                                <h3>
+                                    <%= products.description%>
+                                </h3>
+                                <button>Comprar</button>
+                                <% if (locals.isAnUserLogged == true){%>
+                                <a href="/products/edit/<%= id %>"><button>Editar</button></a>
 
-      <%- include("./partials/footer")%>
-    
-    </body>
-    </html>
-    
+                                <form action="/products/borrar/<%= id %>" method="get">
+                                    <button type="submit">Eliminar</button>
+                                </form>
+                                <% } %>
+                    </div>
+    <div class="small-container">
+        <div class="col-2">
+            <img src="/imagenes/<%= products.image %>">
+        </div>
+        <h2>Otros productos que te pueden interesar</h2>
+        <div class="small-img-row">
+            <div class="small-img-col">
+                <img src="/imagenes/productos/almohadones2.jpg" id="small-img">
+            </div>
+            <div class="small-img-col">
+                <img src="/imagenes/productos/acolchado3.jpg" id="small-img">
+            </div>
+            <div class="small-img-col">
+                <img src="/imagenes/productos/toallas2.jpg" id="small-img">
+            </div>
+            <div class="small-img-col">
+                <img src="/imagenes/productos/sabanas4.jpg" id="small-img">
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <!-- footer -->
+    <%- include("./partials/footer")%>
+</body>
+
+</html>

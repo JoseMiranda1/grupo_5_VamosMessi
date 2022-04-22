@@ -16,7 +16,7 @@ const validations = [
     body("categories").notEmpty().withMessage("El campo de categoria es obligatorio").bail(),
     body("colors").notEmpty().withMessage("El campo de color es obligatorio").bail(),
     body("priceCreate").isNumeric().withMessage("El campo precio es obligatorio").bail(),
-  
+    body("priceCreate").isFloat({min:0}).withMessage("El campo precio debe ser mayor a cero").bail(),
 ]
 
 module.exports=validations;
