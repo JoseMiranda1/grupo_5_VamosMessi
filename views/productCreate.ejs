@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="/css/productEdit.css">
-<link rel="stylesheet" href="/css/productDetail.css">
 <link rel="stylesheet" href="/css/productCreate.css">
 <%- include("./partials/head")%>
   <body>
@@ -11,6 +10,7 @@
       
         <section class="form-create">
           <form action="/products/create" method="post" enctype="multipart/form-data" id="createForm">
+            <a href="/">REGRESAR A LA HOME</a>
             <p class=" title-edit"> Crear un nuevo producto</p>
             <label for="name">Nombre del producto</label>
             <input class="input-edit " type="text"  name="name" value="<%= locals.oldData ? oldData.name: null %>"
@@ -63,7 +63,7 @@
                   <% } %>   
                 <br>
                 <label for="">Imágenes</label>
-                <input class="input-edit" type="file" name="imageCreate">
+                <input class="input-edit" type="file" name="imageCreate" >
                 <span></span>
                 <% if (locals.errorsMessages && errorsMessages.imageCreate) { %>
                   <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">
@@ -110,9 +110,9 @@
                 <!--selector de color- radio-script-->
                 <div class="color-selection">
                   <p class="color-title">Colores</p>
-                  <br>
-
+                  
                   <ul class="color-list-PD">
+                    <div class="checkboxes">
 
                     <% for (let h=0; h<colors.length; h++){ %>
 
@@ -126,6 +126,7 @@
                       </li>
                       <% } %>
 
+                      </div>
                   </ul>
                   <% if (locals.errorsMessages && errorsMessages.color) { %>
                     <p style="color: rgb(252, 80, 0); font-size: 13px; margin-right: 40%;">

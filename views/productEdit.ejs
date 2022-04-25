@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <%- include("./partials/head")%>
   <link rel="stylesheet" href="/css/productEdit.css">
   <link rel="stylesheet" href="/css/productDetail.css">
-<body>   
+<body>
   <!--header-->
-         
 <main class="main-edit">
- 
-  <h2>Editar Producto</h2>
-
+  
   <section class="form-edit" >
-    <form action="/products/edit/<%= products.idProduct %>" method="POST">
-      <p class="title-edit">Modificar un producto existente</p>
-     
+    <form action="/products/edit/<%= products.idProduct %>" method="POST" enctype="multipart/form-data">
+      <p class="title-edit">Editar producto</p>
       <br>
       <label class="label-edit" for="">Modificar nombre del producto</label>
       <input class="input-edit" type="text" name="name" value = "<%= products.name%>">
@@ -30,65 +25,55 @@
           </option>
           <% } %>
       </select>
-      
       <br>
       <label class="label-edit" for="">Modificar descripción</label>
-      <input class="input-edit" type="text" name="description-edit" value = "<%= products.description%>">
-      <%# no carga la imagen %>
-      <img src="../uploads/default-image.jpg" alt="">
+      <input class="input-edit" type="text" name="description" value = "<%= products.description%>">
+      
+      
+      <img src="/uploads/<%= products.image %>" alt="">
       <label class="label-edit" for="">Modificar imágenes</label>
 
-      <input class="input-edit" type="file" name="image-edit" accept="image/png, .jpeg, .jpg, image/gif">
+      <input class="input-edit" type="file" name="image" accept="image/png, .jpeg, .jpg, image/gif" >
       <br>
-
-
       <label class="label-edit" for="">Modificar categoría</label>
+      <div class="checkboxes">
       <% for( let i= 0; i < categories.length; i++ ) { %>
-        <input class="input-edit" type="checkbox" name="category" value="<%= categories[i].idCategory %>"
+        <input class="input-edit" type="checkbox" name="categories" value="<%= categories[i].idCategory %>"
         <% for (let j=0; j <JSON.stringify(products.relProductCategory.length);j++) { %>
           <% if(JSON.stringify(products.relProductCategory[j].idCategory)== categories[i].idCategory){ %>
-            
           checked
           <% } %>
-       <% } %> > <%= categories[i].typeOfCategory %>           
-              
-              
+       <% } %> > <%= categories[i].typeOfCategory %>
         <%  } %>
+      </div>
       <label class="label-edit" for="">Modificar tamaños</label>
-
+      <div class="checkboxes">
       <% for( let i= 0; i < sizes.length; i++ ) { %>
         <input class="input-edit" type="checkbox" name="size" value="<%= sizes[i].idSize %>"
         <% for (let j=0; j <JSON.stringify(products.relProductSize.length);j++) { %>
           <% if(JSON.stringify(products.relProductSize[j].idSize)== sizes[i].idSize){ %>
-            
           checked
           <% } %>
-       <% } %> > <%= sizes[i].typeOfSize %>           
-              
-              
+       <% } %> > <%= sizes[i].typeOfSize %>
         <%  } %>
-
-
-        <h2>Modificar colores</h2>
-
+      </div>
+        <h2 class="label-edit">Modificar colores</h2>
+        <div  class="checkboxes">
         <% for( let i= 0; i < colors.length; i++ ) { %>
         <input class="input-edit" type="checkbox" name="colors" value="<%= colors[i].idColor %>"
         <% for (let j=0; j <JSON.stringify(products.relProductColor.length);j++) { %>
           <% if(JSON.stringify(products.relProductColor[j].idColor)== colors[i].idColor){ %>
-            
           checked
           <% } %>
-       <% } %> > <%= colors[i].color %>           
-              
-              
+       <% } %> > <%= colors[i].color %>
         <%  } %>
+        </div>
     <label class="label-edit" for="price-edit" class="price-edit">Modificar precio</label>
-    <input class="input-edit" type="number" name="price-edit" value="<%= products.price %>">
+    <input class="input-edit" type="number" name="price" value="<%= products.price %>">
     <br>
       <button type="submit">Guardar cambios</button>
     </form>
   </section>
-
 </main>
     <!-- footer -->
   <%- include("./partials/footer")%>

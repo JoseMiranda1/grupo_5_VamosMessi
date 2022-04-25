@@ -80,6 +80,14 @@
     border-radius: 50%;
     cursor: pointer;
 }
+.email{
+    text-align: center;
+ }
+ .email img{
+     max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 10%;
+ }
 
 .seccion-perfil-usuario .perfil-usuario-body {
     width: 70%;

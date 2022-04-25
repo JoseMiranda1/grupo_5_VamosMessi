@@ -112,24 +112,28 @@ const controllers = {
 
     },
     register: async(req, res) => {
-    
-    const userStored = await db.User.create({
-
-        userName: req.body.user,
-        email: req.body.email,
-        userPassword: bcrypt.hashSync(req.body.password, 10),
-        //address: "Avenida Siempreviva 742",
-        //postCode: 7600,
-        country: req.body.country,
-        //phone: "22355555555",
-        birthdate: req.body.birthdate
-
+        console.log(req.body);
+        const emailCheck = await db.User.findAll({
+            where: {
+                email: {
+                    [Op.like]: `${req.body.email}` //"%" + keyword + "%"
+                }
+            }
         })
-
-        res.redirect("/")
-
-        
-    }
+        if(emailCheck.length==0){
+            const userStored = await db.User.create({
+                userName: req.body.user,
+                email: req.body.email,
+                userPassword: bcrypt.hashSync(req.body.password, 10),
+                country: req.body.country,
+                birthdate: req.body.fechaNacimiento
+                })
+                res.redirect("/")
+        }
+        else{
+            res.render("emailAlreadyUsed");
+            }
+        }
 }
 
 

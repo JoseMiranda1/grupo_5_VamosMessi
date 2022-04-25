@@ -5,93 +5,174 @@
     <%- include("./partials/head")%>
         <link rel="stylesheet" href="/css/productEdit.css">
         <link rel="stylesheet" href="/css/productDetail.css">
-
+        <link rel="stylesheet" href="/css/allProducts.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+      
 </head>
 
 <body>
 
-
+    
     <div>
+        <a class="home1" href="/"> regresar a la HOME</a>
+        
+        <H3 class="title-cards"><strong>
+          <%= products.name%>
+        </strong>
+      </H3>
+      <% if (locals.isAnUserLogged==true){%>
+        <div class="card-link-1">
+            <a  href="/products/edit/<%= id %>">Editar</a>
+            <a  href="/products/borrar/<%= id %>">Eliminar</a>           
+            
+            </div>
+          <% } %>
+        <div class="image-marca-colores-tamaños">
+            <img class="image1" src="/uploads/<%= products.image %>" alt="">
+            <div class="marca-colores-tamaños">
 
-        <img src="/uploads/<%= products.image %>" alt="">
-        <h2>Producto número: <%= products.idProduct %>
-        </h2>
-        <H3>
-            <%= products.name%>
-        </H3>
-        <h2>Marca</h2>
-        <h3>
-            <%=brands.name%>
-        </h3>
-        <h2>Colores disponibles</h2>
-        <% for( let i=0; i < colors.length; i++ ) { %>
-            <% for (let j=0; j <JSON.stringify(products.relProductColor.length);j++) { %>
-                <% if(JSON.stringify(products.relProductColor[j].idColor)==colors[i].idColor){ %>
-                    <h3>*<%= colors[i].color %><br></h3>
-                    <% } %>
-                        <% } %>
+                <h2 class="title-cards">Colores disponibles</h2>
+                <% for( let i=0; i < colors.length; i++ ) { %>
+                    <% for (let j=0; j <JSON.stringify(products.relProductColor.length);j++) { %>
+                        <% if(JSON.stringify(products.relProductColor[j].idColor)==colors[i].idColor){ %>
+                            <h3>*<%= colors[i].color %><br></h3>
                             <% } %>
-                                <h2>Tamaños disponibles</h2>
-                                <h3>
-                                    <% for( let i=0; i < sizes.length; i++ ) { %>
-                                        <% for (let j=0; j <JSON.stringify(products.relProductSize.length);j++) { %>
-                                            <% if(JSON.stringify(products.relProductSize[j].idSize)==sizes[i].idSize){
-                                                %>
-                                                <%= sizes[i].typeOfSize %>
-                                                    <% } %>
-                                                        <% } %>
-                                                            <% } %>
-                                </h3>
-                                <h2>Categorías</h2>
-                                <h3>
-                                    <% for( let i=0; i < categories.length; i++ ) { %>
-                                        <% for (let j=0; j <JSON.stringify(products.relProductCategory.length);j++) { %>
-                                            <% if(JSON.stringify(products.relProductCategory[j].idCategory)==categories[i].idCategory){
-                                                %>
-                                                <%= categories[i].typeOfCategory %>
-                                                    <% } %>
-                                                        <% } %>
-                                                            <% } %>
-                                </h3>
-                                <h2>Descripción</h2>
-                                <h3>
-                                    <%= products.description%>
-                                </h3>
-                                <button>Comprar</button>
-                                <% if (locals.isAnUserLogged == true){%>
-                                <a href="/products/edit/<%= id %>"><button>Editar</button></a>
-
-                                <form action="/products/borrar/<%= id %>" method="get">
-                                    <button type="submit">Eliminar</button>
-                                </form>
                                 <% } %>
+                                    <% } %>
+                                        <h2 class="title-cards">Tamaños disponibles</h2>
+                                        <h3>
+                                            <% for( let i=0; i < sizes.length; i++ ) { %>
+                                                <% for (let j=0; j <JSON.stringify(products.relProductSize.length);j++)
+                                                    { %>
+                                                    <% if(JSON.stringify(products.relProductSize[j].idSize)==sizes[i].idSize){
+                                                        %>
+                                                        <%= sizes[i].typeOfSize %>
+                                                            <% } %>
+                                                                <% } %>
+                                                                    <% } %>
+                                                                        <h3 class="title-cards">Precio: 
+                                                                        <strong> $<%= products.price%></strong>
+                                                                        </h3>
+                                                                        </h3>
+                                                                        </h3>
+       <div class="card-link">
+                      <a href="/products/detail/3">Comprar ahora</a>
                     </div>
-    <div class="small-container">
-        <div class="col-2">
-            <img src="/imagenes/<%= products.image %>">
+            </div>
+            </div>
+            
+            
+                    </div>
+                    <div class="descrip">
+                        <h2 class="title-cards" style="text-align:left;">Descripción:</h2>
+                        <h3>
+                            <%= products.description%>
+                        </h3>
+                    </div>
+    <div class="title-cards">
+          <h2>Segun tu ultima busqueda</h2>
         </div>
-        <h2>Otros productos que te pueden interesar</h2>
-        <div class="small-img-row">
-            <div class="small-img-col">
-                <img src="/imagenes/productos/almohadones2.jpg" id="small-img">
-            </div>
-            <div class="small-img-col">
-                <img src="/imagenes/productos/acolchado3.jpg" id="small-img">
-            </div>
-            <div class="small-img-col">
-                <img src="/imagenes/productos/toallas2.jpg" id="small-img">
-            </div>
-            <div class="small-img-col">
-                <img src="/imagenes/productos/sabanas4.jpg" id="small-img">
-            </div>
+    <div class="container-card">
+
+<div class="container">
+  <div class="swiper-container mySwiper">
+    <div class="swiper-wrapper">
+    
+      <div class="swiper-slide">
+        <img src="/imagenes/productos/bata-clasica-dos-costuras-800x800-800x800.jpg" alt="imagen de producto">
+
+        <div class="card-description">
+          <div class="card-title">
+            <h4>Bata de baño adulto</h4>
+          </div>
+
+          <div class="card-text">
+            <p> Posee bolsillos delanteros y cinta de ajuste. la tela de algodon 100% aporta mayor confort y
+              suavidad </p>
+
+          </div>
+
+          <p class="precioproducts">$10.000</p>
+
+          <div class="card-link">
+            <a href="/products/detail/3">Comprar ahora</a>
+          </div>
         </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="/imagenes/productos/almohadas-grandes-1.jpg" alt="imagen de producto">
 
-    </div>
+        <div class="card-description">
+          <div class="card-title">
+            <h4>Almohada sublime</h4>
+          </div>
 
+          <div class="card-text">
+            <p>El relleno está formado por un núcleo central de espuma de poliuretano Hipersoft Premium de
+              Alta Densidad que brinda resistencia y confort, y una abundante manta de fibra de poliéster
+              hueca, siliconada, cardada y peinada que le otorga suavidad.</p>
+          </div>
+
+          <p class="precioproducts">$10.000</p>
+
+          <div class="card-link">
+            <a href="/products/detail/1">Comprar ahora</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="/imagenes/productos/Sabanas-img1.jpg" alt="imagen de producto">
+
+        <div class="card-description">
+          <div class="card-title">
+            <h4>Sabanas 2 Plazas Algodón 400 hilos</h4>
+          </div>
+
+          <div class="card-text">
+            <p>Juego completo de sábanas, fabricadas en genero de 240 hilos. 100% algodon Excelente calidad.
+              No se destiñe, no se motosea, totalmente garantizado. Tela importada, confección nacional. </p>
+
+          </div>
+
+          <p class="precioproducts">$10.000</p>
+
+          <div class="card-link">
+            <a href="/products/detail/2">Comprar ahora</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="/imagenes/productos/bata-clasica-dos-costuras-800x800-800x800.jpg" alt="imagen de producto">
+
+        <div class="card-description">
+          <div class="card-title">
+            <h4>Bata de baño adulto</h4>
+          </div>
+
+          <div class="card-text">
+            <p> Posee bolsillos delanteros y cinta de ajuste. la tela de algodon 100% aporta mayor confort y
+              suavidad </p>
+
+          </div>
+
+          <p class="precioproducts">$10.000</p>
+
+          <div class="card-link">
+            <a href="/products/detail">Comprar ahora</a>
+          </div>
+        </div>
+      </div>
+      
     </div>
+  </div>
+</div>
+
 
     <!-- footer -->
     <%- include("./partials/footer")%>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="/js/slider.js"></script>
+
 </body>
 
 </html>

@@ -161,11 +161,10 @@ CREATE TABLE `products` (
 -- Volcado de datos para la tabla `products`
 --
 INSERT INTO `products` (`idProduct`, `name`, `price`, `image`,`description`, `stock`, `idBrand`, `createDate`) VALUES
-(1, 'sabanas', '3000.00', '/grupo_5_VamosMessi/public/imagenes/productos/Sabanas-imgB.jpg','descripcion uno',5, 5, '2021-11-23'),
-(2, 'colchon', '10000.00', '/grupo_5_VamosMessi/public/imagenes/productos/colchon.jpg', 'descripcion dos',5, 4, '2021-10-20'),
-(3, 'toallas', '500.00', '/grupo_5_VamosMessi/public/imagenes/productos/toallas.jpg', 'descripcion tres',5, 3, '2019-10-21'),
-(4, 'bata', '2000.00', '/grupo_5_VamosMessi/public/imagenes/productos/bata-clasica-dos-costuras-800x800.jpg' ,'descripcion 4',5, 2, '2020-10-28'),
-(5, 'almohada', '1000.00', '/grupo_5_VamosMessi/public/imagenes/productos/Almohada-inspira-imgD.jpg','descripcion 5', 5, 1, '2022-01-18');
+(1, 'Bata de baño adulto', '10000.00', '1649885897772-341335226_imageCreate.jpg','Posee bolsillos delanteros y cinta de ajuste. la tela de algodon 100% aporta mayor confort y suavidad',5, 5, '2021-11-23'),
+(2, 'Almohada sublime', '10000.00', '1649885973484-326586405_imageCreate.jpg', 'El relleno está formado por un núcleo central de espuma de poliuretano Hipersoft Premium de Alta Densidad que brinda resistencia y confort, y una abundante manta de fibra de poliéster hueca, siliconada, cardada y peinada que le otorga suavidad.',5, 4, '2021-10-20'),
+(3, 'Sabanas 2 Plazas Algodón 400 hilos', '20000.00', '1649886455159-988948315_imageCreate.jpg', 'Juego completo de sábanas. 100% algodon Excelente calidad. No se destiñe, no se motosea.Tela importada, confección nacional.',5, 3, '2019-10-21'),
+(4, 'Cortinas "Black out"', '5000.00', '1649886676320-768864379_imageCreate.jpg' ,'Una innovadora propuesta para la cubierta de ventanas, y tienen como característica principal el oscurecimiento total de los ambientes, proporcionando además un excelente aislamiento térmico y acústico.',5, 2, '2020-10-28');
 -- --------------------------------------------------------
 --
 -- Estructura de tabla para la tabla `sizeproduct`
@@ -211,7 +210,7 @@ INSERT INTO `sizes` (`idSize`, `typeOfSize`) VALUES
 -- Estructura de tabla para la tabla `users`
 --
 CREATE TABLE `users` (
-  `idUser` int(10) UNSIGNED NOT NULL,
+  `idUser` int(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `userName` varchar(150) NOT NULL,
   `email` varchar(50) NOT NULL,
   `userPassword` varchar(50) NOT NULL,

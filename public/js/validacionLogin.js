@@ -12,11 +12,11 @@ const validateEmptyField = (e) => {
 	const field = e.target;
 	console.log(e.target);
 	const spanTagError = field.nextElementSibling;
-	console.log(spanTagError); // capturo al <span></span> hermano
+	console.log(spanTagError); 
 	if (field.value.trim() === "") {
 		field.classList.add("inputRegisterLogin");
 		spanTagError.innerText = `El campo Email y Contraseña son obligatorios`;
-		//console.log(field.name);
+		
 		spanTagError.classList.add("invalidfeedbackLogin");
 	} else {
 		field.classList.remove("inputRegisterLogin");

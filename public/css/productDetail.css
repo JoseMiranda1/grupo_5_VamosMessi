@@ -8,8 +8,28 @@ body{
   font-family: sans-serif;
   justify-content: center;
   text-align: center;
-  background-color: antiquewhite;
+  background-color: rgb(235 235 213);
 
+}
+.home1{
+  
+  
+  display:flex;
+  
+  text-align: center;
+  justify-content: center;
+  
+  
+}
+.image-marca-colores-tamaños{
+ 
+  display: flex;
+}
+
+.image1{
+  
+  width:60%;
+  align-items: left
 }
 .button missing-product{
   border: none;
@@ -62,6 +82,34 @@ width:22%;
 margin:1%;
 
 
+}
+.card-link a{
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #d49c50;
+  border: 1px solid #d49c50;
+  border-radius: 4px;
+  transition: all 400ms ease;
+  margin-bottom: 5px;
+}
+.card-link-1 a{
+  display: flex;
+  justify-content: flex-end;
+ 
+  margin-top: 10px;
+  text-decoration: none;
+  color: #d49c50;
+  transition: all 400ms ease;
+  border-radius: 4px;
+  transition: all 400ms ease;
+  margin-bottom: 5px;
+}
+.card-link-1 a:hover{
+  color: red;
+  
+  border-radius: 50%;
 }
 
 

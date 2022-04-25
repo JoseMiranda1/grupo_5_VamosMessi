@@ -6,6 +6,9 @@
     display: flex;
     justify-content: center;
 }
+.checkboxes{
+    display:flex
+}
 
 .create-product {
     display: flex;
@@ -188,7 +191,7 @@ textarea {
 }
 
 
-/*color checkbox section*/
+
 
 .color-selection {
     font-size: 1.5rem;

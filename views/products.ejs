@@ -2,54 +2,169 @@
 <html lang="es">
 
 <%- include("./partials/head")%>
-<link rel="stylesheet" href="/css/allProducts.css">
+  <link rel="stylesheet" href="/css/allProducts.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-<body>
 
-  <%- include("./partials/header")%>
-  <main>
+  <body>
 
-    <div class="title-cards">
-      <h2>¡Todo ésto y mucho más!</h2>
-    </div>
-    <div class="container-card">
+    <%- include("./partials/header")%>
+      <main>
 
-      <% for( let i=products.length ;  i>0; i-- ) { %>        
-                   
-        <% if(products[i]) { %>
-
-      <div class="card">
-        <figure>
-          <img src="/uploads/<%=products[i].image%>"alt="imagen de producto">
-        </figure>
-        <div class="contenido-card">
-          <h3>
-            <%= products[i].name %>
-          </h3>
-          <p>
-            <%= products[i].description  %>
-          </p>
-          <p>
-           <i> <%=// products[i].ProductBrand.name  %></i>
-          </p>
-          <p class="precioproducts">
-            $ <%=  products[i].price %>
-          </p>
-          
-          <a href="/products/detail/<%=products[i].idProduct%>">Ver Detalle</a>
+        <div class="title-cards">
+          <h2>¡Todo esto y mucho mas!</h2>
         </div>
-      </div>
-      <% } %>
-      <% } %>
+        <div class="container-card">
+
+          <div class="container">
+            <div class="swiper-container mySwiper">
+              <div class="swiper-wrapper">
+                <div class="twoArow">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+                <% for( let i=products.length; i >= 0; i-- ) { %>
+                  <% if(products[i]) { %>
+                  <div class="swiper-slide">
+                    <img src="/uploads/<%=products[i].image%>" alt="imagen de producto">
+
+                    <div class="card-description">
+                      <div class="card-title">
+                        <h4>
+                          <%= products[i].name %>
+                        </h4>
+                      </div>
+
+                      <div class="card-text">
+                        <p>
+                          <%= products[i].description %>.
+                        </p>
+                      </div>
+
+                      <p class="precioproducts">$ <%= products[i].price %>
+                      </p>
+
+                      <div class="card-link">
+                        <a href="/products/detail/<%= products[i].idProduct %>">Comprar ahora</a>
+                      </div>
+                    </div>
+                  </div>
+                  <% } %>
+                  <% } %>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="title-cards">
+          <h2>Segun tu ultima busqueda</h2>
+        </div>
+        <!-- aaaaaaaaaaaaaaaa -->
+        <div class="container-card">
+
+          <div class="container">
+            <div class="swiper-container mySwiper">
+              <div class="swiper-wrapper">
+              
+                <div class="swiper-slide">
+                  <img src="/imagenes/productos/bata-clasica-dos-costuras-800x800-800x800.jpg" alt="imagen de producto">
+
+                  <div class="card-description">
+                    <div class="card-title">
+                      <h4>Bata de baño adulto</h4>
+                    </div>
+
+                    <div class="card-text">
+                      <p> Posee bolsillos delanteros y cinta de ajuste. la tela de algodon 100% aporta mayor confort y
+                        suavidad </p>
+
+                    </div>
+
+                    <p class="precioproducts">$10.000</p>
+
+                    <div class="card-link">
+                      <a href="/products/detail/products[i].idProduct ">Comprar ahora</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="/imagenes/productos/almohadas-grandes-1.jpg" alt="imagen de producto">
+
+                  <div class="card-description">
+                    <div class="card-title">
+                      <h4>Almohada sublime</h4>
+                    </div>
+
+                    <div class="card-text">
+                      <p>El relleno está formado por un núcleo central de espuma de poliuretano Hipersoft Premium de
+                        Alta Densidad que brinda resistencia y confort, y una abundante manta de fibra de poliéster
+                        hueca, siliconada, cardada y peinada que le otorga suavidad.</p>
+                    </div>
+
+                    <p class="precioproducts">$10.000</p>
+
+                    <div class="card-link">
+                      <a href="/products/detail/1">Comprar ahora</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="/imagenes/productos/Sabanas-img1.jpg" alt="imagen de producto">
+
+                  <div class="card-description">
+                    <div class="card-title">
+                      <h4>Sabanas 2 Plazas Algodón 400 hilos</h4>
+                    </div>
+
+                    <div class="card-text">
+                      <p>Juego completo de sábanas, fabricadas en genero de 240 hilos. 100% algodon Excelente calidad.
+                        No se destiñe, no se motosea, totalmente garantizado. Tela importada, confección nacional. </p>
+
+                    </div>
+
+                    <p class="precioproducts">$10.000</p>
+
+                    <div class="card-link">
+                      <a href="/products/detail/2">Comprar ahora</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="/imagenes/productos/bata-clasica-dos-costuras-800x800-800x800.jpg" alt="imagen de producto">
+
+                  <div class="card-description">
+                    <div class="card-title">
+                      <h4>Bata de baño adulto</h4>
+                    </div>
+
+                    <div class="card-text">
+                      <p> Posee bolsillos delanteros y cinta de ajuste. la tela de algodon 100% aporta mayor confort y
+                        suavidad </p>
+
+                    </div>
+
+                    <p class="precioproducts">$10.000</p>
+
+                    <div class="card-link">
+                      <a href="/products/detail/4">Comprar ahora</a>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <!-- aaaaaaaaaaa -->
 
 
+      </main>
 
+      <!-- footer -->
+      <%- include("./partials/footer")%>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="/js/slider.js"></script>
 
-  </main>
-
-  <!-- footer -->
-  <%- include("./partials/footer")%>
-
-</body>
+  </body>
 
 </html>

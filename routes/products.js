@@ -36,15 +36,12 @@ router.get("/cart", controllers.productCart);
 
 router.get("/detail/:id", controllers.productDetail)
 
-router.get("/listita", controllers.listita);
-
-
 
 router.get("/borrar/:id", controllers.destroy);
 
 router.get("/edit/:id",authMiddleware, controllers.productEdit);
 
-router.post("/edit/:id",authMiddleware, controllers.productUpdate)
+router.post("/edit/:id",upload.single("image"),authMiddleware, controllers.productUpdate);
 
 //router.delete("/:id", controllers.delete);
 
